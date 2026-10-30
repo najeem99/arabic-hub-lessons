@@ -94,7 +94,7 @@ def main():
         for bi, b in enumerate(d['blocks']):
             notes = b.get('audio', [])
             allnotes = b.get('intro', []) + notes
-            trs = []
+            trs, ranges = [], []
             toff = 0.0
             for fi, f in enumerate(allnotes):
                 tp = os.path.join(ROOT, 'data', 'transcripts', f + '.json')
@@ -105,6 +105,7 @@ def main():
                 words = [(w[0], w[1], norm(w[2])) for s in segs for w in s['w']]
                 words = [w for w in words if w[2]]
                 trs.append((f, words, toff))
+                ranges.append((f, toff, toff + (segs[-1]['e'] if segs else 0)))
                 toff += (segs[-1]['e'] if segs else 0) + 1
             if not trs:
                 continue
@@ -140,6 +141,41 @@ def main():
                         e0 = max(e0, e2)
                 day["items"][f"{bi}.{si}.{ii}"] = {"f": f, "s": round(max(0, s0 - 0.15), 2), "e": round(e0 + 0.35, 2), "r": round(r, 2)}
                 last_by_note[f] = max(last_by_note.get(f, -1), pi)
+            # phrases are taught in order: an unmatched phrase lies between its found neighbours
+            # (or between the note start/end and the nearest found one). Share that stretch of the
+            # joined timeline equally, keep each piece inside one note, snap to a word start, mark approx.
+            off = {f: o for f, _, o in trs}
+            found = {}
+            for g, pi, r, f, s0, e0 in chosen:
+                si, ii, _ = phrases[pi]
+                v = day["items"][f"{bi}.{si}.{ii}"]
+                found[pi] = (off[f] + v["s"], off[f] + v["e"])
+            if found:
+                spoken = [r_ for r_ in ranges if r_[0] in notes] or ranges
+                t0, t1 = spoken[0][1], spoken[-1][2]
+                order = sorted(found)
+                bounds = [(-1, t0, t0)] + [(pi, *found[pi]) for pi in order] + [(len(phrases), t1, t1)]
+                starts = sorted(off[f] + w[0] for f, ws, _ in trs for w in ws)
+                for (a_, _, ea), (b_, sb, _) in zip(bounds, bounds[1:]):
+                    gap = list(range(a_ + 1, b_))
+                    if not gap or sb - ea < 1:
+                        continue
+                    span = (sb - ea) / len(gap)
+                    for k, pi in enumerate(gap):
+                        st, en = ea + k * span, ea + (k + 1) * span
+                        mid = (st + en) / 2
+                        note = next((r_ for r_ in ranges if r_[1] <= mid <= r_[2] + 0.5), None)
+                        if not note or span > 25:
+                            continue
+                        st, en = max(st, note[1]), min(en, note[2], st + 9)
+                        near = [x for x in starts if st - 0.6 <= x <= st + span * 0.5]
+                        if near:
+                            st = near[0]
+                        if en - st < 0.8:
+                            continue
+                        si, ii, _ = phrases[pi]
+                        day["items"][f"{bi}.{si}.{ii}"] = {"f": note[0], "s": round(max(0, st - note[1] - 0.1), 2),
+                                                           "e": round(en - note[1], 2), "r": 0, "approx": 1}
             # where each full note goes: after the last phrase it explains
             if notes and any(f in last_by_note for f in notes):
                 cuts, prevc = [], 0
@@ -150,7 +186,8 @@ def main():
                     prevc = cut
                 cuts[-1] = len(phrases)
                 day["splits"][str(bi)] = [cuts[0]] + [cuts[k] - cuts[k - 1] for k in range(1, len(cuts))]
-            print(f"Day {d['day']} block {bi}: {sum(1 for (g,pi,r,f,s0,e0) in chosen)}/{len(phrases)} phrases found in {len(allnotes)} notes",
+            nap = sum(1 for k, v in day["items"].items() if k.startswith(f"{bi}.") and v.get("approx"))
+            print(f"Day {d['day']} block {bi}: {len(chosen)}/{len(phrases)} exact + {nap} approx, {len(allnotes)} notes",
                   day["splits"].get(str(bi), ""))
         res[str(d['day'])] = day
     json.dump(res, open(os.path.join(ROOT, 'data', 'clips.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=0)

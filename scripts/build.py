@@ -43,6 +43,8 @@ def prepare(path):
                 c = C["items"].get(f"{bi}.{si}.{ii}")
                 if c:
                     it["clip"] = {"f": c["f"], "s": c["s"], "e": c["e"]}
+                    if c.get("approx"):
+                        it["clip"]["a"] = 1
         for s in secs:
             for it in s["items"]:
                 assert it.get("w"), f"Day {d['day']}: missing word-by-word for {it.get('ar')}"

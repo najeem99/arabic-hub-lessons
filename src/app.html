@@ -317,6 +317,8 @@ footer .ar{font-family:var(--f-ar);font-size:18px}
 .say .dot{width:22px;height:22px;border-radius:50%;background:var(--coral);color:#fff;display:grid;place-items:center}
 .say .dot svg{width:12px;height:12px}
 .say.on .dot{animation:pulse 1.2s ease-out infinite}
+.say.approx{background:transparent;border-style:dashed}
+.say.approx .dot{background:color-mix(in srgb,var(--coral) 75%,var(--surface))}
 .card.saying{border-color:var(--coral);box-shadow:0 0 0 3px color-mix(in srgb,var(--coral) 25%,transparent),var(--shadow)}
 
 /* ---------- Mobile: compact bar + side drawer ---------- */
@@ -570,7 +572,7 @@ const card = i => i.audio ? audioCard(i.audio) : `
       <button class="star-btn" type="button" aria-pressed="${!!known[i.id]}" aria-label="I know this phrase">${icon("star")}</button></div>
     <div class="ar-line" lang="ar">${fmt(i.ar)}</div>
     <div class="sound"><span class="en">${fmt(i.ten)}</span>${i.tta ? `<span class="ta" lang="ta">${fmt(i.tta)}</span>` : ""}</div>
-    ${i.clip ? `<button class="say" type="button" data-f="${esc(i.clip.f)}" data-s="${i.clip.s}" data-e="${i.clip.e}" aria-label="Hear the teacher say this"><span class="dot">${icon("play")}</span>Teacher says it</button>` : ""}
+    ${i.clip ? `<button class="say${i.clip.a ? " approx" : ""}" type="button" data-f="${esc(i.clip.f)}" data-s="${i.clip.s}" data-e="${i.clip.e}" aria-label="Hear the teacher say this${i.clip.a ? " (approximate timing)" : ""}" title="${i.clip.a ? "Approximate: from where the teacher explains this phrase, may start a second early or late" : "The teacher saying this phrase"}"><span class="dot">${icon("play")}</span>Teacher says it${i.clip.a ? " ≈" : ""}</button>` : ""}
     <div class="meaning"><span class="en">${esc(i.en)}</span>${i.tm ? `<span class="ta" lang="ta">${esc(i.tm)}</span>` : ""}</div>
     <details class="words"><summary>Word by word</summary><ul>${i.w.map(([a,e],k) => `<li style="animation-delay:${k*40}ms"><span class="w-ar" lang="ar">${fmt(a)}</span><span class="w-en">${esc(e)}</span></li>`).join("")}</ul></details>
   </article>`;
@@ -598,7 +600,7 @@ function renderDay(d){
       <button class="tbtn" id="autoBtn" type="button" aria-pressed="${autoNext}">▶︎ Auto-play next note</button>
       <button class="tbtn" id="dayQuizBtn" type="button">🎯 Quiz this whole day</button>
     </div>
-    <div class="legend"><div><b>Same colour = same meaning.</b> Pick any one word from a colour group. 🎧 Each voice note sits right after the phrases it explains. Tap ☆ when you know a phrase.</div>
+    <div class="legend"><div><b>Same colour = same meaning.</b> Pick any one word from a colour group. 🎧 Each voice note sits right after the phrases it explains. “Teacher says it” plays his own pronunciation; ≈ means the timing is approximate. Tap ☆ when you know a phrase.</div>
       <div class="ta">ஒரே நிறம் = ஒரே பொருள். ஒவ்வொரு ஆடியோவும் அது விளக்கும் வாக்கியங்களுக்கு கீழே உள்ளது.</div>
       <div class="ex"><span class="alt alt-r"><span class="opt">Option A</span><span class="or">/</span><span class="opt">Option B</span></span><span class="alt alt-b"><span class="opt">Option C</span><span class="or">/</span><span class="opt">Option D</span></span></div></div>
     ${d.guide ? `<div class="guide"><h3>${esc(d.guide.title)}</h3><ul>${d.guide.rows.map(r => `<li><span class="g-ar" lang="ar">${esc(r.ar)}</span><span class="g-txt"><b>${esc(r.head)}</b>${r.en ? `<span>${esc(r.en)}</span>` : ""}${r.ta ? `<span class="ta" lang="ta">${esc(r.ta)}</span>` : ""}</span></li>`).join("")}</ul></div>` : ""}
@@ -813,7 +815,7 @@ function answer(k){
   const it = q.item, last = Q.i === Q.qs.length - 1;
   $("#qAns").innerHTML = `<div class="answer ${ok ? "ok" : "no"}">
       <span class="verdict">${ok ? ["✓ صَحّْ! Correct", "✓ زَيْنْ! Nice", "✓ مُمْتَازْ! Excellent"][Math.floor(Math.random()*3)] : "✗ Not quite. The answer is:"}</span>
-      <div class="a-ar" lang="ar">${fmt(it.ar)}</div><span class="a-ten">${fmt(it.ten)}</span>${it.clip ? `<button class="say" type="button" data-f="${esc(it.clip.f)}" data-s="${it.clip.s}" data-e="${it.clip.e}" aria-label="Hear the teacher say this"><span class="dot">${icon("play")}</span>Teacher says it</button>` : ""}
+      <div class="a-ar" lang="ar">${fmt(it.ar)}</div><span class="a-ten">${fmt(it.ten)}</span>${it.clip ? `<button class="say${it.clip.a ? " approx" : ""}" type="button" data-f="${esc(it.clip.f)}" data-s="${it.clip.s}" data-e="${it.clip.e}" aria-label="Hear the teacher say this${it.clip.a ? " (approximate timing)" : ""}" title="${it.clip.a ? "Approximate: from where the teacher explains this phrase, may start a second early or late" : "The teacher saying this phrase"}"><span class="dot">${icon("play")}</span>Teacher says it${it.clip.a ? " ≈" : ""}</button>` : ""}
       <b>${esc(it.en)}</b>${it.tm ? `<span class="a-ta" lang="ta">${esc(it.tm)}</span>` : ""}
       <ul>${it.w.map(([a, e]) => `<li><span class="w-en">${esc(e)}</span><span class="w-ar" lang="ar">${fmt(a)}</span></li>`).join("")}</ul>
     </div>
