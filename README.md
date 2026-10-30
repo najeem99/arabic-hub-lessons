@@ -10,6 +10,7 @@ Every lesson day becomes a tab with:
 - **"Teacher says it"** buttons that play just the moment where the teacher says that phrase
 - colour groups for interchangeable words (same colour = same meaning)
 - a **quiz** across one or more days, with score, streak and review of misses
+- **search** across all days in Arabic (harakat optional), sound, English or Tamil — results show day and topic and jump to the card
 - star ☆ "I know this", listened ✓ progress, light / dark theme, phone side menu
 
 Days 3–14 are included (Day 2 had no text; Day 11 was a revision class).
