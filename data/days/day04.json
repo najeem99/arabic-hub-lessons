@@ -1,0 +1,97 @@
+{"icon":"people","day":4,"title":"Pronouns","pageTitle":"Day 4 · Pronouns","arTitle":"الضَّمَائِرْ","ta":"பிரதிப்பெயர்கள் (நான், அவன், அவள், நாம், அவர்கள், நீ/நீங்கள்)",
+"keys":["أَنَا","هُوَّ","هِيَّ","إِحْنَا","هُمْ","إِنْتْ","إِنْتِي","إِنْتُو"],
+"guide":{"title":"The pronouns at a glance","rows":[
+{"ar":"أَنَا","head":"Ana · I","en":"Same for a man or a woman.","ta":"நான்"},
+{"ar":"هُوَّ","head":"Huwa · He","en":"For a man / masculine thing.","ta":"அவன்"},
+{"ar":"هِيَّ","head":"Hiya · She","en":"Add ـة (-a) to the describing word: مُدَرِّبَة.","ta":"அவள்"},
+{"ar":"إِحْنَا","head":"Ihna / Nahnu / Hinna · We","en":"إِحْنَا and حِنَّا are spoken Gulf; نَحْنُ is formal.","ta":"நாம்"},
+{"ar":"هُمْ","head":"Hum · They","en":"Gulf speech uses -een (رَايْحِينْ) more than formal -oon (ذَاهِبُونْ).","ta":"அவர்கள்"},
+{"ar":"إِنْتْ","head":"Inta / Int · You (man)","en":"Spoken: mostly إِنْتْ.","ta":"நீ (ஆண்)"},
+{"ar":"إِنْتِي","head":"Inti · You (woman)","en":"","ta":"நீ (பெண்)"},
+{"ar":"إِنْتُو","head":"Intu · You all","en":"","ta":"நீங்கள்"}]},
+"activity":{"items":[{"ta":"நான் ஆசிரியர்","en":"I am a teacher"},{"ta":"நான் சமயல்காரன் அல்ல","en":"I am not a chef"},{"ta":"அவன் என் மகன்","en":"He is my son"},{"ta":"அவன் பாகிஸ்தானில் இருந்து வருகிறான்","en":"He is from Pakistan"},{"ta":"அவள் மாணவி","en":"She is a student"}],"hint":"கொடுக்கப்பட்டுள்ள வாக்கியங்களை அரபியில் மாற்றி வாட்ஸ்அப்பில் Record செய்து அனுப்புங்கள்"},
+"blocks":[
+{"audio":["AUD-20260914-WA0007.mp3","AUD-20260914-WA0010.mp3","AUD-20260914-WA0008.mp3","AUD-20260914-WA0009.mp3","AUD-20260914-WA0011.mp3"],"sections":[
+{"title":"1. Ana — I","ar":"أَنَا","ta":"நான்","items":[
+{"key":true,"ar":"أَنَا طَالِبْ","ten":"Ana talib","tta":"அன தாலிப்","en":"I'm a student","tm":"நான் மாணவன்","w":[["أَنَا","I"],["طَالِبْ","student (man)"]]},
+{"tag":"Woman","ar":"أَنَا طَالْبَة","ten":"Ana taliba","tta":"அன தாலிபா","en":"I'm a student (woman)","tm":"நான் மாணவி","w":[["أَنَا","I"],["طَالْبَة","student (woman)"]]},
+{"ar":"أَنَا مُهَنْدِسْ","ten":"Ana muhandis","tta":"அன முஹந்திஸ்","en":"I'm an engineer","tm":"நான் பொறியாளன்","w":[["أَنَا","I"],["مُهَنْدِسْ","engineer"]]},
+{"tag":"Woman","ar":"أَنَا مُعَلِّمَة","ten":"Ana mu'allima","tta":"அன முஅல்லிமா","en":"I'm a teacher (woman)","tm":"நான் ஆசிரியை","w":[["أَنَا","I"],["مُعَلِّمَة","teacher (woman)"]]},
+{"ar":"أَنَا بَايِعْ","ten":"Ana baayi'","tta":"அன பாயிஃ","en":"I'm a seller","tm":"நான் விற்பனையாளன்","w":[["أَنَا","I"],["بَايِعْ","seller"]]},
+{"tag":"Woman","ar":"أَنَا صَايْمَة","ten":"Ana sayma","tta":"அன ஸாயிமா","en":"I'm fasting (woman)","tm":"நான் நோன்பாளி","w":[["أَنَا","I"],["صَايْمَة","fasting (woman; man: صَايِمْ)"]]},
+{"ar":"أَنَا عَالِمْ","ten":"Ana 'aalim","tta":"அன ஆலிம்","en":"I'm a scholar","tm":"நான் கல்வியாளன்","w":[["أَنَا","I"],["عَالِمْ","scholar"]]},
+{"ar":"أَنَا مِنْ دُبَيّْ","ten":"Ana min Dubai","tta":"அன மின் துபாய்","en":"I'm from Dubai","tm":"நான் துபாயில் இருந்து வருகிறன்","w":[["أَنَا","I"],["مِنْ","from"],["دُبَيّْ","Dubai"]]},
+{"ar":"أَنَا مِتْزَوِّجْ","ten":"Ana mitzawwij","tta":"அன மித்ஜவ்விஜ்","en":"I'm married","tm":"நான் திருமணமானவன்","w":[["أَنَا","I"],["مِتْزَوِّجْ","married (man)"]]},
+{"ar":"أَنَا [r:مُبْ|مُو|مَانِي] طَبَّاخْ","ten":"Ana [r:mub|mu|maani] tabbakh","tta":"அன [r:முப்|மூ|மானீ] தப்பாஹ்","en":"I'm not a chef","tm":"நான் சமயல்காரன் அல்ல","w":[["أَنَا","I"],["[r:مُبْ]","not (UAE)"],["[r:مُو]","not"],["[r:مَانِي]","I am not"],["طَبَّاخْ","cook / chef"]]},
+{"ar":"أَنَا تْخَرَّجْتْ","ten":"Ana tkharrajt","tta":"அன தஹர்ரஜ்த்","en":"I graduated","tm":"நான் பட்டம்பெற்றேன்","w":[["أَنَا","I"],["تْخَرَّجْتْ","I graduated"]]},
+{"ar":"أَنَا [r:مُبْ|مُو|مَانِي] سَايِقْ سَيَّارَة","ten":"Ana [r:mub|mu|maani] saayiq sayyara","tta":"அன [r:முப்|மூ|மானீ] ஸாயிக் ஸய்யாரா","en":"I'm not a car driver","tm":"நான் கார் ஓட்டுநர் அல்ல","w":[["أَنَا","I"],["[r:مُبْ]","not (UAE)"],["[r:مُو]","not"],["[r:مَانِي]","I am not"],["سَايِقْ","driver"],["سَيَّارَة","car"]]}
+]},
+{"title":"2. Huwa — He","ar":"هُوَّ","ta":"அவன்","items":[
+{"key":true,"ar":"هُوَّ وِلْدِي","ten":"Huwa wildi","tta":"ஹுவ வில்தீ","en":"He is my son","tm":"அவன் என் பையன்","w":[["هُوَّ","he"],["وِلْدِي","my son (Gulf; lesson: إِبْنِي ibni)"]]},
+{"ar":"هُوَّ مُدِيرْ","ten":"Huwa mudeer","tta":"ஹுவ முதீர்","en":"He is a manager","tm":"அவன் மேலாளர்","w":[["هُوَّ","he"],["مُدِيرْ","manager"]]},
+{"ar":"هُوَّ جَابِرْ","ten":"Huwa Jabir","tta":"ஹுவ ஜாபிர்","en":"He is Jabir","tm":"அவன் ஜாபிர்","w":[["هُوَّ","he"],["جَابِرْ","Jabir (a name)"]]},
+{"ar":"هُوَّ حَاضِرْ","ten":"Huwa hadhir","tta":"ஹுவ ஹாழிர்","en":"He is present","tm":"அவன் வருகை தந்து இருக்கிறான்","w":[["هُوَّ","he"],["حَاضِرْ","present"]]},
+{"ar":"هُوَّ [r:الْحِينْ|الْآنْ] فِي دُبَيّْ","ten":"Huwa [r:al-heen|al-aan] fi Dubai","tta":"ஹுவ [r:அல் ஹீன்|அல் ஆன்] ஃபீ துபய்","en":"He is now in Dubai","tm":"அவன் இப்போது துபாயில் இருக்கிறான்","w":[["هُوَّ","he"],["[r:الْحِينْ]","now (Gulf)"],["[r:الْآنْ]","now (formal)"],["فِي","in"],["دُبَيّْ","Dubai"]]},
+{"ar":"هُوَّ مِنْ بَاكِسْتَانْ","ten":"Huwa min Pakistan","tta":"ஹுவ மின் பாகிஸ்தான்","en":"He is from Pakistan","tm":"அவன் பாகிஸ்தானில் இருந்து வருகிறான்","w":[["هُوَّ","he"],["مِنْ","from"],["بَاكِسْتَانْ","Pakistan"]]},
+{"ar":"هُوَّ مُعَلِّمْ","ten":"Huwa mu'allim","tta":"ஹுவ முஅல்லிம்","en":"He is a teacher","tm":"அவர் ஆசிரியர்","w":[["هُوَّ","he"],["مُعَلِّمْ","teacher (man)"]]},
+{"ar":"هُوَّ مُحَاسِبْ [r:هِنِي|هِنَا]","ten":"Huwa muhasib [r:hini|hina]","tta":"ஹுவ முஹாஸிப் [r:ஹினி|ஹுனா]","en":"He is an accountant here","tm":"அவன் இங்கு கணக்காளராக இருக்கிறான்","w":[["هُوَّ","he"],["مُحَاسِبْ","accountant"],["[r:هِنِي]","here (Gulf)"],["[r:هِنَا]","here"]]},
+{"ar":"هُوَّ يِشْتَغِلْ فِي شَرِكَة مُحَمَّدْ","ten":"Huwa yishtaghil fi sharikat Muhammad","tta":"ஹுவ யிஷ்தகில் ஃபீ ஷரிகத் முஹம்மது","en":"He works in Muhammad's company","tm":"அவன் முஹம்மதுடைய நிறுவனத்தில் வேலை செய்கிறான்","w":[["هُوَّ","he"],["يِشْتَغِلْ","he works"],["فِي","in"],["شَرِكَة","company (of)"],["مُحَمَّدْ","Muhammad"]]},
+{"ar":"هُوَّ [r:سَاكِنْ|يِسْكِنْ] فِي شُقِّتِي","ten":"Huwa [r:sakin|yiskin] fi shuqqati","tta":"ஹுவ [r:ஸாகின்|யஸ்குன்] ஃபீ ஷுக்கதி","en":"He lives in my apartment","tm":"அவன் என் குடியிருப்பில் வசிக்கிறான்","w":[["هُوَّ","he"],["[r:سَاكِنْ]","living / residing"],["[r:يِسْكِنْ]","he lives"],["فِي","in"],["شُقِّتِي","my apartment"]]}
+]},
+{"title":"3. Hiya — She","ar":"هِيَّ","ta":"அவள்","note":{"en":"With هِيَّ, add ـة (-a) at the end of the noun / describing word.","ta":"நாம் (هي) பயன்படுத்தும் பொழுது பெயர்ச்சொல்லின் இறுதியில் (ة) சேர்க்க வேண்டும்."},"items":[
+{"key":true,"ar":"هِيَّ مُدَرِّبَة","ten":"Hiya mudarriba","tta":"ஹிய முதர்ரிபா","en":"She is a trainer","tm":"அவள் பயிற்சியாளர்","w":[["هِيَّ","she"],["مُدَرِّبَة","trainer (woman)"]]},
+{"ar":"هِيَّ طَبِيبَة","ten":"Hiya tabeeba","tta":"ஹிய தபீபா","en":"She is a doctor","tm":"அவள் மருத்துவர்","w":[["هِيَّ","she"],["طَبِيبَة","doctor (woman)"]]},
+{"ar":"هِيَّ جَالْسَة","ten":"Hiya jalsa","tta":"ஹிய ஜாலிஸா","en":"She is sitting","tm":"அவள் உட்கார்ந்து இருக்கிறாள்","w":[["هِيَّ","she"],["جَالْسَة","sitting (woman)"]]},
+{"ar":"هِيَّ [r:نَايْمَة|نَائِمَة]","ten":"Hiya [r:nayma|na'ima]","tta":"ஹிய [r:நாயிமா|நாஇமா]","en":"She is sleeping","tm":"அவள் தூங்குகிறாள்","w":[["هِيَّ","she"],["[r:نَايْمَة]","sleeping (spoken)"],["[r:نَائِمَة]","sleeping (formal)"]]},
+{"ar":"هِيَّ مِنْ إِنْدُونِيسْيَا","ten":"Hiya min Indonesia","tta":"ஹிய மின் இந்தூநிஸியா","en":"She is from Indonesia","tm":"அவள் இந்தோனேஸியாவில் இருந்து வருகிறாள்","w":[["هِيَّ","she"],["مِنْ","from"],["إِنْدُونِيسْيَا","Indonesia"]]},
+{"ar":"هِيَّ رَبَّة الْبَيْتْ","ten":"Hiya rabbat al bait","tta":"ஹிய ரப்பதுல் பைத்","en":"She is a housewife","tm":"அவள் குடும்பத்தலைவி","w":[["هِيَّ","she"],["رَبَّة","lady / mistress (of)"],["الْبَيْتْ","the house"]]},
+{"ar":"هِيَّ مُمَرِّضَة","ten":"Hiya mumarridha","tta":"ஹிய முமர்ரிழா","en":"She is a nurse","tm":"அவள் செவிலியர்","w":[["هِيَّ","she"],["مُمَرِّضَة","nurse (woman)"]]},
+{"ar":"هِيَّ مُحَاسْبَة","ten":"Hiya muhasba","tta":"ஹிய முஹாஸிபா","en":"She is an accountant","tm":"அவள் கணக்காளர்","w":[["هِيَّ","she"],["مُحَاسْبَة","accountant (woman)"]]},
+{"ar":"هِيَّ مِتْزَوْجَة","ten":"Hiya mitzawja","tta":"ஹிய மித்ஜவ்விஜா","en":"She is married","tm":"அவள் திருமணமானவள்","w":[["هِيَّ","she"],["مِتْزَوْجَة","married (woman)"]]},
+{"ar":"هِيَّ عَازْبَة","ten":"Hiya 'azba","tta":"ஹிய ஆஜிபா","en":"She is single","tm":"அவள் திருமணமாகாதவள்","w":[["هِيَّ","she"],["عَازْبَة","single (woman)"]]},
+{"ar":"هِيَّ [r:فَاضْيَة|مِتْفَرْغَة]","ten":"Hiya [r:fadhya|mitfarrigha]","tta":"ஹிய [r:ஃபாழியா|முதஃபர்ரிகா]","en":"She is free","tm":"அவள் சும்மா இருக்கிறாள்","w":[["هِيَّ","she"],["[r:فَاضْيَة]","free / not busy (Gulf)"],["[r:مِتْفَرْغَة]","free / available"]]}
+]},
+{"title":"4. Ihna — We","ar":"[r:إِحْنَا|حِنَّا|نَحْنُ]","ta":"நாம்","note":{"en":"إِحْنَا / حِنَّا are spoken Gulf; نَحْنُ is formal. All mean “we”.","ta":"إِحْنَا / حِنَّا பேச்சு வழக்கு; نَحْنُ முறையானது."},"items":[
+{"key":true,"ar":"[r:إِحْنَا|نَحْنُ] طُلَّابْ","ten":"[r:Ihna|Nahnu] tullab","tta":"[r:இஹ்னா|நஹ்னு] துல்லாப்","en":"We are students","tm":"நாங்கள் மாணவர்கள்","w":[["[r:إِحْنَا]","we (Gulf)"],["[r:نَحْنُ]","we (formal)"],["طُلَّابْ","students"]]},
+{"ar":"إِحْنَا عُمَّالْ","ten":"Ihna 'ummal","tta":"இஹ்னா உம்மால்","en":"We are workers","tm":"நாங்கள் வேலைக்காரர்கள்","w":[["إِحْنَا","we"],["عُمَّالْ","workers"]]},
+{"ar":"إِحْنَا رْيَايِيلْ","ten":"Ihna ryayeel","tta":"இஹ்னா ரயாயீல்","en":"We are men","tm":"நாங்கள் ஆண்கள்","w":[["إِحْنَا","we"],["رْيَايِيلْ","men (Emirati; formal رِجَالْ rijal)"]]},
+{"ar":"إِحْنَا سَوَّاقِينْ","ten":"Ihna sawwaqeen","tta":"இஹ்னா ஸவ்வாகீன்","en":"We are drivers","tm":"நாங்கள் ஓட்டுநர்கள்","w":[["إِحْنَا","we"],["سَوَّاقِينْ","drivers (lesson: سَائِقِينْ saa'iqeen)"]]},
+{"ar":"إِحْنَا سُيَّاحْ","ten":"Ihna suyyah","tta":"இஹ்னா சுய்யாஹ்","en":"We are tourists","tm":"நாங்கள் சுற்றுலா பயணிகள்","w":[["إِحْنَا","we"],["سُيَّاحْ","tourists"]]},
+{"ar":"إِحْنَا أَطِبَّاءْ","ten":"Ihna atibba'","tta":"இஹ்னா அதிப்பா","en":"We are doctors","tm":"நாங்கள் மருத்துவர்கள்","w":[["إِحْنَا","we"],["أَطِبَّاءْ","doctors"]]},
+{"ar":"إِحْنَا مُسْلِمِينْ","ten":"Ihna muslimeen","tta":"இஹ்னா முஸ்லிமீன்","en":"We are Muslims","tm":"நாங்கள் முஸ்லிம்கள்","w":[["إِحْنَا","we"],["مُسْلِمِينْ","Muslims"]]},
+{"ar":"إِحْنَا هُنُودْ","ten":"Ihna hunood","tta":"இஹ்னா ஹுனூத்","en":"We are Indians","tm":"நாங்கள் இந்தியர்கள்","w":[["إِحْنَا","we"],["هُنُودْ","Indians"]]},
+{"ar":"إِحْنَا زُوَّارْ مِنَ الْهِنْدْ","ten":"Ihna zuwwar minal Hind","tta":"இஹ்னா ஜுவ்வார் மினல் ஹிந்த்","en":"We are visitors from India","tm":"நாங்கள் இந்தியாவில் இருந்து வந்த பார்வையாளர்கள்","w":[["إِحْنَا","we"],["زُوَّارْ","visitors"],["مِنَ","from"],["الْهِنْدْ","India"]]},
+{"ar":"إِحْنَا نْغَادِرْ مِنَ الْإِمَارَاتْ","ten":"Ihna nghadir minal Imarat","tta":"இஹ்னா நகாதிர் மினல் இமாராத்","en":"We are leaving from the Emirates","tm":"நாங்கள் அமீரகத்தில் இருந்து புறப்படுகிறோம்","w":[["إِحْنَا","we"],["نْغَادِرْ","we leave / depart"],["مِنَ","from"],["الْإِمَارَاتْ","the Emirates"]]},
+{"ar":"إِحْنَا نِتْحَدَّثْ","ten":"Ihna nithaddath","tta":"இஹ்னா நித்ஹத்தஸ்","en":"We are speaking","tm":"நாங்கள் பேசுகிறோம்","w":[["إِحْنَا","we"],["نِتْحَدَّثْ","we talk / speak"]]},
+{"tag":"Women","ar":"إِحْنَا مُعَلِّمَاتْ","ten":"Ihna mu'allimat","tta":"இஹ்னா மு'அல்லிமாத்","en":"We are teachers (women)","tm":"நாங்கள் ஆசிரியைகள்","w":[["إِحْنَا","we"],["مُعَلِّمَاتْ","teachers (women)"]]},
+{"tag":"Women","ar":"إِحْنَا بَنَاتْ","ten":"Ihna banat","tta":"இஹ்னா பனாத்","en":"We are girls","tm":"நாங்கள் பெண்கள்","w":[["إِحْنَا","we"],["بَنَاتْ","girls"]]},
+{"tag":"Women","ar":"إِحْنَا مُدَرِّسَاتْ","ten":"Ihna mudarrisat","tta":"இஹ்னா முதர்ரிஸாத்","en":"We are teachers (women)","tm":"நாங்கள் ஆசிரியைகள்","w":[["إِحْنَا","we"],["مُدَرِّسَاتْ","teachers (women, school)"]]}
+]},
+{"title":"5. Hum — They","ar":"هُمْ","ta":"அவர்கள்","items":[
+{"key":true,"ar":"هُمْ [r:رَايْحِينْ|ذَاهِبُونْ]","ten":"Hum [r:rayheen|thahiboon]","tta":"ஹும் [r:ராயிஹீன்|தாஹிபூன்]","en":"They are going","tm":"அவர்கள் செல்கிறார்கள்","w":[["هُمْ","they"],["[r:رَايْحِينْ]","going (spoken)"],["[r:ذَاهِبُونْ]","going (formal)"]]},
+{"ar":"هُمْ [r:رَاكْبِينْ|رَاكِبُونْ] السَّيَّارَة","ten":"Hum [r:rakbeen|rakiboon] assayyara","tta":"ஹும் [r:ராகிபீன்|ராகிபூன்] அஸ் ஸையாரா","en":"They are getting into the car","tm":"அவர்கள் காரில் ஏறுகிறார்கள்","w":[["هُمْ","they"],["[r:رَاكْبِينْ]","riding / getting in (spoken)"],["[r:رَاكِبُونْ]","riding (formal)"],["السَّيَّارَة","the car"]]},
+{"ar":"هُمْ [r:يَالْسِينْ|جَالِسُونْ]","ten":"Hum [r:yalseen|jalisoon]","tta":"ஹும் [r:யால்ஸீன்|ஜாலிஸூன்]","en":"They are sitting","tm":"அவர்கள் உட்கார்ந்துள்ளார்கள்","w":[["هُمْ","they"],["[r:يَالْسِينْ]","sitting (Emirati, ج→ي)"],["[r:جَالِسُونْ]","sitting (formal)"]]},
+{"ar":"هُمْ [r:كَاتِبُونْ|كُتَّابْ]","ten":"Hum [r:katiboon|kuttab]","tta":"ஹும் [r:காதிபூன்|குத்தாப்]","en":"They are writers","tm":"அவர்கள் எழுத்தாளர்கள்","w":[["هُمْ","they"],["[r:كَاتِبُونْ]","writers / writing"],["[r:كُتَّابْ]","writers"]]},
+{"ar":"هُمْ يَاكْلُونْ","ten":"Hum yakloon","tta":"ஹும் யாக்லூன்","en":"They are eating","tm":"அவர்கள் சாப்பிடுகிறார்கள்","w":[["هُمْ","they"],["يَاكْلُونْ","they eat"]]},
+{"ar":"هُمْ يِجْتَهْدُونْ","ten":"Hum yijtahdoon","tta":"ஹும் யிஜ்தஹிதூன்","en":"They are hardworking","tm":"அவர்கள் கடினமாக உழைக்கிறார்கள்","w":[["هُمْ","they"],["يِجْتَهْدُونْ","they work hard"]]},
+{"ar":"هُمْ بَايْعِينْ","ten":"Hum bay'een","tta":"ஹும் பாயிஈன்","en":"They are sellers","tm":"அவர்கள் விற்பனையாளர்கள்","w":[["هُمْ","they"],["بَايْعِينْ","sellers (lesson: بَائِعُونْ)"]]},
+{"ar":"هُمْ يِدْرِسُونْ","ten":"Hum yidrisoon","tta":"ஹும் யித்ருஸூன்","en":"They are studying","tm":"அவர்கள் படிக்கிறார்கள்","w":[["هُمْ","they"],["يِدْرِسُونْ","they study"]]},
+{"ar":"هُمْ فَايْزِينْ","ten":"Hum fayzeen","tta":"ஹும் ஃபாய்ஜீன்","en":"They are winners","tm":"அவர்கள் வெற்றியாளர்கள்","w":[["هُمْ","they"],["فَايْزِينْ","winners (lesson: فَائِزُونْ)"]]}
+]}
+]},
+{"audio":["AUD-20260914-WA0012.mp3"],"sections":[
+{"title":"6. Inta — You (man)","ar":"إِنْتْ","ta":"நீ (ஆண்)","note":{"en":"In speech Arabs mostly say إِنْتْ (int / inta), not أَنْتَ (anta).","ta":"அரபிகள் பேச்சு வழக்கில் பெரும்பாலும் (இன்த்) என்பதை பயன்படுத்துவார்கள்"},"items":[
+{"key":true,"ar":"إِنْتْ مُحَمَّدْ","ten":"Int Muhammad","tta":"இன்த் முஹம்மத்","en":"You are Muhammad","tm":"நீ முஹம்மத்","w":[["إِنْتْ","you (man)"],["مُحَمَّدْ","Muhammad"]]},
+{"ar":"إِنْتْ مُدِيرْ","ten":"Int mudeer","tta":"இன்த் முதீர்","en":"You are a manager","tm":"நீ மேலாளர்","w":[["إِنْتْ","you (man)"],["مُدِيرْ","manager"]]},
+{"ar":"إِنْتْ كَذَّابْ","ten":"Int kadhdhab","tta":"இன்த் கத்தாப்","en":"You are a liar","tm":"நீ பொய்யன்","w":[["إِنْتْ","you (man)"],["كَذَّابْ","liar"]]},
+{"ar":"إِنْتْ تَعْبَانْ","ten":"Int ta'ban","tta":"இன்த் தஃபான்","en":"You are tired","tm":"நீ களைப்பாக இருக்கிறாய்","w":[["إِنْتْ","you (man)"],["تَعْبَانْ","tired"]]},
+{"ar":"إِنْتْ سَاكِنْ فِي الرِّيَاضْ","ten":"Int sakin fi rriyadh","tta":"இன்த் ஸாகின் ஃபிர் ரியாழ்","en":"You live in Riyadh","tm":"நீ ரியாதில் வசிக்கிறாய்","w":[["إِنْتْ","you (man)"],["سَاكِنْ","living"],["فِي","in"],["الرِّيَاضْ","Riyadh"]]}
+]},
+{"title":"7. Inti — You (woman)","ar":"إِنْتِي","ta":"நீ (பெண்)","items":[
+{"key":true,"ar":"إِنْتِي جَمِيلَة","ten":"Inti jameela","tta":"இன்த்தி ஜமீலா","en":"You are beautiful","tm":"நீ அழகாக இருக்கிறாய்","w":[["إِنْتِي","you (woman)"],["جَمِيلَة","beautiful (woman)"]]},
+{"ar":"إِنْتِي [r:جُوعَانَة|يُوعَانَة|جَائِعَة]","ten":"Inti [r:joo'ana|yoo'ana|ja'i'a]","tta":"இன்த்தி [r:ஜௌஆனா|யூஆனா|ஜாஇஆ]","en":"You are hungry","tm":"நீ பசியாக இருக்கிறாய்","w":[["إِنْتِي","you (woman)"],["[r:جُوعَانَة]","hungry (spoken)"],["[r:يُوعَانَة]","hungry (Emirati, ج→ي)"],["[r:جَائِعَة]","hungry (formal)"]]},
+{"ar":"إِنْتِي حَبِيبْتِي","ten":"Inti habeebti","tta":"இன்த்தி ஹபீபத்தீ","en":"You are my love","tm":"நீ என் காதலி","w":[["إِنْتِي","you (woman)"],["حَبِيبْتِي","my love / my dear (woman)"]]},
+{"ar":"إِنْتِي نَايْمَة","ten":"Inti nayma","tta":"இன்த்தி நாயிமா","en":"You are sleeping","tm":"நீ தூங்கிக்கொண்டு இருக்கிறாய்","w":[["إِنْتِي","you (woman)"],["نَايْمَة","sleeping (woman)"]]}
+]}
+]}
+]}

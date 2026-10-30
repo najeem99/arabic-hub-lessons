@@ -1,0 +1,64 @@
+{"day":6,"icon":"calendar","title":"Days & Time Words","arTitle":"أَيَّامْ","ta":"நாட்கள்",
+"keys":["الْيَوْمْ","أَمْسْ","بَاچِرْ","الْأُسْبُوعْ","الشَّهَرْ","السَّنَة"],
+"activity":{"items":[{"ta":"நான் நாளை வருவேன்.","en":"I will come tomorrow."},{"ta":"நான் அடுத்த மாதம் பணம் செலுத்துவேன்.","en":"I will pay next month."},{"ta":"அடுத்த மாதம் சந்திப்போம்.","en":"We will meet next month."},{"ta":"இந்த வருடம் நான் சேர்ந்தேன்.","en":"I joined this year."},{"ta":"அவன் தினமும் காபி குடிப்பான்.","en":"He drinks coffee every day."}],"hint":"இந்த வாக்கியங்களை அரபியில் மாற்றி பயிற்சி செய்யுங்கள்"},
+"blocks":[
+{"audio":["AUD-20261014-WA0012.mp3"],"sections":[
+{"title":"1. Time words","ar":"الْوَقْتْ","ta":"நேரச் சொற்கள்","grid":true,"items":[
+{"key":true,"ar":"الْيَوْمْ","ten":"Al-yoom","tta":"அல் யௌம்","en":"Today","tm":"இன்று","w":[["الْيَوْمْ","the day → today"]]},
+{"ar":"[r:أَمْسْ|الْبَارِحْ]","ten":"[r:Ams|Al-barih]","tta":"[r:அம்ஸ்|அல் பாரிஹ்]","en":"Yesterday","tm":"நேற்று","w":[["[r:أَمْسْ]","yesterday"],["[r:الْبَارِحْ]","yesterday (Gulf)"]]},
+{"ar":"[r:بَاچِرْ|بُكْرَة]","ten":"[r:Bachir|Bukra]","tta":"[r:பாஜிர்|புக்ரா]","en":"Tomorrow","tm":"நாளை","w":[["[r:بَاچِرْ]","tomorrow (UAE; ك→چ)"],["[r:بُكْرَة]","tomorrow"]]},
+{"ar":"بَعْدْ [r:بَاچِرْ|بُكْرَة]","ten":"Ba'ad [r:bachir|bukra]","tta":"பஃத் [r:பாஜிர்|புக்ரா]","en":"Day after tomorrow","tm":"நாளை மறுநாள்","w":[["بَعْدْ","after"],["[r:بَاچِرْ]","tomorrow (UAE)"],["[r:بُكْرَة]","tomorrow"]]},
+{"ar":"قَبْلْ أَمْسْ","ten":"Gabl ams","tta":"கப்ல் அம்ஸ்","en":"Day before yesterday","tm":"நேற்று முன்தினம்","w":[["قَبْلْ","before (ق = g)"],["أَمْسْ","yesterday"]]},
+{"ar":"الْفَجْرْ","ten":"Al-fajr","tta":"அல் ஃபஜ்ர்","en":"Dawn / early morning","tm":"அதிகாலை","w":[["الْفَجْرْ","the dawn"]]},
+{"ar":"الصَّبَاحْ","ten":"As-sabah","tta":"அஸ் ஸபாஹ்","en":"Morning","tm":"காலை","w":[["الصَّبَاحْ","the morning"]]},
+{"ar":"بَعْدِ الظُّهُرْ","ten":"Ba'd adh-dhuhur","tta":"பஃத் அழ்ழுஹுர்","en":"Afternoon","tm":"மதியம்","w":[["بَعْدِ","after"],["الظُّهُرْ","the noon"]]},
+{"ar":"الْمَسَاءْ","ten":"Al-masa","tta":"அல் மஸா","en":"Evening","tm":"மாலை","w":[["الْمَسَاءْ","the evening"]]},
+{"ar":"اللَّيْلْ","ten":"Al-lail","tta":"அல் லைல்","en":"Night","tm":"இரவு","w":[["اللَّيْلْ","the night"]]},
+{"ar":"نَهَارْ","ten":"Nahar","tta":"நஹார்","en":"Daytime","tm":"பகல்","w":[["نَهَارْ","daytime"]]},
+{"ar":"كِلّْ يَوْمْ","ten":"Kill yoom","tta":"கில் யௌம்","en":"Every day","tm":"ஒவ்வொரு நாளும்","w":[["كِلّْ","every (Gulf; formal كُلّ)"],["يَوْمْ","day"]]},
+{"ar":"الْأُسْبُوعْ","ten":"Al-usboo'","tta":"அல் உஸ்பூஃ","en":"Week","tm":"வாரம்","w":[["الْأُسْبُوعْ","the week"]]},
+{"ar":"الْأُسْبُوعْ [r:الْيَايْ|الْقَادِمْ]","ten":"Al-usboo' [r:al-yai|al-qadim]","tta":"அல் உஸ்பூஃ [r:அல் யாய்|அல் காதிம்]","en":"Next week","tm":"அடுத்த வாரம்","w":[["الْأُسْبُوعْ","the week"],["[r:الْيَايْ]","the coming (UAE; ج→ي)"],["[r:الْقَادِمْ]","the coming (formal)"]]},
+{"ar":"خِلَالْ أُسْبُوعْ","ten":"Khilal usboo'","tta":"ஹிலால் உஸ்பூஃ","en":"Within a week","tm":"ஒரு வாரத்திற்குள்","w":[["خِلَالْ","within / during"],["أُسْبُوعْ","a week"]]},
+{"ar":"الشَّهَرْ","ten":"Ash-shahar","tta":"அஷ் ஷஹர்","en":"Month","tm":"மாதம்","w":[["الشَّهَرْ","the month"]]},
+{"ar":"الشَّهَرْ [r:الْيَايْ|الْقَادِمْ]","ten":"Ash-shahar [r:al-yai|al-qadim]","tta":"அஷ்ஷஹ்ர் [r:அல் யாய்|அல் காதிம்]","en":"Next month","tm":"அடுத்த மாதம்","w":[["الشَّهَرْ","the month"],["[r:الْيَايْ]","the coming (UAE)"],["[r:الْقَادِمْ]","the coming (formal)"]]},
+{"ar":"قَبْلْ شَهَرْ","ten":"Gabl shahar","tta":"கப்ல் ஷஹ்ர்","en":"A month ago","tm":"ஒரு மாதத்திற்கு முன்","w":[["قَبْلْ","before / ago"],["شَهَرْ","a month"]]},
+{"ar":"بَعْدْ شَهْرَيْنْ","ten":"Ba'ad shahrain","tta":"பஃத் ஷஹ்ரைன்","en":"After two months","tm":"இரு மாதங்களுக்கு பிறகு","w":[["بَعْدْ","after"],["شَهْرَيْنْ","two months"]]},
+{"ar":"[r:السَّنَة|الْعَامْ]","ten":"[r:As-sana|Al-'aam]","tta":"[r:அஸ்ஸனா|அல் ஆம்]","en":"Year","tm":"வருடம்","w":[["[r:السَّنَة]","the year"],["[r:الْعَامْ]","the year"]]},
+{"ar":"فِي السَّنَة الْمَاضْيَة","ten":"Fis-sana al-madhya","tta":"ஃபிஸ்ஸனா அல்மாழியா","en":"Last year","tm":"சென்ற வருடம்","w":[["فِي","in"],["السَّنَة","the year"],["الْمَاضْيَة","the past"]]}
+]}
+]},
+{"audio":["AUD-20261014-WA0013.mp3"],"sections":[
+{"title":"2. Days of the week","ar":"أَيَّامِ الْأُسْبُوعْ","ta":"வாரத்தின் நாட்கள்","grid":true,"items":[
+{"key":true,"ar":"الْإِثْنَيْنْ","ten":"Al-ithnain","tta":"அல் இஸ்னைன்","en":"Monday","tm":"திங்கட்கிழமை","w":[["الْإِثْنَيْنْ","the second (day) → Monday"]]},
+{"ar":"الثُّلَاثَاءْ","ten":"Ath-thulatha","tta":"அஸ் ஸுலஸா","en":"Tuesday","tm":"செவ்வாய்க்கிழமை","w":[["الثُّلَاثَاءْ","the third (day) → Tuesday"]]},
+{"ar":"الْأَرْبِعَاءْ","ten":"Al-arbi'a","tta":"அல் அர்பி'ஆ","en":"Wednesday","tm":"புதன்கிழமை","w":[["الْأَرْبِعَاءْ","the fourth (day) → Wednesday"]]},
+{"ar":"الْخَمِيسْ","ten":"Al-khamees","tta":"அல் ஹமீஸ்","en":"Thursday","tm":"வியாழக்கிழமை","w":[["الْخَمِيسْ","the fifth (day) → Thursday"]]},
+{"ar":"الْجُمْعَة","ten":"Al-jum'a","tta":"அல் ஜும்ஆ","en":"Friday","tm":"வெள்ளிக்கிழமை","w":[["الْجُمْعَة","the gathering (day) → Friday"]]},
+{"ar":"السَّبْتْ","ten":"As-sabt","tta":"அஸ் ஸப்த்","en":"Saturday","tm":"சனிக்கிழமை","w":[["السَّبْتْ","Saturday (the sabbath)"]]},
+{"ar":"الْأَحَدْ","ten":"Al-ahad","tta":"அல் அஹத்","en":"Sunday","tm":"ஞாயிற்றுக்கிழமை","w":[["الْأَحَدْ","the first (day) → Sunday"]]}
+]}
+]},
+{"audio":["AUD-20261014-WA0014.mp3","AUD-20261014-WA0015.mp3"],"sections":[
+{"title":"3. Using them in sentences","ar":"جُمَلْ","ta":"வாக்கியங்கள்","items":[
+{"key":true,"ar":"هُوَّ [r:يِيِي|يَايْ|يِيجِي|جَايْ] الْيَوْمْ","ten":"Huwa [r:yiyi|yai|yeeji|jai] al-yoom","tta":"ஹுவ [r:யியி|யாய்|யீஜி|ஜாய்] அல் யௌம்","en":"He is coming today","tm":"அவன் இன்று வருகிறான்","w":[["هُوَّ","he"],["[r:يِيِي]","he comes (UAE)"],["[r:يَايْ]","coming (UAE)"],["[r:يِيجِي]","he comes"],["[r:جَايْ]","coming"],["الْيَوْمْ","today"]]},
+{"ar":"الْيَوْمْ إِجَازَة","ten":"Al-yoom ijaza","tta":"அல் யௌம் இஜாஸா","en":"Today is a holiday","tm":"இன்று விடுமுறை","w":[["الْيَوْمْ","today"],["إِجَازَة","holiday / leave"]]},
+{"ar":"الْيَوْمْ فِي الصَّبَاحْ","ten":"Al-yoom fis-sabah","tta":"அல் யௌம் ஃபிஸ் ஸபாஹ்","en":"Today in the morning","tm":"இன்று காலையில்","w":[["الْيَوْمْ","today"],["فِي","in"],["الصَّبَاحْ","the morning"]]},
+{"ar":"هُوَّ غَادَرْ أَمْسْ","ten":"Huwa ghadar ams","tta":"ஹுவ காதர் அம்ஸ்","en":"He left yesterday","tm":"அவன் நேற்று புறப்பட்டு விட்டான்","w":[["هُوَّ","he"],["غَادَرْ","left / departed"],["أَمْسْ","yesterday"]]},
+{"ar":"[r:رَدَّيْتْ|رِجَعْتْ] الْبَلَدْ الْبَارْحَة","ten":"[r:Raddait|Rija't] al-balad al-barha","tta":"[r:ரத்தைத்|ரஜஃத்] அல் பலத் அல் பாரிஹா","en":"I returned to the country yesterday","tm":"நான் நேற்று நாட்டிற்கு திரும்பி விட்டேன்","w":[["[r:رَدَّيْتْ]","I went back (Gulf)"],["[r:رِجَعْتْ]","I returned"],["الْبَلَدْ","the country / home town"],["الْبَارْحَة","yesterday (Gulf)"]]},
+{"ar":"هُوَّ [r:يَايْ بَاچِرْ|يِيجِي بُكْرَة]","ten":"Huwa [r:yai bachir|yeeji bukra]","tta":"ஹுவ [r:யாய் பாஜிர்|யீஜி புக்ரா]","en":"He is coming tomorrow","tm":"அவன் நாளை வருகிறான்","w":[["هُوَّ","he"],["[r:يَايْ]","coming (UAE)"],["[r:بَاچِرْ]","tomorrow (UAE)"],["[r:يِيجِي]","he comes"],["[r:بُكْرَة]","tomorrow"]]},
+{"ar":"أَنَا أَعْطِيكْ بَعْدْ بُكْرَة","ten":"Ana a'teek ba'ad bukra","tta":"அன அஃதீக் பஃத் புக்ரா","en":"I'll give you (it) the day after tomorrow","tm":"நாளை மறுநாள் நான் உன்னிடம் கொடுக்கிறேன்","w":[["أَنَا","I"],["أَعْطِيكْ","I give you"],["بَعْدْ","after"],["بُكْرَة","tomorrow"]]},
+{"ar":"[r:أَسِيرْ|أَسَافِرْ] بَعْدْ بَاچِرْ","ten":"[r:Aseer|Asafir] ba'ad bachir","tta":"[r:அசீர்|அஸாஃபிர்] பஃத் பாஜிர்","en":"I'm leaving / travelling the day after tomorrow","tm":"நான் நாளை மறுநாள் பயணிக்கிறேன்","w":[["[r:أَسِيرْ]","I go (UAE)"],["[r:أَسَافِرْ]","I travel"],["بَعْدْ","after"],["بَاچِرْ","tomorrow (UAE)"]]},
+{"ar":"أَنَا رَاحْ أَكَلِّمَكْ بَعْدْ بُكْرَة","ten":"Ana rah akallimak ba'ad bukra","tta":"அன ராஹ் அகல்லிமக் பஃத் புக்ரா","en":"I will talk to you the day after tomorrow","tm":"நாளை மறுநாள் நான் உன்னிடம் பேசுவேன்","w":[["أَنَا","I"],["رَاحْ","will (future)"],["أَكَلِّمَكْ","I talk to you"],["بَعْدْ","after"],["بُكْرَة","tomorrow"]]},
+{"ar":"شِفْتَهْ قَبْلْ أَمْسْ","ten":"Shiftah gabl ams","tta":"ஷுஃப்துஹ் கப்ல் அம்ஸ்","en":"I saw him the day before yesterday","tm":"நேற்று முன்தினம் நான் அவனை பார்த்தேன்","w":[["شِفْتَهْ","I saw him"],["قَبْلْ","before"],["أَمْسْ","yesterday"]]},
+{"ar":"نِلْتِقِي صَبَاحِ الْيَوْمْ","ten":"Niltiqi sabah al-yoom","tta":"நல்தகி ஸபாஹல் யௌம்","en":"We meet this morning","tm":"இன்று காலை சந்திப்போம்","w":[["نِلْتِقِي","we meet"],["صَبَاحِ","morning (of)"],["الْيَوْمْ","today"]]},
+{"ar":"أَنَا بَشْرَبِ الْقَهْوَة كِلّْ يَوْمْ","ten":"Ana bashrab al-gahwa kill yoom","tta":"அன பஷ்ரப் அல் கஹ்வா கில் யௌம்","en":"I drink coffee every day","tm":"நான் தினமும் காபி குடிப்பேன்","w":[["أَنَا","I"],["بَشْرَبِ","I drink (habit)"],["الْقَهْوَة","the coffee (ق = g)"],["كِلّْ","every"],["يَوْمْ","day"]]},
+{"ar":"شَارَكْتْ قَبْلْ شَهَرْ","ten":"Sharakt gabl shahar","tta":"ஷாரக்த் கப்ல் ஷஹ்ர்","en":"I participated a month ago","tm":"ஒரு மாதத்திற்கு முன்பு கலந்து கொண்டேன்","w":[["شَارَكْتْ","I took part"],["قَبْلْ","before / ago"],["شَهَرْ","a month"]]},
+{"ar":"اِلْتَحَقْتْ","ten":"Iltahaqt","tta":"இல்தஹக்த்","en":"I joined …","tm":"நான் சேர்ந்தேன் …","w":[["اِلْتَحَقْتْ","I joined / enrolled"]]},
+{"ar":"كِنْتْ فِي دُبَيّْ فِي السَّنَة الْمَاضْيَة","ten":"Kint fi Dubai fis-sana al-madhya","tta":"குன்த் ஃபி துபய் ஃபிஸ் ஸனா அல்மாழியா","en":"I was in Dubai last year","tm":"நான் சென்ற வருடம் துபாயில் இருந்தேன்","w":[["كِنْتْ","I was"],["فِي","in"],["دُبَيّْ","Dubai"],["فِي","in"],["السَّنَة","the year"],["الْمَاضْيَة","the past"]]},
+{"ar":"تَرَكْتْ فِي السَّنَة اللِّي [r:فَاتَتْ|طَافَتْ]","ten":"Tarakt fis-sana illi [r:fatat|tafat]","tta":"தரக்த் ஃபிஸ் ஸனா இல்லி [r:ஃபாதத்|தாஃபத்]","en":"I left last year","tm":"நான் சென்ற வருடம் விட்டுவிட்டேன்","w":[["تَرَكْتْ","I left / quit"],["فِي","in"],["السَّنَة","the year"],["اللِّي","that / which"],["[r:فَاتَتْ]","passed"],["[r:طَافَتْ]","passed (Gulf)"]]},
+{"ar":"[r:بَدْفَعْ|أَدْفَعْ|سَأَدْفَعْ] الْمَبْلَغْ فِي الشَّهَرْ [b:الْيَايْ|الْجَايْ]","ten":"[r:Badfa'|Adfa'|Sa-adfa'] al-mablagh fish-shahar [b:al-yai|al-jai]","tta":"[r:பத்ஃபஃ|அத்ஃபஃ|ஸஅத்ஃபஃ] அல் மப்லஃ ஃபிஷ் ஷஹர் [b:அல் யாய்|அல் ஜாய்]","en":"I will pay the amount next month","tm":"நான் அடுத்த மாதம் பணம் தருகிறேன்","w":[["[r:بَدْفَعْ]","I'll pay (Gulf)"],["[r:أَدْفَعْ]","I pay"],["[r:سَأَدْفَعْ]","I will pay (formal)"],["الْمَبْلَغْ","the amount"],["فِي","in"],["الشَّهَرْ","the month"],["[b:الْيَايْ]","coming (UAE)"],["[b:الْجَايْ]","coming"]]},
+{"ar":"فِي هَاذِي السَّنَة","ten":"Fi hathi as-sana","tta":"ஃபி ஹாதிஸ் ஸனா","en":"This year","tm":"இந்த வருடம்","w":[["فِي","in"],["هَاذِي","this (Gulf; formal هَذِهِ)"],["السَّنَة","the year"]]},
+{"ar":"أَنَا [r:يَايْ|جَايْ] بَعْدْ شَهْرَيْنْ","ten":"Ana [r:yai|jai] ba'ad shahrain","tta":"அன [r:யாய்|ஜாய்] பஃத் ஷஹ்ரைன்","en":"I'm coming after two months","tm":"நான் இரண்டு மாதங்களுக்கு பிறகு வருகிறேன்","w":[["أَنَا","I"],["[r:يَايْ]","coming (UAE)"],["[r:جَايْ]","coming"],["بَعْدْ","after"],["شَهْرَيْنْ","two months"]]}
+]}
+]}
+]}

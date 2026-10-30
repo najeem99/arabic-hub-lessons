@@ -1,0 +1,968 @@
+<title>Arabic Hub Lessons</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@500;700;800&family=Figtree:wght@400;600;700&family=Noto+Naskh+Arabic:wght@500;700&family=Noto+Sans+Tamil:wght@400;600&display=swap">
+<style>
+/* Layout: dusk-over-dunes hero band → sticky day picker → one day's lesson as a column of phrase cards,
+   each teacher voice note placed right after the phrases it explains. */
+:root{
+  --bg:#eef3f2; --surface:#ffffff; --surface-2:#f6f9f8; --fg:#162423; --muted:#566b68; --line:#d5e1de;
+  --teal:#0e7069; --teal-soft:#dcefeb; --sand:#d99a2b; --sand-soft:#fbf0dc; --coral:#e2634f; --coral-soft:#fde6e1;
+  --indigo:#2b2f6b; --chip:#e8efed;
+  --red:#c42a31; --red-bg:#fde9e9; --blue:#1d5fc4; --blue-bg:#e6effc; --green:#1f7a3a; --green-bg:#e3f4e7;
+  --sky-top:#2b2f6b; --sky-mid:#8a4f7d; --sky-low:#f0956b; --dune-1:#e9b062; --dune-2:#d48f3e; --dune-3:#b8722c; --sun:#ffd98a;
+  --hero-fg:#fff8ec;
+  --f-display:"Baloo Bhaijaan 2","Figtree",system-ui,sans-serif;
+  --f-ui:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-ar:"Noto Naskh Arabic","Geeza Pro","Arial",serif;
+  --f-ta:"Noto Sans Tamil","Latha","Nirmala UI",sans-serif;
+  --shadow:0 1px 2px rgba(22,36,35,.06),0 6px 18px -10px rgba(22,36,35,.25);
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0d1517; --surface:#152224; --surface-2:#1a292b; --fg:#e5efed; --muted:#97aba7; --line:#283a3c;
+  --teal:#4fc8b6; --teal-soft:#183530; --sand:#f0b54f; --sand-soft:#2e2615; --coral:#ff8b76; --coral-soft:#3a1f1b;
+  --indigo:#a9adff; --chip:#1d2d2f;
+  --red:#ff8a8a; --red-bg:#3a1d1f; --blue:#8ab4ff; --blue-bg:#1a2740; --green:#7fd894; --green-bg:#16301d;
+  --sky-top:#070b24; --sky-mid:#1d1d4a; --sky-low:#4b2c5c; --dune-1:#5a3f2e; --dune-2:#43301f; --dune-3:#2e2117; --sun:#f3f0d6;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 20px -12px rgba(0,0,0,.6);
+  color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0d1517; --surface:#152224; --surface-2:#1a292b; --fg:#e5efed; --muted:#97aba7; --line:#283a3c;
+  --teal:#4fc8b6; --teal-soft:#183530; --sand:#f0b54f; --sand-soft:#2e2615; --coral:#ff8b76; --coral-soft:#3a1f1b;
+  --indigo:#a9adff; --chip:#1d2d2f;
+  --red:#ff8a8a; --red-bg:#3a1d1f; --blue:#8ab4ff; --blue-bg:#1a2740; --green:#7fd894; --green-bg:#16301d;
+  --sky-top:#070b24; --sky-mid:#1d1d4a; --sky-low:#4b2c5c; --dune-1:#5a3f2e; --dune-2:#43301f; --dune-3:#2e2117; --sun:#f3f0d6;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 20px -12px rgba(0,0,0,.6);
+  color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 96px)}
+body{background:var(--bg);color:var(--fg);font-family:var(--f-ui);font-size:15px;line-height:1.5}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--bg)}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--teal);outline-offset:2px}
+.gut{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.inner{max-width:780px;margin:0 auto}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;overflow:hidden;color:var(--hero-fg);background:var(--sky-top);isolation:isolate}
+.hero svg.scene{position:absolute;inset:0;width:100%;height:100%;z-index:-1}
+.hero .inner{padding-block:28px 64px;display:flex;flex-direction:column;gap:8px;position:relative}
+.hero .eyebrow{font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;opacity:.9}
+.hero h1{margin:0;font-family:var(--f-display);font-weight:800;font-size:clamp(30px,7vw,46px);line-height:1.05;text-wrap:balance}
+.hero .h-ar{font-family:var(--f-display);font-size:clamp(22px,5vw,30px);direction:rtl;text-align:left;font-weight:700;color:var(--sun)}
+.hero .stats{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.hero .stat{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);backdrop-filter:blur(4px);
+  border-radius:999px;padding:4px 12px;font-size:13px;font-weight:600;font-variant-numeric:tabular-nums}
+.float-letters{position:absolute;inset:0;pointer-events:none;z-index:-1;overflow:hidden}
+.float-letters span{position:absolute;bottom:-40px;font-family:var(--f-ar);font-weight:700;color:var(--hero-fg);opacity:0;
+  animation:rise linear infinite}
+@keyframes rise{0%{transform:translateY(0) rotate(-8deg);opacity:0}15%{opacity:.35}80%{opacity:.18}100%{transform:translateY(-260px) rotate(10deg);opacity:0}}
+.dune-a{animation:drift 38s linear infinite alternate}
+.dune-b{animation:drift 26s linear infinite alternate-reverse}
+@keyframes drift{from{transform:translateX(0)}to{transform:translateX(-60px)}}
+.sun{animation:bob 7s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+.sun-glow{animation:glow 7s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+@keyframes bob{50%{transform:translateY(6px)}}
+@keyframes glow{50%{transform:scale(1.15);opacity:.55}}
+.star{animation:twinkle 3s ease-in-out infinite}
+@keyframes twinkle{50%{opacity:.15}}
+
+/* ---------- Day picker ---------- */
+.daybar{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);
+  backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.daybar .inner{display:flex;gap:8px;overflow-x:auto;padding-block:10px;scroll-snap-type:x proximity;scrollbar-width:thin}
+.dtab{flex:0 0 auto;scroll-snap-align:center;display:flex;align-items:center;gap:8px;background:var(--surface);border:1.5px solid var(--line);
+  border-radius:14px;padding:6px 12px 6px 6px;cursor:pointer;transition:transform .15s,border-color .15s,background .15s;box-shadow:var(--shadow)}
+.dtab:hover{transform:translateY(-2px)}
+.dtab[aria-selected="true"]{border-color:var(--dc);background:color-mix(in srgb,var(--dc) 14%,var(--surface))}
+.dtab .ring{position:relative;width:40px;height:40px;flex:0 0 40px}
+.dtab .ring svg{width:40px;height:40px;transform:rotate(-90deg)}
+.dtab .ring .ic{position:absolute;inset:0;display:grid;place-items:center;color:var(--dc)}
+.dtab .ring .ic svg{width:20px;height:20px;transform:none}
+.dtab .txt{display:flex;flex-direction:column;line-height:1.15;text-align:left}
+.dtab .txt b{font-family:var(--f-display);font-size:15px}
+.dtab .txt small{font-size:12px;color:var(--muted);max-width:120px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+/* ---------- Day header ---------- */
+main{padding-block:22px 56px}
+main .inner{display:flex;flex-direction:column;gap:26px}
+.dhead{display:grid;grid-template-columns:auto minmax(0,1fr);gap:16px;align-items:center}
+.badge{width:76px;height:76px;position:relative;color:var(--dc)}
+.badge svg{width:100%;height:100%}
+.badge .num{position:absolute;inset:0;display:grid;place-items:center;font-family:var(--f-display);font-weight:800;font-size:30px;color:var(--fg)}
+.badge .spin{animation:spin 30s linear infinite;transform-origin:50% 50%}
+@keyframes spin{to{transform:rotate(360deg)}}
+.dhead .eyebrow{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--dc);font-weight:700}
+.dhead h2{margin:0;font-family:var(--f-display);font-weight:800;font-size:clamp(26px,6vw,34px);line-height:1.1;text-wrap:balance}
+.dhead .ar{font-family:var(--f-ar);font-size:22px;direction:rtl;text-align:left;color:var(--dc);font-weight:700}
+.dhead .ta{font-family:var(--f-ta);color:var(--muted);font-size:14px}
+.keys{display:flex;flex-wrap:wrap;gap:8px}
+.keys span{font-family:var(--f-ar);font-size:19px;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:0 14px;line-height:2}
+.meter{display:flex;flex-wrap:wrap;gap:10px}
+.meter .m{display:flex;align-items:center;gap:8px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:8px 12px;font-size:13px;color:var(--muted)}
+.meter .m b{font-family:var(--f-display);font-size:18px;color:var(--fg);font-variant-numeric:tabular-nums}
+.meter .bar{width:70px;height:6px;border-radius:9px;background:var(--chip);overflow:hidden}
+.meter .bar i{display:block;height:100%;background:var(--dc);border-radius:9px;transition:width .4s}
+
+/* ---------- Toolbar ---------- */
+.toolbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.tbtn{font:600 13px var(--f-ui);background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:8px 12px;cursor:pointer;display:inline-flex;gap:6px;align-items:center}
+.tbtn[aria-pressed="true"]{background:var(--teal);color:var(--surface);border-color:var(--teal)}
+.toolbar small{color:var(--muted)}
+
+.legend{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:10px 14px;display:flex;flex-direction:column;gap:4px;font-size:14px}
+.legend .ta{font-family:var(--f-ta);color:var(--muted);font-size:13px}
+.legend .ex{display:flex;flex-wrap:wrap;gap:10px;font-weight:600;margin-top:2px}
+
+.guide{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 16px;display:flex;flex-direction:column;gap:8px}
+.guide h3{margin:0;font-family:var(--f-display);font-size:18px}
+.guide ul{list-style:none;margin:0;padding:0}
+.guide li{display:grid;grid-template-columns:84px minmax(0,1fr);gap:12px;padding:8px 0;border-bottom:1px dashed var(--line)}
+.guide li:last-child{border-bottom:0}
+.guide .g-ar{font-family:var(--f-ar);font-size:22px;font-weight:700;color:var(--dc);direction:rtl;text-align:right;line-height:1.6}
+.guide .g-txt{min-width:0;display:flex;flex-direction:column;gap:2px;font-size:14px}
+.guide .g-txt .ta{font-family:var(--f-ta);color:var(--muted);font-size:13px}
+
+/* ---------- Sections & cards ---------- */
+section{display:flex;flex-direction:column;gap:12px}
+.sec-head{display:flex;flex-direction:column;gap:2px;padding-bottom:8px;border-bottom:3px solid var(--dc)}
+.sec-head .row{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+.sec-head h3{margin:0;font-family:var(--f-display);font-size:20px;font-weight:700}
+.sec-head .ar{font-family:var(--f-ar);font-size:24px;color:var(--dc);direction:rtl}
+.sec-head .ta{font-family:var(--f-ta);font-size:13px;color:var(--muted)}
+.note{background:var(--teal-soft);border-radius:12px;padding:10px 14px;font-size:14px}
+.note .ta{font-family:var(--f-ta);display:block;color:var(--muted);font-size:13px;margin-top:2px}
+.cards{display:flex;flex-direction:column;gap:12px}
+.cards.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr))}
+.cards.grid .ar-line{font-size:25px}
+.cards.grid .audio{grid-column:1/-1}
+
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:14px 16px;display:flex;flex-direction:column;gap:8px;min-width:0;
+  box-shadow:var(--shadow);position:relative;transition:transform .15s,border-color .2s}
+.card:hover{transform:translateY(-1px)}
+.card.key{border-color:var(--dc)}
+.card.known{border-color:var(--sand)}
+.card .top{display:flex;justify-content:space-between;align-items:center;gap:8px;min-height:24px}
+.tag{font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;background:var(--chip);color:var(--muted);border-radius:6px;padding:2px 8px}
+.star-btn{margin-left:auto;background:none;border:0;padding:2px;cursor:pointer;color:var(--line);line-height:0;border-radius:8px}
+.star-btn svg{width:24px;height:24px;transition:transform .2s}
+.star-btn[aria-pressed="true"]{color:var(--sand)}
+.star-btn[aria-pressed="true"] svg{animation:pop .4s}
+@keyframes pop{40%{transform:scale(1.45) rotate(15deg)}}
+.ar-line{font-family:var(--f-ar);font-size:28px;line-height:2;direction:rtl;text-align:right;font-weight:700}
+.sound{display:flex;flex-direction:column;gap:1px}
+.sound .en{font-weight:600;color:var(--teal);font-style:italic}
+.sound .ta{font-family:var(--f-ta);color:var(--muted);font-size:14px}
+.meaning{border-top:1px dashed var(--line);padding-top:8px;display:flex;flex-direction:column;gap:2px}
+.meaning .en{font-weight:700}
+.meaning .ta{font-family:var(--f-ta);font-size:14px}
+body.quiz .meaning{filter:blur(7px);cursor:pointer;transition:filter .15s;user-select:none}
+body.quiz .meaning.show{filter:none}
+
+.alt-r{--alt:var(--red);--alt-bg:var(--red-bg)} .alt-b{--alt:var(--blue);--alt-bg:var(--blue-bg)} .alt-g{--alt:var(--green);--alt-bg:var(--green-bg)}
+.alt{color:var(--alt)}
+.alt .opt{background:var(--alt-bg);border-radius:6px;padding:0 4px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.alt .or{color:var(--muted);font-weight:400;margin:0 3px}
+
+.words{border-top:1px solid var(--line);padding-top:8px}
+.words summary{cursor:pointer;font-weight:700;font-size:13px;color:var(--dc);list-style:none;display:flex;align-items:center;gap:6px;width:max-content;border-radius:6px}
+.words summary::-webkit-details-marker{display:none}
+.words summary::before{content:"▸";transition:transform .15s}
+.words[open] summary::before{transform:rotate(90deg)}
+.words ul{list-style:none;margin:8px 0 0;padding:0}
+.words li{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px;align-items:center;padding:5px 0;border-bottom:1px dashed var(--line)}
+.words li:last-child{border-bottom:0}
+.words[open] li{animation:slidein .25s both}
+@keyframes slidein{from{opacity:0;transform:translateX(8px)}}
+.w-ar{font-family:var(--f-ar);font-size:21px;line-height:1.8;direction:rtl;text-align:right;order:2;font-weight:700}
+.w-en{order:1;min-width:0;font-size:14px}
+
+/* ---------- Voice note ---------- */
+.audio{background:linear-gradient(135deg,var(--sand-soft),var(--coral-soft));border:1px solid color-mix(in srgb,var(--sand) 40%,var(--line));
+  border-radius:16px;padding:12px 14px;display:flex;flex-direction:column;gap:10px;scroll-margin-top:110px}
+.audio .a-head{display:flex;align-items:center;gap:12px}
+.audio .play{flex:0 0 48px;width:48px;height:48px;border-radius:50%;border:0;background:var(--coral);color:#fff;cursor:pointer;display:grid;place-items:center;
+  box-shadow:0 6px 16px -6px var(--coral);transition:transform .15s}
+.audio .play:hover{transform:scale(1.07)}
+.audio .play svg{width:22px;height:22px}
+.audio .meta{min-width:0;flex:1;display:flex;flex-direction:column}
+.audio .a-title{font-family:var(--f-display);font-weight:700;font-size:16px;line-height:1.2}
+.audio .a-sub{font-size:12.5px;color:var(--muted)}
+.audio .eq{display:flex;gap:3px;align-items:flex-end;height:22px}
+.audio .eq i{width:4px;height:6px;border-radius:2px;background:var(--coral);opacity:.5}
+.audio.playing .eq i{animation:eq .9s ease-in-out infinite;opacity:1}
+.audio.playing .eq i:nth-child(2){animation-delay:-.2s}.audio.playing .eq i:nth-child(3){animation-delay:-.45s}
+.audio.playing .eq i:nth-child(4){animation-delay:-.65s}.audio.playing .eq i:nth-child(5){animation-delay:-.3s}
+@keyframes eq{0%,100%{height:5px}50%{height:22px}}
+.audio .heard{font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--green);background:var(--green-bg);border-radius:6px;padding:2px 8px}
+.audio .track{display:flex;align-items:center;gap:10px;font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums}
+.audio input[type=range]{flex:1;accent-color:var(--coral);min-width:0}
+.audio .speed{display:flex;gap:4px;flex-wrap:wrap}
+.audio .speed button{font:700 12px var(--f-ui);border:1px solid color-mix(in srgb,var(--coral) 45%,transparent);background:transparent;color:var(--coral);border-radius:7px;padding:3px 8px;cursor:pointer}
+.audio .speed button[aria-pressed="true"]{background:var(--coral);color:#fff}
+
+/* ---------- Activity & nav ---------- */
+.activity{background:var(--surface);border:2px dashed var(--dc);border-radius:16px;padding:14px 16px;display:flex;flex-direction:column;gap:10px}
+.activity h3{margin:0;font-family:var(--f-display);font-size:19px}
+.activity ol{margin:0;padding-left:22px;display:flex;flex-direction:column;gap:8px}
+.activity .ta{font-family:var(--f-ta)}
+.activity .en{display:block;color:var(--muted);font-size:13px}
+.activity .hint{font-family:var(--f-ta);color:var(--muted);font-size:13px}
+.daynav{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.daynav button{flex:1 1 160px;font-family:var(--f-display);font-weight:700;font-size:16px;background:var(--surface);border:1.5px solid var(--line);border-radius:14px;padding:12px 14px;cursor:pointer;text-align:left}
+.daynav button:last-child{text-align:right}
+.daynav button small{display:block;font-family:var(--f-ui);font-weight:400;color:var(--muted);font-size:12px}
+footer{text-align:center;color:var(--muted);font-size:13px;padding-block:0 32px}
+footer .ar{font-family:var(--f-ar);font-size:18px}
+
+.toast{position:fixed;left:50%;bottom:calc(18px + env(safe-area-inset-bottom,0px));transform:translate(-50%,140%);background:var(--fg);color:var(--bg);
+  border-radius:999px;padding:10px 18px;font-weight:700;z-index:40;transition:transform .35s cubic-bezier(.2,1.4,.4,1);max-width:calc(100% - 32px);text-align:center;visibility:hidden}
+.toast.on{transform:translate(-50%,0);visibility:visible}
+.toast .ar{font-family:var(--f-ar)}
+/* Floating mini-player: shows while a note is active and its card is off-screen */
+.mini{position:fixed;z-index:38;right:calc(16px + env(safe-area-inset-right,0px));bottom:calc(76px + env(safe-area-inset-bottom,0px));
+  display:flex;align-items:center;gap:10px;background:var(--surface);border:1px solid color-mix(in srgb,var(--coral) 45%,var(--line));
+  border-radius:999px;padding:6px 14px 6px 6px;box-shadow:0 12px 30px -10px rgba(0,0,0,.45);max-width:calc(100% - 32px);
+  transform:translateY(20px) scale(.9);opacity:0;visibility:hidden;transition:transform .25s cubic-bezier(.2,1.4,.4,1),opacity .2s,visibility .2s}
+.mini.on{transform:none;opacity:1;visibility:visible}
+.mini .mbtn{position:relative;width:52px;height:52px;flex:0 0 52px;border-radius:50%;border:0;background:var(--coral);color:#fff;cursor:pointer;display:grid;place-items:center}
+.mini .mbtn svg.ic{width:22px;height:22px;position:relative}
+.mini .mbtn svg.prog{position:absolute;inset:-4px;width:60px;height:60px;transform:rotate(-90deg)}
+.mini.playing .mbtn{animation:pulse 1.8s ease-out infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--coral) 55%,transparent)}100%{box-shadow:0 0 0 14px transparent}}
+.mini .mtxt{min-width:0;display:flex;flex-direction:column;line-height:1.2;background:none;border:0;padding:0;text-align:left;cursor:pointer}
+.mini .mtxt b{font-family:var(--f-display);font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mini .mtxt small{font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums}
+.mini .mx{background:none;border:0;color:var(--muted);cursor:pointer;font-size:18px;line-height:1;padding:4px}
+
+/* ---------- Quiz ---------- */
+.qbtn{display:flex;align-items:center;gap:12px;width:100%;text-align:left;cursor:pointer;background:var(--surface);border:1.5px dashed var(--dc);
+  border-radius:14px;padding:10px 14px;color:var(--fg);transition:background .15s,transform .15s}
+.qbtn:hover{background:color-mix(in srgb,var(--dc) 10%,var(--surface));transform:translateY(-1px)}
+.qbtn>svg{width:28px;height:28px;color:var(--dc);flex:0 0 28px}
+.qbtn span{display:flex;flex-direction:column;min-width:0;flex:1}
+.qbtn small{color:var(--muted);font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.qbtn .go{flex:0 0 auto;font-weight:700;color:var(--dc)}
+.qhero{display:flex;flex-direction:column;gap:6px}
+.qhero h2{margin:0;font-family:var(--f-display);font-weight:800;font-size:clamp(26px,6vw,34px)}
+.qhero p{margin:0;color:var(--muted)}
+.qpanel{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:14px 16px;display:flex;flex-direction:column;gap:12px;box-shadow:var(--shadow)}
+.qpanel h3{margin:0;font-family:var(--f-display);font-size:17px}
+.qpanel .row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.chip{font:600 13px var(--f-ui);border:1.5px solid var(--line);background:var(--surface-2);border-radius:999px;padding:6px 12px;cursor:pointer;display:inline-flex;gap:6px;align-items:center}
+.chip[aria-pressed="true"]{background:var(--dc,var(--coral));border-color:var(--dc,var(--coral));color:#fff}
+.chip small{opacity:.75;font-weight:400}
+.linkbtn{background:none;border:0;color:var(--teal);font-weight:700;cursor:pointer;padding:4px}
+.bigbtn{font-family:var(--f-display);font-weight:800;font-size:18px;border:0;border-radius:14px;padding:12px 22px;background:var(--coral);color:#fff;cursor:pointer;
+  box-shadow:0 8px 20px -10px var(--coral);transition:transform .15s}
+.bigbtn:hover{transform:translateY(-2px)}
+.bigbtn:disabled{opacity:.45;cursor:not-allowed;transform:none}
+.bigbtn.alt2{background:var(--surface);color:var(--fg);border:1.5px solid var(--line);box-shadow:none}
+.hist{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px;font-size:14px}
+.hist li{display:flex;justify-content:space-between;gap:10px;border-bottom:1px dashed var(--line);padding-bottom:6px}
+.hist b{font-variant-numeric:tabular-nums}
+.score{position:sticky;top:calc(env(safe-area-inset-top,0px) + 74px);z-index:10;display:grid;grid-template-columns:repeat(3,1fr);gap:8px;
+  background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(8px);padding-block:6px}
+.score .s{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:6px 10px;text-align:center}
+.score .s b{display:block;font-family:var(--f-display);font-size:22px;line-height:1.1;font-variant-numeric:tabular-nums}
+.score .s small{color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.06em}
+.score .s.bump b{animation:pop .4s}
+.qbar{grid-column:1/-1;height:6px;border-radius:9px;background:var(--chip);overflow:hidden}
+.qbar i{display:block;height:100%;background:linear-gradient(90deg,var(--teal),var(--sand),var(--coral));transition:width .35s}
+.qcard{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:18px;display:flex;flex-direction:column;gap:14px;box-shadow:var(--shadow);animation:qin .3s both}
+@keyframes qin{from{opacity:0;transform:translateY(10px)}}
+.qcard .ask{font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--coral)}
+.qcard .prompt-ar{font-family:var(--f-ar);font-size:34px;line-height:2;direction:rtl;text-align:center;font-weight:700}
+.qcard .prompt-en{font-family:var(--f-display);font-size:24px;font-weight:700;text-align:center;line-height:1.25}
+.qcard .prompt-ta{font-family:var(--f-ta);color:var(--muted);text-align:center}
+.qcard .from{font-size:12px;color:var(--muted);text-align:center}
+.opts{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:10px}
+.qopt{display:flex;align-items:center;gap:12px;text-align:left;border:1.5px solid var(--line);background:var(--surface-2);border-radius:14px;padding:12px 14px;cursor:pointer;
+  font-weight:600;min-height:56px;transition:border-color .15s,background .15s,transform .1s;color:var(--fg)}
+.qopt:hover:not(:disabled){border-color:var(--coral);transform:translateY(-1px)}
+.qopt .k{flex:0 0 26px;height:26px;border-radius:8px;background:var(--chip);display:grid;place-items:center;font-size:12px;font-weight:800;color:var(--muted)}
+.qopt .t{min-width:0;flex:1}
+.qopt .t.ar{font-family:var(--f-ar);font-size:23px;direction:rtl;text-align:right;line-height:1.9}
+.qopt.right{border-color:var(--green);background:var(--green-bg)}
+.qopt.right .k{background:var(--green);color:#fff}
+.qopt.wrong{border-color:var(--red);background:var(--red-bg);animation:shake .35s}
+.qopt.wrong .k{background:var(--red);color:#fff}
+.qopt:disabled{cursor:default}
+@keyframes shake{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.answer{border-radius:14px;padding:12px 14px;display:flex;flex-direction:column;gap:6px;animation:qin .25s both}
+.answer.ok{background:var(--green-bg)} .answer.no{background:var(--red-bg)}
+.answer .verdict{font-family:var(--f-display);font-weight:800;font-size:18px}
+.answer.ok .verdict{color:var(--green)} .answer.no .verdict{color:var(--red)}
+.answer .a-ar{font-family:var(--f-ar);font-size:26px;direction:rtl;text-align:right;font-weight:700;line-height:1.9}
+.answer .a-ten{color:var(--teal);font-style:italic;font-weight:600}
+.answer .a-ta{font-family:var(--f-ta);font-size:14px;color:var(--muted)}
+.answer ul{list-style:none;margin:4px 0 0;padding:0;border-top:1px dashed var(--line)}
+.answer li{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px;align-items:center;padding:3px 0;font-size:14px}
+.answer li .w-ar{font-size:19px}
+.qnext{display:flex;justify-content:flex-end;gap:8px;flex-wrap:wrap}
+.result{display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center}
+.result svg{width:170px;height:170px}
+.result .pct{font-family:var(--f-display);font-weight:800;font-size:40px}
+.result .msg-ar{font-family:var(--f-ar);font-size:28px;font-weight:700;color:var(--coral)}
+.result .ringfill{transition:stroke-dashoffset 1.2s cubic-bezier(.2,.8,.2,1)}
+.missed{display:flex;flex-direction:column;gap:8px}
+.missed .mrow{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--red);border-radius:12px;padding:8px 12px;display:flex;flex-direction:column;gap:2px}
+.missed .mrow .ar{font-family:var(--f-ar);font-size:22px;direction:rtl;text-align:right;font-weight:700;line-height:1.8}
+.missed .mrow small{color:var(--muted)}
+
+/* Teacher says it: plays just this phrase from his voice note */
+.say{display:inline-flex;align-items:center;gap:6px;align-self:flex-start;font:700 12.5px var(--f-ui);color:var(--coral);background:var(--coral-soft);
+  border:1px solid color-mix(in srgb,var(--coral) 35%,transparent);border-radius:999px;padding:3px 10px 3px 4px;cursor:pointer;transition:transform .12s}
+.say:hover{transform:scale(1.04)}
+.say .dot{width:22px;height:22px;border-radius:50%;background:var(--coral);color:#fff;display:grid;place-items:center}
+.say .dot svg{width:12px;height:12px}
+.say.on .dot{animation:pulse 1.2s ease-out infinite}
+.card.saying{border-color:var(--coral);box-shadow:0 0 0 3px color-mix(in srgb,var(--coral) 25%,transparent),var(--shadow)}
+
+/* ---------- Mobile: compact bar + side drawer ---------- */
+.daybar .mbar{display:none}
+.scrim{position:fixed;inset:0;background:rgba(5,12,14,.5);z-index:44;backdrop-filter:blur(2px);animation:fade .2s}
+@keyframes fade{from{opacity:0}}
+.drawer{position:fixed;z-index:45;top:0;bottom:0;left:0;width:min(86vw,340px);background:var(--surface);border-right:1px solid var(--line);
+  box-shadow:20px 0 40px -20px rgba(0,0,0,.5);transform:translateX(-105%);transition:transform .28s cubic-bezier(.2,.9,.3,1);
+  display:flex;flex-direction:column;gap:14px;overflow-y:auto;overscroll-behavior:contain;
+  padding:calc(14px + env(safe-area-inset-top,0px)) 14px calc(20px + env(safe-area-inset-bottom,0px)) max(14px,env(safe-area-inset-left,0px))}
+.drawer.open{transform:none}
+.dr-head{display:flex;align-items:center;gap:10px}
+.dr-head b{font-family:var(--f-display);font-size:20px}
+.dr-head span{font-family:var(--f-ar);color:var(--coral);font-weight:700}
+.dr-x{margin-left:auto;background:var(--chip);border:0;border-radius:10px;width:36px;height:36px;font-size:16px;cursor:pointer}
+.dr-player{display:flex;align-items:center;gap:12px;background:linear-gradient(135deg,var(--sand-soft),var(--coral-soft));border-radius:16px;padding:10px 12px}
+.dp-btn{flex:0 0 54px;width:54px;height:54px;border-radius:50%;border:0;background:var(--coral);color:#fff;display:grid;place-items:center;cursor:pointer}
+.dp-btn svg{width:24px;height:24px}
+.dp-btn:disabled{opacity:.4}
+.dr-player.playing .dp-btn{animation:pulse 1.8s ease-out infinite}
+.dp-txt{min-width:0;flex:1;display:flex;flex-direction:column;gap:2px}
+.dp-txt b{font-family:var(--f-display);font-size:15px;line-height:1.2}
+.dp-txt small{color:var(--muted);font-size:12px;font-variant-numeric:tabular-nums}
+.dp-bar{height:5px;border-radius:9px;background:color-mix(in srgb,var(--coral) 20%,transparent);overflow:hidden;margin-top:3px}
+.dp-bar i{display:block;height:100%;width:0;background:var(--coral)}
+.dr-tog{display:flex;gap:8px;flex-wrap:wrap}
+.dr-sec{display:flex;flex-direction:column;gap:6px}
+.dr-sec h4{margin:0;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.dr-link{display:flex;align-items:center;gap:10px;width:100%;text-align:left;background:none;border:0;border-radius:12px;padding:9px 10px;cursor:pointer;color:var(--fg)}
+.dr-link:hover,.dr-link[aria-current="true"]{background:color-mix(in srgb,var(--dc,var(--teal)) 13%,transparent)}
+.dr-link svg{width:22px;height:22px;flex:0 0 22px;color:var(--dc,var(--teal))}
+.dr-link .t{min-width:0;flex:1;display:flex;flex-direction:column;line-height:1.2}
+.dr-link .t small{color:var(--muted);font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.dr-link .ar{font-family:var(--f-ar);color:var(--dc,var(--teal));font-weight:700;font-size:17px}
+.dr-link .pc{font-size:11px;font-weight:700;color:var(--muted);font-variant-numeric:tabular-nums}
+.dr-link.sec{padding:7px 10px}
+.dr-link.sec .n{width:24px;height:24px;border-radius:8px;background:var(--chip);display:grid;place-items:center;font-size:12px;font-weight:800;flex:0 0 24px}
+@media (max-width:760px){
+  .daybar .mbar{display:flex;align-items:center;gap:10px;padding-block:8px}
+  .daybar #tabs{display:none}
+  .menu-btn{flex:0 0 44px;width:44px;height:44px;border-radius:12px;border:1px solid var(--line);background:var(--surface);display:flex;flex-direction:column;justify-content:center;align-items:center;gap:4px;cursor:pointer}
+  .menu-btn span{width:18px;height:2px;border-radius:2px;background:var(--fg)}
+  .mcur{min-width:0;flex:1;display:flex;flex-direction:column;line-height:1.15}
+  .mcur b{font-family:var(--f-display);font-size:17px}
+  .mcur small{color:var(--muted);font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .mquiz{flex:0 0 44px;width:44px;height:44px;border-radius:12px;border:0;background:var(--coral);color:#fff;display:grid;place-items:center;cursor:pointer}
+  .mquiz svg{width:22px;height:22px}
+  .hero .inner{padding-block:20px 50px}
+  .hero .stats .stat{font-size:12px;padding:3px 10px}
+  main{padding-block:16px 48px}
+  main .inner{gap:20px}
+  .card{padding:12px 14px}
+  .toolbar .tbtn{flex:1 1 auto;justify-content:center}
+  .legend{font-size:13px}
+  .score{top:calc(env(safe-area-inset-top,0px) + 62px)}
+  .mini{bottom:calc(16px + env(safe-area-inset-bottom,0px))}
+  html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 72px)}
+  .audio{scroll-margin-top:80px}
+  .cards.grid{grid-template-columns:1fr 1fr;gap:10px}
+  .cards.grid .card{padding:10px 12px}
+  .cards.grid .ar-line{font-size:21px}
+  .cards.grid .sound .ta,.cards.grid .meaning .ta{font-size:12.5px}
+  .cards.grid .say{font-size:11.5px}
+}
+@media (max-width:360px){.cards.grid{grid-template-columns:1fr}}
+
+.toprow{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.toprow .eyebrow{min-width:0}
+.theme-btn{flex:0 0 auto;display:inline-flex;align-items:center;gap:6px;
+  background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.3);color:var(--hero-fg);border-radius:999px;padding:6px 12px 6px 8px;
+  font:700 13px var(--f-ui);cursor:pointer;backdrop-filter:blur(4px);transition:transform .15s}
+.theme-btn:hover{transform:scale(1.05)}
+.theme-btn .ti{display:inline-block;transition:transform .5s}
+.theme-btn:active .ti{transform:rotate(180deg)}
+#fx{position:fixed;inset:0;pointer-events:none;z-index:35;width:100%;height:100%}
+
+@media (max-width:480px){.ar-line{font-size:25px}.dhead{grid-template-columns:60px minmax(0,1fr)}.badge{width:60px;height:60px}.badge .num{font-size:24px}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.float-letters{display:none}}
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+ <defs>
+  <symbol id="i-wave" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M7 12V6.5a1.5 1.5 0 013 0V11M10 11V4.5a1.5 1.5 0 013 0V11M13 11V5.5a1.5 1.5 0 013 0V12M16 12V8.5a1.5 1.5 0 013 0V14c0 3.9-3 7-7 7-2.6 0-4.4-1.2-5.8-3.3L3.5 13.4a1.5 1.5 0 012.4-1.8L7 13"/></symbol>
+  <symbol id="i-people" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17" cy="9" r="2.5"/><path d="M16 14.3c2.9.2 5 2.4 5 5.2"/></g></symbol>
+  <symbol id="i-pray" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M19.5 15A8 8 0 119 4.5a6.3 6.3 0 0010.5 10.5z"/><path d="M17 3.5l.7 1.6 1.7.2-1.3 1.1.4 1.7-1.5-.9-1.5.9.4-1.7-1.3-1.1 1.7-.2z"/></g></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/><circle cx="12" cy="15" r="1.4" fill="currentColor"/></g></symbol>
+  <symbol id="i-numbers" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 8.5L5.5 7v10M9 9.5a2 2 0 114 0c0 2-4 3.5-4 7.5h4M16 7.5h4l-2.5 3.3a2.6 2.6 0 11-1.8 4.6"/></g></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 7v5l3.2 2"/></g></symbol>
+  <symbol id="i-hand" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M12 20s-7.5-4.6-7.5-10.2A4.1 4.1 0 0112 7.4a4.1 4.1 0 017.5 2.4C19.5 15.4 12 20 12 20z"/></symbol>
+  <symbol id="i-food" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 12h18a9 8 0 01-18 0z"/><path d="M8.5 8c0-1.7 1.6-1.9 1.6-3.6M13.5 8c0-1.7 1.6-1.9 1.6-3.6"/></g></symbol>
+  <symbol id="i-no" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="8.5"/><path d="M6 6l12 12"/></g></symbol>
+  <symbol id="i-compass" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M15.5 8.5l-2 5.2-5 1.8 2-5.2z"/></g></symbol>
+  <symbol id="i-question" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="8.5"/><path d="M9.6 9.6a2.5 2.5 0 014.9.6c0 1.7-2.5 2-2.5 3.6"/><circle cx="12" cy="16.9" r=".6" fill="currentColor"/></g></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M4 5.5A2.5 2.5 0 016.5 3H20v15H6.5A2.5 2.5 0 004 20.5zM4 20.5V5.5"/></symbol>
+  <symbol id="i-target" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1" fill="currentColor"/></g></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3-4.6-4.4 6.3-.9z"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path fill="currentColor" d="M8 5.5v13a1 1 0 001.5.9l10-6.5a1 1 0 000-1.7l-10-6.5A1 1 0 008 5.5z"/></symbol>
+  <symbol id="i-pause" viewBox="0 0 24 24"><g fill="currentColor"><rect x="6.5" y="5" width="4" height="14" rx="1.2"/><rect x="13.5" y="5" width="4" height="14" rx="1.2"/></g></symbol>
+ </defs>
+</svg>
+
+<header class="hero">
+  <svg class="scene" viewBox="0 0 1200 300" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+    <defs>
+      <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" style="stop-color:var(--sky-top)"/><stop offset=".6" style="stop-color:var(--sky-mid)"/><stop offset="1" style="stop-color:var(--sky-low)"/>
+      </linearGradient>
+      <radialGradient id="glow"><stop offset="0" style="stop-color:var(--sun);stop-opacity:.7"/><stop offset="1" style="stop-color:var(--sun);stop-opacity:0"/></radialGradient>
+    </defs>
+    <rect width="1200" height="300" fill="url(#sky)"/>
+    <g fill="var(--sun)">
+      <circle class="star" cx="90" cy="40" r="1.6"/><circle class="star" cx="260" cy="70" r="1.2" style="animation-delay:-1s"/>
+      <circle class="star" cx="420" cy="30" r="1.8" style="animation-delay:-2s"/><circle class="star" cx="610" cy="58" r="1.2" style="animation-delay:-.5s"/>
+      <circle class="star" cx="760" cy="24" r="1.5" style="animation-delay:-1.6s"/><circle class="star" cx="1110" cy="48" r="1.4" style="animation-delay:-2.4s"/>
+      <circle class="star" cx="1010" cy="96" r="1.1" style="animation-delay:-.9s"/><circle class="star" cx="180" cy="120" r="1" style="animation-delay:-1.3s"/>
+    </g>
+    <circle class="sun-glow" cx="930" cy="170" r="120" fill="url(#glow)"/>
+    <circle class="sun" cx="930" cy="170" r="46" fill="var(--sun)"/>
+    <path fill="var(--sun)" opacity=".9" d="M870 118a26 26 0 1 0 22 40 21 21 0 1 1-22-40z" transform="translate(-660 -60) scale(.8)"/>
+    <g class="dune-a"><path fill="var(--dune-1)" d="M-80 230 C120 180 260 200 420 225 S720 260 900 215 S1180 190 1320 230 V300 H-80Z"/></g>
+    <g class="dune-b"><path fill="var(--dune-2)" d="M-80 262 C80 235 240 240 380 258 S640 290 820 255 S1120 235 1320 265 V300 H-80Z"/></g>
+    <path fill="var(--dune-3)" d="M0 285 C200 268 380 276 560 288 S920 296 1200 280 V300 H0Z"/>
+  </svg>
+  <div class="float-letters" id="letters" aria-hidden="true"></div>
+  <div class="inner gut">
+    <div class="toprow"><div class="eyebrow">Arabic Language Hub · Oct 08 Module</div>
+      <button class="theme-btn" id="themeBtn" type="button" aria-label="Switch to dark mode"><span class="ti">🌙</span><span class="tl">Dark</span></button></div>
+    <h1>Gulf Arabic, one day at a time</h1>
+    <div class="h-ar" lang="ar">يَوْم بِيَوْم · خْطْوَة بِخْطْوَة</div>
+    <div class="stats" id="stats"></div>
+  </div>
+</header>
+
+<nav class="daybar" aria-label="Choose a day">
+  <div class="inner gut mbar">
+    <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="drawer"><span></span><span></span><span></span></button>
+    <div class="mcur" id="mcur"></div>
+    <button class="mquiz" id="mQuiz" type="button" aria-label="Open the quiz"><svg aria-hidden="true"><use href="#i-target"/></svg></button>
+  </div>
+  <div class="inner gut" role="tablist" id="tabs"></div>
+</nav>
+<div class="scrim" id="scrim" hidden></div>
+<aside class="drawer" id="drawer" aria-label="Lesson menu" aria-hidden="true">
+  <div class="dr-head"><b>Arabic Hub</b><span lang="ar">يَوْم بِيَوْم</span><button class="dr-x" id="drClose" type="button" aria-label="Close menu">✕</button></div>
+  <div class="dr-player" id="drPlayer">
+    <button class="dp-btn" id="dpBtn" type="button" aria-label="Play"><svg aria-hidden="true"><use href="#i-play"/></svg></button>
+    <div class="dp-txt"><b id="dpTitle">Nothing playing</b><small id="dpTime">Tap ▶ on a voice note or “Teacher says it”</small>
+      <span class="dp-bar"><i id="dpBar"></i></span></div>
+  </div>
+  <div class="dr-tog">
+    <button class="chip" id="drQuizMode" type="button" aria-pressed="false">🙈 Hide meanings</button>
+    <button class="chip" id="drOpen" type="button" aria-pressed="false">📖 Word-by-word</button>
+    <button class="chip" id="drTheme" type="button">🌙 Dark mode</button>
+  </div>
+  <div class="dr-sec"><h4 id="drSecTitle">This day</h4><div id="drSections"></div></div>
+  <div class="dr-sec"><h4>All days</h4><div id="drDays"></div></div>
+</aside>
+
+<main class="gut"><div class="inner" id="day"></div></main>
+<footer class="gut">All the best · <span class="ar">بِالتَّوْفِيقْ</span><br>Arabic Language Hub</footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<div class="mini" id="mini" role="region" aria-label="Now playing">
+  <button class="mbtn" id="miniBtn" type="button" aria-label="Pause">
+    <svg class="prog" viewBox="0 0 60 60" aria-hidden="true"><circle cx="30" cy="30" r="27" fill="none" stroke="var(--coral-soft)" stroke-width="3.5"/>
+      <circle id="miniRing" cx="30" cy="30" r="27" fill="none" stroke="var(--sand)" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="169.6" stroke-dashoffset="169.6"/></svg>
+    <svg class="ic" aria-hidden="true"><use href="#i-pause"/></svg>
+  </button>
+  <button class="mtxt" id="miniGo" type="button" aria-label="Scroll to this voice note"><b id="miniTitle">Voice note</b><small id="miniTime">0:00</small></button>
+  <button class="mx" id="miniClose" type="button" aria-label="Stop and close">✕</button>
+</div>
+<canvas id="fx" aria-hidden="true"></canvas>
+
+<script>
+const DAYS = __DATA__;
+const HUES = ["--teal","--coral","--sand","--indigo","--green"];
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const fmt = s => esc(s).replace(/\[([rbg]):([^\]]+)\]/g, (_, g, o) =>
+  `<span class="alt alt-${g}">` + o.split("|").map(x => `<span class="opt">${x}</span>`).join('<span class="or">/</span>') + `</span>`);
+const mmss = s => `${Math.floor(s/60)}:${String(Math.floor(s%60)).padStart(2,"0")}`;
+const icon = (n, cls="") => `<svg class="${cls}" aria-hidden="true"><use href="#i-${n}"/></svg>`;
+const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+/* per-viewer progress (best effort) */
+const store = {
+  get(k){ try { return JSON.parse(localStorage.getItem(k) || "{}"); } catch { return {}; } },
+  set(k,v){ try { localStorage.setItem(k, JSON.stringify(v)); } catch {} }
+};
+let heard = store.get("alh-heard"), known = store.get("alh-known");
+
+/* stable ids */
+DAYS.forEach(d => {
+  let c = 0;
+  d.sections.forEach(s => s.items.forEach(i => { if (!i.audio) i.id = `d${d.day}-${c++}`; }));
+  d.cards = c;
+  d.audios = d.sections.flatMap(s => s.items.filter(i => i.audio).map(i => i.audio.file));
+});
+const dayColor = d => `var(${HUES[DAYS.indexOf(d) % HUES.length]})`;
+const heardIn = d => d.audios.filter(f => heard[f]).length;
+const knownIn = d => d.sections.reduce((n,s) => n + s.items.filter(i => i.id && known[i.id]).length, 0);
+
+/* ---------- hero ---------- */
+const totalCards = DAYS.reduce((n,d) => n + d.cards, 0), totalAud = DAYS.reduce((n,d) => n + d.audios.length, 0);
+function renderStats(){
+  const h = DAYS.reduce((n,d) => n + heardIn(d), 0), k = DAYS.reduce((n,d) => n + knownIn(d), 0);
+  $("#stats").innerHTML = `<span class="stat">${DAYS.length} days</span><span class="stat">${totalCards} phrases</span>
+    <span class="stat">🎧 ${h}/${totalAud} voice notes heard</span><span class="stat">⭐ ${k} phrases known</span>`;
+}
+(function letters(){
+  if (reduce) return;
+  const L = "ا ب ت ث ج ح خ د ذ ر ز س ش ص ض ط ظ ع غ ف ق ك ل م ن ه و ي".split(" ");
+  $("#letters").innerHTML = Array.from({length:16}, (_,i) =>
+    `<span style="left:${(i*6.3+Math.random()*4)%100}%;font-size:${18+Math.random()*26}px;animation-duration:${9+Math.random()*9}s;animation-delay:${-Math.random()*16}s">${L[(i*7)%L.length]}</span>`).join("");
+})();
+
+/* ---------- tabs ---------- */
+function renderTabs(cur){
+  const quizTab = `<button class="dtab qtab" role="tab" type="button" id="tab-quiz" aria-selected="${mode==="quiz"}" data-quiz="1" style="--dc:var(--coral)">
+      <span class="ring"><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="17" fill="var(--coral)"/></svg><span class="ic" style="color:#fff">${icon("target")}</span></span>
+      <span class="txt"><b>Quiz</b><small>Pick days · score</small></span></button>`;
+  $("#tabs").innerHTML = quizTab + DAYS.map(d => {
+    const p = d.audios.length ? heardIn(d)/d.audios.length : 0, C = 2*Math.PI*17;
+    return `<button class="dtab" role="tab" type="button" id="tab-${d.day}" aria-selected="${mode!=="quiz" && d.day===cur}" data-day="${d.day}" style="--dc:${dayColor(d)}">
+      <span class="ring"><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="17" fill="none" stroke="var(--chip)" stroke-width="3.5"/>
+        <circle cx="20" cy="20" r="17" fill="none" stroke="var(--dc)" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="${C}" stroke-dashoffset="${C*(1-p)}"/></svg>
+        <span class="ic">${icon(d.icon)}</span></span>
+      <span class="txt"><b>Day ${d.day}</b><small>${esc(d.title)}</small></span></button>`;
+  }).join("");
+  const t = mode === "quiz" ? $("#tab-quiz") : $(`#tab-${cur}`); if (t) t.scrollIntoView({block:"nearest", inline:"center", behavior: reduce ? "auto" : "smooth"});
+}
+$("#tabs").addEventListener("click", e => { const b = e.target.closest(".dtab"); if (!b) return; if (b.dataset.quiz) openQuizSetup(true); else go(+b.dataset.day, true); });
+
+/* ---------- day ---------- */
+const audioCard = (a) => `
+  <div class="audio" data-file="${esc(a.file)}">
+    <div class="a-head">
+      <button class="play" type="button" aria-label="Play voice note ${a.n}">${icon("play")}</button>
+      <div class="meta"><span class="a-title">Teacher's voice note ${a.n} of ${a.of}</span>
+        <span class="a-sub">${esc(a.label)} · ${mmss(a.dur)}</span></div>
+      ${heard[a.file] ? `<span class="heard">Heard ✓</span>` : ""}
+      <span class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+    </div>
+    <div class="track"><span class="cur">0:00</span><input type="range" min="0" max="${a.dur}" step="0.1" value="0" aria-label="Seek"><span>${mmss(a.dur)}</span></div>
+    <div class="speed" role="group" aria-label="Playback speed">${[0.75,1,1.25,1.5].map(r => `<button type="button" data-rate="${r}" aria-pressed="${r===1}">${r}×</button>`).join("")}</div>
+    <audio preload="none" src="audio/${esc(a.file)}"></audio>
+  </div>`;
+
+const card = i => i.audio ? audioCard(i.audio) : `
+  <article class="card${i.key ? " key" : ""}${known[i.id] ? " known" : ""}" data-id="${i.id}">
+    <div class="top">${i.tag ? `<span class="tag">${esc(i.tag)}</span>` : ""}
+      <button class="star-btn" type="button" aria-pressed="${!!known[i.id]}" aria-label="I know this phrase">${icon("star")}</button></div>
+    <div class="ar-line" lang="ar">${fmt(i.ar)}</div>
+    <div class="sound"><span class="en">${fmt(i.ten)}</span>${i.tta ? `<span class="ta" lang="ta">${fmt(i.tta)}</span>` : ""}</div>
+    ${i.clip ? `<button class="say" type="button" data-f="${esc(i.clip.f)}" data-s="${i.clip.s}" data-e="${i.clip.e}" aria-label="Hear the teacher say this"><span class="dot">${icon("play")}</span>Teacher says it</button>` : ""}
+    <div class="meaning"><span class="en">${esc(i.en)}</span>${i.tm ? `<span class="ta" lang="ta">${esc(i.tm)}</span>` : ""}</div>
+    <details class="words"><summary>Word by word</summary><ul>${i.w.map(([a,e],k) => `<li style="animation-delay:${k*40}ms"><span class="w-ar" lang="ar">${fmt(a)}</span><span class="w-en">${esc(e)}</span></li>`).join("")}</ul></details>
+  </article>`;
+
+let cur = null, mode = "day";
+function renderDay(d){
+  const idx = DAYS.indexOf(d), prev = DAYS[idx-1], next = DAYS[idx+1];
+  const root = $("#day");
+  root.style.setProperty("--dc", dayColor(d));
+  root.innerHTML = `
+    <div class="dhead">
+      <div class="badge" aria-hidden="true"><svg viewBox="0 0 80 80">
+        <g class="spin"><path fill="color-mix(in srgb,var(--dc) 22%,transparent)" d="M40 2l9 15 17-3-3 17 15 9-15 9 3 17-17-3-9 15-9-15-17 3 3-17L2 40l15-9-3-17 17 3z"/></g>
+        <circle cx="40" cy="40" r="25" fill="var(--surface)" stroke="var(--dc)" stroke-width="2.5"/></svg><span class="num">${d.day}</span></div>
+      <div style="min-width:0;display:flex;flex-direction:column;gap:2px">
+        <span class="eyebrow">Day ${d.day}</span><h2>${esc(d.title)}</h2>
+        ${d.arTitle ? `<span class="ar" lang="ar">${esc(d.arTitle)}</span>` : ""}<span class="ta" lang="ta">${esc(d.ta)}</span>
+      </div>
+    </div>
+    ${d.keys ? `<div class="keys">${d.keys.map(k => `<span lang="ar">${esc(k)}</span>`).join("")}</div>` : ""}
+    <div class="meter" id="meter"></div>
+    <div class="toolbar">
+      <button class="tbtn" id="quizBtn" type="button" aria-pressed="${document.body.classList.contains("quiz")}">🙈 Hide meanings</button>
+      <button class="tbtn" id="openBtn" type="button" aria-pressed="false">📖 Open all word-by-word</button>
+      <button class="tbtn" id="autoBtn" type="button" aria-pressed="${autoNext}">▶︎ Auto-play next note</button>
+      <button class="tbtn" id="dayQuizBtn" type="button">🎯 Quiz this whole day</button>
+    </div>
+    <div class="legend"><div><b>Same colour = same meaning.</b> Pick any one word from a colour group. 🎧 Each voice note sits right after the phrases it explains. Tap ☆ when you know a phrase.</div>
+      <div class="ta">ஒரே நிறம் = ஒரே பொருள். ஒவ்வொரு ஆடியோவும் அது விளக்கும் வாக்கியங்களுக்கு கீழே உள்ளது.</div>
+      <div class="ex"><span class="alt alt-r"><span class="opt">Option A</span><span class="or">/</span><span class="opt">Option B</span></span><span class="alt alt-b"><span class="opt">Option C</span><span class="or">/</span><span class="opt">Option D</span></span></div></div>
+    ${d.guide ? `<div class="guide"><h3>${esc(d.guide.title)}</h3><ul>${d.guide.rows.map(r => `<li><span class="g-ar" lang="ar">${esc(r.ar)}</span><span class="g-txt"><b>${esc(r.head)}</b>${r.en ? `<span>${esc(r.en)}</span>` : ""}${r.ta ? `<span class="ta" lang="ta">${esc(r.ta)}</span>` : ""}</span></li>`).join("")}</ul></div>` : ""}
+    ${d.sections.map((s, si) => `<section id="sec-${si}">
+      <div class="sec-head"><div class="row"><h3>${esc(s.title)}</h3>${s.ar ? `<span class="ar" lang="ar">${fmt(s.ar)}</span>` : ""}</div>${s.ta ? `<span class="ta" lang="ta">${esc(s.ta)}</span>` : ""}</div>
+      ${s.note ? `<div class="note">${esc(s.note.en)}${s.note.ta ? `<span class="ta" lang="ta">${esc(s.note.ta)}</span>` : ""}</div>` : ""}
+      <div class="cards${s.grid ? " grid" : ""}">${s.items.map(card).join("")}</div>
+      <button class="qbtn" type="button" data-sq="${si}">${icon("target")}<span><b>Quiz this section</b><small>${s.items.filter(i => !i.audio).length} phrases · ${esc(s.title)}</small></span><span class="go">Start →</span></button></section>`).join("")}
+    ${d.activity ? `<div class="activity"><h3>🔖 Activity · Day ${d.day}</h3><ol>${d.activity.items.map(x => `<li><span class="ta" lang="ta">${esc(x.ta)}</span><span class="en">${esc(x.en)}</span></li>`).join("")}</ol>${d.activity.hint ? `<div class="hint" lang="ta">${esc(d.activity.hint)}</div>` : ""}</div>` : ""}
+    <div class="daynav">
+      ${prev ? `<button type="button" data-go="${prev.day}"><small>← Previous</small>Day ${prev.day} · ${esc(prev.title)}</button>` : "<span></span>"}
+      ${next ? `<button type="button" data-go="${next.day}"><small>Next →</small>Day ${next.day} · ${esc(next.title)}</button>` : "<span></span>"}
+    </div>`;
+  renderMeter(d);
+}
+function renderMeter(d){
+  const m = $("#meter"); if (!m) return;
+  const h = heardIn(d), k = knownIn(d);
+  m.innerHTML = `<div class="m">🎧 <b>${h}/${d.audios.length}</b> notes heard <span class="bar"><i style="width:${d.audios.length ? h/d.audios.length*100 : 0}%"></i></span></div>
+    <div class="m">⭐ <b>${k}/${d.cards}</b> phrases known <span class="bar"><i style="width:${k/d.cards*100}%"></i></span></div>`;
+}
+
+function go(day, push){
+  const d = DAYS.find(x => x.day === day) || DAYS[0];
+  stopAll(); mode = "day"; $("#day").classList.remove("quizview");
+  cur = d; renderTabs(d.day); renderDay(d); renderDrawer();
+  if (push) { history.replaceState(null, "", `#day-${d.day}`); }
+  if (push) window.scrollTo({top: $(".daybar").offsetTop, behavior: reduce ? "auto" : "smooth"});
+  try { localStorage.setItem("alh-last", d.day); } catch {}
+}
+const fromHash = () => { const m = location.hash.match(/^#day-(\d+)$/); return m ? +m[1] : null; };
+addEventListener("hashchange", () => { if (location.hash === "#quiz") { if (mode !== "quiz") openQuizSetup(false); return; }
+  const n = fromHash(); if (n && (mode === "quiz" || !cur || n !== cur.day)) go(n, false); });
+
+/* ---------- audio ---------- */
+let autoNext = false, playingBox = null;
+function stopAll(){ if (typeof clipStop === "function") clipStop(); document.querySelectorAll(".audio audio").forEach(a => a.pause()); playingBox = null; if (typeof miniSync === "function") miniSync(); }
+function setPlayIcon(box, on){ box.querySelector(".play").innerHTML = icon(on ? "pause" : "play"); box.classList.toggle("playing", on); }
+function wire(box){
+  if (box.dataset.wired) return; box.dataset.wired = 1;
+  const a = box.querySelector("audio"), r = box.querySelector("input[type=range]"), c = box.querySelector(".cur");
+  a.addEventListener("play", () => { document.querySelectorAll(".audio audio").forEach(o => { if (o !== a) o.pause(); }); playingBox = box; setPlayIcon(box, true); });
+  a.addEventListener("pause", () => setPlayIcon(box, false));
+  a.addEventListener("timeupdate", () => { if (!r.matches(":active")) r.value = a.currentTime; c.textContent = mmss(a.currentTime); });
+  a.addEventListener("ended", () => {
+    setPlayIcon(box, false);
+    const f = box.dataset.file, first = !heard[f];
+    heard[f] = 1; store.set("alh-heard", heard);
+    if (!box.querySelector(".heard")) box.querySelector(".eq").insertAdjacentHTML("beforebegin", `<span class="heard">Heard ✓</span>`);
+    renderMeter(cur); renderStats(); renderTabsQuiet();
+    const rect = box.querySelector(".play").getBoundingClientRect();
+    if (first) burst(rect.left + rect.width/2, rect.top + rect.height/2);
+    const all = [...document.querySelectorAll(".audio")], nx = all[all.indexOf(box) + 1];
+    if (cur.audios.every(x => heard[x]) && first) toast(`<span class="ar">مَبْرُوكْ!</span> You heard every note for Day ${cur.day} 🎉`);
+    else if (first) toast(`<span class="ar">أَحْسَنْتْ</span> · Well done! Note ${cur.audios.indexOf(f)+1} heard`);
+    if (autoNext && nx) { wire(nx); nx.scrollIntoView({block:"center", behavior: reduce ? "auto" : "smooth"}); nx.querySelector("audio").play().catch(()=>{}); }
+  });
+  r.addEventListener("input", () => { a.currentTime = +r.value; });
+}
+function renderTabsQuiet(){ const y = $("#tabs").scrollLeft; renderTabs(cur.day); $("#tabs").scrollLeft = y; }
+
+$("#day").addEventListener("click", e => {
+  const t = e.target;
+  const play = t.closest(".play");
+  if (play) { const box = play.closest(".audio"); wire(box); const a = box.querySelector("audio"); a.paused ? a.play().catch(()=>{}) : a.pause(); return; }
+  const sp = t.closest(".speed button");
+  if (sp) { const box = sp.closest(".audio"); wire(box); box.querySelector("audio").playbackRate = +sp.dataset.rate;
+    box.querySelectorAll(".speed button").forEach(x => x.setAttribute("aria-pressed", x === sp)); return; }
+  const st = t.closest(".star-btn");
+  if (st) { const c = st.closest(".card"), id = c.dataset.id, on = !known[id];
+    if (on) known[id] = 1; else delete known[id]; store.set("alh-known", known);
+    st.setAttribute("aria-pressed", on); c.classList.toggle("known", on); renderMeter(cur); renderStats();
+    if (on) { const r = st.getBoundingClientRect(); burst(r.left + r.width/2, r.top + r.height/2, 14); }
+    return; }
+  const g = t.closest("[data-go]"); if (g) { go(+g.dataset.go, true); return; }
+  const sq = t.closest("[data-sq]"); if (sq) { const s = cur.sections[+sq.dataset.sq];
+    startQuiz(s.items.filter(i => !i.audio).map(i => ({...i, day: cur.day})), `Day ${cur.day} · ${s.title}`, {count: 0, type: "mix", back: cur.day}); return; }
+  if (t.closest("#dayQuizBtn")) { startQuiz(poolFor([cur.day]), `Day ${cur.day} · ${cur.title}`, {count: 10, type: "mix", back: cur.day}); return; }
+  if (t.closest("#quizBtn")) { const on = document.body.classList.toggle("quiz"); t.closest("#quizBtn").setAttribute("aria-pressed", on);
+    document.querySelectorAll(".meaning.show").forEach(m => m.classList.remove("show")); if (on) toast("Tap a blurred meaning to check yourself"); return; }
+  if (t.closest("#openBtn")) { const b = t.closest("#openBtn"), on = b.getAttribute("aria-pressed") !== "true"; b.setAttribute("aria-pressed", on);
+    b.textContent = on ? "📕 Close all word-by-word" : "📖 Open all word-by-word"; document.querySelectorAll("details.words").forEach(x => x.open = on); return; }
+  if (t.closest("#autoBtn")) { autoNext = !autoNext; t.closest("#autoBtn").setAttribute("aria-pressed", autoNext); toast(autoNext ? "Auto-play on: notes play one after another" : "Auto-play off"); return; }
+  const m = t.closest(".meaning"); if (m && document.body.classList.contains("quiz")) m.classList.toggle("show");
+});
+
+/* ---------- fun: toast + confetti ---------- */
+let tt; function toast(html){ const el = $("#toast"); el.innerHTML = html; el.classList.add("on"); clearTimeout(tt); tt = setTimeout(() => el.classList.remove("on"), 2600); }
+const fx = $("#fx"), ctx = fx.getContext("2d"); let parts = [], raf = 0;
+function size(){ const dpr = devicePixelRatio || 1; fx.width = innerWidth*dpr; fx.height = innerHeight*dpr; ctx.setTransform(dpr,0,0,dpr,0,0); }
+size(); addEventListener("resize", size);
+function burst(x, y, n = 46){
+  if (reduce) return;
+  const cs = getComputedStyle(document.documentElement), cols = ["--coral","--sand","--teal","--indigo","--green"].map(v => cs.getPropertyValue(v).trim());
+  for (let i = 0; i < n; i++) { const a = Math.random()*Math.PI*2, s = 2 + Math.random()*5;
+    parts.push({x, y, vx: Math.cos(a)*s, vy: Math.sin(a)*s - 3, r: 3 + Math.random()*4, c: cols[i % cols.length], life: 60 + Math.random()*30, rot: Math.random()*6, sq: Math.random() < .5}); }
+  if (!raf) tick();
+}
+function tick(){
+  ctx.clearRect(0, 0, innerWidth, innerHeight);
+  parts = parts.filter(p => p.life-- > 0);
+  parts.forEach(p => { p.vy += .18; p.x += p.vx; p.y += p.vy; p.rot += .2; ctx.globalAlpha = Math.min(1, p.life/30); ctx.fillStyle = p.c;
+    ctx.save(); ctx.translate(p.x, p.y); ctx.rotate(p.rot); p.sq ? ctx.fillRect(-p.r, -p.r/2, p.r*2, p.r) : (ctx.beginPath(), ctx.arc(0,0,p.r/1.3,0,7), ctx.fill()); ctx.restore(); });
+  raf = parts.length ? requestAnimationFrame(tick) : (ctx.clearRect(0,0,innerWidth,innerHeight), 0);
+}
+
+/* ---------- floating mini-player ---------- */
+const mini = $("#mini");
+function miniSync(){
+  const box = playingBox && document.body.contains(playingBox) ? playingBox : null;
+  if (!box) { mini.classList.remove("on"); return; }
+  const a = box.querySelector("audio"), r = box.getBoundingClientRect();
+  const offscreen = r.bottom < 90 || r.top > innerHeight - 40;
+  const active = !a.paused || a.currentTime > 0;
+  mini.classList.toggle("on", active && offscreen);
+  mini.classList.toggle("playing", !a.paused);
+  $("#miniBtn").setAttribute("aria-label", a.paused ? "Play" : "Pause");
+  $("#miniBtn .ic").innerHTML = `<use href="#i-${a.paused ? "play" : "pause"}"/>`;
+  $("#miniTitle").textContent = `Day ${cur.day} · ` + box.querySelector(".a-title").textContent.replace("Teacher's voice note", "Note");
+  const d = a.duration || +box.querySelector("input[type=range]").max || 1;
+  $("#miniTime").textContent = `${mmss(a.currentTime)} / ${mmss(d)}${a.paused ? " · paused" : ""}`;
+  $("#miniRing").setAttribute("stroke-dashoffset", 169.6 * (1 - Math.min(1, a.currentTime / d)));
+}
+let miniRaf = 0;
+addEventListener("scroll", () => { if (!miniRaf) miniRaf = requestAnimationFrame(() => { miniRaf = 0; miniSync(); }); }, {passive:true});
+document.addEventListener("play", miniSync, true);
+document.addEventListener("pause", miniSync, true);
+document.addEventListener("timeupdate", miniSync, true);
+$("#miniBtn").addEventListener("click", () => { if (!playingBox) return; const a = playingBox.querySelector("audio"); a.paused ? a.play().catch(()=>{}) : a.pause(); });
+$("#miniGo").addEventListener("click", () => playingBox && playingBox.scrollIntoView({block:"center", behavior: reduce ? "auto" : "smooth"}));
+$("#miniClose").addEventListener("click", () => { if (playingBox) { const a = playingBox.querySelector("audio"); a.pause(); a.currentTime = 0; } playingBox = null; miniSync(); });
+
+
+/* ---------- Quiz ---------- */
+const plain = t => String(t ?? "").replace(/\[[rbg]:([^\]]+)\]/g, (_, o) => o.split("|").join(" / "));
+const shuffle = a => { a = [...a]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+const poolFor = days => DAYS.filter(d => days.includes(d.day)).flatMap(d => d.sections.flatMap(s => s.items.filter(i => !i.audio).map(i => ({...i, day: d.day}))));
+const ALL = poolFor(DAYS.map(d => d.day));
+let qsel = null, qcount = 10, qtype = "mix", Q = null;
+
+function enterQuizMode(){
+  stopAll(); mode = "quiz"; renderTabs(cur ? cur.day : null); renderDrawer();
+  const root = $("#day"); root.classList.add("quizview"); root.style.setProperty("--dc", "var(--coral)");
+  if (location.hash !== "#quiz") history.replaceState(null, "", "#quiz");
+}
+function openQuizSetup(scroll){
+  enterQuizMode();
+  if (!qsel) qsel = new Set([cur ? cur.day : DAYS[DAYS.length-1].day]);
+  const pool = poolFor([...qsel]);
+  const hist = store.get("alh-quiz").list || [];
+  $("#day").innerHTML = `
+    <div class="qhero"><span class="eyebrow" style="color:var(--coral);font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:700">Quiz time · <span lang="ar" style="font-family:var(--f-ar)">يَلَّا نِخْتَبِرْ</span></span>
+      <h2>Test yourself</h2><p>Pick one day or several. Questions come from the same phrases you studied, in random order, with the answer and word-by-word shown after each one.</p></div>
+    <div class="qpanel"><div class="row" style="justify-content:space-between"><h3>1 · Which days?</h3>
+      <span><button class="linkbtn" type="button" data-qall="1">Select all</button><button class="linkbtn" type="button" data-qall="0">Clear</button></span></div>
+      <div class="row">${DAYS.map(d => `<button class="chip" type="button" data-qday="${d.day}" aria-pressed="${qsel.has(d.day)}" style="--dc:${dayColor(d)}">Day ${d.day} <small>${esc(d.title)}</small></button>`).join("")}</div></div>
+    <div class="qpanel"><h3>2 · How many questions?</h3>
+      <div class="row">${[10,20,30,0].map(n => `<button class="chip" type="button" data-qn="${n}" aria-pressed="${qcount===n}">${n || `All (${pool.length})`}</button>`).join("")}</div></div>
+    <div class="qpanel"><h3>3 · Question style</h3>
+      <div class="row">${[["mix","🎲 Mixed"],["ar2en","Arabic → meaning"],["en2ar","Meaning → Arabic"]].map(([k,l]) => `<button class="chip" type="button" data-qt="${k}" aria-pressed="${qtype===k}">${l}</button>`).join("")}</div></div>
+    <div class="row" style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
+      <button class="bigbtn" type="button" id="qStart" ${pool.length < 2 ? "disabled" : ""}>Start quiz · ${qcount && qcount < pool.length ? qcount : pool.length} questions</button>
+      <small style="color:var(--muted)">${pool.length} phrases in the selected days</small></div>
+    ${hist.length ? `<div class="qpanel"><h3>🏆 Recent scores</h3><ul class="hist">${hist.map(h => `<li><span>${esc(h.label)}</span><b>${h.score}/${h.total} · ${Math.round(h.score/h.total*100)}%</b></li>`).join("")}</ul></div>` : ""}`;
+  if (scroll) window.scrollTo({top: $(".daybar").offsetTop, behavior: reduce ? "auto" : "smooth"});
+}
+
+function makeQuestion(item, type, pool){
+  const t = type === "mix" ? (Math.random() < .5 ? "ar2en" : "en2ar") : type;
+  const key = i => (t === "ar2en" ? i.en : plain(i.ar)).toLowerCase();
+  const seen = new Set([key(item)]);
+  const distract = [];
+  for (const src of [shuffle(pool), shuffle(ALL)]) for (const c of src) {
+    if (distract.length >= 3) break;
+    const k = key(c); if (seen.has(k) || c.en.toLowerCase() === item.en.toLowerCase()) continue;
+    seen.add(k); distract.push(c);
+  }
+  return {item, t, opts: shuffle([item, ...distract])};
+}
+function startQuiz(pool, label, opt = {}){
+  if (pool.length < 2) { toast("Pick days with at least 2 phrases"); return; }
+  const n = opt.count && opt.count < pool.length ? opt.count : pool.length;
+  const items = shuffle(pool).slice(0, n);
+  Q = {label, pool, type: opt.type || "mix", back: opt.back, qs: items.map(i => makeQuestion(i, opt.type || "mix", pool)), i: 0, score: 0, streak: 0, best: 0, missed: [], answered: false};
+  enterQuizMode(); renderQ(); window.scrollTo({top: $(".daybar").offsetTop, behavior: reduce ? "auto" : "smooth"});
+}
+function scoreBar(){
+  return `<div class="score" id="scoreBar">
+    <div class="s"><b>${Math.min(Q.i + 1, Q.qs.length)}/${Q.qs.length}</b><small>Question</small></div>
+    <div class="s" id="sScore"><b>${Q.score}</b><small>Score</small></div>
+    <div class="s" id="sStreak"><b>${Q.streak ? "🔥" + Q.streak : "0"}</b><small>Streak</small></div>
+    <div class="qbar"><i style="width:${Q.i / Q.qs.length * 100}%"></i></div></div>`;
+}
+function renderQ(){
+  const q = Q.qs[Q.i], it = q.item;
+  $("#day").innerHTML = `${scoreBar()}
+    <div class="qcard" id="qcard">
+      <span class="ask">${q.t === "ar2en" ? "What does this mean?" : "How do you say this in Arabic?"}</span>
+      ${q.t === "ar2en" ? `<div class="prompt-ar" lang="ar">${fmt(it.ar)}</div>` : `<div class="prompt-en">${esc(it.en)}</div>${it.tm ? `<div class="prompt-ta" lang="ta">${esc(it.tm)}</div>` : ""}`}
+      <div class="from">${esc(Q.label)} · from Day ${it.day}</div>
+      <div class="opts">${q.opts.map((o, k) => `<button class="qopt" type="button" data-opt="${k}"><span class="k">${k+1}</span>
+        ${q.t === "ar2en" ? `<span class="t">${esc(o.en)}</span>` : `<span class="t ar" lang="ar">${fmt(o.ar)}</span>`}</button>`).join("")}</div>
+      <div id="qAns"></div>
+    </div>`;
+  Q.answered = false;
+}
+function answer(k){
+  if (!Q || Q.answered) return;
+  const q = Q.qs[Q.i], pick = q.opts[k], ok = pick === q.item; Q.answered = true;
+  document.querySelectorAll(".qopt").forEach((b, j) => { b.disabled = true; if (q.opts[j] === q.item) b.classList.add("right"); else if (j === k) b.classList.add("wrong"); });
+  if (ok) { Q.score++; Q.streak++; Q.best = Math.max(Q.best, Q.streak); } else { Q.streak = 0; Q.missed.push(q.item); }
+  const it = q.item, last = Q.i === Q.qs.length - 1;
+  $("#qAns").innerHTML = `<div class="answer ${ok ? "ok" : "no"}">
+      <span class="verdict">${ok ? ["✓ صَحّْ! Correct", "✓ زَيْنْ! Nice", "✓ مُمْتَازْ! Excellent"][Math.floor(Math.random()*3)] : "✗ Not quite. The answer is:"}</span>
+      <div class="a-ar" lang="ar">${fmt(it.ar)}</div><span class="a-ten">${fmt(it.ten)}</span>${it.clip ? `<button class="say" type="button" data-f="${esc(it.clip.f)}" data-s="${it.clip.s}" data-e="${it.clip.e}" aria-label="Hear the teacher say this"><span class="dot">${icon("play")}</span>Teacher says it</button>` : ""}
+      <b>${esc(it.en)}</b>${it.tm ? `<span class="a-ta" lang="ta">${esc(it.tm)}</span>` : ""}
+      <ul>${it.w.map(([a, e]) => `<li><span class="w-en">${esc(e)}</span><span class="w-ar" lang="ar">${fmt(a)}</span></li>`).join("")}</ul>
+    </div>
+    <div class="qnext" style="margin-top:12px"><button class="bigbtn" type="button" id="qNext">${last ? "See my score 🏁" : "Next question →"}</button></div>`;
+  const sb = $("#scoreBar"); sb.outerHTML = scoreBar();
+  const el = ok ? $("#sScore") : null; if (el) el.classList.add("bump");
+  if (ok) { const r = document.querySelectorAll(".qopt")[k].getBoundingClientRect(); burst(r.left + 30, r.top + r.height/2, Q.streak >= 5 ? 40 : 16); }
+  if (ok && Q.streak > 0 && Q.streak % 5 === 0) toast(`🔥 ${Q.streak} in a row! <span class="ar">مَاشَاءَ الله</span>`);
+  $("#qNext").focus({preventScroll: true});
+  $("#qAns").scrollIntoView({block: "nearest", behavior: reduce ? "auto" : "smooth"});
+}
+function nextQ(){
+  if (!Q) return;
+  if (Q.i < Q.qs.length - 1) { Q.i++; renderQ(); $("#qcard").scrollIntoView({block: "nearest", behavior: reduce ? "auto" : "smooth"}); }
+  else finishQuiz();
+}
+function finishQuiz(){
+  const pct = Math.round(Q.score / Q.qs.length * 100), C = 2 * Math.PI * 70;
+  const [ar, en] = pct >= 90 ? ["مُمْتَازْ!", "Excellent!"] : pct >= 70 ? ["زَيْنْ وَايِدْ!", "Very good!"] : pct >= 50 ? ["زَيْنْ", "Good, keep going"] : ["يَلَّا مَرَّة ثَانْيَة", "Let's try again"];
+  const h = store.get("alh-quiz"); h.list = [{label: Q.label, score: Q.score, total: Q.qs.length}, ...(h.list || [])].slice(0, 6); store.set("alh-quiz", h);
+  $("#day").innerHTML = `
+    <div class="qpanel result">
+      <svg viewBox="0 0 170 170" aria-hidden="true"><circle cx="85" cy="85" r="70" fill="none" stroke="var(--chip)" stroke-width="14"/>
+        <circle class="ringfill" id="rf" cx="85" cy="85" r="70" fill="none" stroke="${pct >= 70 ? "var(--green)" : pct >= 50 ? "var(--sand)" : "var(--coral)"}" stroke-width="14" stroke-linecap="round"
+          stroke-dasharray="${C}" stroke-dashoffset="${C}" transform="rotate(-90 85 85)"/>
+        <text x="85" y="95" text-anchor="middle" style="font:800 34px var(--f-display);fill:var(--fg)">${pct}%</text></svg>
+      <span class="msg-ar" lang="ar">${ar}</span>
+      <b style="font-family:var(--f-display);font-size:22px">${en} You scored ${Q.score} out of ${Q.qs.length}</b>
+      <span style="color:var(--muted)">${esc(Q.label)} · best streak 🔥${Q.best}</span>
+      <div class="qnext" style="justify-content:center">
+        ${Q.missed.length ? `<button class="bigbtn" type="button" id="qRetry">Retry the ${Q.missed.length} I missed</button>` : ""}
+        <button class="bigbtn alt2" type="button" id="qAgain">New quiz</button>
+        ${Q.back ? `<button class="bigbtn alt2" type="button" data-go="${Q.back}">Back to Day ${Q.back}</button>` : ""}
+      </div>
+    </div>
+    ${Q.missed.length ? `<div class="qpanel"><h3>Phrases to review</h3><div class="missed">${Q.missed.map(i => `<div class="mrow"><span class="ar" lang="ar">${fmt(i.ar)}</span><b>${esc(i.en)}</b><small>${fmt(i.ten)} · Day ${i.day}</small></div>`).join("")}</div></div>` : ""}`;
+  requestAnimationFrame(() => requestAnimationFrame(() => { const rf = $("#rf"); if (rf) rf.setAttribute("stroke-dashoffset", C * (1 - pct / 100)); }));
+  if (pct >= 70) { const r = $(".result svg").getBoundingClientRect(); burst(r.left + r.width/2, r.top + r.height/2, 80); }
+}
+
+$("#day").addEventListener("click", e => {
+  if (mode !== "quiz") return;
+  const t = e.target;
+  const d = t.closest("[data-qday]"); if (d) { const n = +d.dataset.qday; qsel.has(n) ? qsel.delete(n) : qsel.add(n); openQuizSetup(false); return; }
+  const a = t.closest("[data-qall]"); if (a) { qsel = new Set(a.dataset.qall === "1" ? DAYS.map(x => x.day) : []); openQuizSetup(false); return; }
+  const n = t.closest("[data-qn]"); if (n) { qcount = +n.dataset.qn; openQuizSetup(false); return; }
+  const ty = t.closest("[data-qt]"); if (ty) { qtype = ty.dataset.qt; openQuizSetup(false); return; }
+  if (t.closest("#qStart")) { const days = [...qsel].sort((x, y) => x - y);
+    startQuiz(poolFor(days), days.length === DAYS.length ? "All days" : "Day " + days.join(", "), {count: qcount, type: qtype}); return; }
+  const o = t.closest("[data-opt]"); if (o) { answer(+o.dataset.opt); return; }
+  if (t.closest("#qNext")) { nextQ(); return; }
+  if (t.closest("#qRetry")) { startQuiz(Q.missed, Q.label + " · retry", {count: 0, type: Q.type, back: Q.back}); return; }
+  if (t.closest("#qAgain")) { openQuizSetup(true); return; }
+});
+addEventListener("keydown", e => {
+  if (mode !== "quiz" || !Q || !$("#qcard")) return;
+  if (!Q.answered && /^[1-4]$/.test(e.key)) answer(+e.key - 1);
+  else if (Q.answered && e.key === "Enter" && document.activeElement?.id !== "qNext") nextQ();
+});
+
+
+/* ---------- teacher clips ---------- */
+const clipA = new Audio(); clipA.preload = "none"; let clipEnd = 0, clipBtn = null, clipRaf = 0;
+function clipStop(){ clipA.pause(); cancelAnimationFrame(clipRaf); if (clipBtn) { clipBtn.classList.remove("on"); clipBtn.closest(".card")?.classList.remove("saying"); } clipBtn = null; }
+function clipWatch(){ if (clipA.currentTime >= clipEnd || clipA.ended) { clipStop(); return; } clipRaf = requestAnimationFrame(clipWatch); }
+function playClip(btn){
+  const same = clipBtn === btn; clipStop(); if (same) return;
+  document.querySelectorAll(".audio audio").forEach(a => a.pause());
+  const src = "audio/" + btn.dataset.f, s = +btn.dataset.s; clipEnd = +btn.dataset.e; clipBtn = btn;
+  btn.classList.add("on"); btn.closest(".card")?.classList.add("saying");
+  const go = () => { clipA.currentTime = s; clipA.play().then(() => { clipRaf = requestAnimationFrame(clipWatch); }).catch(clipStop); };
+  if (!clipA.src.endsWith(src)) { clipA.src = src; clipA.addEventListener("loadedmetadata", go, {once: true}); clipA.load(); } else go();
+}
+document.addEventListener("click", e => { const b = e.target.closest(".say"); if (b) { e.stopPropagation(); playClip(b); } }, true);
+document.addEventListener("play", e => { if (e.target !== clipA) clipStop(); }, true);
+
+/* ---------- mobile drawer ---------- */
+const drawer = $("#drawer"), scrim = $("#scrim");
+function drawerOpen(on){
+  drawer.classList.toggle("open", on); drawer.setAttribute("aria-hidden", !on); scrim.hidden = !on;
+  $("#menuBtn").setAttribute("aria-expanded", on);
+  if (on) { renderDrawer(); $("#drClose").focus({preventScroll:true}); }
+}
+function renderDrawer(){
+  const quiz = mode === "quiz";
+  $("#mcur").innerHTML = quiz ? `<b>Quiz</b><small>Pick days · score</small>` : `<b>Day ${cur.day}</b><small>${esc(cur.title)}</small>`;
+  $("#drQuizMode").setAttribute("aria-pressed", document.body.classList.contains("quiz"));
+  $("#drOpen").setAttribute("aria-pressed", $("#openBtn")?.getAttribute("aria-pressed") === "true");
+  $("#drSecTitle").textContent = quiz ? "Quiz" : `Day ${cur.day} · sections`;
+  $("#drSections").innerHTML = quiz ? `<button class="dr-link sec" type="button" data-drq="1"><span class="n">🎯</span><span class="t"><b>Quiz setup</b><small>Choose days and start</small></span></button>`
+    : cur.sections.map((s, si) => `<button class="dr-link sec" type="button" data-drs="${si}" style="--dc:${dayColor(cur)}"><span class="n">${si+1}</span>
+      <span class="t"><b>${esc(s.title.replace(/^\d+\.\s*/, ""))}</b><small>${s.items.filter(i => !i.audio).length} phrases · ${s.items.filter(i => i.audio).length} notes</small></span>${s.ar ? `<span class="ar" lang="ar">${fmt(s.ar).replace(/<[^>]+>/g, "").split(" ")[0]}</span>` : ""}</button>`).join("")
+      + `<button class="dr-link sec" type="button" data-drq="day"><span class="n">🎯</span><span class="t"><b>Quiz this day</b><small>10 random questions</small></span></button>`;
+  $("#drDays").innerHTML = `<button class="dr-link" type="button" data-drq="1" aria-current="${quiz}" style="--dc:var(--coral)">${icon("target")}<span class="t"><b>Quiz</b><small>Pick one or more days</small></span></button>` +
+    DAYS.map(d => `<button class="dr-link" type="button" data-drd="${d.day}" aria-current="${!quiz && cur.day === d.day}" style="--dc:${dayColor(d)}">${icon(d.icon)}
+      <span class="t"><b>Day ${d.day}</b><small>${esc(d.title)}</small></span><span class="pc">🎧${heardIn(d)}/${d.audios.length}</span></button>`).join("");
+  drawerSync();
+}
+function drawerSync(){
+  const pr = $("#drPlayer"), btn = $("#dpBtn");
+  let a = null, title = "Nothing playing", sub = "Tap ▶ on a voice note or “Teacher says it”", frac = 0;
+  if (clipBtn) { a = clipA; title = "Teacher says it"; sub = clipBtn.closest(".card")?.querySelector(".sound .en")?.textContent || ""; }
+  else if (playingBox && document.body.contains(playingBox)) {
+    a = playingBox.querySelector("audio"); title = `Day ${cur.day} · ` + playingBox.querySelector(".a-title").textContent.replace("Teacher's voice note", "Note");
+    const d = a.duration || +playingBox.querySelector("input[type=range]").max || 1; sub = `${mmss(a.currentTime)} / ${mmss(d)}${a.paused ? " · paused" : ""}`; frac = a.currentTime / d;
+  }
+  pr.classList.toggle("playing", !!a && !a.paused);
+  btn.disabled = !a; btn.setAttribute("aria-label", a && !a.paused ? "Pause" : "Play");
+  btn.innerHTML = `<svg aria-hidden="true"><use href="#i-${a && !a.paused ? "pause" : "play"}"/></svg>`;
+  $("#dpTitle").textContent = title; $("#dpTime").textContent = sub; $("#dpBar").style.width = (frac * 100) + "%";
+}
+$("#menuBtn").addEventListener("click", () => drawerOpen(true));
+$("#drClose").addEventListener("click", () => drawerOpen(false));
+scrim.addEventListener("click", () => drawerOpen(false));
+addEventListener("keydown", e => { if (e.key === "Escape" && drawer.classList.contains("open")) drawerOpen(false); });
+$("#mQuiz").addEventListener("click", () => openQuizSetup(true));
+$("#dpBtn").addEventListener("click", () => {
+  if (clipBtn) { clipStop(); drawerSync(); return; }
+  if (playingBox) { const a = playingBox.querySelector("audio"); a.paused ? a.play().catch(()=>{}) : a.pause(); }
+});
+$("#drQuizMode").addEventListener("click", () => { if (mode === "quiz") return; $("#quizBtn")?.click(); renderDrawer(); });
+$("#drOpen").addEventListener("click", () => { if (mode === "quiz") return; $("#openBtn")?.click(); renderDrawer(); });
+drawer.addEventListener("click", e => {
+  const s = e.target.closest("[data-drs]"), d = e.target.closest("[data-drd]"), q = e.target.closest("[data-drq]");
+  if (s) { drawerOpen(false); $(`#sec-${s.dataset.drs}`)?.scrollIntoView({behavior: reduce ? "auto" : "smooth"}); }
+  else if (d) { drawerOpen(false); go(+d.dataset.drd, true); }
+  else if (q) { drawerOpen(false); q.dataset.drq === "day" ? startQuiz(poolFor([cur.day]), `Day ${cur.day} · ${cur.title}`, {count: 10, type: "mix", back: cur.day}) : openQuizSetup(true); }
+});
+["play","pause","timeupdate","ended"].forEach(ev => document.addEventListener(ev, drawerSync, true));
+["play","pause","timeupdate","ended"].forEach(ev => clipA.addEventListener(ev, drawerSync));
+
+/* ---------- theme switch (light / dark), remembered per viewer ---------- */
+const isDark = () => { const t = document.documentElement.dataset.theme; return t ? t === "dark" : matchMedia("(prefers-color-scheme: dark)").matches; };
+function themeLabels(){
+  const d = isDark();
+  $("#themeBtn").innerHTML = `<span class="ti">${d ? "☀️" : "🌙"}</span><span class="tl">${d ? "Light" : "Dark"}</span>`;
+  $("#themeBtn").setAttribute("aria-label", d ? "Switch to light mode" : "Switch to dark mode");
+  $("#drTheme").textContent = d ? "☀️ Light mode" : "🌙 Dark mode";
+}
+function setTheme(t){ document.documentElement.dataset.theme = t; try { localStorage.setItem("alh-theme", t); } catch {} themeLabels(); }
+try { const t = localStorage.getItem("alh-theme"); if (t === "light" || t === "dark") document.documentElement.dataset.theme = t; } catch {}
+themeLabels();
+$("#themeBtn").addEventListener("click", () => setTheme(isDark() ? "light" : "dark"));
+$("#drTheme").addEventListener("click", () => setTheme(isDark() ? "light" : "dark"));
+matchMedia("(prefers-color-scheme: dark)").addEventListener?.("change", themeLabels);
+/* ---------- start ---------- */
+renderStats();
+let startDay = fromHash();
+if (!startDay) { try { startDay = +localStorage.getItem("alh-last") || null; } catch {} }
+go(DAYS.some(d => d.day === startDay) ? startDay : DAYS[DAYS.length-1].day, false);
+if (location.hash === "#quiz") openQuizSetup(false);
+</script>

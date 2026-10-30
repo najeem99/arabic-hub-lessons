@@ -1,0 +1,75 @@
+{"day":10,"icon":"food","title":"Verbs & Food","arTitle":"الْأَفْعَالْ وَالْمَوَادّ الْغِذَائِيَّة","ta":"வினைச்சொற்களும் உணவு பொருட்களும்",
+"keys":["أَسِيرْ","أَشُوفْ","فْطُورْ","غَدَاءْ","عَشَاءْ","عِيشْ"],
+"blocks":[
+{"audio":["AUD-20260923-WA0008.mp3"],"sections":[
+{"title":"1. Go & see — with every “you”","ar":"أَسِيرْ · أَشُوفْ","ta":"போ / பார் — வினைச்சொற்கள்","note":{"en":"The verb changes with the person: أَ (I), تِ (you, man), تِ…ين (you, woman), تِ…ون (you all).","ta":"நான் = அ…, நீ (ஆண்) = த…, நீ (பெண்) = த…ீன், நீங்கள் = த…ூன்"},"grid":true,"items":[
+{"key":true,"ar":"أَنَا أَسِيرْ","ten":"Ana aseer","tta":"அன அசீர்","en":"I go","tm":"நான் போகிறேன்","w":[["أَنَا","I"],["أَسِيرْ","I go (UAE)"]]},
+{"ar":"إِنْتْ تِسِيرْ","ten":"Inta tiseer","tta":"இன்த திஸீர்","en":"You go (man)","tm":"நீ போகிறாய் (ஆண்)","w":[["إِنْتْ","you (man)"],["تِسِيرْ","you go"]]},
+{"ar":"إِنْتِي تِسِيرِينْ","ten":"Inti tiseereen","tta":"இன்தி திஸீரீன்","en":"You go (woman)","tm":"நீ போகிறாய் (பெண்)","w":[["إِنْتِي","you (woman)"],["تِسِيرِينْ","you go (woman)"]]},
+{"ar":"إِنْتُو تِسِيرُونْ","ten":"Intu tiseeroon","tta":"இன்து திஸீரூன்","en":"You all go","tm":"நீங்கள் போகிறீர்கள்","w":[["إِنْتُو","you all"],["تِسِيرُونْ","you (all) go"]]},
+{"ar":"أَنَا أَشُوفْ","ten":"Ana ashoof","tta":"அன அஷூஃப்","en":"I see","tm":"நான் பார்க்கிறேன்","w":[["أَنَا","I"],["أَشُوفْ","I see"]]},
+{"ar":"إِنْتْ تْشُوفْ","ten":"Inta tshoof","tta":"இன்த தஷூஃப்","en":"You see (man)","tm":"நீ பார்க்கிறாய் (ஆண்)","w":[["إِنْتْ","you (man)"],["تْشُوفْ","you see"]]},
+{"ar":"إِنْتِي تْشُوفِينْ","ten":"Inti tshoofeen","tta":"இன்தி தஷூஃபீன்","en":"You see (woman)","tm":"நீ பார்க்கிறாய் (பெண்)","w":[["إِنْتِي","you (woman)"],["تْشُوفِينْ","you see (woman)"]]},
+{"ar":"إِنْتُو تْشُوفُونْ","ten":"Intu tshoofoon","tta":"இன்து தஷூஃபூன்","en":"You all see","tm":"நீங்கள் பார்க்கிறீர்கள்","w":[["إِنْتُو","you all"],["تْشُوفُونْ","you (all) see"]]}
+]}
+]},
+{"audio":["AUD-20260923-WA0009.mp3","AUD-20260923-WA0010.mp3","AUD-20260923-WA0012.mp3","AUD-20260923-WA0011.mp3"],"sections":[
+{"title":"2. The main meals","ar":"الْوَجَبَاتْ","ta":"முக்கிய உணவுகள்","grid":true,"items":[
+{"key":true,"ar":"فْطُورْ","ten":"Ftoor","tta":"ஃபுதூர்","en":"Breakfast","tm":"காலை உணவு","w":[["فْطُورْ","breakfast"]]},
+{"ar":"غَدَاءْ","ten":"Ghada","tta":"கதா","en":"Lunch","tm":"மதிய உணவு","w":[["غَدَاءْ","lunch"]]},
+{"ar":"عَشَاءْ","ten":"'Asha","tta":"அஷா","en":"Dinner","tm":"இரவு உணவு","w":[["عَشَاءْ","dinner"]]}
+]},
+{"title":"3. Food words","ar":"الْمَوَادّ الْغِذَائِيَّة","ta":"உணவு வகைகள்","grid":true,"items":[
+{"tag":"🍚","ar":"[r:عِيشْ|رِزّْ|الْأَرُزّْ]","ten":"[r:'Aish|Rizz|Al-aruzz]","tta":"[r:அய்ஷ்|ருஜ்|அல் அருஜ்]","en":"Rice","tm":"அரிசி","w":[["[r:عِيشْ]","rice (Gulf)"],["[r:رِزّْ]","rice"],["[r:الْأَرُزّْ]","the rice (formal)"]]},
+{"ar":"سُكَّرْ","ten":"Sukkar","tta":"சுக்கர்","en":"Sugar","tm":"சர்க்கரை","w":[["سُكَّرْ","sugar"]]},
+{"tag":"🍗","ar":"[r:دْيَايْ|دَجَاجْ]","ten":"[r:Dyay|Dajaj]","tta":"[r:தியாய்|துஜாஜ்]","en":"Chicken","tm":"கோழிக்கறி","w":[["[r:دْيَايْ]","chicken (Emirati, ج→ي)"],["[r:دَجَاجْ]","chicken"]]},
+{"tag":"🍬","ar":"حَلَاوَة","ten":"Halawa","tta":"ஹலாவா","en":"Sweets","tm":"இனிப்புகள்","w":[["حَلَاوَة","sweets / candy"]]},
+{"tag":"🥛","ar":"حَلِيبْ","ten":"Haleeb","tta":"ஹலீப்","en":"Milk","tm":"பால்","w":[["حَلِيبْ","milk"]]},
+{"ar":"لَبَنْ","ten":"Laban","tta":"லெபன்","en":"Buttermilk / sour milk","tm":"தயிர் / புளிப்பு பால்","w":[["لَبَنْ","laban (buttermilk)"]]},
+{"tag":"🧂","ar":"مِلْحْ","ten":"Milh","tta":"மில்ஹ்","en":"Salt","tm":"உப்பு","w":[["مِلْحْ","salt"]]},
+{"tag":"🍞","ar":"[r:خُبُزْ|عِيشْ]","ten":"[r:Khubz|'Aish]","tta":"[r:ஹுப்ஜ்|அய்ஷ்]","en":"Bread","tm":"ரொட்டி","w":[["[r:خُبُزْ]","bread"],["[r:عِيشْ]","bread (in Egypt; rice in the Gulf)"]]},
+{"tag":"🍫","ar":"شُوكُولَاتَة","ten":"Shokolata","tta":"சுகூலாதா","en":"Chocolate","tm":"சாக்லேட்","w":[["شُوكُولَاتَة","chocolate"]]},
+{"tag":"🍖","ar":"لَحَمْ","ten":"Laham","tta":"லஹம்","en":"Meat","tm":"இறைச்சி","w":[["لَحَمْ","meat"]]},
+{"tag":"🐟","ar":"[r:سَمَچْ|سَمَكْ]","ten":"[r:Samach|Samak]","tta":"[r:ஸமச்|ஸமக்]","en":"Fish","tm":"மீன்","w":[["[r:سَمَچْ]","fish (Gulf, ك→چ)"],["[r:سَمَكْ]","fish"]]},
+{"tag":"🍊","ar":"بُرْتُقَالْ","ten":"Burtugal","tta":"புர்துகால்","en":"Orange","tm":"ஆரஞ்சு","w":[["بُرْتُقَالْ","orange (ق = g)"]]},
+{"tag":"🍎","ar":"تُفَّاحْ","ten":"Tuffah","tta":"துஃப்பாஹ்","en":"Apple","tm":"ஆப்பிள்","w":[["تُفَّاحْ","apple"]]},
+{"tag":"🍅","ar":"طَمَاطْ","ten":"Tamat","tta":"தமாத்","en":"Tomato","tm":"தக்காளி","w":[["طَمَاطْ","tomato (Gulf; lesson طَمَاطِمْ tamatim)"]]},
+{"tag":"🥔","ar":"بَطَاطْ","ten":"Batat","tta":"பதாத்","en":"Potato","tm":"உருளைக்கிழங்கு","w":[["بَطَاطْ","potato (Gulf; lesson بَطَاطِسْ batatis)"]]},
+{"tag":"🍉","ar":"[r:يِحّْ|بَطِّيخْ|حَبْحَبْ]","ten":"[r:Yihh|Batteekh|Habhab]","tta":"[r:யிஹ்|பத்தீஹ்|ஹப்ஹப்]","en":"Watermelon","tm":"தர்பூசணி","w":[["[r:يِحّْ]","watermelon (UAE)"],["[r:بَطِّيخْ]","watermelon"],["[r:حَبْحَبْ]","watermelon (Saudi)"]]},
+{"ar":"فَوَاكِهْ","ten":"Fawakih","tta":"ஃபவாகிஹ்","en":"Fruits","tm":"பழங்கள்","w":[["فَوَاكِهْ","fruits"]]},
+{"tag":"🥦","ar":"[r:خُضَارْ|خَضْرَاوَاتْ]","ten":"[r:Khudhar|Khadhrawat]","tta":"[r:ஹுழார்|ஹழ்ரவாத்]","en":"Vegetables","tm":"காய்கறிகள்","w":[["[r:خُضَارْ]","vegetables (spoken)"],["[r:خَضْرَاوَاتْ]","vegetables (formal)"]]},
+{"tag":"🥚","ar":"[r:بِيضَة|بِيضْ]","ten":"[r:Baidha|Baidh]","tta":"[r:பைழா|பைழ்]","en":"Egg / eggs","tm":"முட்டை","w":[["[r:بِيضَة]","an egg"],["[r:بِيضْ]","eggs"]]},
+{"tag":"🍳","ar":"مَقْلِي","ten":"Magli","tta":"மக்லீ","en":"Fried","tm":"பொரித்தது","w":[["مَقْلِي","fried (ق = g)"]]},
+{"ar":"مَسْلُوقْ","ten":"Masloog","tta":"மஸ்லூக்","en":"Boiled","tm":"வேகவைத்தது","w":[["مَسْلُوقْ","boiled"]]},
+{"tag":"🍌","ar":"مُوزْ","ten":"Mooz","tta":"மௌஜ்","en":"Banana","tm":"வாழைப்பழம்","w":[["مُوزْ","banana"]]},
+{"tag":"🧄","ar":"ثُومْ","ten":"Thoom","tta":"தூம்","en":"Garlic","tm":"பூண்டு","w":[["ثُومْ","garlic"]]},
+{"tag":"🥭","ar":"[r:هَمْبَا|مَانْجَا]","ten":"[r:Hamba|Manja]","tta":"[r:ஹம்பா|மான்ஜா]","en":"Mango","tm":"மாம்பழம்","w":[["[r:هَمْبَا]","mango (Gulf)"],["[r:مَانْجَا]","mango"]]},
+{"tag":"🍇","ar":"عِنَبْ","ten":"'Inab","tta":"இனப்","en":"Grapes","tm":"திராட்சை","w":[["عِنَبْ","grapes"]]},
+{"tag":"🍍","ar":"أَنَانَاسْ","ten":"Ananas","tta":"அனானாஸ்","en":"Pineapple","tm":"அன்னாசிப்பழம்","w":[["أَنَانَاسْ","pineapple"]]},
+{"tag":"🍓","ar":"فَرَاوْلَة","ten":"Farawla","tta":"ஃபராவ்லா","en":"Strawberry","tm":"ஸ்ட்ராபெர்ரி","w":[["فَرَاوْلَة","strawberry"]]},
+{"tag":"🍆","ar":"بَيْذَنْجَانْ","ten":"Baidhinjan","tta":"பைதின்ஜான்","en":"Aubergine / brinjal","tm":"கத்திரிக்காய்","w":[["بَيْذَنْجَانْ","aubergine (lesson: بَاذِنْجَانْ)"]]},
+{"ar":"زَبَادِي","ten":"Zabadi","tta":"ஜபாதி","en":"Yoghurt / curd","tm":"தயிர்","w":[["زَبَادِي","yoghurt"]]},
+{"tag":"🧃","ar":"عَصِيرْ","ten":"'Aseer","tta":"அஸீர்","en":"Juice","tm":"ஜூஸ்","w":[["عَصِيرْ","juice"]]},
+{"tag":"☕","ar":"قَهْوَة","ten":"Gahwa","tta":"கஹ்வா","en":"Coffee","tm":"காஃபி","w":[["قَهْوَة","coffee (ق = g)"]]},
+{"ar":"مْرَبَّى","ten":"Mrabba","tta":"முரப்பா","en":"Jam","tm":"ஜாம்","w":[["مْرَبَّى","jam"]]},
+{"tag":"🥗","ar":"سَلَطَة","ten":"Salata","tta":"சலதா","en":"Salad","tm":"சாலட்","w":[["سَلَطَة","salad"]]},
+{"tag":"🍵","ar":"[r:چَايْ|شَايْ]","ten":"[r:Chai|Shai]","tta":"[r:சாய்|ஷாய்]","en":"Tea","tm":"தேநீர்","w":[["[r:چَايْ]","tea (Gulf)"],["[r:شَايْ]","tea"]]},
+{"tag":"💧","ar":"[r:مَايْ|مُويَة|مَاءْ]","ten":"[r:Mai|Moya|Ma']","tta":"[r:மாய்|மோயா|மா]","en":"Water","tm":"தண்ணீர்","w":[["[r:مَايْ]","water (UAE)"],["[r:مُويَة]","water (Saudi)"],["[r:مَاءْ]","water (formal)"]]}
+]},
+{"title":"4. Dishes","ar":"الْأَكَلَاتْ","ta":"உணவு வகைகள்","items":[
+{"key":true,"ar":"بِرْيَانِي دْيَايْ","ten":"Biryani dyay","tta":"பிரியாணி தியாய்","en":"Chicken biryani","tm":"சிக்கன் பிரியாணி","w":[["بِرْيَانِي","biryani"],["دْيَايْ","chicken (Emirati; lesson الدَّجَاجْ)"]]},
+{"ar":"بِرْيَانِي لَحَمْ مَاعِزْ","ten":"Biryani laham ma'iz","tta":"பிரியாணி லஹம் மா'இஜ்","en":"Goat-meat biryani","tm":"மட்டன் (வெள்ளாடு) பிரியாணி","w":[["بِرْيَانِي","biryani"],["لَحَمْ","meat (of)"],["مَاعِزْ","goat"]]},
+{"ar":"بِرْيَانِي لَحَمْ غَنَمْ","ten":"Biryani laham ghanam","tta":"பிரியாணி லஹம் கனம்","en":"Mutton (sheep) biryani","tm":"மட்டன் பிரியாணி","w":[["بِرْيَانِي","biryani"],["لَحَمْ","meat (of)"],["غَنَمْ","sheep"]]},
+{"ar":"مَنْدِي لَحَمْ [r:بُوشْ|حَاشِي|إِبِلْ]","ten":"Mandi laham [r:boosh|hashi|ibil]","tta":"மந்தி லஹம் [r:பூஷ்|ஹாஷி|இப்ல்]","en":"Camel-meat mandi","tm":"ஒட்டக இறைச்சி மந்தி","w":[["مَنْدِي","mandi"],["لَحَمْ","meat (of)"],["[r:بُوشْ]","camel (UAE)"],["[r:حَاشِي]","young camel"],["[r:إِبِلْ]","camels (formal)"]]},
+{"ar":"مَاعِزْ مَقْلِي","ten":"Ma'iz magli","tta":"மா'இஜ் மக்லீ","en":"Fried goat meat","tm":"வறுத்த ஆட்டிறைச்சி","w":[["مَاعِزْ","goat"],["مَقْلِي","fried"]]},
+{"ar":"عِيشْ كَبْسَة","ten":"'Aish kabsa","tta":"அய்ஷ் கப்ஸா","en":"Kabsa rice","tm":"கப்சா ரைஸ்","w":[["عِيشْ","rice (Gulf; lesson أَرُزّْ)"],["كَبْسَة","kabsa"]]},
+{"ar":"عِيشْ مَنْدِي","ten":"'Aish mandi","tta":"அய்ஷ் மந்தி","en":"Mandi rice","tm":"மந்தி ரைஸ்","w":[["عِيشْ","rice (Gulf)"],["مَنْدِي","mandi"]]},
+{"ar":"دْيَايْ مَقْلِي","ten":"Dyay magli","tta":"தியாய் மக்லீ","en":"Fried chicken","tm":"பொரித்த கோழி","w":[["دْيَايْ","chicken (Emirati)"],["مَقْلِي","fried"]]},
+{"ar":"[r:مَرَقْ|إِدَامْ] دْيَايْ","ten":"[r:Marag|Idam] dyay","tta":"[r:மரக்|இதாம்] தியாய்","en":"Chicken curry","tm":"கோழிக்குழம்பு","w":[["[r:مَرَقْ]","stew / curry"],["[r:إِدَامْ]","curry / side stew"],["دْيَايْ","chicken"]]},
+{"ar":"[r:مَرَقْ|إِدَامْ] سَمَچْ","ten":"[r:Marag|Idam] samach","tta":"[r:மரக்|இதாம்] ஸமச்","en":"Fish curry","tm":"மீன் குழம்பு","w":[["[r:مَرَقْ]","stew / curry"],["[r:إِدَامْ]","curry"],["سَمَچْ","fish (Gulf)"]]},
+{"ar":"[r:مَرَقْ|إِدَامْ] خُضَارْ","ten":"[r:Marag|Idam] khudhar","tta":"[r:மரக்|இதாம்] ஹுழார்","en":"Vegetable curry","tm":"காய்கறி குழம்பு","w":[["[r:مَرَقْ]","stew / curry"],["[r:إِدَامْ]","curry"],["خُضَارْ","vegetables"]]},
+{"ar":"[r:مَرَقْ|إِدَامْ] لَحَمْ مَاعِزْ","ten":"[r:Marag|Idam] laham ma'iz","tta":"[r:மரக்|இதாம்] லஹம் மா'இஜ்","en":"Goat-meat curry","tm":"ஆட்டுக்கறி குழம்பு","w":[["[r:مَرَقْ]","stew / curry"],["[r:إِدَامْ]","curry"],["لَحَمْ","meat (of)"],["مَاعِزْ","goat"]]},
+{"ar":"سَلَطَة خُضَارْ","ten":"Salata khudhar","tta":"சலதா ஹுழார்","en":"Vegetable salad","tm":"காய்கறி சாலட்","w":[["سَلَطَة","salad"],["خُضَارْ","vegetables"]]}
+]}
+]}
+]}

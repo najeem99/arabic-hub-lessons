@@ -1,0 +1,88 @@
+{"day":7,"icon":"numbers","title":"Numbers","arTitle":"أَرْقَامْ","ta":"எண்கள்",
+"keys":["وَاحِدْ","عَشَرَة","مِيَّة","أَلْفْ","الْأَوَّلْ"],
+"activity":{"items":[{"ta":"எட்டாவது கதவு.","en":"The eighth door."},{"ta":"ஆறாவது மகன்.","en":"The sixth son."},{"ta":"பத்தாவது பேருந்து.","en":"The tenth bus."},{"ta":"ஏழாவது மகள்.","en":"The seventh daughter."},{"ta":"இருபதாவது தளம்.","en":"The twentieth floor."}],"hint":"மேற்கண்ட 5 வாக்கியங்களை அரபியில் மாற்றி பயிற்சி செய்துக் கொள்ளவும்"},
+"blocks":[
+{"audio":["AUD-20260923-WA0003.mp3","AUD-20260923-WA0004.mp3"],"sections":[
+{"title":"1. Counting 1–20","ar":"١ – ٢٠","ta":"எண்கள் 1 முதல் 20","grid":true,"items":[
+{"key":true,"tag":"1 · ١","ar":"وَاحِدْ","ten":"Wahid","tta":"வாஹித்","en":"One","tm":"ஒன்று","w":[["وَاحِدْ","one"]]},
+{"tag":"2 · ٢","ar":"[r:اثْنَيْنْ|اثْنَانْ]","ten":"[r:Ithnain|Ithnan]","tta":"[r:இஸ்னைன்|இஸ்னான்]","en":"Two","tm":"இரண்டு","w":[["[r:اثْنَيْنْ]","two (spoken)"],["[r:اثْنَانْ]","two (formal)"]]},
+{"tag":"3 · ٣","ar":"ثَلَاثَة","ten":"Thalatha","tta":"ஸலாஸா","en":"Three","tm":"மூன்று","w":[["ثَلَاثَة","three"]]},
+{"tag":"4 · ٤","ar":"أَرْبَعَة","ten":"Arba'a","tta":"அர்பஆ","en":"Four","tm":"நான்கு","w":[["أَرْبَعَة","four"]]},
+{"tag":"5 · ٥","ar":"خَمْسَة","ten":"Khamsa","tta":"ஹம்ஸா","en":"Five","tm":"ஐந்து","w":[["خَمْسَة","five"]]},
+{"tag":"6 · ٦","ar":"سِتَّة","ten":"Sitta","tta":"ஸித்தா","en":"Six","tm":"ஆறு","w":[["سِتَّة","six"]]},
+{"tag":"7 · ٧","ar":"سَبْعَة","ten":"Sab'a","tta":"ஸப்ஆ","en":"Seven","tm":"ஏழு","w":[["سَبْعَة","seven"]]},
+{"tag":"8 · ٨","ar":"ثَمَانْيَة","ten":"Thamanya","tta":"ஸமானியா","en":"Eight","tm":"எட்டு","w":[["ثَمَانْيَة","eight"]]},
+{"tag":"9 · ٩","ar":"تِسْعَة","ten":"Tis'a","tta":"திஸ்ஆ","en":"Nine","tm":"ஒன்பது","w":[["تِسْعَة","nine"]]},
+{"tag":"10 · ١٠","ar":"عَشَرَة","ten":"'Ashara","tta":"அஷரா","en":"Ten","tm":"பத்து","w":[["عَشَرَة","ten"]]},
+{"tag":"11 · ١١","ar":"إِحْدَعْشَرْ","ten":"Ihda'shar","tta":"இஹ்தஃஷர்","en":"Eleven","tm":"பதினொன்று","w":[["إِحْدَعْشَرْ","eleven (spoken; formal إِحْدَى عَشَرْ)"]]},
+{"tag":"12 · ١٢","ar":"اثْنَعْشَرْ","ten":"Ithna'shar","tta":"இஸ்னஃஷர்","en":"Twelve","tm":"பன்னிரண்டு","w":[["اثْنَعْشَرْ","twelve (spoken; formal اثْنَا عَشَرْ)"]]},
+{"tag":"13 · ١٣","ar":"ثَلَاثَطَعْشْ","ten":"Thalatta'sh","tta":"ஸலாஸதஃஷ்","en":"Thirteen","tm":"பதிமூன்று","w":[["ثَلَاثَطَعْشْ","thirteen (spoken; formal ثَلَاثَة عَشَرْ)"]]},
+{"tag":"14 · ١٤","ar":"أَرْبَعْطَعْشْ","ten":"Arba'ta'sh","tta":"அர்பஃதஃஷ்","en":"Fourteen","tm":"பதினான்கு","w":[["أَرْبَعْطَعْشْ","fourteen (spoken; formal أَرْبَعَة عَشَرْ)"]]},
+{"tag":"15 · ١٥","ar":"خَمْسْطَعْشْ","ten":"Khamsta'sh","tta":"ஹம்ஸ்தஃஷ்","en":"Fifteen","tm":"பதினைந்து","w":[["خَمْسْطَعْشْ","fifteen (spoken; formal خَمْسَة عَشَرْ)"]]},
+{"tag":"16 · ١٦","ar":"سِتَّطَعْشْ","ten":"Sitta'sh","tta":"ஸித்தஃஷ்","en":"Sixteen","tm":"பதினாறு","w":[["سِتَّطَعْشْ","sixteen (spoken; formal سِتَّة عَشَرْ)"]]},
+{"tag":"17 · ١٧","ar":"سَبْعْطَعْشْ","ten":"Sab'ta'sh","tta":"ஸப்ஃதஃஷ்","en":"Seventeen","tm":"பதினேழு","w":[["سَبْعْطَعْشْ","seventeen (spoken; formal سَبْعَة عَشَرْ)"]]},
+{"tag":"18 · ١٨","ar":"ثَمَنْطَعْشْ","ten":"Thamanta'sh","tta":"ஸமன்தஃஷ்","en":"Eighteen","tm":"பதினெட்டு","w":[["ثَمَنْطَعْشْ","eighteen (spoken; formal ثَمَانْيَة عَشَرْ)"]]},
+{"tag":"19 · ١٩","ar":"تِسْعْطَعْشْ","ten":"Tis'ta'sh","tta":"திஸ்ஃதஃஷ்","en":"Nineteen","tm":"பத்தொன்பது","w":[["تِسْعْطَعْشْ","nineteen (spoken; formal تِسْعَة عَشَرْ)"]]},
+{"tag":"20 · ٢٠","ar":"[r:عِشْرِينْ|عِشْرُونْ]","ten":"[r:'Ishreen|'Ishroon]","tta":"[r:இஷ்ரீன்|இஷ்ரூன்]","en":"Twenty","tm":"இருபது","w":[["[r:عِشْرِينْ]","twenty (spoken)"],["[r:عِشْرُونْ]","twenty (formal)"]]}
+]},
+{"title":"2. Tens, hundreds, thousand","ar":"٣٠ – ١٠٠٠","ta":"பத்துகள், நூறுகள், ஆயிரம்","note":{"en":"Spoken Gulf Arabic uses the -een ending (ثَلَاثِينْ); the lesson's -oon form (ثَلَاثُونْ) is formal.","ta":"பேச்சு வழக்கில் -ஈன் (ஸலாஸீன்), எழுத்து வழக்கில் -ஊன் (ஸலாஸூன்)"},"grid":true,"items":[
+{"tag":"30 · ٣٠","ar":"[r:ثَلَاثِينْ|ثَلَاثُونْ]","ten":"[r:Thalatheen|Thalathoon]","tta":"[r:ஸலாஸீன்|ஸலாஸூன்]","en":"Thirty","tm":"முப்பது","w":[["[r:ثَلَاثِينْ]","thirty (spoken)"],["[r:ثَلَاثُونْ]","thirty (formal)"]]},
+{"tag":"40 · ٤٠","ar":"[r:أَرْبَعِينْ|أَرْبَعُونْ]","ten":"[r:Arba'een|Arba'oon]","tta":"[r:அர்பஈன்|அர்பஊன்]","en":"Forty","tm":"நாற்பது","w":[["[r:أَرْبَعِينْ]","forty (spoken)"],["[r:أَرْبَعُونْ]","forty (formal)"]]},
+{"tag":"50 · ٥٠","ar":"[r:خَمْسِينْ|خَمْسُونْ]","ten":"[r:Khamseen|Khamsoon]","tta":"[r:ஹம்ஸீன்|ஹம்ஸூன்]","en":"Fifty","tm":"ஐம்பது","w":[["[r:خَمْسِينْ]","fifty (spoken)"],["[r:خَمْسُونْ]","fifty (formal)"]]},
+{"tag":"60 · ٦٠","ar":"[r:سِتِّينْ|سِتُّونْ]","ten":"[r:Sitteen|Sittoon]","tta":"[r:ஸித்தீன்|ஸித்தூன்]","en":"Sixty","tm":"அறுபது","w":[["[r:سِتِّينْ]","sixty (spoken)"],["[r:سِتُّونْ]","sixty (formal)"]]},
+{"tag":"70 · ٧٠","ar":"[r:سَبْعِينْ|سَبْعُونْ]","ten":"[r:Sab'een|Sab'oon]","tta":"[r:ஸப்ஈன்|ஸப்ஊன்]","en":"Seventy","tm":"எழுபது","w":[["[r:سَبْعِينْ]","seventy (spoken)"],["[r:سَبْعُونْ]","seventy (formal)"]]},
+{"tag":"80 · ٨٠","ar":"[r:ثَمَانِينْ|ثَمَانُونْ]","ten":"[r:Thamaneen|Thamanoon]","tta":"[r:ஸமானீன்|ஸமானூன்]","en":"Eighty","tm":"எண்பது","w":[["[r:ثَمَانِينْ]","eighty (spoken)"],["[r:ثَمَانُونْ]","eighty (formal)"]]},
+{"tag":"90 · ٩٠","ar":"[r:تِسْعِينْ|تِسْعُونْ]","ten":"[r:Tis'een|Tis'oon]","tta":"[r:திஸ்ஈன்|திஸ்ஊன்]","en":"Ninety","tm":"தொண்ணூறு","w":[["[r:تِسْعِينْ]","ninety (spoken)"],["[r:تِسْعُونْ]","ninety (formal)"]]},
+{"tag":"100 · ١٠٠","ar":"[r:مِيَّة|مِئَة]","ten":"[r:Miyya|Mi'a]","tta":"[r:மிய்யா|மிஅ]","en":"One hundred","tm":"நூறு","w":[["[r:مِيَّة]","hundred (spoken)"],["[r:مِئَة]","hundred (written)"]]},
+{"tag":"200 · ٢٠٠","ar":"مِيتَيْنْ","ten":"Mitain","tta":"மீதைன்","en":"Two hundred","tm":"இருநூறு","w":[["مِيتَيْنْ","two hundred (formal مِئَتَيْنْ)"]]},
+{"tag":"300 · ٣٠٠","ar":"ثَلَاثْ مِيَّة","ten":"Thalath miyya","tta":"ஸலாஸ் மிய்யா","en":"Three hundred","tm":"முன்னூறு","w":[["ثَلَاثْ","three"],["مِيَّة","hundred"]]},
+{"tag":"400 · ٤٠٠","ar":"أَرْبَعْ مِيَّة","ten":"Arba' miyya","tta":"அர்பஃ மிய்யா","en":"Four hundred","tm":"நானூறு","w":[["أَرْبَعْ","four"],["مِيَّة","hundred"]]},
+{"tag":"500 · ٥٠٠","ar":"خَمْسْ مِيَّة","ten":"Khams miyya","tta":"ஹம்ஸ் மிய்யா","en":"Five hundred","tm":"ஐநூறு","w":[["خَمْسْ","five"],["مِيَّة","hundred"]]},
+{"tag":"600 · ٦٠٠","ar":"سِتّْ مِيَّة","ten":"Sitt miyya","tta":"ஸித் மிய்யா","en":"Six hundred","tm":"அறுநூறு","w":[["سِتّْ","six"],["مِيَّة","hundred"]]},
+{"tag":"700 · ٧٠٠","ar":"سَبْعْ مِيَّة","ten":"Sab' miyya","tta":"ஸப்ஃ மிய்யா","en":"Seven hundred","tm":"எழுநூறு","w":[["سَبْعْ","seven"],["مِيَّة","hundred"]]},
+{"tag":"800 · ٨٠٠","ar":"ثَمَانْ مِيَّة","ten":"Thaman miyya","tta":"ஸமான் மிய்யா","en":"Eight hundred","tm":"எண்ணூறு","w":[["ثَمَانْ","eight"],["مِيَّة","hundred"]]},
+{"tag":"900 · ٩٠٠","ar":"تِسْعْ مِيَّة","ten":"Tis' miyya","tta":"திஸ்ஃ மிய்யா","en":"Nine hundred","tm":"தொள்ளாயிரம்","w":[["تِسْعْ","nine"],["مِيَّة","hundred"]]},
+{"tag":"1000 · ١٠٠٠","ar":"أَلْفْ","ten":"Alf","tta":"அல்ஃப்","en":"One thousand","tm":"ஆயிரம்","w":[["أَلْفْ","thousand"]]}
+]}
+]},
+{"audio":["AUD-20261015-WA0011.mp3"],"sections":[
+{"title":"3. First, second, third…","ar":"الْأَوَّلْ · الثَّانِي","ta":"வரிசை எண்கள் (முதலாவது, இரண்டாவது…)","note":{"en":"Each ordinal has a masculine form and a feminine form (ending ـة). “First” is special: الْأَوَّلْ (m) / الْأُولَى (f).","ta":"ஆண்பால் / பெண்பால் இரண்டு வடிவங்கள் உள்ளன."},"grid":true,"items":[
+{"key":true,"tag":"1st","ar":"[r:الْأَوَّلْ|الْأُولَى]","ten":"[r:Al-awwal|Al-oola]","tta":"[r:அல் அவ்வல்|அல் ஊலா]","en":"First (m / f)","tm":"முதலாவது","w":[["[r:الْأَوَّلْ]","the first (m)"],["[r:الْأُولَى]","the first (f)"]]},
+{"tag":"2nd","ar":"[r:الثَّانِي|الثَّانْيَة]","ten":"[r:Ath-thani|Ath-thanya]","tta":"[r:அஸ் ஸானி|அஸ் ஸானியா]","en":"Second (m / f)","tm":"இரண்டாவது","w":[["[r:الثَّانِي]","the second (m)"],["[r:الثَّانْيَة]","the second (f)"]]},
+{"tag":"3rd","ar":"[r:الثَّالِثْ|الثَّالْثَة]","ten":"[r:Ath-thalith|Ath-thaltha]","tta":"[r:அஸ் ஸாலிஸ்|அஸ் ஸாலிஸா]","en":"Third (m / f)","tm":"மூன்றாவது","w":[["[r:الثَّالِثْ]","the third (m)"],["[r:الثَّالْثَة]","the third (f)"]]},
+{"tag":"4th","ar":"[r:الرَّابِعْ|الرَّابْعَة]","ten":"[r:Ar-rabi'|Ar-rab'a]","tta":"[r:அர் ராபிஃ|அர் ராபிஆ]","en":"Fourth (m / f)","tm":"நான்காவது","w":[["[r:الرَّابِعْ]","the fourth (m)"],["[r:الرَّابْعَة]","the fourth (f)"]]},
+{"tag":"5th","ar":"[r:الْخَامِسْ|الْخَامْسَة]","ten":"[r:Al-khamis|Al-khamsa]","tta":"[r:அல் ஹாமிஸ்|அல் ஹாமிஸா]","en":"Fifth (m / f)","tm":"ஐந்தாவது","w":[["[r:الْخَامِسْ]","the fifth (m)"],["[r:الْخَامْسَة]","the fifth (f)"]]},
+{"tag":"6th","ar":"[r:السَّادِسْ|السَّادْسَة]","ten":"[r:As-sadis|As-sadsa]","tta":"[r:அஸ் ஸாதிஸ்|அஸ் ஸாதிஸா]","en":"Sixth (m / f)","tm":"ஆறாவது","w":[["[r:السَّادِسْ]","the sixth (m)"],["[r:السَّادْسَة]","the sixth (f)"]]},
+{"tag":"7th","ar":"[r:السَّابِعْ|السَّابْعَة]","ten":"[r:As-sabi'|As-sab'a]","tta":"[r:அஸ் ஸாபிஃ|அஸ் ஸாபிஆ]","en":"Seventh (m / f)","tm":"ஏழாவது","w":[["[r:السَّابِعْ]","the seventh (m)"],["[r:السَّابْعَة]","the seventh (f)"]]},
+{"tag":"8th","ar":"[r:الثَّامِنْ|الثَّامْنَة]","ten":"[r:Ath-thamin|Ath-thamna]","tta":"[r:அஸ் ஸாமின்|அஸ் ஸாமினா]","en":"Eighth (m / f)","tm":"எட்டாவது","w":[["[r:الثَّامِنْ]","the eighth (m)"],["[r:الثَّامْنَة]","the eighth (f)"]]},
+{"tag":"9th","ar":"[r:التَّاسِعْ|التَّاسْعَة]","ten":"[r:At-tasi'|At-tas'a]","tta":"[r:அத் தாஸிஃ|அத் தாஸிஆ]","en":"Ninth (m / f)","tm":"ஒன்பதாவது","w":[["[r:التَّاسِعْ]","the ninth (m)"],["[r:التَّاسْعَة]","the ninth (f)"]]},
+{"tag":"10th","ar":"[r:الْعَاشِرْ|الْعَاشْرَة]","ten":"[r:Al-'ashir|Al-'ashra]","tta":"[r:அல் ஆஷிர்|அல் ஆஷிரா]","en":"Tenth (m / f)","tm":"பத்தாவது","w":[["[r:الْعَاشِرْ]","the tenth (m)"],["[r:الْعَاشْرَة]","the tenth (f)"]]},
+{"tag":"11th","ar":"الْحَادِي عَشَرْ","ten":"Al-hadi 'ashar","tta":"அல் ஹாதி அஷர்","en":"Eleventh (f: الْحَادْيَة عَشْرَة)","tm":"பதினொன்றாவது","w":[["الْحَادِي","the first (unit)"],["عَشَرْ","ten"]]},
+{"tag":"12th","ar":"الثَّانِي عَشَرْ","ten":"Ath-thani 'ashar","tta":"அஸ் ஸானி அஷர்","en":"Twelfth (f: الثَّانْيَة عَشْرَة)","tm":"பன்னிரண்டாவது","w":[["الثَّانِي","the second"],["عَشَرْ","ten"]]},
+{"tag":"13th","ar":"الثَّالِثْ عَشَرْ","ten":"Ath-thalith 'ashar","tta":"அஸ் ஸாலிஸ் அஷர்","en":"Thirteenth","tm":"பதிமூன்றாவது","w":[["الثَّالِثْ","the third"],["عَشَرْ","ten"]]},
+{"tag":"14th","ar":"الرَّابِعْ عَشَرْ","ten":"Ar-rabi' 'ashar","tta":"அர் ராபிஃ அஷர்","en":"Fourteenth","tm":"பதினான்காவது","w":[["الرَّابِعْ","the fourth"],["عَشَرْ","ten"]]},
+{"tag":"15th","ar":"الْخَامِسْ عَشَرْ","ten":"Al-khamis 'ashar","tta":"அல் ஹாமிஸ் அஷர்","en":"Fifteenth","tm":"பதினைந்தாவது","w":[["الْخَامِسْ","the fifth"],["عَشَرْ","ten"]]},
+{"tag":"16th","ar":"السَّادِسْ عَشَرْ","ten":"As-sadis 'ashar","tta":"அஸ் ஸாதிஸ் அஷர்","en":"Sixteenth","tm":"பதினாறாவது","w":[["السَّادِسْ","the sixth"],["عَشَرْ","ten"]]},
+{"tag":"17th","ar":"السَّابِعْ عَشَرْ","ten":"As-sabi' 'ashar","tta":"அஸ் ஸாபிஃ அஷர்","en":"Seventeenth","tm":"பதினேழாவது","w":[["السَّابِعْ","the seventh"],["عَشَرْ","ten"]]},
+{"tag":"18th","ar":"الثَّامِنْ عَشَرْ","ten":"Ath-thamin 'ashar","tta":"அஸ் ஸாமின் அஷர்","en":"Eighteenth","tm":"பதினெட்டாவது","w":[["الثَّامِنْ","the eighth"],["عَشَرْ","ten"]]},
+{"tag":"19th","ar":"التَّاسِعْ عَشَرْ","ten":"At-tasi' 'ashar","tta":"அத் தாஸிஃ அஷர்","en":"Nineteenth","tm":"பத்தொன்பதாவது","w":[["التَّاسِعْ","the ninth"],["عَشَرْ","ten"]]},
+{"tag":"20th","ar":"الْعِشْرُونْ","ten":"Al-'ishroon","tta":"அல் இஷ்ரூன்","en":"Twentieth","tm":"இருபதாவது","w":[["الْعِشْرُونْ","the twentieth (same as “twenty” with الْ)"]]},
+{"tag":"21st","ar":"الْحَادِي وَالْعِشْرُونْ","ten":"Al-hadi wal-'ishroon","tta":"அல் ஹாதி வல் இஷ்ரூன்","en":"Twenty-first","tm":"இருபத்தொன்றாவது","w":[["الْحَادِي","the first (unit)"],["وَ","and"],["الْعِشْرُونْ","the twentieth"]]},
+{"tag":"35th","ar":"الْخَامِسْ وَالثَّلَاثُونْ","ten":"Al-khamis wath-thalathoon","tta":"அல் ஹாமிஸ் வஸ் ஸலாஸூன்","en":"Thirty-fifth","tm":"முப்பத்தைந்தாவது","w":[["الْخَامِسْ","the fifth"],["وَ","and"],["الثَّلَاثُونْ","the thirtieth"]]},
+{"tag":"48th","ar":"الثَّامِنْ وَالْأَرْبَعُونْ","ten":"Ath-thamin wal-arba'oon","tta":"அஸ் ஸாமின் வல் அர்பஊன்","en":"Forty-eighth","tm":"நாற்பத்தெட்டாவது","w":[["الثَّامِنْ","the eighth"],["وَ","and"],["الْأَرْبَعُونْ","the fortieth"]]},
+{"tag":"99th","ar":"التَّاسِعْ وَالتِّسْعُونْ","ten":"At-tasi' wat-tis'oon","tta":"அத் தாஸிஃ வத் திஸ்ஊன்","en":"Ninety-ninth","tm":"தொண்ணூற்றொன்பதாவது","w":[["التَّاسِعْ","the ninth"],["وَ","and"],["التِّسْعُونْ","the ninetieth"]]},
+{"tag":"100th","ar":"الْمِئَة","ten":"Al-mi'a","tta":"அல் மிஅ","en":"Hundredth (the lesson's الْمِئَوِيَّة means “centenary”)","tm":"நூறாவது","w":[["الْمِئَة","the hundred(th)"]]}
+]}
+]},
+{"audio":["AUD-20261015-WA0012.mp3"],"sections":[
+{"title":"4. Ordinals in use","ar":"وَلَدِي الْأَوَّلْ","ta":"வாக்கியங்களில் வரிசை எண்கள்","note":{"en":"With a feminine word, الْأَوَّلْ becomes الْأُولَى and الثَّانِي becomes الثَّانْيَة.","ta":"பெண்பால் உபயோகப்படுத்தினால் (அல் அவ்வல்) → (அல் ஊலா), (அஸ்ஸானி) → (அஸ்ஸானியா)"},"items":[
+{"key":true,"ar":"وِلْدِي الْأَوَّلْ","ten":"Wildi al-awwal","tta":"வில்தி அல் அவ்வல்","en":"My first son","tm":"என்னுடைய முதலாவது மகன்","w":[["وِلْدِي","my son (Gulf; lesson وَلَدِي)"],["الْأَوَّلْ","the first (m)"]]},
+{"ar":"بِنْتِي الْأُولَى","ten":"Binti al-oola","tta":"பின்தி அல் ஊலா","en":"My first daughter","tm":"என்னுடைய முதலாவது மகள்","w":[["بِنْتِي","my daughter"],["الْأُولَى","the first (f)"]]},
+{"ar":"الطَّيَرَانْ السَّادِسْ عَشَرْ","ten":"At-tayaran as-sadis 'ashar","tta":"அத்தைரான் அஸ்ஸாதிஸ் அஷர்","en":"Flight number 16","tm":"பதினாறாவது விமானம்","w":[["الطَّيَرَانْ","the flight"],["السَّادِسْ","the sixth"],["عَشَرْ","ten"]]},
+{"ar":"الشُّبَّاكْ الثَّانِي عَشَرْ","ten":"Ash-shubbak ath-thani 'ashar","tta":"அஷ்ஷுப்பாக் அஸ்ஸானி அஷர்","en":"Counter number 12","tm":"பனிரெண்டாவது கவுன்டர்","w":[["الشُّبَّاكْ","the window / counter"],["الثَّانِي","the second"],["عَشَرْ","ten"]]},
+{"ar":"الْبَابْ الثَّانِي","ten":"Al-bab ath-thani","tta":"அல்பாப் அஸ்ஸானி","en":"The second door","tm":"இரண்டாவது கதவு","w":[["الْبَابْ","the door"],["الثَّانِي","the second"]]},
+{"ar":"الْمَدْخَلْ الثَّالِثْ","ten":"Al-madkhal ath-thalith","tta":"அல் மத்ஹல் அஸ்ஸாலிஸ்","en":"The third entrance","tm":"மூன்றாவது நுழைவு","w":[["الْمَدْخَلْ","the entrance"],["الثَّالِثْ","the third"]]},
+{"ar":"الْمَخْرَجْ الثَّانِي","ten":"Al-makhraj ath-thani","tta":"அல் மஹ்ரஜ் அஸ்ஸானி","en":"The second exit","tm":"இரண்டாவது வெளியேறும் வழி","w":[["الْمَخْرَجْ","the exit"],["الثَّانِي","the second"]]}
+]}
+]}
+]}

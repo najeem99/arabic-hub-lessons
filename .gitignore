@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.venv/
+dist/
+.DS_Store
+*.zip
+# original 320 kbps WhatsApp exports
+raw/

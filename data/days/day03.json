@@ -1,0 +1,70 @@
+{"icon":"wave","day":3,"title":"Greetings & Welcoming","pageTitle":"Day 3 · Greetings","arTitle":"التَّحِيَّاتْ وَالتَّرْحِيبْ","ta":"வாழ்த்துக்களும் வரவேற்ப்பும்",
+"keys":["السَّلَامُ عَلَيْكُمْ","كَيْفَ حَالَكْ","مَرْحَبَا","شُكْرًا","صَبَاحَ الْخَيْرْ"],
+"activity":{"items":[{"ta":"தினமும் Greetings-யை பயிற்சி செய்யுங்கள்.","en":"Practise the greetings every day with trainers, group members, colleagues and friends."}]},
+"blocks":[
+{"audio":["AUD-20260912-WA0025.mp3","AUD-20260912-WA0027.mp3"],"sections":[
+{"title":"1. Salam","ar":"السَّلَامْ","ta":"வாழ்த்துக்கள் / Greetings","items":[
+{"key":true,"ar":"السَّلَامُ عَلَيْكُمْ","ten":"Assalamu alaikum","tta":"அஸ்ஸலாமு அலைக்கும்","en":"Peace be upon you","tm":"உங்கள் மீது சாந்தி உண்டாகட்டும்","w":[["السَّلَامُ","the peace"],["عَلَيْكُمْ","upon you (all)"]]},
+{"ar":"وَعَلَيْكُمُ السَّلَامْ","ten":"Wa alaikumu ssalam","tta":"வ அலைக்கும் ஸலாம்","en":"And upon you (peace)","tm":"உங்கள் மீதும் சாந்தி உண்டாகட்டும்","w":[["وَ","and"],["عَلَيْكُمُ","upon you (all)"],["السَّلَامْ","the peace"]]}
+]},
+{"title":"2. How are you?","ar":"كَيْفَ حَالَكْ؟","ta":"நீங்கள் எப்படி இருக்கிறீர்கள்?","note":{"en":"Ending -ak (ـكْ) is for a man, -ach (ـچْ / ـجْ in Gulf) is for a woman.","ta":"ஆணிடம் -அக், பெண்ணிடம் -அச் (வளைகுடா வழக்கு)"},"items":[
+{"key":true,"tag":"To a man","ar":"[r:كَيْفَ حَالَكْ|كَيْفَكْ]؟","ten":"[r:Kaif halak|Kaifak]?","tta":"[r:கைஃப் ஹாலக்|கைஃபக்]?","en":"How are you?","tm":"நீங்கள் எப்படி இருக்கிறீர்கள்?","w":[["كَيْفَ","how"],["حَالَكْ","your condition (to a man)"],["[r:كَيْفَكْ]","how are you (short)"]]},
+{"tag":"To a woman","ar":"[r:كَيْفَ حَالِچْ|كَيْفِچْ]؟","ten":"[r:Kaif halach|Kaifach]?","tta":"[r:கைஃப் ஹாலச்|கைஃபச்]?","en":"How are you? (to a woman)","tm":"நீங்கள் எப்படி இருக்கிறீர்கள்? (பெண்)","w":[["كَيْفَ","how"],["حَالِچْ","your condition (to a woman, Gulf ك→چ)"],["[r:كَيْفِچْ]","how are you (short, to a woman)"]]},
+{"tag":"Emirati 🇦🇪","ar":"[r:شْلُونَكْ|اشْحَالَكْ]؟","ten":"[r:Shlonak|Ishhalak]?","tta":"[r:ஷுலூனக்|இஷ்ஹாலக்]?","en":"How are you? (Gulf)","tm":"நீங்கள் எப்படி இருக்கிறீர்கள்?","w":[["[r:شْلُونَكْ]","how are you (lit. what's your colour/state)"],["[r:اشْحَالَكْ]","how is your condition (UAE)"]]},
+{"ar":"[r:إِيشْ حَالَكْ|إِيشْ أَخْبَارَكْ|شْنُو أَخْبَارَكْ]؟","ten":"[r:Yeish halak|Yeish akhbarak|Shnu akhbarak]?","tta":"[r:ஏஷ் ஹாலக்|ஏஷ் அஹ்பாரக்|ஷுனூ அஹ்பாரக்]?","en":"How are you? / What's your news?","tm":"நீங்கள் எப்படி இருக்கிறீர்கள்?","w":[["[r:إِيشْ]","what"],["[r:شْنُو]","what (Kuwait / Iraq)"],["حَالَكْ","your condition"],["أَخْبَارَكْ","your news"]]},
+{"ar":"إِيشْ عُلُومَكْ؟","ten":"Yeish uloomak?","tta":"ஏஷ் உலூமக்?","en":"What's your news? (Bedouin / Gulf)","tm":"உங்கள் செய்தி என்ன?","w":[["إِيشْ","what"],["عُلُومَكْ","your news (lit. your knowings)"]]}
+]},
+{"title":"3. I'm fine","ar":"الْحَمْدُ لِلّٰهْ","ta":"கடவுளுக்கு நன்றி நான் நலமாக உள்ளேன்","items":[
+{"key":true,"ar":"الْحَمْدُ لِلّٰهْ، أَنَا بِخَيْرْ","ten":"Alhamdulillah, ana bi khair","tta":"அல்ஹம்து லில்லாஹ், அன பிஹைர்","en":"Thank God, I am good","tm":"கடவுளுக்கு நன்றி நான் நலமாக உள்ளேன்","w":[["الْحَمْدُ","the praise"],["لِلّٰهْ","to God"],["أَنَا","I"],["بِخَيْرْ","in good / well"]]},
+{"ar":"[r:كْوَيِّسْ|طَيِّبِينْ|مْبَارَكِينْ|تَمَامْ]","ten":"[r:Kuwayyis|Tayyibeen|Mubarakeen|Tamam]","tta":"[r:குவைஸ்|தய்யிபீன்|முபாரகீன்|தமாம்]","en":"Good / fine","tm":"நலமாக உள்ளேன்","w":[["[r:كْوَيِّسْ]","good"],["[r:طَيِّبِينْ]","well / fine (we're fine)"],["[r:مْبَارَكِينْ]","blessed (Gulf reply)"],["[r:تَمَامْ]","perfect / fine"]]},
+{"tag":"Formal","ar":"الْحَمْدُ لِلّٰهِ عَلَى مَا يُرَامْ","ten":"Alhamdulillah ala ma yuram","tta":"அல்ஹம்து லில்லாஹ் அலா மா யுராம்","en":"Thank God, all as it should be","tm":"கடவுளுக்கு நன்றி நான் நலமாக உள்ளேன்","w":[["الْحَمْدُ لِلّٰهِ","praise be to God"],["عَلَى","on / as"],["مَا","what"],["يُرَامْ","is wished for"]]}
+]},
+{"title":"4. Welcome","ar":"مَرْحَبَا","ta":"வருக","items":[
+{"key":true,"ar":"[r:أَهْلًا وَسَهْلًا|مَرْحَبَا]","ten":"[r:Ahlan wa sahlan|Marhaba]","tta":"[r:அஹ்லன் வ ஸஹ்லன்|மர்ஹபா]","en":"Welcome / Hello","tm":"வருக","w":[["أَهْلًا","(you are among) family"],["وَ","and"],["سَهْلًا","easy ground"],["[r:مَرْحَبَا]","hello / welcome"]]},
+{"ar":"حَيَّاكَ اللهْ","ten":"Hayyak Allah","tta":"ஹய்யாகல்லாஹ்","en":"Welcome (God greet you)","tm":"வருக","w":[["حَيَّاكَ","greeted you / gave you life"],["اللهْ","God"]]},
+{"ar":"نَوَّرْتِ الْمَكَانْ","ten":"Nawwart al makan","tta":"நவ்வர்த்த அல் மகான்","en":"Welcome (you lit up the place)","tm":"வருக","w":[["نَوَّرْتْ","you lit up"],["الْمَكَانْ","the place"]]},
+{"tag":"Emirati 🇦🇪","ar":"مَرْحَبَا السَّاعْ","ten":"Marhaba ssa'","tta":"மர்ஹபா ஸ்ஸா'அ","en":"A warm welcome (UAE)","tm":"வருக","w":[["مَرْحَبَا","welcome"],["السَّاعْ","right now / plenty (UAE)"]]}
+]},
+{"title":"5. Thank you","ar":"شُكْرًا","ta":"நன்றி","items":[
+{"key":true,"ar":"[r:شُكْرًا|مَشْكُورْ|تِسْلَمْ]","ten":"[r:Shukran|Mashkoor|Tislam]","tta":"[r:ஷுக்ரன்|மஷ்கூர்|திஸ்லம்]","en":"Thank you","tm":"நன்றி","w":[["[r:شُكْرًا]","thanks"],["[r:مَشْكُورْ]","thanked (you are thanked)"],["[r:تِسْلَمْ]","may you be safe (thanks)"]]},
+{"ar":"جَزَاكَ اللهُ خَيْرًا","ten":"Jazak Allahu khairan","tta":"ஜஸாகல்லாஹ் ஹைர்","en":"God bless you (God reward you with good)","tm":"கடவுள் உங்களுக்கு நற்கூலி வழங்குவானாக","w":[["جَزَاكَ","rewarded you"],["اللهُ","God"],["خَيْرًا","with good"]]},
+{"ar":"[r:عَفْوًا|الْعَفْوْ]","ten":"[r:Afwan|Al afw]","tta":"[r:அஃப்வன்|அல் அஃப்வ்]","en":"You are welcome","tm":"சரி பரவாயில்லை","w":[["[r:عَفْوًا]","you're welcome / pardon"],["[r:الْعَفْوْ]","the pardon (don't mention it)"]]}
+]},
+{"title":"6. Good morning","ar":"صَبَاحَ الْخَيْرْ","ta":"காலை வணக்கம்","items":[
+{"key":true,"ar":"صَبَاحَ [r:الْخَيْرْ|الْوَرْدْ|الْحُبّْ]","ten":"Sabah [r:al khair|al ward|al hubb]","tta":"ஸபாஹ் [r:அல் ஹைர்|அல் வர்த்|அல் ஹுப்]","en":"Good morning (of goodness / roses / love)","tm":"காலை வணக்கம்","w":[["صَبَاحَ","morning (of)"],["[r:الْخَيْرْ]","the goodness"],["[r:الْوَرْدْ]","the roses"],["[r:الْحُبّْ]","the love"]]},
+{"ar":"أَسْعَدَ اللهُ صَبَاحَكُمْ","ten":"As'ada Allahu sabahakum","tta":"அஸ்அத அல்லாஹ் ஸபாஹகும்","en":"May God make your morning happy","tm":"காலை வணக்கம்","w":[["أَسْعَدَ","made happy"],["اللهُ","God"],["صَبَاحَكُمْ","your morning (all)"]]},
+{"ar":"صَبَاحَ النُّورْ","ten":"Sabah annoor","tta":"ஸபாஹந் நூர்","en":"Good morning (reply: morning of light)","tm":"காலை வணக்கம் (பதில்)","w":[["صَبَاحَ","morning (of)"],["النُّورْ","the light"]]}
+]},
+{"title":"7. Good evening","ar":"مَسَاءَ الْخَيْرْ","ta":"மாலை வணக்கம்","items":[
+{"key":true,"ar":"مَسَاءَ [r:الْخَيْرْ|النُّورْ|الْمَحَبَّة|الْحُبّْ|السَّعَادَة]","ten":"Masa [r:al khair|annoor|al mahabba|al hubb|assa'ada]","tta":"மஸா [r:அல் ஹைர்|அந் நூர்|அல் மஹப்பா|அல் ஹுப்|அஸ் ஸஆதா]","en":"Good evening","tm":"மாலை வணக்கம்","w":[["مَسَاءَ","evening (of)"],["[r:الْخَيْرْ]","the goodness"],["[r:النُّورْ]","the light (reply)"],["[r:الْمَحَبَّة]","the affection"],["[r:الْحُبّْ]","the love"],["[r:السَّعَادَة]","the happiness"]]}
+]},
+{"title":"8. Good night","ar":"تِصْبَحْ عَلَى خَيْرْ","ta":"இரவு வணக்கம்","items":[
+{"key":true,"tag":"To a man","ar":"[r:تِصْبَحْ عَلَى خَيْرْ|لَيْلَة سَعِيدَة]","ten":"[r:Tisbah ala khair|Laila sa'eeda]","tta":"[r:திஸ்பஹ் அலா ஹைர்|லைலா ஸஈதா]","en":"Good night","tm":"இரவு வணக்கம்","w":[["تِصْبَحْ","may you wake up"],["عَلَى","on / to"],["خَيْرْ","goodness"],["[r:لَيْلَة]","night"],["[r:سَعِيدَة]","happy"]]},
+{"tag":"To a woman","ar":"تِصْبَحِينْ عَلَى خَيْرْ","ten":"Tisbaheen ala khair","tta":"திஸ்பஹீன் அலா ஹைர்","en":"Good night (to a woman)","tm":"இரவு வணக்கம்","w":[["تِصْبَحِينْ","may you wake up (to a woman)"],["عَلَى","on / to"],["خَيْرْ","goodness"]]}
+]},
+{"title":"9. Same to you","ar":"عُقْبَالَكْ","ta":"உங்களுக்கும் (ஆகட்டும்)","items":[
+{"key":true,"ar":"عُقْبَالَكْ","ten":"Ugbaalak","tta":"அக்பாலக்","en":"Same to you (may it be your turn next)","tm":"உங்களுக்கும் ஆகட்டும்","w":[["عُقْبَالَكْ","your turn next (ق = g in Gulf)"]]},
+{"ar":"وَإِيَّاكُمْ","ten":"Wa iyyakum","tta":"வ இய்யாக்கும்","en":"And to you too","tm":"உங்களுக்கும்","w":[["وَ","and"],["إِيَّاكُمْ","you (all) too"]]}
+]}
+]},
+{"sections":[
+{"title":"10. Family & health","ar":"كَيْفَ الْعَايْلَة؟","ta":"குடும்பம், உடல் நலம்","items":[
+{"key":true,"ar":"كَيْفَ الْعَايْلَة؟","ten":"Kaif al 'ayla?","tta":"கைஃபல் ஆஇலா?","en":"How is your family?","tm":"உங்கள் குடும்பம் எப்படி இருக்கிறார்கள்?","w":[["كَيْفَ","how"],["الْعَايْلَة","the family"]]},
+{"ar":"كَيْفَ الْعِيَالْ؟","ten":"Kaif al 'iyal?","tta":"கைஃபல் இயால்?","en":"How are your children?","tm":"உங்கள் பிள்ளைகள் எப்படி இருக்கிறார்கள்?","w":[["كَيْفَ","how"],["الْعِيَالْ","the kids (Gulf)"]]},
+{"ar":"[r:كَيْفَ الصِّحَّة|كَيْفَ صِحَّتَكْ]؟","ten":"[r:Kaif assiha|Kaif sihhatak]?","tta":"[r:கைஃப் அஸ்ஸிஹ்ஹா|கைஃப் ஸிஹ்ஹதக்]?","en":"How is your health?","tm":"உங்கள் உடல் நலம் எப்படி உள்ளது?","w":[["كَيْفَ","how"],["[r:الصِّحَّة]","the health"],["[r:صِحَّتَكْ]","your health"]]},
+{"ar":"الْحَمْدُ لِلّٰهْ، تَمَامْ","ten":"Alhamdulillah, tamam","tta":"அல்ஹம்துலில்லாஹ், தமாம்","en":"Thank God, I am fine","tm":"இறைவனுக்கு நன்றி, நான் நலமாக உள்ளேன்","w":[["الْحَمْدُ لِلّٰهْ","praise be to God"],["تَمَامْ","fine / perfect"]]}
+]},
+{"title":"11. Meeting & travel","ar":"فُرْصَة سَعِيدَة","ta":"சந்திப்பு & பயணம்","items":[
+{"key":true,"ar":"فُرْصَة سَعِيدَة [r:مَعَكْ|وِيَّاكْ]","ten":"Fursa sa'eeda [r:ma'ak|wiyyak]","tta":"ஃபுர்ஸா ஸஈதா [r:ம'அக்|விய்யாக்]","en":"A pleasant time with you","tm":"உங்களுடன் இருந்தது மகிழ்ச்சியான தருணமாக இருந்தது","w":[["فُرْصَة","chance / occasion"],["سَعِيدَة","happy"],["[r:مَعَكْ]","with you"],["[r:وِيَّاكْ]","with you (Gulf)"]]},
+{"ar":"تْشَرَّفْنَا [r:بِمَعْرِفْتَكْ|بِلِقَاكْ]","ten":"Tsharrafna [r:bi ma'rifatak|bi liqaak]","tta":"தஷர்ரஃப்னா [r:பி மஃரிஃபதக்|பி லிகாஅக்]","en":"Nice to meet you","tm":"உங்களை சந்தித்ததில் மகிழ்ச்சி","w":[["تْشَرَّفْنَا","we are honoured"],["[r:بِمَعْرِفْتَكْ]","by knowing you"],["[r:بِلِقَاكْ]","by meeting you"]]},
+{"ar":"[r:رِحْلَة سَعِيدَة|أَسْتَوْدِعُكَ الله]","ten":"[r:Rihla sa'eeda|Astawdi'ak Allah]","tta":"[r:ரிஹ்லா ஸஈதா|அஸ்தௌதிஅகல்லாஹ்]","en":"Happy journey / I leave you in God's care","tm":"இனிய பயணமாகட்டும்","w":[["[r:رِحْلَة]","journey / trip"],["[r:سَعِيدَة]","happy"],["[r:أَسْتَوْدِعُكَ]","I entrust you"],["[r:الله]","(to) God"]]},
+{"ar":"تِرُوحْ وَتِرْجَعْ بِالسَّلَامَة","ten":"Tirooh wa tirja' bissalama","tta":"திரூஹ் வ திர்ஜிஃ பிஸ் ஸலாமா","en":"Go and come back safely","tm":"பாதுகாப்பாக பயணம் சென்று திரும்பி வாருங்கள்","w":[["تِرُوحْ","you go"],["وَ","and"],["تِرْجَعْ","you return"],["بِالسَّلَامَة","with safety"]]},
+{"ar":"الْحَمْدُ لِلّٰهِ عَلَى [r:السَّلَامَة|السَّلَامَاتْ]، سَلَامَاتْ","ten":"Alhamdulillah ala [r:ssalama|ssalamat], salamat","tta":"அல்ஹம்து லில்லாஹ் அலா [r:ஸ்ஸலாமா|ஸலாமத்], ஸலாமத்","en":"Thank God for your safe return","tm":"பாதுகாப்பாக இருந்ததற்கு கடவுளுக்கு நன்றி","w":[["الْحَمْدُ لِلّٰهِ","praise be to God"],["عَلَى","for"],["[r:السَّلَامَة]","the safety"],["[r:السَّلَامَاتْ]","the safeties (Gulf)"],["سَلَامَاتْ","welcome back safe (short)"]]}
+]},
+{"title":"12. Celebrations","ar":"مَبْرُوكْ","ta":"வாழ்த்துக்கள்","items":[
+{"key":true,"ar":"مَبْرُوكْ","ten":"Mabrook","tta":"மப்ரூக்","en":"Congratulations","tm":"வாழ்த்துக்கள்","w":[["مَبْرُوكْ","blessed (congrats)"]]},
+{"ar":"عِيدْ مِيلَادْ سَعِيدْ","ten":"Eid meelad sa'eed","tta":"ஈத் மீலாத் ஸஈத்","en":"Happy birthday","tm":"இனிய பிறந்தநாளாகட்டும்","w":[["عِيدْ","feast / celebration"],["مِيلَادْ","birth"],["سَعِيدْ","happy"]]},
+{"ar":"كُلّْ عَامْ وَإِنْتُمْ بِخَيْرْ","ten":"Kull 'aam wa intum bi khair","tta":"குல்லு ஆம் வ இன்தும் பி ஹைர்","en":"Happy new year / many happy returns","tm":"இனிய புத்தாண்டு வாழ்த்துக்கள்","w":[["كُلّْ","every"],["عَامْ","year"],["وَ","and"],["إِنْتُمْ","you (all)"],["بِخَيْرْ","in good health"]]}
+]}
+]}
+]}

@@ -1,0 +1,40 @@
+{"day":14,"icon":"question","title":"Questions: What & Why","arTitle":"الْأَسْئِلَة: شُو · لِيشْ","ta":"கேள்விகள்: என்ன, ஏன் - எதற்காக",
+"keys":["شُو","إِيشْ","وِشْ","لِيشْ"],
+"guide":{"title":"Which “what” do I use?","rows":[
+{"ar":"شُو","head":"Shu · “what” (UAE 🇦🇪)","en":"The one you'll hear most in the Emirates.","ta":"அமீரகத்தில் அதிகம்"},
+{"ar":"إِيشْ","head":"Eish · “what” (Gulf / Hijaz)","en":"Also common across the Gulf.","ta":"வளைகுடா முழுவதும்"},
+{"ar":"وِشْ","head":"Wish · “what” (Saudi 🇸🇦)","en":"Najdi / central Saudi.","ta":"சவுதி"},
+{"ar":"شْنُو","head":"Shnu · “what” (Kuwait / Iraq)","en":"You may hear it from Kuwaiti colleagues.","ta":"குவைத் / ஈராக்"},
+{"ar":"لِيشْ","head":"Leish · “why / for what”","en":"Same everywhere in the Gulf.","ta":"ஏன் / எதற்காக"}]},
+"activity":{"items":[{"ta":"உனது சகோதரனின் பெயர் என்ன?","en":"What is your brother's name?"},{"ta":"சிக்னலில் இருந்து ஏன் நேராக சென்றாய்?","en":"Why did you go straight from the signal?"},{"ta":"ஏன் நீ பள்ளிவாசலுக்கு சென்றாய்?","en":"Why did you go to the mosque?"},{"ta":"நீ என்ன நினைக்கிறாய்?","en":"What do you think?"},{"ta":"இது என்ன?","en":"What is this?"},{"ta":"ஏன் நீ தாமதமானாய்?","en":"Why are you late?"}],"hint":"குரூப்பில் ஒருவருக்கொருவர் இந்த கேள்விகளைக் கேட்டு பதில் சொல்லுங்கள்."},
+"blocks":[
+{"intro":["AUD-20260930-WA0006.mp3"],"audio":["AUD-20260930-WA0007.mp3","AUD-20260930-WA0010.mp3","AUD-20260930-WA0008.mp3","AUD-20260930-WA0009.mp3"],"sections":[
+{"title":"1. Shu — What","ar":"شُو","ta":"என்ன","items":[
+{"key":true,"ar":"شُو هَاذَا؟","ten":"Shu hatha?","tta":"ஷூ ஹாதா?","en":"What is this?","tm":"இது என்ன?","w":[["شُو","what (UAE)"],["هَاذَا","this"]]},
+{"ar":"[r:وِشْ ذَا|إِيشْ ذَا|شْنُو ذَا]؟","ten":"[r:Wish tha|Eish tha|Shnu tha]?","tta":"[r:உஷ் தா|ஏய்ஷ் தா|ஷுனூ தா]?","en":"What is this? (other Gulf ways)","tm":"இது என்ன?","w":[["[r:وِشْ]","what (Saudi)"],["[r:إِيشْ]","what"],["[r:شْنُو]","what (Kuwait)"],["ذَا","this (short)"]]},
+{"ar":"شُو تْسَوِّي يَا شِيخْ؟","ten":"Shu tsawwi ya sheikh?","tta":"ஷூ திஸவ்வி யா ஷைஹ்?","en":"What are you doing, man?","tm":"ஷேக்! என்ன செய்துகொண்டிருக்கிறீர்?","w":[["شُو","what"],["تْسَوِّي","you do / make"],["يَا","O (calling)"],["شِيخْ","sheikh / sir / man"]]},
+{"ar":"شُو سَوَّيْتْ يَا رْبِيعْ؟","ten":"Shu sawwait ya rbee'?","tta":"ஷூ ஸவ்வைத் யா ரபீஃ?","en":"What did you do, friend?","tm":"என்ன செய்தாய் நண்பா?","w":[["شُو","what"],["سَوَّيْتْ","you did"],["يَا","O (calling)"],["رْبِيعْ","friend (Gulf)"]]},
+{"ar":"شُو تْسَوِّي؟","ten":"Shu tsawwi?","tta":"ஷூ திஸவ்வீ?","en":"What are you doing?","tm":"என்ன செய்துகொண்டிருக்கிறாய்?","w":[["شُو","what"],["تْسَوِّي","you do"]]},
+{"ar":"[r:رْبِيعْ|صَاحْبِي|زَمِيلْ|صَدِيقْ|حَبِيبِي]","ten":"[r:Rbee'|Sahbi|Zameel|Sadeeg|Habeebi]","tta":"[r:ரபீஃ|ஸாஹ்பீ|ஸமீல்|ஸதீக்|ஹபீபி]","en":"Friend","tm":"நண்பன்","w":[["[r:رْبِيعْ]","friend (Gulf)"],["[r:صَاحْبِي]","my buddy"],["[r:زَمِيلْ]","colleague"],["[r:صَدِيقْ]","friend (formal)"],["[r:حَبِيبِي]","my dear"]]},
+{"ar":"شُو اسْمَكْ؟","ten":"Shu ismak?","tta":"ஷூ இஸ்மக்?","en":"What's your name?","tm":"உனது பெயர் என்ன?","w":[["شُو","what"],["اسْمَكْ","your name"]]},
+{"ar":"شُو السَّالْفَة؟","ten":"Shu as-salfa?","tta":"ஷூ அஸ்ஸால்ஃபா?","en":"What's going on?","tm":"என்ன நடக்கிறது?","w":[["شُو","what"],["السَّالْفَة","the story / matter (Gulf)"]]},
+{"ar":"شُو [r:الْأَخْبَارْ|يْدِيدَكْ]؟","ten":"Shu [r:al-akhbar|ydeedak]?","tta":"ஷூ [r:அல் அஹ்பார்|யதீதக்]?","en":"What's up? What's new?","tm":"என்ன விஷயம்?","w":[["شُو","what"],["[r:الْأَخْبَارْ]","the news"],["[r:يْدِيدَكْ]","your new (stuff) (UAE, ج→ي)"]]},
+{"ar":"شُو تَقْصِدْ [r:بْهَالْكَلَامْ|بْهَالرَّمْسَة]؟","ten":"Shu tagsid [r:bhal-kalam|bhar-ramsa]?","tta":"ஷூ தக்ஸித் [r:பிஹல் கலாம்|பிஹர் ரம்ஸா]?","en":"What do you mean by this talk?","tm":"இந்த பேச்சின் மூலம் என்ன சொல்ல வருகிறாய்?","w":[["شُو","what"],["تَقْصِدْ","you mean (ق = g)"],["[r:بْهَالْكَلَامْ]","by this talk"],["[r:بْهَالرَّمْسَة]","by this talk (Emirati)"]]},
+{"ar":"إِيشِ الْكَلَامْ هَاذَا؟","ten":"Eish al-kalam hatha?","tta":"ஏய்ஷ் அல்கலாம் ஹாதா?","en":"What is this talk?","tm":"இது என்ன பேச்சு?","w":[["إِيشِ","what"],["الْكَلَامْ","the talk"],["هَاذَا","this"]]},
+{"ar":"شُو اسْمِ الشَّرِكَة؟","ten":"Shu ism ash-sharika?","tta":"ஷூ இஸ்மஷ் ஷரிகா?","en":"What is the name of the company?","tm":"இந்த நிறுவனத்தின் பெயர் என்ன?","w":[["شُو","what"],["اسْمِ","name (of)"],["الشَّرِكَة","the company"]]},
+{"ar":"[r:شُو تِبَا|إِيشْ تِبْغَى|وِشْ تِبِي]؟","ten":"[r:Shu tiba|Eish tibgha|Wish tibi]?","tta":"[r:ஷூ திபா|ஏய்ஷ் திப்கா|உஷ் திபீ]?","en":"What do you want?","tm":"உனக்கு என்ன வேண்டும்?","w":[["[r:شُو تِبَا]","what do you want (UAE)"],["[r:إِيشْ تِبْغَى]","what do you want (Saudi / Hijaz)"],["[r:وِشْ تِبِي]","what do you want (Najdi)"]]},
+{"ar":"شُو أَحْسَنْ مَطْعَمْ لِلْأَكِلِ الْعَرَبِي؟","ten":"Shu ahsan mat'am lil-akil al-'arabi?","tta":"ஷூ அஹ்ஸன் மத்அம் லில் அகில் அல் அரபீ?","en":"What is the best restaurant for Arabic food?","tm":"அரபி உணவு சாப்பிட எது சிறந்த உணவகம்?","w":[["شُو","what"],["أَحْسَنْ","best"],["مَطْعَمْ","restaurant"],["لِلْأَكِلِ","for the food"],["الْعَرَبِي","the Arabic"]]},
+{"ar":"شُو صَارْ؟","ten":"Shu sar?","tta":"ஷூ ஸார்?","en":"What happened?","tm":"என்ன நடந்தது?","w":[["شُو","what"],["صَارْ","happened"]]},
+{"ar":"[r:شُو فِيكْ|وِشْ فِيكْ|إِيشْ بِكْ]؟","ten":"[r:Shu feek|Wish feek|Eish bik]?","tta":"[r:ஷூ ஃபீக்|உஷ் ஃபீக்|ஏய்ஷ் பிக்]?","en":"What's wrong with you?","tm":"உனக்கு என்ன ஆகிவிட்டது?","w":[["[r:شُو فِيكْ]","what's in you (UAE)"],["[r:وِشْ فِيكْ]","what's in you (Saudi)"],["[r:إِيشْ بِكْ]","what's with you"]]}
+]},
+{"title":"2. Leish — Why / for what","ar":"لِيشْ","ta":"எதற்காக, ஏன்","items":[
+{"key":true,"ar":"لِيشْ اتَّصَلْتْ عَلَيّْ؟","ten":"Leish ittasalt 'alay?","tta":"லேய்ஷ் இத்தஸல்த் அலைய்?","en":"Why did you call me?","tm":"ஏன் என்னை அழைத்தாய்?","w":[["لِيشْ","why"],["اتَّصَلْتْ","you called"],["عَلَيّْ","on me → me"]]},
+{"ar":"كِنْتْ تِبَانِي فِي شَيّْ ضَرُورِي؟","ten":"Kint tibani fi shai dharoori?","tta":"குன்த் திபானி ஃபீ ஷய் ழரூரீ?","en":"Did you want me for something urgent?","tm":"உனக்கு உடனடியாக ஏதாவது வேண்டுமா?","w":[["كِنْتْ","you were"],["تِبَانِي","you want me (UAE)"],["فِي","for / in"],["شَيّْ","something"],["ضَرُورِي","urgent / necessary"]]},
+{"ar":"لِيشْ قِلْتْ [r:چِذِي|كِذَا]؟","ten":"Leish gilt [r:chithi|kitha]?","tta":"லேய்ஷ் குல்த் [r:சிதி|கிதா]?","en":"Why did you say that?","tm":"ஏன் நீ அப்படி சொன்னாய்?","w":[["لِيشْ","why"],["قِلْتْ","you said (ق = g)"],["[r:چِذِي]","like this (UAE; lesson جِي)"],["[r:كِذَا]","like this"]]},
+{"ar":"لِيشْ [r:إِنْتْ تْأَخَّرْتْ|تْأَخَّرْتْ]؟","ten":"Leish [r:int t'akhkhart|t'akhkhart]?","tta":"லேய்ஷ் [r:இன்த் தஅஹ்ஹர்த்|தஅஹ்ஹர்த்]?","en":"Why are you late?","tm":"ஏன் நீ தாமதமாக வந்தாய்?","w":[["لِيشْ","why"],["[r:إِنْتْ]","you"],["[r:تْأَخَّرْتْ]","you were late"]]},
+{"ar":"لِيشْ زَعْلَانْ؟","ten":"Leish za'lan?","tta":"லேய்ஷ் ஜஃலான்?","en":"Why are you upset?","tm":"ஏன் நீ சோகமாக இருக்கிறாய்?","w":[["لِيشْ","why"],["زَعْلَانْ","upset / sad"]]},
+{"ar":"لِيشْ زَحْمَة؟","ten":"Leish zahma?","tta":"லேய்ஷ் ஸஹ்மா?","en":"Why is there traffic?","tm":"ஏன் டிராஃபிக்காக இருக்கிறது?","w":[["لِيشْ","why"],["زَحْمَة","crowd / traffic jam"]]},
+{"ar":"لِيشْ غَالِي؟","ten":"Leish ghali?","tta":"லேய்ஷ் காலீ?","en":"Why is it expensive?","tm":"அது ஏன் விலை உயர்வாக இருக்கிறது?","w":[["لِيشْ","why"],["غَالِي","expensive"]]}
+]}
+]}
+]}

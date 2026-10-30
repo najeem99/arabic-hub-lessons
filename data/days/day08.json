@@ -1,0 +1,63 @@
+{"day":8,"icon":"clock","title":"Time & Colours","arTitle":"السَّاعَة وَالْأَلْوَانْ","ta":"நேரம் / வண்ணங்கள்",
+"keys":["السَّاعَة كَمْ؟","وَرُبُعْ","وَنُصّْ","أَحْمَرْ","أَبْيَضْ"],
+"activity":{"items":[{"ta":"நேரம் 3.15 ஆகிறது","en":"It's 3:15."},{"ta":"அரை மணி நேரம்","en":"Half an hour."},{"ta":"மணி என்ன?","en":"What time is it?"},{"ta":"பச்சை நிறம்","en":"Green colour."},{"ta":"சிவப்பு கார்","en":"A red car."},{"ta":"அவர் மாலை 4 மணிக்கு வருவார்","en":"He will come at 4 in the evening."},{"ta":"இன்று மாலை, சரியாக ஐந்து மணி","en":"This evening, at exactly five."},{"ta":"நேரம் மாலை 4:20 ஆகிறது","en":"It's 4:20 in the evening."}]},
+"blocks":[
+{"audio":["AUD-20260919-WA0005.mp3"],"sections":[
+{"title":"1. Telling-time words","ar":"السَّاعَة","ta":"நேரம்","grid":true,"items":[
+{"key":true,"ar":"[r:السَّاعَة كَمْ|كَمِ السَّاعَة]؟","ten":"[r:As-sa'a kam|Kamis-sa'a]?","tta":"[r:அஸ்ஸாஆ கம்|கமிஸ் ஸாஆ]?","en":"What time is it?","tm":"மணி என்ன?","w":[["السَّاعَة","the hour / the clock"],["كَمْ","how much / how many"]]},
+{"ar":"[r:سَاعَة|سَاعَاتْ]","ten":"[r:Sa'a|Sa'at]","tta":"[r:ஸாஆ|ஸாஆத்]","en":"Hour / hours","tm":"மணி / மணிகள்","w":[["[r:سَاعَة]","hour"],["[r:سَاعَاتْ]","hours"]]},
+{"ar":"بِالضَّبْطْ","ten":"Bidh-dhabt","tta":"பிழ்ழப்த்","en":"Exactly","tm":"சரியாக","w":[["بِ","with / at"],["الضَّبْطْ","the exactness"]]},
+{"ar":"وَرُبُعْ","ten":"Wa rubu'","tta":"வ ருபுஃ","en":"And a quarter (:15)","tm":"கால்","w":[["وَ","and"],["رُبُعْ","quarter"]]},
+{"ar":"[r:وَنُصّْ|وَنِصْفْ]","ten":"[r:Wa nuss|Wa nisf]","tta":"[r:வ நுஸ்|வ நிஸ்ஃப்]","en":"And a half (:30)","tm":"அரை","w":[["وَ","and"],["[r:نُصّْ]","half (spoken)"],["[r:نِصْفْ]","half (formal)"]]},
+{"ar":"إِلَّا رُبُعْ","ten":"Illa rubu'","tta":"இல்லா ருபுஃ","en":"Quarter to (:45)","tm":"முக்கால்","w":[["إِلَّا","except / minus"],["رُبُعْ","quarter"]]},
+{"ar":"[r:دَقِيقَة|ثَانْيَة]","ten":"[r:Dagiga|Thanya]","tta":"[r:தகீகா|ஸானியா]","en":"Minute / second","tm":"நிமிடம் / வினாடி","w":[["[r:دَقِيقَة]","minute (ق = g)"],["[r:ثَانْيَة]","second"]]}
+]}
+]},
+{"audio":["AUD-20260919-WA0006.mp3"],"sections":[
+{"title":"2. Saying the time","ar":"٥:٠٠ · ١٢:١٥ · ٥:٤٥","ta":"நேரம் சொல்லுதல்","items":[
+{"key":true,"tag":"5:00","ar":"[r:السَّاعَة الْخَامْسَة|السَّاعَة خَمْسَة] [b:بِالضَّبْطْ|تَمَامْ]","ten":"[r:As-sa'a al-khamsa|As-sa'a khamsa] [b:bidh-dhabt|tamam]","tta":"[r:அஸ்ஸாஆ அல்ஹாமிஸா|அஸ்ஸாஆ ஹம்ஸா] [b:பிழ்ழப்த்|தமாம்]","en":"It's exactly 5:00","tm":"மணி சரியாக 5 ஆகின்றது","w":[["السَّاعَة","the hour / it's"],["[r:الْخَامْسَة]","the fifth (formal way)"],["[r:خَمْسَة]","five (spoken)"],["[b:بِالضَّبْطْ]","exactly"],["[b:تَمَامْ]","exactly / sharp"]]},
+{"tag":"12:15","ar":"السَّاعَة اثْنَعْشَرْ وَرُبُعْ","ten":"As-sa'a ithna'shar wa rubu'","tta":"ஸாஆ இஸ்னா அஷர் வ ருப்ஃ","en":"It's quarter past 12","tm":"மணி பன்னிரண்டே கால் ஆகின்றது","w":[["السَّاعَة","the hour"],["اثْنَعْشَرْ","twelve"],["وَ","and"],["رُبُعْ","quarter"]]},
+{"tag":"5:45","ar":"السَّاعَة سِتَّة إِلَّا رُبُعْ","ten":"As-sa'a sitta illa rubu'","tta":"ஸாஆ ஸித்தா இல்லா ருப்ஃ","en":"It's quarter to 6","tm":"மணி ஐந்தே முக்கால் ஆகின்றது","w":[["السَّاعَة","the hour"],["سِتَّة","six"],["إِلَّا","minus"],["رُبُعْ","quarter"]]},
+{"tag":"1:30","ar":"السَّاعَة وَحْدَة [r:وَنُصّْ|وَنِصْفْ]","ten":"As-sa'a wahda [r:wa nuss|wa nisf]","tta":"ஸாஆ வஹ்தா [r:வ நுஸ்|வ நிஸ்ஃப்]","en":"It's half past one","tm":"மணி ஒன்றரை ஆகின்றது","w":[["السَّاعَة","the hour"],["وَحْدَة","one (f, for the hour)"],["[r:وَنُصّْ]","and a half (spoken)"],["[r:وَنِصْفْ]","and a half (formal)"]]},
+{"tag":"3:20","ar":"السَّاعَة ثَلَاثَة وَعِشْرِينْ دَقِيقَة","ten":"As-sa'a thalatha wa 'ishreen dagiga","tta":"ஸாஆ ஸலாஸா வ இஷ்ரீன் தகீகா","en":"It's three twenty","tm":"மணி மூன்று இருபதாகிறது","w":[["السَّاعَة","the hour"],["ثَلَاثَة","three"],["وَ","and"],["عِشْرِينْ","twenty"],["دَقِيقَة","minute(s)"]]}
+]}
+]},
+{"audio":["AUD-20260919-WA0008.mp3"],"sections":[
+{"title":"3. Colours","ar":"الْأَلْوَانْ","ta":"வண்ணங்கள்","grid":true,"items":[
+{"key":true,"tag":"⚪ White","ar":"أَبْيَضْ","ten":"Abyadh","tta":"அப்யழ்","en":"White","tm":"வெள்ளை","w":[["أَبْيَضْ","white"]]},
+{"tag":"⚫ Black","ar":"أَسْوَدْ","ten":"Aswad","tta":"அஸ்வத்","en":"Black","tm":"கருப்பு","w":[["أَسْوَدْ","black"]]},
+{"tag":"🔵 Blue","ar":"أَزْرَقْ","ten":"Azrag","tta":"அஜ்ரக்","en":"Blue","tm":"நீலம்","w":[["أَزْرَقْ","blue (ق = g)"]]},
+{"tag":"🟢 Green","ar":"أَخْضَرْ","ten":"Akhdhar","tta":"அஹ்ழர்","en":"Green","tm":"பச்சை","w":[["أَخْضَرْ","green"]]},
+{"tag":"🔴 Red","ar":"أَحْمَرْ","ten":"Ahmar","tta":"அஹ்மர்","en":"Red","tm":"சிவப்பு","w":[["أَحْمَرْ","red"]]},
+{"tag":"🟡 Yellow","ar":"أَصْفَرْ","ten":"Asfar","tta":"அஸ்ஃபர்","en":"Yellow","tm":"மஞ்சள்","w":[["أَصْفَرْ","yellow"]]},
+{"tag":"🩷 Pink","ar":"وَرْدِي","ten":"Wardi","tta":"வர்தி","en":"Pink","tm":"இளஞ்சிவப்பு","w":[["وَرْدِي","pink (rose-coloured)"]]},
+{"tag":"🟤 Brown","ar":"بُنِّي","ten":"Bunni","tta":"புன்னி","en":"Brown","tm":"பழுப்பு","w":[["بُنِّي","brown (coffee-bean coloured)"]]},
+{"tag":"🥇 Gold","ar":"ذَهَبِي","ten":"Dhahabi","tta":"தஹபி","en":"Gold","tm":"தங்க நிறம்","w":[["ذَهَبِي","golden"]]},
+{"tag":"🥈 Silver","ar":"فِضِّي","ten":"Fiddhi","tta":"ஃபிழ்ழி","en":"Silver","tm":"வெள்ளி நிறம்","w":[["فِضِّي","silver"]]},
+{"tag":"🩶 Grey","ar":"رَمَادِي","ten":"Ramadi","tta":"ரமாதி","en":"Grey","tm":"சாம்பல்","w":[["رَمَادِي","grey (ash-coloured)"]]}
+]}
+]},
+{"audio":["AUD-20260919-WA0009.mp3"],"sections":[
+{"title":"4. Colours with things","ar":"قَمِيصْ أَبْيَضْ","ta":"அரபி மொழியில் வண்ணங்கள்","note":{"en":"Colours change with gender. Words ending in ة are feminine, so the colour takes its feminine form: سَيَّارَة بِيضَاء.","ta":"அரபியில் (ة) என்று முடிவடையும் வார்த்தைகள் பெண்பாலைக் குறிக்கும். எ.கா: سيارة , حقيبة"},"items":[
+{"key":true,"ar":"قَمِيصْ أَبْيَضْ","ten":"Gamees abyadh","tta":"கமீஸ் அப்யழ்","en":"A white shirt","tm":"வெள்ளை சட்டை","w":[["قَمِيصْ","shirt (m)"],["أَبْيَضْ","white (m)"]]},
+{"ar":"سَيَّارَة بِيضَاءْ","ten":"Sayyara baidha","tta":"ஸையாரா பைழா","en":"A white car","tm":"வெள்ளை கார்","w":[["سَيَّارَة","car (f)"],["بِيضَاءْ","white (f)"]]},
+{"ar":"حَقِيبَة زَرْقَاءْ","ten":"Hageeba zarga","tta":"ஹகீபா ஜர்கா","en":"A blue bag","tm":"நீல பை","w":[["حَقِيبَة","bag (f)"],["زَرْقَاءْ","blue (f)"]]},
+{"ar":"رَجُلْ أَسْوَدْ","ten":"Rajul aswad","tta":"ரஜுல் அஸ்வத்","en":"A black (dark-skinned) man","tm":"கருப்பு நிற ஆண்","w":[["رَجُلْ","man"],["أَسْوَدْ","black (m)"]]},
+{"ar":"اِمْرَأَة سَوْدَاءْ","ten":"Imra'a sawda","tta":"இம்ரஆ சௌதா","en":"A black (dark-skinned) woman","tm":"கருப்பு நிற பெண்","w":[["اِمْرَأَة","woman"],["سَوْدَاءْ","black (f)"]]},
+{"ar":"هَاذِي الْحَدِيقَة خَضْرَاءْ","ten":"Hathi al-hadeega khadhra","tta":"ஹாதிஹில் ஹதீகா ஹழ்ரா","en":"This garden is green","tm":"இந்த பூங்கா பசுமையானது","w":[["هَاذِي","this (f, Gulf)"],["الْحَدِيقَة","the garden / park"],["خَضْرَاءْ","green (f)"]]},
+{"ar":"فُرْصَة ذَهَبِيَّة","ten":"Fursa dhahabiyya","tta":"ஃபுர்ஸா தஹபிய்யா","en":"A golden opportunity","tm":"பொன்னான வாய்ப்பு","w":[["فُرْصَة","chance (f)"],["ذَهَبِيَّة","golden (f)"]]}
+]},
+{"title":"5. Masculine × feminine colours","ar":"مُذَكَّرْ × مُؤَنَّثْ","ta":"ஆண்பால் × பெண்பால்","grid":true,"items":[
+{"key":true,"ar":"[r:أَخْضَرْ|خَضْرَاءْ]","ten":"[r:Akhdhar|Khadhra]","tta":"[r:அஹ்ழர்|ஹழ்ரா]","en":"Green (m / f)","tm":"பச்சை","w":[["[r:أَخْضَرْ]","green (m)"],["[r:خَضْرَاءْ]","green (f)"]]},
+{"ar":"[r:أَحْمَرْ|حَمْرَاءْ]","ten":"[r:Ahmar|Hamra]","tta":"[r:அஹ்மர்|ஹம்ரா]","en":"Red (m / f)","tm":"சிவப்பு","w":[["[r:أَحْمَرْ]","red (m)"],["[r:حَمْرَاءْ]","red (f)"]]},
+{"ar":"[r:أَزْرَقْ|زَرْقَاءْ]","ten":"[r:Azrag|Zarga]","tta":"[r:அஜ்ரக்|ஜர்கா]","en":"Blue (m / f)","tm":"நீலம்","w":[["[r:أَزْرَقْ]","blue (m)"],["[r:زَرْقَاءْ]","blue (f)"]]},
+{"ar":"[r:أَبْيَضْ|بِيضَاءْ]","ten":"[r:Abyadh|Baidha]","tta":"[r:அப்யழ்|பைழா]","en":"White (m / f)","tm":"வெள்ளை","w":[["[r:أَبْيَضْ]","white (m)"],["[r:بِيضَاءْ]","white (f)"]]},
+{"ar":"[r:أَسْوَدْ|سَوْدَاءْ]","ten":"[r:Aswad|Sawda]","tta":"[r:அஸ்வத்|சௌதா]","en":"Black (m / f)","tm":"கருப்பு","w":[["[r:أَسْوَدْ]","black (m)"],["[r:سَوْدَاءْ]","black (f)"]]},
+{"ar":"[r:بُرْتُقَالِي|بُرْتُقَالِيَّة]","ten":"[r:Burtugali|Burtugaliyya]","tta":"[r:புர்துகாலி|புர்துகாலியா]","en":"Orange (m / f)","tm":"ஆரஞ்சு","w":[["[r:بُرْتُقَالِي]","orange (m)"],["[r:بُرْتُقَالِيَّة]","orange (f)"]]},
+{"ar":"[r:رَمَادِي|رَمَادِيَّة]","ten":"[r:Ramadi|Ramadiyya]","tta":"[r:ரமாதி|ரமாதியா]","en":"Grey (m / f)","tm":"சாம்பல்","w":[["[r:رَمَادِي]","grey (m)"],["[r:رَمَادِيَّة]","grey (f)"]]},
+{"ar":"[r:وَرْدِي|وَرْدِيَّة]","ten":"[r:Wardi|Wardiyya]","tta":"[r:வர்தி|வர்தியா]","en":"Pink (m / f)","tm":"இளஞ்சிவப்பு","w":[["[r:وَرْدِي]","pink (m)"],["[r:وَرْدِيَّة]","pink (f)"]]},
+{"ar":"[r:بَنَفْسَجِي|بَنَفْسَجِيَّة]","ten":"[r:Banafsaji|Banafsajiyya]","tta":"[r:பனஃப்சஜி|பனஃப்சஜியா]","en":"Purple (m / f)","tm":"ஊதா","w":[["[r:بَنَفْسَجِي]","purple (m, violet-coloured)"],["[r:بَنَفْسَجِيَّة]","purple (f)"]]},
+{"ar":"[r:بُنِّي|بُنِّيَّة]","ten":"[r:Bunni|Bunniyya]","tta":"[r:புன்னி|புன்னியா]","en":"Brown (m / f)","tm":"பழுப்பு","w":[["[r:بُنِّي]","brown (m)"],["[r:بُنِّيَّة]","brown (f)"]]}
+]}
+]}
+]}

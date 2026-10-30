@@ -1,0 +1,85 @@
+{"day":13,"icon":"compass","title":"Directions & Prepositions","arTitle":"الِاتِّجَاهَاتْ وَحُرُوفِ الْجَرّْ","ta":"திசைகள் / முன்னிடைச்சொல்",
+"keys":["مِنْ","إِلَى","فِي","يَمِينْ","يَسَارْ","سِيدَا","قِدَّامْ"],
+"activity":{"items":[{"ta":"சிக்னலில் இருந்து இடதுபுறம் செல்லவும்","en":"Go left from the signal."},{"ta":"நேராக நடக்கவும்","en":"Walk straight."},{"ta":"நிலையத்தின் பின்புறம் இருக்கிறது","en":"It's behind the station."},{"ta":"இங்கிருந்து மிக அருகில் இருக்கிறது","en":"It's very near from here."},{"ta":"மருத்துவமனை முன் எனது காரின் பின்பக்கத்தில் மோதினேன்","en":"I hit the back of my car in front of the hospital."},{"ta":"நான் வீட்டில் இல்லை, வீட்டிற்கு வெளியே இருக்கிறேன்","en":"I'm not at home, I'm outside the house."},{"ta":"எனது பிலாட் வெகு தொலைவில் இல்லை, அது அருகில் இருக்கிறது","en":"My flat is not far, it's near."},{"ta":"அவன் தன் மனைவியைப் பற்றி பேசுகிறான்","en":"He is talking about his wife."},{"ta":"காலை முதல் இரவு வரை","en":"From morning until night."},{"ta":"நான் வேலையில் இருக்கிறேன்","en":"I'm at work."}],"hint":"இவ்வாக்கியங்களை அரபியில் மாற்றி பயிற்சி செய்யுங்கள்"},
+"blocks":[
+{"audio":["AUD-20261026-WA0009.mp3"],"sections":[
+{"title":"1. Little linking words","ar":"حُرُوفِ الْجَرّْ","ta":"முன்னிடைச்சொற்கள்","grid":true,"items":[
+{"key":true,"ar":"مِنْ","ten":"Min","tta":"மின்","en":"From","tm":"இருந்து","w":[["مِنْ","from"]]},
+{"ar":"إِلَى","ten":"Ila","tta":"இலா","en":"To","tm":"க்கு","w":[["إِلَى","to / towards"]]},
+{"ar":"عَنْ","ten":"'An","tta":"அன்","en":"About","tm":"பற்றி","w":[["عَنْ","about / from"]]},
+{"ar":"[r:لِينْ|حَتَّى]","ten":"[r:Leen|Hatta]","tta":"[r:லீன்|ஹத்தா]","en":"Until","tm":"வரை / இருக்கும் வரை","w":[["[r:لِينْ]","until (Gulf)"],["[r:حَتَّى]","until"]]},
+{"ar":"فِي","ten":"Fi","tta":"ஃபீ","en":"In / inside","tm":"உள்ளே","w":[["فِي","in"]]},
+{"ar":"عَلَى","ten":"'Ala","tta":"அலா","en":"On / on top of","tm":"மேலே","w":[["عَلَى","on"]]},
+{"ar":"بَيْنْ","ten":"Bain","tta":"பைன","en":"Between","tm":"இடையில்","w":[["بَيْنْ","between"]]},
+{"ar":"خِلَالْ","ten":"Khilal","tta":"ஹிலால்","en":"Within / during","tm":"இடைப்பட்ட நேரத்திற்குள்","w":[["خِلَالْ","within / during"]]}
+]},
+{"title":"2. In short phrases","ar":"مِنْ تَامِلْ نَادُو","ta":"சிறு சொற்றொடர்கள்","items":[
+{"key":true,"ar":"مِنْ تَامِلْ نَادُو","ten":"Min Tamil Nadu","tta":"மின் தாமில் நாதூ","en":"From Tamil Nadu","tm":"தமிழ்நாட்டில் இருந்து","w":[["مِنْ","from"],["تَامِلْ نَادُو","Tamil Nadu"]]},
+{"ar":"إِلَى الْمَطَارْ","ten":"Ilal-matar","tta":"இலல் மதார்","en":"To the airport","tm":"விமான நிலையத்திற்கு","w":[["إِلَى","to"],["الْمَطَارْ","the airport"]]},
+{"ar":"عَنِ الشَّرِكَة","ten":"'Anish-sharika","tta":"அனிஷ் ஷரிகா","en":"About the company","tm":"நிறுவனம் பற்றி","w":[["عَنِ","about"],["الشَّرِكَة","the company"]]},
+{"ar":"[r:لِينْ|حَتَّى] الصَّبَاحْ","ten":"[r:Leen|Hatta] as-sabah","tta":"[r:லீன்|ஹத்தா] ஸபாஹ்","en":"Until the morning","tm":"காலை வரை","w":[["[r:لِينْ]","until (Gulf)"],["[r:حَتَّى]","until"],["الصَّبَاحْ","the morning"]]},
+{"ar":"عَلَى الطَّاوْلَة","ten":"'Alat-tawla","tta":"அலத் தாவ்லா","en":"On the table","tm":"மேஜையின் மேல்","w":[["عَلَى","on"],["الطَّاوْلَة","the table"]]},
+{"ar":"بَيْنِ الْمِلَفَّاتْ","ten":"Bainal-milaffat","tta":"பைனல் மிலஃப்பாத்","en":"Between the files","tm":"கோப்புகளுக்கு இடையில்","w":[["بَيْنِ","between"],["الْمِلَفَّاتْ","the files (lesson: الْمِلَفّ, the file)"]]},
+{"ar":"خِلَالْ أُسْبُوعْ","ten":"Khilal usboo'","tta":"ஹிலால் உஸ்பூஃ","en":"Within a week","tm":"ஒரு வாரத்திற்குள்","w":[["خِلَالْ","within"],["أُسْبُوعْ","a week"]]}
+]}
+]},
+{"audio":["AUD-20261005-WA0016.mp3"],"sections":[
+{"title":"3. In full sentences","ar":"جُمَلْ","ta":"வாக்கியங்கள்","items":[
+{"key":true,"ar":"[r:أَبَا|أَبِي|أَبْغَى] أَشْتَرِي [b:تِلِفُونْ|جَوَّالْ] مِنْ لُولُو","ten":"[r:Aba|Abi|Abgha] ashtari [b:tilifoon|jawwal] min Lulu","tta":"[r:அபா|அபீ|அப்கா] அஷ்தரீ [b:திலிஃபூன்|ஜவ்வால்] மின் லூலூ","en":"I want to buy a mobile from Lulu","tm":"நான் லூலூவில் இருந்து மொபைல் வாங்க விரும்புகிறேன்","w":[["[r:أَبَا]","I want (UAE)"],["[r:أَبِي]","I want (Gulf)"],["[r:أَبْغَى]","I want (Saudi)"],["أَشْتَرِي","I buy"],["[b:تِلِفُونْ]","phone (UAE)"],["[b:جَوَّالْ]","mobile"],["مِنْ","from"],["لُولُو","Lulu"]]},
+{"ar":"مِنَ الْيَوْمْ [r:لِينْ|حَتَّى] بَاچِرْ","ten":"Minal-yoom [r:leen|hatta] bachir","tta":"மினல் யௌம் [r:லீன்|ஹத்தா] பாஜிர்","en":"From today until tomorrow","tm":"இன்று முதல் நாளை வரை","w":[["مِنَ","from"],["الْيَوْمْ","today"],["[r:لِينْ]","until (Gulf)"],["[r:حَتَّى]","until"],["بَاچِرْ","tomorrow (UAE)"]]},
+{"ar":"أَنَا فِي الشُّغُلْ","ten":"Ana fish-shughul","tta":"அன ஃபிஷ் ஷுகுல்","en":"I am at work","tm":"நான் வேலையில் இருக்கிறேன்","w":[["أَنَا","I"],["فِي","in / at"],["الشُّغُلْ","the work"]]},
+{"ar":"هُوَّ يِتْكَلَّمْ عَنِ الِاجْتِمَاعْ","ten":"Huwa yitkallam 'anil-ijtima'","tta":"ஹுவ யித்கல்லம் அனில் இஜ்திமா","en":"He is talking about the meeting","tm":"அவன் சந்திப்பை (meeting) குறித்து பேசுகிறான்","w":[["هُوَّ","he"],["يِتْكَلَّمْ","he talks"],["عَنِ","about"],["الِاجْتِمَاعْ","the meeting"]]},
+{"ar":"رِحْتْ إِلَى السُّوقْ وَبَعْدَيْنْ سِرْتْ إِلَى الدَّوَامْ","ten":"Riht ilas-soog wa ba'dain sirt ilad-dawam","tta":"ருஹ்த் இலஸ் ஸூக் வ பஃதைன் சிர்த் இலத் தவாம்","en":"I went to the market and then went to work","tm":"நான் சந்தைக்குப் போய்விட்டு பின் வேலைக்குச் சென்றேன்","w":[["رِحْتْ","I went"],["إِلَى","to"],["السُّوقْ","the market"],["وَ","and"],["بَعْدَيْنْ","then / later"],["سِرْتْ","I went (UAE)"],["إِلَى","to"],["الدَّوَامْ","the work shift / office hours"]]},
+{"ar":"عَشَانْ چِذِي مَا رِحْتْ الْمَكْتَبْ","ten":"'Ashan chithi ma riht al-maktab","tta":"அஷான் சிதி மா ருஹ்த் அல் மக்தப்","en":"That's why I didn't go to the office","tm":"அதனால்தான் நான் அலுவலகம் செல்லவில்லை","w":[["عَشَانْ","because"],["چِذِي","like this / so (Gulf; lesson جِي)"],["مَا","didn't"],["رِحْتْ","I went (lesson: أَرُوحْ, I go)"],["الْمَكْتَبْ","the office"]]}
+]}
+]},
+{"audio":["AUD-20261026-WA0010.mp3"],"sections":[
+{"title":"4. Direction words","ar":"الِاتِّجَاهَاتْ","ta":"திசைச் சொற்கள்","grid":true,"items":[
+{"key":true,"tag":"⬆️","ar":"[r:سِيدَا|طَوَّالِي]","ten":"[r:Seeda|Tawwali]","tta":"[r:ஸீதா|தவ்வாலி]","en":"Straight","tm":"நேராக","w":[["[r:سِيدَا]","straight (UAE)"],["[r:طَوَّالِي]","straight on"]]},
+{"tag":"↗️","ar":"[r:بَرَّا|خَارِجْ]","ten":"[r:Barra|Kharij]","tta":"[r:பர்ரா|ஹாரிஜ்]","en":"Outside","tm":"வெளியே","w":[["[r:بَرَّا]","outside (spoken)"],["[r:خَارِجْ]","outside (formal)"]]},
+{"tag":"↙️","ar":"دَاخِلْ","ten":"Dakhil","tta":"தாஹில்","en":"Inside","tm":"உள்ளே","w":[["دَاخِلْ","inside"]]},
+{"tag":"🔼","ar":"فُوقْ","ten":"Foog","tta":"ஃபௌக்","en":"Above / up","tm":"மேலே","w":[["فُوقْ","above (ق = g)"]]},
+{"tag":"🔽","ar":"تَحَتْ","ten":"Tahat","tta":"தஹத்","en":"Below / under","tm":"கீழே","w":[["تَحَتْ","under"]]},
+{"tag":"➡️","ar":"يَمِينْ","ten":"Yameen","tta":"யமீன்","en":"Right","tm":"வலது","w":[["يَمِينْ","right"]]},
+{"tag":"⬅️","ar":"يَسَارْ","ten":"Yasar","tta":"யஸார்","en":"Left","tm":"இடது","w":[["يَسَارْ","left"]]},
+{"tag":"⏮","ar":"قَبْلْ","ten":"Gabl","tta":"கப்ல்","en":"Before","tm":"முன்","w":[["قَبْلْ","before (ق = g)"]]},
+{"tag":"⏭","ar":"[r:عُقُبْ|بَعْدْ]","ten":"[r:'Ugub|Ba'ad]","tta":"[r:உகுப்|பஃத்]","en":"After","tm":"பின்","w":[["[r:عُقُبْ]","after (Gulf)"],["[r:بَعْدْ]","after"]]},
+{"tag":"⏺","ar":"الْحِينْ","ten":"Al-heen","tta":"அல்ஹீன்","en":"Now","tm":"இப்போது","w":[["الْحِينْ","now (Gulf)"]]},
+{"tag":"⏳","ar":"بَعْدَيْنْ","ten":"Ba'dain","tta":"பஃதைன்","en":"Later","tm":"பிறகு","w":[["بَعْدَيْنْ","later"]]},
+{"tag":"🔜","ar":"[r:قِدَّامْ|أَمَامْ]","ten":"[r:Giddam|Amam]","tta":"[r:கித்தாம்|அமாம்]","en":"In front","tm":"முன்னால்","w":[["[r:قِدَّامْ]","in front (Gulf)"],["[r:أَمَامْ]","in front (formal)"]]},
+{"tag":"🔙","ar":"[r:وَرَا|خَلْفْ]","ten":"[r:Wara|Khalf]","tta":"[r:வரா|ஹல்ஃப்]","en":"Behind","tm":"பின்னால்","w":[["[r:وَرَا]","behind (spoken)"],["[r:خَلْفْ]","behind"]]},
+{"tag":"📍","ar":"قَرِيبْ","ten":"Gareeb","tta":"கரீப்","en":"Near","tm":"அருகில்","w":[["قَرِيبْ","near (ق = g)"]]},
+{"tag":"🗺","ar":"بَعِيدْ","ten":"Ba'eed","tta":"பஈத்","en":"Far","tm":"தூரம்","w":[["بَعِيدْ","far"]]},
+{"tag":"↔️","ar":"مُقَابِلْ","ten":"Mugabil","tta":"முகாபில்","en":"Opposite","tm":"எதிரே","w":[["مُقَابِلْ","opposite (ق = g)"]]}
+]}
+]},
+{"audio":["AUD-20261026-WA0013.mp3","AUD-20261026-WA0014.mp3","AUD-20261026-WA0015.mp3"],"sections":[
+{"title":"5. Giving directions","ar":"وِينْ؟","ta":"திசைகள் — வாக்கியங்கள்","items":[
+{"key":true,"ar":"[r:أَبَا|أَبْغَى] أَسِيرِ [b:الدَّوَامْ|الشُّغُلْ] بَعْدْ سَاعَة","ten":"[r:Aba|Abgha] aseer [b:ad-dawam|ash-shughul] ba'ad sa'a","tta":"[r:அபா|அப்கா] அசீர் [b:அத் தவாம்|அஷ் ஷுகுல்] பஃத் ஸாஆ","en":"I have to go to work after an hour","tm":"ஒரு மணி நேரம் கழித்து நான் வேலைக்கு செல்ல வேண்டும்","w":[["[r:أَبَا]","I want (UAE)"],["[r:أَبْغَى]","I want"],["أَسِيرِ","I go (UAE)"],["[b:الدَّوَامْ]","the work shift"],["[b:الشُّغُلْ]","the work"],["بَعْدْ","after"],["سَاعَة","an hour"]]},
+{"ar":"وِينْ مَحَطَّةِ الْقِطَارْ؟","ten":"Ween mahattat al-gitar?","tta":"வீன் மஹத்ததுல் கிதார்?","en":"Where is the train station?","tm":"ரயில் நிலையம் எங்கு இருக்கிறது?","w":[["وِينْ","where"],["مَحَطَّةِ","station (of)"],["الْقِطَارْ","the train (ق = g)"]]},
+{"ar":"اِمْشِ [r:سِيدَا|طَوَّالِي] وْخِذْ يَمِينْ","ten":"Imshi [r:seeda|tawwali] w-khidh yameen","tta":"இம்ஷீ [r:ஸீதா|தவ்வாலீ] வ ஹுத் யமீன்","en":"Walk straight and take a right","tm":"நேராக நட, வலதுபுறம் செல்","w":[["اِمْشِ","walk"],["[r:سِيدَا]","straight (UAE)"],["[r:طَوَّالِي]","straight on"],["وْ","and"],["خِذْ","take"],["يَمِينْ","right"]]},
+{"ar":"رُوحْ يَسَارْ","ten":"Rooh yasar","tta":"ரூஹ் யஸார்","en":"Go left","tm":"இடதுபுறம் செல்","w":[["رُوحْ","go"],["يَسَارْ","left"]]},
+{"ar":"أَنَا [r:يَايْ|إِيجِي] الْحِينْ","ten":"Ana [r:yai|eeji] al-heen","tta":"அன [r:யாய்|ஈஜி] அல்ஹீன்","en":"I am coming now","tm":"நான் வந்துகொண்டு இருக்கிறேன்","w":[["أَنَا","I"],["[r:يَايْ]","coming (UAE)"],["[r:إِيجِي]","I come"],["الْحِينْ","now"]]},
+{"ar":"الْمَحَطَّة بَعِيدَة","ten":"Al-mahatta ba'eeda","tta":"அல் மஹத்தா பஈதா","en":"The station is far","tm":"நிலையம் தூரமாக இருக்கிறது","w":[["الْمَحَطَّة","the station"],["بَعِيدَة","far (f)"]]},
+{"ar":"اتَّصِلْ [r:عُقُبْ|بَعْدِ] الصَّلَاة","ten":"Ittasil [r:'ugub|ba'd] as-sala","tta":"இத்தஸில் [r:உகுப்|பஃதஸ்] ஸலாத்","en":"Call after the prayer","tm":"தொழுகைக்கு பிறகு அழைக்கவும்","w":[["اتَّصِلْ","call"],["[r:عُقُبْ]","after (Gulf)"],["[r:بَعْدِ]","after"],["الصَّلَاة","the prayer"]]},
+{"ar":"[r:خُشّْ|خِذْ] يَمِينْ مِنَ الْإِشَارَة","ten":"[r:Khush|Khidh] yameen minal-ishara","tta":"[r:ஹுஷ்|ஹுத்] யமீன் மினல் இஷாரா","en":"Take a right at the signal","tm":"சிக்னலில் இருந்து வலதுபுறம் செல்லவும்","w":[["[r:خُشّْ]","turn / enter (Gulf)"],["[r:خِذْ]","take"],["يَمِينْ","right"],["مِنَ","from"],["الْإِشَارَة","the traffic signal"]]},
+{"ar":"أَنَا بَرَّا الْبَيْتْ","ten":"Ana barra al-bait","tta":"அன பர்ரல் பைத்","en":"I'm outside the house","tm":"நான் வீட்டை விட்டு வெளியே உள்ளேன்","w":[["أَنَا","I"],["بَرَّا","outside"],["الْبَيْتْ","the house"]]},
+{"ar":"أَنَا دَاخِلِ الْمَكْتَبْ","ten":"Ana dakhil al-maktab","tta":"அன தாஹில் மக்தப்","en":"I'm in the office","tm":"நான் அலுவலகத்தில் இருக்கிறேன்","w":[["أَنَا","I"],["دَاخِلِ","inside"],["الْمَكْتَبْ","the office"]]},
+{"ar":"هُوَّ رَاحْ بَرَّا الْمَحَلّْ","ten":"Huwa rah barra al-mahall","tta":"ஹுவ ராஹ் பர்ரல் மஹல்","en":"He went outside the shop","tm":"அவன் கடைக்கு வெளியே சென்றுவிட்டான்","w":[["هُوَّ","he"],["رَاحْ","went"],["بَرَّا","outside"],["الْمَحَلّْ","the shop"]]},
+{"ar":"الْمُسْتَشْفَى وَرَا السُّوقْ","ten":"Al-mustashfa wara as-soog","tta":"அல் முஸ்தஷ்ஃபா வரா அஸ் ஸூக்","en":"The hospital is behind the market","tm":"சந்தைக்கு பின்னால் மருத்துவமணை இருக்கிறது","w":[["الْمُسْتَشْفَى","the hospital"],["وَرَا","behind"],["السُّوقْ","the market"]]},
+{"ar":"[r:حَطَّيْتَهْ|وَضَعْتَهْ] تَحَتِ الطَّاوْلَة","ten":"[r:Hattaitah|Wadha'tah] tahat at-tawla","tta":"[r:ஹத்தைத்தஹ்|வழஃத்தஹ்] தஹ்தத் தாவ்லா","en":"I put it under the table","tm":"நான் அதை மேஜைக்கு அடியில் வைத்தேன்","w":[["[r:حَطَّيْتَهْ]","I put it (Gulf)"],["[r:وَضَعْتَهْ]","I placed it"],["تَحَتِ","under"],["الطَّاوْلَة","the table"]]},
+{"ar":"صُوبْ تَحَتِ [r:الْكُوبْرِي|الْجِسْرْ]","ten":"Soob tahat [r:al-koobri|al-jisr]","tta":"ஸௌப் தஹ்த் [r:அல் கூப்ரீ|அல் ஜிஸ்ர்]","en":"Towards (and) under the bridge","tm":"பாலத்தின் அடியில் முன்னோக்கி (செல்)","w":[["صُوبْ","towards (Gulf)"],["تَحَتِ","under"],["[r:الْكُوبْرِي]","the bridge (spoken)"],["[r:الْجِسْرْ]","the bridge"]]},
+{"ar":"فُوقِ الثَّلَّاجَة","ten":"Foog ath-thallaja","tta":"ஃபௌக்கஸ் ஸல்லாஜா","en":"On top of the fridge","tm":"ஃபிரிட்ஜ் மேலே","w":[["فُوقِ","above"],["الثَّلَّاجَة","the fridge"]]},
+{"ar":"أَنَا قِدَّامِ الْمَطَارْ","ten":"Ana giddam al-matar","tta":"அன கித்தாம் அல்மதார்","en":"I am in front of the airport","tm":"நான் விமான நிலையத்தின் முன்னால் இருக்கிறேன்","w":[["أَنَا","I"],["قِدَّامِ","in front of"],["الْمَطَارْ","the airport"]]},
+{"ar":"تَعَالْ قِدَّامِ الْمَدْخَلْ","ten":"Ta'al giddam al-madkhal","tta":"த'ஆல் கித்தாம் அல் மத்ஹல்","en":"Come in front of the entrance","tm":"நுழைவுவாயிலுக்கு முன்னால் வா","w":[["تَعَالْ","come"],["قِدَّامِ","in front of"],["الْمَدْخَلْ","the entrance"]]},
+{"ar":"هُوَّ صَدَمْنِي وَرَا سَيَّارْتِي","ten":"Huwa sadamni wara sayyarti","tta":"ஹுவ ஸதம்னீ வரா ஸய்யாரதீ","en":"He hit me behind my car","tm":"அவன் என் காருக்கு பின்னால் என்னை இடித்தான்","w":[["هُوَّ","he"],["صَدَمْنِي","hit / crashed into me"],["وَرَا","behind"],["سَيَّارْتِي","my car"]]},
+{"ar":"شُو وَرَاكْ؟","ten":"Shu warak?","tta":"ஷூ வராக்?","en":"What's up with you? / What else have you got?","tm":"உனக்கு பின்னால் என்ன விஷயம் இருக்கிறது? / உன்னிடம் வேறு ஏதாவது விஷயம் இருக்கிறதா?","w":[["شُو","what (UAE)"],["وَرَاكْ","behind you"]]},
+{"ar":"قَرِيبْ مِنْ هِنِي","ten":"Gareeb min hini","tta":"கரீப் மின் ஹினி","en":"Near here","tm":"இங்கிருந்து பக்கமாக இருக்கிறது","w":[["قَرِيبْ","near"],["مِنْ","from"],["هِنِي","here (Gulf)"]]},
+{"ar":"مُو دَاخِلِ الْمَكْتَبْ","ten":"Mu dakhil al-maktab","tta":"மூ தாஹில் மக்தப்","en":"Not in the office","tm":"அலுவலகத்தில் இல்லை","w":[["مُو","not"],["دَاخِلِ","inside"],["الْمَكْتَبْ","the office"]]},
+{"ar":"مُبْ بَعْدَيْنْ، أَبَاهْ الْحِينْ","ten":"Mub ba'dain, abah al-heen","tta":"முப் பஃதைன், அபாஹ் அல்ஹீன்","en":"Not later, I want it now","tm":"எனக்கு பிறகு அல்ல, இப்போதே வேண்டும்","w":[["مُبْ","not"],["بَعْدَيْنْ","later"],["أَبَاهْ","I want it (UAE)"],["الْحِينْ","now"]]},
+{"ar":"وَايِدْ قَرِيبْ مِنْ هِنِي","ten":"Wayid gareeb min hini","tta":"வாயித் கரீப் மின் ஹினி","en":"Very near from here","tm":"இங்கிருந்து மிக சமீபத்தில் இருக்கிறது","w":[["وَايِدْ","very / a lot (UAE)"],["قَرِيبْ","near"],["مِنْ","from"],["هِنِي","here"]]},
+{"ar":"قَبْلِ الصَّيْدَلِيَّة","ten":"Gabl as-saidaliyya","tta":"கப்லஸ் ஸைதலிய்யா","en":"Before the pharmacy","tm":"மருந்தகத்திற்கு முன்னால்","w":[["قَبْلِ","before"],["الصَّيْدَلِيَّة","the pharmacy"]]},
+{"ar":"الْمَكْتَبْ مُقَابِلِ الْمُسْتَشْفَى","ten":"Al-maktab mugabil al-mustashfa","tta":"அல்மக்தப் முகாபில் அல் முஸ்தஷ்ஃபா","en":"The office is opposite the hospital","tm":"மருத்துவமணைக்கு எதிரே அலுவலகம் இருக்கிறது","w":[["الْمَكْتَبْ","the office"],["مُقَابِلِ","opposite"],["الْمُسْتَشْفَى","the hospital"]]}
+]}
+]}
+]}

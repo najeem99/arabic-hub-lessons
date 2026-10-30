@@ -1,0 +1,59 @@
+{"day":12,"icon":"no","title":"How to Say No","arTitle":"كَيْفْ تْقُولْ لَا","ta":"வேண்டாம் / இல்லை என்று எப்படி சொல்வது",
+"keys":["لَا","مُبْ","مُو","مَا","مَانِي"],
+"guide":{"title":"Which “no” do I use?","rows":[
+{"ar":"لَا","head":"La · “Don't…” / “I don't…”","en":"Before a verb: don't say, don't hurry, I don't know.","ta":"வினைச்சொல்லுக்கு முன்: “செய்யாதே”, “எனக்கு …இல்லை”"},
+{"ar":"مُبْ","head":"Mub · “not” (Emirati 🇦🇪)","en":"Before a describing word, place or person. This is the one UAE colleagues use most.","ta":"அமீரகத்தில் அதிகம் பயன்படும் “இல்லை”"},
+{"ar":"مُو","head":"Mu · “not” (Saudi + Gulf)","en":"Same job as مُبْ.","ta":"مُبْ போலவே"},
+{"ar":"مَا","head":"Ma · “didn't” / “don't have” / “can't”","en":"Past actions and مَا عِنْدِي (I don't have).","ta":"கடந்த காலம், “என்னிடம் இல்லை”, “முடியாது”"},
+{"ar":"مَانِي","head":"Maani · “I am not”","en":"Short for مَا + أَنَا.","ta":"“நான் இல்லை”"},
+{"ar":"مِشْ","head":"Mish · “not” (Egypt / Levant)","en":"You'll hear it, but use مُبْ or مُو in the Gulf.","ta":"வளைகுடாவில் مُبْ / مُو பயன்படுத்துங்கள்"}]},
+"activity":{"items":[{"ta":"நான் மருத்துவர் அல்ல ஆசிரியர்.","en":"I'm not a doctor, I'm a teacher."},{"ta":"எனக்குத் தெரியாது","en":"I don't know."},{"ta":"எனக்கு நியாபகம் இல்லை.","en":"I don't remember."},{"ta":"எந்த பிரச்சினையும் இல்லை.","en":"No problem."},{"ta":"எனக்கு பிரியாணி பிடிக்காது.","en":"I don't like biryani."},{"ta":"நீ சொல்லாதே, அவசரப்படாதே","en":"Don't say (it), don't hurry."},{"ta":"என்னை தொந்தரவு செய்யாதே, நான் வேலை செய்து கொண்டிருக்கிறேன்.","en":"Don't disturb me, I'm working."},{"ta":"என்னால் சொல்ல முடியாது.","en":"I can't say."}],"hint":"மேற்கண்ட வாக்கியங்களை அரபியில் மாற்றி பயிற்சி செய்யுங்கள்"},
+"blocks":[
+{"audio":["AUD-20260927-WA0000.mp3","AUD-20260927-WA0004.mp3","AUD-20260927-WA0002.mp3","AUD-20260927-WA0001.mp3"],"sections":[
+{"title":"1. La — No / Don't","ar":"لَا","ta":"வேண்டாம் / இல்லை","note":{"en":"We use لَا to say “no” or “don't”.","ta":"நாம் வேண்டாம் அல்லது இல்லை என்று சொல்ல لَا பயன்படுத்த வேண்டும்"},"items":[
+{"key":true,"ar":"لَا [r:أَدْرِي|أَعْرِفْ]","ten":"La [r:adri|a'raf]","tta":"லா [r:அத்ரீ|'அஃரஃப்]","en":"I don't know","tm":"எனக்கு தெரியாது","w":[["لَا","no / not / don't"],["[r:أَدْرِي]","I know (Gulf)"],["[r:أَعْرِفْ]","I know"]]},
+{"ar":"لَا شَيّْ","ten":"La shai","tta":"லா ஷை","en":"Nothing","tm":"ஒன்றுமில்லை","w":[["لَا","no / not"],["شَيّْ","thing"]]},
+{"ar":"لَا أَحِبّْ","ten":"La ahibb","tta":"லா அஹிப்","en":"I don't like","tm":"எனக்கு பிடிக்காது","w":[["لَا","not"],["أَحِبّْ","I like / love"]]},
+{"ar":"لَا تْقُولْ","ten":"La tgool","tta":"லா திகுல்","en":"Don't say","tm":"நீ சொல்லாதே","w":[["لَا","don't"],["تْقُولْ","you say (ق = g in Gulf)"]]},
+{"ar":"لَا تِعْجَلْ","ten":"La ti'jal","tta":"லா திஃஜல்","en":"Don't hurry","tm":"அவசரப்படாதே","w":[["لَا","don't"],["تِعْجَلْ","you hurry"]]},
+{"ar":"لَا تِشْرَبِ الدُّخَانْ","ten":"La tishrab ad-dukhan","tta":"லா திஷ்ரப் அத் துஹான்","en":"Don't smoke","tm":"புகை பிடிக்காதே","w":[["لَا","don't"],["تِشْرَبِ","you drink"],["الدُّخَانْ","the smoke"]]},
+{"tag":"To a woman","ar":"لَا تْقُولِينْ چِذِي","ten":"La tgooleen chithi","tta":"லா திகூலீன் சிதி","en":"Don't say that","tm":"அப்படி சொல்லாதே","w":[["لَا","don't"],["تْقُولِينْ","you say (to a woman, Gulf)"],["چِذِي","like this (Gulf; lesson كِذَا)"]]},
+{"tag":"To a man","ar":"لَا تِزْعِجْنِي","ten":"La tiz'ijni","tta":"லா திஸ்அஜ்னீ","en":"Don't disturb me","tm":"என்னை தொந்தரவு செய்யாதே","w":[["لَا","don't"],["تِزْعِجْنِي","you disturb me (to a man)"]]},
+{"tag":"To a woman","ar":"لَا تِزْعِجِينِي","ten":"La tiz'ijeeni","tta":"லா திஸ்அஜீனீ","en":"Don't disturb me","tm":"என்னை தொந்தரவு செய்யாதே","w":[["لَا","don't"],["تِزْعِجِينِي","you disturb me (to a woman)"]]},
+{"ar":"لَا أَتْذَكَّرْ","ten":"La atdhakkar","tta":"லா அத்தக்கர்","en":"I don't remember","tm":"எனக்கு நியாபகமில்லை","w":[["لَا","not"],["أَتْذَكَّرْ","I remember"]]}
+]},
+{"title":"2. Mu — Not","ar":"مُو","ta":"இல்லை 🇸🇦🇦🇪","items":[
+{"key":true,"ar":"مُو مُشْكِلَة","ten":"Mu mushkila","tta":"மூ முஷ்கிலா","en":"No problem","tm":"எந்த பிரச்சனையுமில்லை","w":[["مُو","not"],["مُشْكِلَة","problem"]]},
+{"ar":"أَنَا مُو مِرْتَاحْ","ten":"Ana mu mirtah","tta":"அன மூ முர்தாஹ்","en":"I am not comfortable","tm":"நான் சவுகரியமாக இல்லை","w":[["أَنَا","I"],["مُو","not"],["مِرْتَاحْ","comfortable"]]},
+{"ar":"أَنَا مُو سَاكِنْ فِي جِدَّة","ten":"Ana mu sakin fi Jidda","tta":"அன மூ ஸாகின் ஃபீ ஜித்தா","en":"I don't live in Jeddah","tm":"நான் ஜித்தாவில் வசிக்கவில்லை","w":[["أَنَا","I"],["مُو","not"],["سَاكِنْ","living / staying"],["فِي","in"],["جِدَّة","Jeddah"]]},
+{"ar":"أَنَا مُو أَشْتَغِلْ فِي شَرِكَةِ الْمَرَاعِي، أَنَا فِي شَرِكَةِ لُولُو","ten":"Ana mu ashtaghil fi sharikat al-Marai, ana fi sharikat Lulu","tta":"அன மூ அஷ்தகில் ஃபீ ஷரிகத் அல் மரா'இ, அன ஃபீ ஷரிகத் லூலூ","en":"I don't work at Almarai, I'm at Lulu","tm":"நான் அல் மராய் நிறுவனத்தில் வேலை செய்யவில்லை, நான் லூலூ நிறுவனத்தில் வேலை செய்கிறேன்","w":[["أَنَا","I"],["مُو","not"],["أَشْتَغِلْ","I work"],["فِي","in"],["شَرِكَةِ","company (of)"],["الْمَرَاعِي","Almarai"],["لُولُو","Lulu"]]},
+{"ar":"أَنَا مُو مَشْغُولْ","ten":"Ana mu mashghool","tta":"அன மூ மஷ்கூல்","en":"I am not busy","tm":"நான் பிஸியாக இல்லை","w":[["أَنَا","I"],["مُو","not"],["مَشْغُولْ","busy"]]},
+{"ar":"أَنَا مُو فَاضِي","ten":"Ana mu fadhi","tta":"அன மூ ஃபாழி","en":"I am not free","tm":"நான் ஓய்வாக இல்லை","w":[["أَنَا","I"],["مُو","not"],["فَاضِي","free"]]},
+{"ar":"هُوَّ مُو بَاكِسْتَانِي، هُوَّ هِنْدِي","ten":"Huwa mu Pakistani, huwa Hindi","tta":"ஹுவ மூ பாகிஸ்தானி, ஹுவ ஹிந்தி","en":"He's not Pakistani, he's Indian","tm":"அவன் பாகிஸ்தானி இல்லை, அவன் இந்தியன்","w":[["هُوَّ","he"],["مُو","not"],["بَاكِسْتَانِي","Pakistani"],["هِنْدِي","Indian"]]},
+{"ar":"هُوَّ مُو مَوْجُودْ [r:هِنِي|هِنَا]","ten":"Huwa mu mawjood [r:hini|hina]","tta":"ஹுவ மூ மௌஜூத் [r:ஹினி|ஹினா]","en":"He is not here","tm":"அவன் இங்கு இல்லை","w":[["هُوَّ","he"],["مُو","not"],["مَوْجُودْ","present / available"],["[r:هِنِي]","here (Gulf)"],["[r:هِنَا]","here"]]},
+{"ar":"أَخُوِي مُو يِشْتَغِلْ [r:وِيَّايْ|مَعَايْ]","ten":"Akhooy mu yishtaghil [r:wiyyai|ma'ai]","tta":"அஹுய் மூ யிஷ்தகில் [r:விய்யாய்|மஆய்]","en":"My brother doesn't work with me","tm":"என்னோடு என் சகோதரன் வேலை செய்யவில்லை","w":[["أَخُوِي","my brother"],["مُو","not"],["يِشْتَغِلْ","he works"],["[r:وِيَّايْ]","with me (Gulf)"],["[r:مَعَايْ]","with me"]]},
+{"ar":"أَنَا مُو [r:يُوعَانْ|جُوعَانْ|جِيعَانْ]","ten":"Ana mu [r:yoo'an|joo'an|jee'an]","tta":"அன மூ [r:யூஆன்|ஜௌஆன்|ஜீஆன்]","en":"I am not hungry","tm":"எனக்கு பசியில்லை","w":[["أَنَا","I"],["مُو","not"],["[r:يُوعَانْ]","hungry (Emirati, ج→ي)"],["[r:جُوعَانْ]","hungry"],["[r:جِيعَانْ]","hungry"]]},
+{"ar":"أَنَا مُو مَالِكِ الْمَحَلّْ","ten":"Ana mu malik al-mahall","tta":"அன மூ மாலிகல் மஹல்","en":"I am not the owner of the shop","tm":"நான் இந்த கடையின் முதலாளி இல்லை","w":[["أَنَا","I"],["مُو","not"],["مَالِكِ","owner (of)"],["الْمَحَلّْ","the shop"]]}
+]},
+{"title":"3. Mub — Not (UAE)","ar":"مُبْ","ta":"இல்லை (அமீரகம்) 🇦🇪","note":{"en":"مُبْ is the Emirati way to say “not”. It works exactly like مُو.","ta":"مُبْ என்பது அமீரக வழக்கு. இது مُو போலவே வேலை செய்யும்."},"items":[
+{"key":true,"ar":"أَنَا مُبْ طَايِعْ","ten":"Ana mub tayi'","tta":"அன முப் தாயிஃ","en":"I am not satisfied / not willing","tm":"எனக்கு திருப்தி இல்லை","w":[["أَنَا","I"],["مُبْ","not"],["طَايِعْ","willing / satisfied"]]},
+{"ar":"مُبْ رَخِيصْ","ten":"Mub rakhees","tta":"முப் ரஹீஸ்","en":"Not cheap","tm":"மலிவாக இல்லை","w":[["مُبْ","not"],["رَخِيصْ","cheap"]]},
+{"ar":"هُوَّ مُبْ فَرْحَانْ","ten":"Huwa mub farhan","tta":"ஹுவ முப் ஃபர்ஹான்","en":"He is not happy","tm":"அவன் மகிழ்ச்சியாக இல்லை","w":[["هُوَّ","he"],["مُبْ","not"],["فَرْحَانْ","happy"]]},
+{"ar":"مُبْ كْبِيرْ هَاذَا","ten":"Mub kbeer hatha","tta":"முப் கபீர் ஹாதா","en":"This is not big","tm":"இது பெரிதாக இல்லை","w":[["مُبْ","not"],["كْبِيرْ","big"],["هَاذَا","this"]]},
+{"ar":"مُبْ غَالِي","ten":"Mub ghali","tta":"முப் காலீ","en":"Not expensive","tm":"இது விலையுயர்ந்ததாக இல்லை","w":[["مُبْ","not"],["غَالِي","expensive"]]},
+{"ar":"هُوَّ مُبْ سَاكِنْ فِي دُبَيّْ","ten":"Huwa mub sakin fi Dubai","tta":"ஹுவ முப் ஸாகின் ஃபீ துபய்","en":"He doesn't live in Dubai","tm":"அவன் துபாயில் வசிக்கவில்லை","w":[["هُوَّ","he"],["مُبْ","not"],["سَاكِنْ","living"],["فِي","in"],["دُبَيّْ","Dubai"]]},
+{"ar":"أَنَا مُبْ [r:يُوعَانْ|جُوعَانْ|جِيعَانْ]","ten":"Ana mub [r:yoo'an|joo'an|jee'an]","tta":"அன முப் [r:யூஆன்|ஜௌஆன்|ஜீஆன்]","en":"I am not hungry","tm":"எனக்கு பசியில்லை","w":[["أَنَا","I"],["مُبْ","not"],["[r:يُوعَانْ]","hungry (Emirati)"],["[r:جُوعَانْ]","hungry"],["[r:جِيعَانْ]","hungry"]]},
+{"tag":"To a woman","ar":"مُبْ تْقُولِينْ إِنَّهَا هِيَّ","ten":"Mub tgooleen innaha hiya","tta":"முப் திகூலீன் இன்னஹா ஹிய","en":"Don't say it's her","tm":"அது அவள்தான் என்று சொல்லாதே","w":[["مُبْ","don't / not"],["تْقُولِينْ","you say (to a woman)"],["إِنَّهَا","that she / it"],["هِيَّ","her / she"]]},
+{"ar":"مُبْ حِلُو","ten":"Mub hilu","tta":"முப் ஹிலூ","en":"Not nice","tm":"நன்றாக இல்லை","w":[["مُبْ","not"],["حِلُو","nice / sweet"]]},
+{"ar":"[r:مُبْ|مُو] أَنَا","ten":"[r:Mub|Mu] ana","tta":"[r:முப்|மூ] அன","en":"Not me / It isn't me","tm":"நான் இல்லை","w":[["[r:مُبْ]","not (UAE)"],["[r:مُو]","not"],["أَنَا","I / me"]]}
+]},
+{"title":"4. Ma — Didn't / Don't have / Can't","ar":"مَا","ta":"இல்லை","items":[
+{"key":true,"ar":"مَا عِنْدِي [r:تِلِفُونْ|جَوَّالْ]","ten":"Ma 'indi [r:tilifoon|jawwal]","tta":"மா இன்தீ [r:திலிஃபூன்|ஜவ்வால்]","en":"I don't have a mobile","tm":"என்னிடம் செல்போன் இல்லை","w":[["مَا","not"],["عِنْدِي","I have (lit. with me)"],["[r:تِلِفُونْ]","phone (UAE)"],["[r:جَوَّالْ]","mobile phone"]]},
+{"ar":"مَا عِنْدِي فِكْرَة","ten":"Ma 'indi fikra","tta":"மா இன்தீ ஃபிக்ரா","en":"I have no idea","tm":"என்னிடம் எந்த யோசனையும் இல்லை","w":[["مَا","not"],["عِنْدِي","I have"],["فِكْرَة","idea"]]},
+{"ar":"مَا عِنْدِي [r:خُرْدَة|صَرْفْ]","ten":"Ma 'indi [r:khurda|sarf]","tta":"மா இன்தீ [r:ஹுர்தா|ஸர்ஃப்]","en":"I don't have change","tm":"என்னிடம் சில்லரை இல்லை","w":[["مَا","not"],["عِنْدِي","I have"],["[r:خُرْدَة]","small change (UAE)"],["[r:صَرْفْ]","change"]]},
+{"ar":"مَا نْسِيتْ","ten":"Ma nseet","tta":"மா நஸீத்","en":"I didn't forget","tm":"நான் மறக்கவில்லை","w":[["مَا","didn't"],["نْسِيتْ","I forgot"]]},
+{"ar":"مَا قَالِّي حَدّْ","ten":"Ma galli hadd","tta":"மா கால்லி ஹத்","en":"Nobody told me","tm":"யாரும் என்னிடம் சொல்லவில்லை","w":[["مَا","didn't"],["قَالِّي","told me (ق = g)"],["حَدّْ","anyone (Gulf; lesson أَحَدْ)"]]},
+{"ar":"مَا [r:أَرُومْ|أَقْدَرْ]","ten":"Ma [r:aroom|agdar]","tta":"மா [r:அரூம்|அக்தர்]","en":"I can't","tm":"என்னால் முடியாது","w":[["مَا","not"],["[r:أَرُومْ]","I can (UAE)"],["[r:أَقْدَرْ]","I can"]]}
+]}
+]}
+]}
