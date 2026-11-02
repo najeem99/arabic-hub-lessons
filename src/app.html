@@ -41,7 +41,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 button{font:inherit;color:inherit}
 :focus-visible{outline:2px solid var(--teal);outline-offset:2px}
 .gut{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
-.inner{max-width:780px;margin:0 auto}
+.inner{max-width:640px;margin:0 auto}
 
 /* ---------- Hero ---------- */
 .hero{position:relative;overflow:hidden;color:var(--hero-fg);background:var(--sky-top);isolation:isolate}
@@ -356,7 +356,8 @@ footer .ar{font-family:var(--f-ar);font-size:18px}
 .dr-link .pc{font-size:11px;font-weight:700;color:var(--muted);font-variant-numeric:tabular-nums}
 .dr-link.sec{padding:7px 10px}
 .dr-link.sec .n{width:24px;height:24px;border-radius:8px;background:var(--chip);display:grid;place-items:center;font-size:12px;font-weight:800;flex:0 0 24px}
-@media (max-width:760px){
+/* Phone layout everywhere: same compact bar + side menu on desktop too */
+@media all{
   .daybar .mbar{display:flex;align-items:center;gap:10px;padding-block:8px}
   .daybar #tabs{display:none}
   .menu-btn{flex:0 0 44px;width:44px;height:44px;border-radius:12px;border:1px solid var(--line);background:var(--surface);display:flex;flex-direction:column;justify-content:center;align-items:center;gap:4px;cursor:pointer}
@@ -423,7 +424,7 @@ footer .ar{font-family:var(--f-ar);font-size:18px}
 @keyframes found{0%,30%{box-shadow:0 0 0 4px var(--sand),var(--shadow);border-color:var(--sand)}100%{box-shadow:var(--shadow)}}
 .dr-search{display:flex;align-items:center;gap:10px;width:100%;border:1px solid var(--line);background:var(--surface-2);border-radius:12px;padding:10px 12px;color:var(--muted);font:500 14px var(--f-ui);cursor:pointer}
 .dr-search svg{width:18px;height:18px;color:var(--teal)}
-@media (max-width:760px){
+@media all{
   .msearch{flex:0 0 44px;width:44px;height:44px;border-radius:12px;border:1px solid var(--line);background:var(--surface);color:var(--teal);display:grid;place-items:center;cursor:pointer}
   .msearch svg{width:22px;height:22px}
   .search{padding-top:calc(env(safe-area-inset-top,0px) + 10px)}
