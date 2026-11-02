@@ -47,9 +47,9 @@
 {"ar":"هِيَّ رَبَّة الْبَيْتْ","ten":"Hiya rabbat al bait","tta":"ஹிய ரப்பதுல் பைத்","en":"She is a housewife","tm":"அவள் குடும்பத்தலைவி","w":[["هِيَّ","she"],["رَبَّة","lady / mistress (of)"],["الْبَيْتْ","the house"]]},
 {"ar":"هِيَّ مُمَرِّضَة","ten":"Hiya mumarridha","tta":"ஹிய முமர்ரிழா","en":"She is a nurse","tm":"அவள் செவிலியர்","w":[["هِيَّ","she"],["مُمَرِّضَة","nurse (woman)"]]},
 {"ar":"هِيَّ مُحَاسْبَة","ten":"Hiya muhasba","tta":"ஹிய முஹாஸிபா","en":"She is an accountant","tm":"அவள் கணக்காளர்","w":[["هِيَّ","she"],["مُحَاسْبَة","accountant (woman)"]]},
-{"ar":"هِيَّ مِتْزَوّْجَة","ten":"Hiya mitzawwja","tta":"ஹிய மித்ஜவ்விஜா","en":"She is married","tm":"அவள் திருமணமானவள்","w":[["هِيَّ","she"],["مِتْزَوّْجَة","married (woman)"]]},
+{"ar":"هِيَّ مِتْزَوّْجَة","ten":"Hiya mitzawwja","tta":"ஹிய மித்ஜவ்ஜா","en":"She is married","tm":"அவள் திருமணமானவள்","w":[["هِيَّ","she"],["مِتْزَوّْجَة","married (woman)"]]},
 {"ar":"هِيَّ عَازْبَة","ten":"Hiya 'azba","tta":"ஹிய ஆஜிபா","en":"She is single","tm":"அவள் திருமணமாகாதவள்","w":[["هِيَّ","she"],["عَازْبَة","single (woman)"]]},
-{"ar":"هِيَّ [r:فَاضْيَة|مِتْفَرِّغَة]","ten":"Hiya [r:fadhya|mitfarrigha]","tta":"ஹிய [r:ஃபாழியா|முதஃபர்ரிகா]","en":"She is free","tm":"அவள் சும்மா இருக்கிறாள்","w":[["هِيَّ","she"],["[r:فَاضْيَة]","free / not busy (Gulf)"],["[r:مِتْفَرِّغَة]","free / available"]]}
+{"ar":"هِيَّ [r:فَاضْيَة|مِتْفَرِّغَة]","ten":"Hiya [r:fadhya|mitfarrigha]","tta":"ஹிய [r:ஃபாழியா|மித்ஃபர்ரிகா]","en":"She is free","tm":"அவள் சும்மா இருக்கிறாள்","w":[["هِيَّ","she"],["[r:فَاضْيَة]","free / not busy (Gulf)"],["[r:مِتْفَرِّغَة]","free / available"]]}
 ]},
 {"title":"4. Ihna — We","ar":"[r:إِحْنَا|حِنَّا|نَحْنُ]","ta":"நாம்","note":{"en":"إِحْنَا / حِنَّا are spoken Gulf; نَحْنُ is formal. All mean “we”.","ta":"إِحْنَا / حِنَّا பேச்சு வழக்கு; نَحْنُ முறையானது."},"items":[
 {"key":true,"ar":"[r:إِحْنَا|نَحْنُ] طُلَّابْ","ten":"[r:Ihna|Nahnu] tullab","tta":"[r:இஹ்னா|நஹ்னு] துல்லாப்","en":"We are students","tm":"நாங்கள் மாணவர்கள்","w":[["[r:إِحْنَا]","we (Gulf)"],["[r:نَحْنُ]","we (formal)"],["طُلَّابْ","students"]]},
