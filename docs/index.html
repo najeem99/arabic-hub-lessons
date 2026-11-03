@@ -402,6 +402,19 @@ footer .ar{font-family:var(--f-ar);font-size:18px}
 .theme-btn:hover{transform:scale(1.05)}
 .theme-btn .ti{display:inline-block;transition:transform .5s}
 .theme-btn:active .ti{transform:rotate(180deg)}
+.hero-btns{flex:0 0 auto;display:flex;gap:8px}
+.theme-btn[aria-pressed="true"]{background:var(--hero-fg);color:var(--sky-low,#000);border-color:var(--hero-fg)}
+
+/* ---------- Audio only: hide the lesson text, keep the voice notes ---------- */
+.ao-note{display:none}
+body.audio-only #day:not(.quizview) .ao-note{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;
+  background:linear-gradient(135deg,var(--sand-soft),var(--coral-soft));border:1px solid color-mix(in srgb,var(--sand) 40%,var(--line));border-radius:14px;padding:10px 14px;font-size:14px}
+.ao-note .ta{font-family:var(--f-ta);color:var(--muted);font-size:13px;display:block}
+body.audio-only #day:not(.quizview) :is(.card,.note,.legend,.guide,.keys,.activity,.qbtn,#quizBtn,#openBtn,#dayQuizBtn,.meter .m:nth-child(2)){display:none}
+body.audio-only #day:not(.quizview) .dhead .ta,body.audio-only #day:not(.quizview) .sec-head .ta{display:none}
+body.audio-only #day:not(.quizview) section:not(:has(.audio)){display:none}
+body.audio-only .dr-sec .sec small{visibility:hidden}
+body.audio-only #drQuizMode,body.audio-only #drOpen{display:none}
 
 /* ---------- Search ---------- */
 .search{position:fixed;inset:0;z-index:50;background:rgba(5,12,14,.55);backdrop-filter:blur(3px);display:flex;justify-content:center;align-items:flex-start;
@@ -492,7 +505,8 @@ footer .ar{font-family:var(--f-ar);font-size:18px}
   <div class="float-letters" id="letters" aria-hidden="true"></div>
   <div class="inner gut">
     <div class="toprow"><div class="eyebrow">Arabic Language Hub · Oct 08 Module</div>
-      <button class="theme-btn" id="themeBtn" type="button" aria-label="Switch to dark mode"><span class="ti">🌙</span><span class="tl">Dark</span></button></div>
+      <div class="hero-btns"><button class="theme-btn" id="aoBtn" type="button" aria-pressed="false" aria-label="Audio only: show just the voice notes"><span class="ti">🎧</span><span class="tl">Audio only</span></button>
+      <button class="theme-btn" id="themeBtn" type="button" aria-label="Switch to dark mode"><span class="ti">🌙</span><span class="tl">Dark</span></button></div></div>
     <h1>Gulf Arabic, one day at a time</h1>
     <div class="h-ar" lang="ar">يَوْم بِيَوْم · خْطْوَة بِخْطْوَة</div>
     <div class="stats" id="stats"></div>
@@ -521,6 +535,7 @@ footer .ar{font-family:var(--f-ar);font-size:18px}
     <button class="chip" id="drQuizMode" type="button" aria-pressed="false">🙈 Hide meanings</button>
     <button class="chip" id="drOpen" type="button" aria-pressed="false">📖 Word-by-word</button>
     <button class="chip" id="drTheme" type="button">🌙 Dark mode</button>
+    <button class="chip" id="drAudio" type="button" aria-pressed="false">🎧 Audio only</button>
   </div>
   <div class="dr-sec"><h4 id="drSecTitle">This day</h4><div id="drSections"></div></div>
   <div class="dr-sec"><h4>All days</h4><div id="drDays"></div></div>
@@ -654,6 +669,8 @@ function renderDay(d){
       </div>
     </div>
     ${d.keys ? `<div class="keys">${d.keys.map(k => `<span lang="ar">${esc(k)}</span>`).join("")}</div>` : ""}
+    <div class="ao-note"><div><b>🎧 Audio only</b> · just the teacher's voice notes, text hidden.<span class="ta" lang="ta">ஆடியோ மட்டும் · எழுத்து மறைக்கப்பட்டுள்ளது.</span></div>
+      <button class="tbtn" type="button" data-ao-off="1">Show text</button></div>
     <div class="meter" id="meter"></div>
     <div class="toolbar">
       <button class="tbtn" id="quizBtn" type="button" aria-pressed="${document.body.classList.contains("quiz")}">🙈 Hide meanings</button>
@@ -736,6 +753,7 @@ $("#day").addEventListener("click", e => {
     st.setAttribute("aria-pressed", on); c.classList.toggle("known", on); renderMeter(cur); renderStats();
     if (on) { const r = st.getBoundingClientRect(); burst(r.left + r.width/2, r.top + r.height/2, 14); }
     return; }
+  if (t.closest("[data-ao-off]")) { setAudioOnly(false); return; }
   const g = t.closest("[data-go]"); if (g) { go(+g.dataset.go, true); return; }
   const sq = t.closest("[data-sq]"); if (sq) { const s = cur.sections[+sq.dataset.sq];
     startQuiz(s.items.filter(i => !i.audio).map(i => ({...i, day: cur.day})), `Day ${cur.day} · ${s.title}`, {count: 0, type: "mix", back: cur.day}); return; }
@@ -1022,6 +1040,19 @@ themeLabels();
 $("#themeBtn").addEventListener("click", () => setTheme(isDark() ? "light" : "dark"));
 $("#drTheme").addEventListener("click", () => setTheme(isDark() ? "light" : "dark"));
 matchMedia("(prefers-color-scheme: dark)").addEventListener?.("change", themeLabels);
+
+/* ---------- audio only (text hidden, voice notes kept), remembered per viewer ---------- */
+function setAudioOnly(on, save = true){
+  document.body.classList.toggle("audio-only", on);
+  $("#aoBtn").setAttribute("aria-pressed", on); $("#drAudio").setAttribute("aria-pressed", on);
+  $("#aoBtn").querySelector(".tl").textContent = on ? "Show text" : "Audio only";
+  $("#aoBtn").setAttribute("aria-label", on ? "Show the lesson text again" : "Audio only: show just the voice notes");
+  if (on) { if (typeof clipStop === "function" && clipBtn) clipStop(); }
+  if (save) { try { localStorage.setItem("alh-audio-only", on ? "1" : "0"); } catch {} }
+}
+try { if (localStorage.getItem("alh-audio-only") === "1") setAudioOnly(true, false); } catch {}
+$("#aoBtn").addEventListener("click", () => setAudioOnly(!document.body.classList.contains("audio-only")));
+$("#drAudio").addEventListener("click", () => setAudioOnly(!document.body.classList.contains("audio-only")));
 
 /* ---------- search ---------- */
 const sNorm = t => plain(t).toLowerCase().replace(/[\u064B-\u0652\u0670\u0640]/g, "")
