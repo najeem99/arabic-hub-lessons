@@ -78,6 +78,10 @@ button{font:inherit;color:inherit}
 /* ---------- Day picker ---------- */
 .daybar{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);
   backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+/* Scroll progress: thin bar on the bottom edge of the sticky header, full width at the end of the page */
+.sprog{position:absolute;left:0;right:0;bottom:-1px;height:3px;pointer-events:none;background:color-mix(in srgb,var(--line) 60%,transparent)}
+.sprog i{display:block;height:100%;width:100%;transform-origin:left center;transform:scaleX(0);
+  background:linear-gradient(90deg,var(--teal),var(--sand),var(--coral));border-radius:0 3px 3px 0}
 .daybar .inner{display:flex;gap:8px;overflow-x:auto;padding-block:10px;scroll-snap-type:x proximity;scrollbar-width:thin}
 .dtab{flex:0 0 auto;scroll-snap-align:center;display:flex;align-items:center;gap:8px;background:var(--surface);border:1.5px solid var(--line);
   border-radius:14px;padding:6px 12px 6px 6px;cursor:pointer;transition:transform .15s,border-color .15s,background .15s;box-shadow:var(--shadow)}
@@ -521,6 +525,7 @@ body.audio-only #drQuizMode,body.audio-only #drOpen{display:none}
     <button class="mquiz" id="mQuiz" type="button" aria-label="Open the quiz"><svg aria-hidden="true"><use href="#i-target"/></svg></button>
   </div>
   <div class="inner gut" role="tablist" id="tabs"></div>
+  <div class="sprog" aria-hidden="true"><i id="sprog"></i></div>
 </nav>
 <div class="scrim" id="scrim" hidden></div>
 <aside class="drawer" id="drawer" aria-label="Lesson menu" aria-hidden="true">
@@ -804,6 +809,15 @@ function miniSync(){
   $("#miniRing").setAttribute("stroke-dashoffset", 169.6 * (1 - Math.min(1, a.currentTime / d)));
 }
 let miniRaf = 0;
+// Scroll progress bar under the header
+const sprog = $("#sprog"); let sprogRaf = 0;
+function sprogSync(){ sprogRaf = 0; const el = document.scrollingElement || document.documentElement;
+  const max = el.scrollHeight - innerHeight; const p = max > 0 ? Math.min(1, Math.max(0, el.scrollTop / max)) : 1;
+  sprog.style.transform = `scaleX(${p})`; }
+const sprogQ = () => { if (!sprogRaf) sprogRaf = requestAnimationFrame(sprogSync); };
+addEventListener("scroll", sprogQ, {passive:true}); addEventListener("resize", sprogQ);
+if (window.ResizeObserver) new ResizeObserver(sprogQ).observe(document.body);
+sprogQ();
 addEventListener("scroll", () => { if (!miniRaf) miniRaf = requestAnimationFrame(() => { miniRaf = 0; miniSync(); }); }, {passive:true});
 document.addEventListener("play", miniSync, true);
 document.addEventListener("pause", miniSync, true);
