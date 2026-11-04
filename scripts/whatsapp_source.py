@@ -96,15 +96,35 @@ def entries_by_day(path):
 def variants(ar):
     groups = re.findall(r'\[[rbg]:([^\]]+)\]', ar)
     allopts = norm(re.sub(r'\[[rbg]:([^\]]+)\]', lambda m: ' '.join(m.group(1).split('|')), ar))
-    first = norm(re.sub(r'\[[rbg]:([^\]]+)\]', lambda m: m.group(1).split('|')[0], ar))
-    return {allopts, first} if groups else {first}
+    opts = {norm(re.sub(r'\[[rbg]:([^\]]+)\]', lambda m: m.group(1).split('|')[min(k, len(m.group(1).split('|')) - 1)], ar))
+            for k in range(max([len(g.split('|')) for g in groups] or [1]))}
+    return opts | {allopts}
 
 
-def score(item_ar, ent):
+LESSON = re.compile(r'(?:lesson:?|formal)\s*([\u0600-\u06FF\u064B-\u0652 ]+)')
+
+
+def lesson_forms(it):
+    """the card's Arabic with each Gulf swap put back to the lesson's own word"""
+    swaps = {}
+    for a_, e_ in it.get('w', []):
+        m = LESSON.search(e_)
+        src = norm(re.sub(r'\[[rbg]:([^\]]+)\]', lambda x: x.group(1), a_))
+        if m and src:
+            swaps[src] = norm(m.group(1))
+    out = set()
+    for v in variants(it['ar']):
+        alt = ' '.join(swaps.get(w, w) for w in v.split())
+        out.add(alt)
+    return out
+
+
+def score(item, ent):
+    item_ar = item['ar']
     best = 0
     parts = [p.strip() for p in re.split(r'/', ent["ar"])]
     cands = {ent["n"]} | {norm(p) for p in parts if norm(p)}
-    for v in variants(item_ar):
+    for v in variants(item_ar) | lesson_forms(item):
         for c in cands:
             r = SequenceMatcher(None, v.replace(' ', ''), c.replace(' ', '')).ratio()
             best = max(best, r)
@@ -116,13 +136,15 @@ def main(chat):
     res = {}
     for p in sorted(glob.glob(os.path.join(ROOT, 'data', 'days', 'day*.json'))):
         d = json.load(open(p, encoding='utf-8'))
+        if 'blocks' not in d:  # ready-laid-out day: carries its own WhatsApp text
+            continue
         E = ents.get(d['day'], [])
         got, pos, tot = {}, -1, 0
         for bi, b in enumerate(d['blocks']):
             for si, s in enumerate(b['sections']):
                 for ii, it in enumerate(s['items']):
                     tot += 1
-                    scored = [(score(it['ar'], e) - (0.04 if k < pos - 3 else 0), k) for k, e in enumerate(E)]
+                    scored = [(score(it, e) - (0.04 if k < pos - 3 else 0) - (0.02 if k > pos + 6 and pos >= 0 else 0), k) for k, e in enumerate(E)]
                     if not scored:
                         continue
                     sc, k = max(scored)
