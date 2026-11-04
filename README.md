@@ -8,6 +8,7 @@ Every lesson day becomes a tab with:
 - an expandable **word-by-word** breakdown on every phrase
 - the teacher's **voice notes**, placed right after the phrases they explain
 - **"Teacher says it"** buttons that play just the moment where the teacher says that phrase
+- a **WhatsApp text** button showing the phrase exactly as the teacher typed it (no harakat, with his transliteration lines)
 - colour groups for interchangeable words (same colour = same meaning)
 - a **quiz** across one or more days, with score, streak and review of misses
 - **search** across all days in Arabic (harakat optional), sound, English or Tamil — results show day and topic and jump to the card
@@ -21,6 +22,7 @@ Days 3–14 are included (Day 2 had no text; Day 11 was a revision class).
 src/app.html            page template (styles + script); __DATA__ is replaced at build time
 data/days/dayNN.json    lesson content, one file per day
 data/clips.json         where the teacher says each phrase (made by scripts/match.py)
+data/whatsapp.json      each phrase's original WhatsApp text (made by scripts/whatsapp_source.py)
 data/transcripts/       speech-recognition output per voice note (made by scripts/transcribe.py)
 docs/index.html         the built site (served by GitHub Pages)
 docs/audio/             compressed voice notes (mono 48 kbps MP3)
@@ -49,7 +51,9 @@ Open `docs/index.html` in a browser, or serve the folder: `python3 -m http.serve
    python3 scripts/transcribe.py   # ~real time on 2 CPU cores; skips notes already done
    python3 scripts/match.py        # updates data/clips.json and where each note sits
    ```
-4. `python3 scripts/build.py`, check `docs/index.html`, commit.
+4. Link each phrase to its original WhatsApp text:
+   `python3 scripts/whatsapp_source.py "path/to/WhatsApp Chat with ….txt"`
+5. `python3 scripts/build.py`, check `docs/index.html`, commit.
 
 ## Publish with GitHub Pages
 

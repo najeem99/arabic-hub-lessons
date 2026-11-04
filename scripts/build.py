@@ -28,18 +28,23 @@ def dur(f):
     return round(float(out.strip()), 1)
 
 
+WA = json.load(open(os.path.join(DATA, "whatsapp.json"), encoding="utf-8")) if os.path.exists(os.path.join(DATA, "whatsapp.json")) else {}
 CLIPS = json.load(open(os.path.join(DATA, "clips.json"), encoding="utf-8")) if os.path.exists(os.path.join(DATA, "clips.json")) else {}
 
 
 def prepare(path):
     d = json.load(open(path, encoding="utf-8"))
     C = CLIPS.get(str(d["day"]), {"items": {}, "splits": {}})
+    W = WA.get(str(d["day"]), {})
     total_audio = sum(len(b.get("intro", [])) + len(b.get("audio", [])) for b in d["blocks"])
     n, sections, used = 0, [], []
     for bi, b in enumerate(d["blocks"]):
         secs = [dict(s, items=[dict(it) for it in s["items"]]) for s in b["sections"]]
         for si, s in enumerate(secs):  # teacher's own pronunciation, cut from his voice note
             for ii, it in enumerate(s["items"]):
+                wa = W.get(f"{bi}.{si}.{ii}")
+                if wa:  # the teacher's original WhatsApp text, as typed
+                    it["wa"] = wa
                 c = C["items"].get(f"{bi}.{si}.{ii}")
                 if c:
                     it["clip"] = {"f": c["f"], "s": c["s"], "e": c["e"]}

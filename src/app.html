@@ -1,6 +1,6 @@
 <title>Arabic Hub Lessons</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@500;700;800&family=Figtree:wght@400;600;700&family=Noto+Naskh+Arabic:wght@500;700&family=Noto+Sans+Tamil:wght@400;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@500;700;800&family=Figtree:wght@400;600;700&family=Noto+Naskh+Arabic:wght@500;700&family=Noto+Sans+Arabic:wght@500;600&family=Noto+Sans+Tamil:wght@400;600&display=swap">
 <style>
 /* Layout: dusk-over-dunes hero band → sticky day picker → one day's lesson as a column of phrase cards,
    each teacher voice note placed right after the phrases it explains. */
@@ -11,6 +11,7 @@
   --red:#c42a31; --red-bg:#fde9e9; --blue:#1d5fc4; --blue-bg:#e6effc; --green:#1f7a3a; --green-bg:#e3f4e7;
   --sky-top:#2b2f6b; --sky-mid:#8a4f7d; --sky-low:#f0956b; --dune-1:#e9b062; --dune-2:#d48f3e; --dune-3:#b8722c; --sun:#ffd98a;
   --hero-fg:#fff8ec;
+  --wa:#128c4a; --wa-bg:#e3f6ea; --wa-bubble:#e6f7dc;
   --f-display:"Baloo Bhaijaan 2","Figtree",system-ui,sans-serif;
   --f-ui:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
   --f-ar:"Noto Naskh Arabic","Geeza Pro","Arial",serif;
@@ -24,6 +25,7 @@
   --red:#ff8a8a; --red-bg:#3a1d1f; --blue:#8ab4ff; --blue-bg:#1a2740; --green:#7fd894; --green-bg:#16301d;
   --sky-top:#070b24; --sky-mid:#1d1d4a; --sky-low:#4b2c5c; --dune-1:#5a3f2e; --dune-2:#43301f; --dune-3:#2e2117; --sun:#f3f0d6;
   --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 20px -12px rgba(0,0,0,.6);
+  --wa:#4fd98b; --wa-bg:#143323; --wa-bubble:#1d3a2c;
   color-scheme:dark}}
 :root[data-theme="dark"]{
   --bg:#0d1517; --surface:#152224; --surface-2:#1a292b; --fg:#e5efed; --muted:#97aba7; --line:#283a3c;
@@ -32,6 +34,7 @@
   --red:#ff8a8a; --red-bg:#3a1d1f; --blue:#8ab4ff; --blue-bg:#1a2740; --green:#7fd894; --green-bg:#16301d;
   --sky-top:#070b24; --sky-mid:#1d1d4a; --sky-low:#4b2c5c; --dune-1:#5a3f2e; --dune-2:#43301f; --dune-3:#2e2117; --sun:#f3f0d6;
   --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 20px -12px rgba(0,0,0,.6);
+  --wa:#4fd98b; --wa-bg:#143323; --wa-bubble:#1d3a2c;
   color-scheme:dark}
 
 *{box-sizing:border-box}
@@ -448,6 +451,20 @@ body.audio-only #drQuizMode,body.audio-only #drOpen{display:none}
   .s-item .s-where{grid-column:1/-1;grid-row:auto;flex-direction:row;align-items:center;justify-content:flex-start;text-align:left;margin-top:4px}
   .s-item{grid-template-columns:1fr}
 }
+
+/* Original WhatsApp text (as the teacher typed it, no harakat) */
+.acts{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.acts:empty{display:none}
+.wa-btn{display:inline-flex;align-items:center;gap:5px;font:700 12.5px var(--f-ui);color:var(--wa);background:var(--wa-bg);
+  border:1px solid color-mix(in srgb,var(--wa) 35%,transparent);border-radius:999px;padding:3px 10px 3px 6px;cursor:pointer;transition:transform .12s}
+.wa-btn:hover{transform:scale(1.04)}
+.wa-btn svg{width:16px;height:16px}
+.wa-btn[aria-expanded="true"]{background:var(--wa);color:#fff}
+.wa-box{position:relative;background:var(--wa-bubble);border-radius:4px 14px 14px 14px;padding:8px 12px 10px;display:flex;flex-direction:column;gap:2px;
+  box-shadow:0 1px 1px rgba(0,0,0,.12);animation:qin .2s both;max-width:100%}
+.wa-box .wa-from{font-size:11px;font-weight:700;color:var(--wa);letter-spacing:.03em}
+.wa-box .wa-ar{font-family:"Noto Sans Arabic","Segoe UI","Geeza Pro",system-ui,sans-serif;font-size:21px;font-weight:600;line-height:1.7;text-align:right;color:var(--fg)}
+.wa-box .wa-l{font-size:13.5px;color:var(--fg);opacity:.85;overflow-wrap:anywhere}
 #fx{position:fixed;inset:0;pointer-events:none;z-index:35;width:100%;height:100%}
 
 @media (max-width:480px){.ar-line{font-size:25px}.dhead{grid-template-columns:60px minmax(0,1fr)}.badge{width:60px;height:60px}.badge .num{font-size:24px}}
@@ -470,6 +487,7 @@ body.audio-only #drQuizMode,body.audio-only #drOpen{display:none}
   <symbol id="i-book" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M4 5.5A2.5 2.5 0 016.5 3H20v15H6.5A2.5 2.5 0 004 20.5zM4 20.5V5.5"/></symbol>
   <symbol id="i-target" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1" fill="currentColor"/></g></symbol>
   <symbol id="i-search" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5l5 5"/></g></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.5a9.5 9.5 0 0 0-8.3 14.1L2.5 21.5l5-1.2A9.5 9.5 0 1 0 12 2.5zm-4 8.2a1.3 1.3 0 1 1 0 2.6 1.3 1.3 0 0 1 0-2.6zm4 0a1.3 1.3 0 1 1 0 2.6 1.3 1.3 0 0 1 0-2.6zm4 0a1.3 1.3 0 1 1 0 2.6 1.3 1.3 0 0 1 0-2.6z"/></symbol>
   <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3-4.6-4.4 6.3-.9z"/></symbol>
   <symbol id="i-play" viewBox="0 0 24 24"><path fill="currentColor" d="M8 5.5v13a1 1 0 001.5.9l10-6.5a1 1 0 000-1.7l-10-6.5A1 1 0 008 5.5z"/></symbol>
   <symbol id="i-pause" viewBox="0 0 24 24"><g fill="currentColor"><rect x="6.5" y="5" width="4" height="14" rx="1.2"/><rect x="13.5" y="5" width="4" height="14" rx="1.2"/></g></symbol>
@@ -645,7 +663,8 @@ const card = i => i.audio ? audioCard(i.audio) : `
       <button class="star-btn" type="button" aria-pressed="${!!known[i.id]}" aria-label="I know this phrase">${icon("star")}</button></div>
     <div class="ar-line" lang="ar">${fmt(i.ar)}</div>
     <div class="sound"><span class="en">${fmt(i.ten)}</span>${i.tta ? `<span class="ta" lang="ta">${fmt(i.tta)}</span>` : ""}</div>
-    ${i.clip ? `<button class="say${i.clip.a ? " approx" : ""}" type="button" data-f="${esc(i.clip.f)}" data-s="${i.clip.s}" data-e="${i.clip.e}" aria-label="Hear the teacher say this${i.clip.a ? " (approximate timing)" : ""}" title="${i.clip.a ? "Approximate: from where the teacher explains this phrase, may start a second early or late" : "The teacher saying this phrase"}"><span class="dot">${icon("play")}</span>Teacher says it${i.clip.a ? " ≈" : ""}</button>` : ""}
+    <div class="acts">${i.clip ? `<button class="say${i.clip.a ? " approx" : ""}" type="button" data-f="${esc(i.clip.f)}" data-s="${i.clip.s}" data-e="${i.clip.e}" aria-label="Hear the teacher say this${i.clip.a ? " (approximate timing)" : ""}" title="${i.clip.a ? "Approximate: from where the teacher explains this phrase, may start a second early or late" : "The teacher saying this phrase"}"><span class="dot">${icon("play")}</span>Teacher says it${i.clip.a ? " ≈" : ""}</button>` : ""}${i.wa ? `<button class="wa-btn" type="button" aria-expanded="false" aria-label="Show the original WhatsApp text" title="Show how it was written in the WhatsApp message">${icon("chat")}<span>WhatsApp text</span></button>` : ""}</div>
+    ${i.wa ? `<div class="wa-box" hidden><span class="wa-from">Original message · no harakat</span><div class="wa-ar" lang="ar" dir="rtl">${esc(i.wa.ar)}</div>${i.wa.lines.map(l => `<div class="wa-l">${esc(l)}</div>`).join("")}</div>` : ""}
     <div class="meaning"><span class="en">${esc(i.en)}</span>${i.tm ? `<span class="ta" lang="ta">${esc(i.tm)}</span>` : ""}</div>
     <details class="words"><summary>Word by word</summary><ul>${i.w.map(([a,e],k) => `<li style="animation-delay:${k*40}ms"><span class="w-ar" lang="ar">${fmt(a)}</span><span class="w-en">${esc(e)}</span></li>`).join("")}</ul></details>
   </article>`;
@@ -1123,6 +1142,13 @@ $("#drSearch").addEventListener("click", openSearch);
 addEventListener("keydown", e => {
   if (e.key === "Escape" && !$("#search").hidden) { closeSearch(); return; }
   if (e.key === "/" && $("#search").hidden && !/INPUT|TEXTAREA/.test(document.activeElement?.tagName || "")) { e.preventDefault(); openSearch(); }
+});
+
+/* ---------- original WhatsApp text ---------- */
+document.addEventListener("click", e => {
+  const b = e.target.closest(".wa-btn"); if (!b) return;
+  const box = b.closest(".card")?.querySelector(".wa-box"); if (!box) return;
+  const open = box.hidden; box.hidden = !open; b.setAttribute("aria-expanded", open);
 });
 /* ---------- start ---------- */
 renderStats();
