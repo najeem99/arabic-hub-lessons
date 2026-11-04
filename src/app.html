@@ -685,7 +685,7 @@ function renderDay(d){
       </div>
     </div>
     ${d.keys ? `<div class="keys">${d.keys.map(k => `<span lang="ar">${esc(k)}</span>`).join("")}</div>` : ""}
-    <div class="ao-note"><div><b>🎧 Audio only</b> · just the teacher's voice notes, text hidden.<span class="ta" lang="ta">ஆடியோ மட்டும் · எழுத்து மறைக்கப்பட்டுள்ளது.</span></div>
+    <div class="ao-note"><div><b>🎧 Audio only</b> · just the teacher's voice notes, text hidden. Notes play one after another with a ding between them, then carry on to the next day.<span class="ta" lang="ta">ஆடியோ மட்டும் · எழுத்து மறைக்கப்பட்டுள்ளது.</span></div>
       <button class="tbtn" type="button" data-ao-off="1">Show text</button></div>
     <div class="meter" id="meter"></div>
     <div class="toolbar">
@@ -736,7 +736,8 @@ function setPlayIcon(box, on){ box.querySelector(".play").innerHTML = icon(on ? 
 function wire(box){
   if (box.dataset.wired) return; box.dataset.wired = 1;
   const a = box.querySelector("audio"), r = box.querySelector("input[type=range]"), c = box.querySelector(".cur");
-  a.addEventListener("play", () => { document.querySelectorAll(".audio audio").forEach(o => { if (o !== a) o.pause(); }); playingBox = box; setPlayIcon(box, true); });
+  a.addEventListener("play", () => { try { chimeCtx = chimeCtx || new (window.AudioContext || window.webkitAudioContext)(); chimeCtx.resume(); } catch {}
+    document.querySelectorAll(".audio audio").forEach(o => { if (o !== a) o.pause(); }); playingBox = box; setPlayIcon(box, true); });
   a.addEventListener("pause", () => setPlayIcon(box, false));
   a.addEventListener("timeupdate", () => { if (!r.matches(":active")) r.value = a.currentTime; c.textContent = mmss(a.currentTime); });
   a.addEventListener("ended", () => {
@@ -750,9 +751,36 @@ function wire(box){
     const all = [...document.querySelectorAll(".audio")], nx = all[all.indexOf(box) + 1];
     if (cur.audios.every(x => heard[x]) && first) toast(`<span class="ar">مَبْرُوكْ!</span> You heard every note for Day ${cur.day} 🎉`);
     else if (first) toast(`<span class="ar">أَحْسَنْتْ</span> · Well done! Note ${cur.audios.indexOf(f)+1} heard`);
-    if (autoNext && nx) { wire(nx); nx.scrollIntoView({block:"center", behavior: reduce ? "auto" : "smooth"}); nx.querySelector("audio").play().catch(()=>{}); }
+    // Audio only mode (or the Auto-play toggle): chime, then the next note; at the end of a day, on to the next day
+    const chain = autoNext || document.body.classList.contains("audio-only");
+    if (chain && nx) {
+      chime(false);
+      setTimeout(() => { wire(nx); nx.scrollIntoView({block:"center", behavior: reduce ? "auto" : "smooth"}); nx.querySelector("audio").play().catch(()=>{}); }, 1100);
+    } else if (chain && document.body.classList.contains("audio-only")) {
+      const nextDay = DAYS.slice(DAYS.indexOf(cur) + 1).find(d => d.audios.length);
+      chime(true);
+      if (nextDay) {
+        toast(`Day ${cur.day} done · starting Day ${nextDay.day} 🎧`);
+        setTimeout(() => { go(nextDay.day, true); const b = document.querySelector(".audio"); if (b) { wire(b); b.querySelector("audio").play().catch(()=>{}); } }, 1800);
+      } else toast(`<span class="ar">مَبْرُوكْ!</span> That was the last voice note 🎉`);
+    }
   });
   r.addEventListener("input", () => { a.currentTime = +r.value; });
+}
+/* short "ding" between voice notes (made in the browser, no file needed) */
+let chimeCtx = null;
+function chime(final){
+  try {
+    chimeCtx = chimeCtx || new (window.AudioContext || window.webkitAudioContext)();
+    if (chimeCtx.state === "suspended") chimeCtx.resume();
+    const notes = final ? [660, 880, 1175] : [880, 1320], t0 = chimeCtx.currentTime + 0.02;
+    notes.forEach((f, k) => {
+      const o = chimeCtx.createOscillator(), g = chimeCtx.createGain(), t = t0 + k * 0.16;
+      o.type = "sine"; o.frequency.value = f;
+      g.gain.setValueAtTime(0.0001, t); g.gain.exponentialRampToValueAtTime(0.25, t + 0.02); g.gain.exponentialRampToValueAtTime(0.0001, t + 0.55);
+      o.connect(g).connect(chimeCtx.destination); o.start(t); o.stop(t + 0.6);
+    });
+  } catch {}
 }
 function renderTabsQuiet(){ const y = $("#tabs").scrollLeft; renderTabs(cur.day); $("#tabs").scrollLeft = y; }
 
