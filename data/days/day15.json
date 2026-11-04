@@ -19,6 +19,14 @@
 ],
 "hint": "இந்த பாடத்திலிருந்து 5 கேள்விகளைத் தேர்ந்தெடுத்து, ஆண்/பெண் வடிவத்தை சரியாகப் பயன்படுத்துங்கள்."
 },
+"blocks": [
+{
+"audio": [
+"AUD-20261031-180332.mp3",
+"AUD-20261031-180457.mp3",
+"AUD-20261031-180510.mp3",
+"AUD-20261031-180520.mp3"
+],
 "sections": [
 {
 "title": "1. Name, home & origin",
@@ -650,6 +658,7 @@
 }
 ]
 }
-],
-"note": "Added from the live page (another session). Sections are used as they are: no blocks/voice notes yet."
+]
+}
+]
 }
