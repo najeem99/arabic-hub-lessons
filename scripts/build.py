@@ -34,6 +34,12 @@ CLIPS = json.load(open(os.path.join(DATA, "clips.json"), encoding="utf-8")) if o
 
 def prepare(path):
     d = json.load(open(path, encoding="utf-8"))
+    if "sections" in d and "blocks" not in d:  # a day already laid out (sections used as they are)
+        page = {k: d[k] for k in ("day", "icon", "title", "arTitle", "ta", "keys", "guide", "activity", "sections") if k in d}
+        if page.get("icon") not in ICONS:
+            page["icon"] = "book"
+        used = [i["audio"]["file"] for s in page["sections"] for i in s["items"] if "audio" in i]
+        return page, used
     C = CLIPS.get(str(d["day"]), {"items": {}, "splits": {}})
     W = WA.get(str(d["day"]), {})
     total_audio = sum(len(b.get("intro", [])) + len(b.get("audio", [])) for b in d["blocks"])
