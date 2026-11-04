@@ -91,7 +91,7 @@ def main():
     for p in sorted(glob.glob(os.path.join(ROOT, 'data', 'days', 'day*.json'))):
         d = json.load(open(p, encoding='utf-8'))
         day = {"items": {}, "splits": {}}
-        for bi, b in enumerate(d['blocks']):
+        for bi, b in enumerate(d.get('blocks', [])):
             notes = b.get('audio', [])
             allnotes = b.get('intro', []) + notes
             trs, ranges = [], []

@@ -31,6 +31,13 @@
 ],
 "hint": "இந்த வாக்கியங்களை அரபியில் மாற்றவும் — ضَيِّقْ, وَاسِعْ, مْرِيحْ, قَمِيصْ பயன்படுத்துங்கள்."
 },
+"blocks": [
+{
+"audio": [
+"AUD-20261102-173347.mp3",
+"AUD-20261102-173359.mp3",
+"AUD-20261102-173415.mp3"
+],
 "sections": [
 {
 "title": "1. Compliments & comments",
@@ -542,6 +549,7 @@
 }
 ]
 }
-],
-"note": "Added from the live page (another session). Sections are used as they are: no blocks/voice notes yet."
+]
+}
+]
 }

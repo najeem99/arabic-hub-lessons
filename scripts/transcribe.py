@@ -16,7 +16,7 @@ def jobs():
     j = {}
     for p in sorted(glob.glob(os.path.join(ROOT, "data", "days", "day*.json"))):
         d = json.load(open(p, encoding="utf-8"))
-        for b in d["blocks"]:
+        for b in d.get("blocks", []):
             ph = []
             for s in b["sections"]:
                 for it in s["items"]:
