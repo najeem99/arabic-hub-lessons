@@ -244,11 +244,20 @@ body.quiz .meaning.show{filter:none}
 .fs-track{width:100%;max-width:520px;display:flex;flex-direction:column;gap:4px}
 .fs-track input{width:100%;accent-color:var(--sun);height:28px}
 .fs-track .t{display:flex;justify-content:space-between;font-size:13px;font-variant-numeric:tabular-nums;opacity:.9}
-.fs-ctrls{display:flex;align-items:center;justify-content:center;gap:clamp(18px,7vw,40px)}
-.fs-skip{width:68px;height:68px;border-radius:50%;border:1.5px solid rgba(255,255,255,.4);background:rgba(255,255,255,.14);display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1}
+.fs-ctrls{display:flex;align-items:center;justify-content:center;gap:clamp(8px,3.5vw,28px)}
+.fs-nav{width:46px;height:46px;border:0;background:none;display:grid;place-items:center;border-radius:50%}
+.fs-nav svg{width:30px;height:30px}
+.fs-nav:disabled,.fs-day:disabled{opacity:.3;cursor:default}
+.fs-days{width:100%;max-width:520px;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.fs-day{display:flex;flex-direction:column;gap:1px;min-width:0;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.12);border-radius:14px;padding:8px 12px;text-align:left}
+.fs-day.nx{text-align:right}
+.fs-day small{font-size:11px;letter-spacing:.08em;text-transform:uppercase;opacity:.8;font-weight:700}
+.fs-day b{font:700 14px var(--f-display);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.fsp.announcing .disc{animation:fsbreath 1.2s ease-in-out infinite}
+.fs-skip{width:60px;height:60px;flex:0 0 60px;border-radius:50%;border:1.5px solid rgba(255,255,255,.4);background:rgba(255,255,255,.14);display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1}
 .fs-skip span{font-size:24px}.fs-skip small{font:800 12px var(--f-ui);margin-top:2px}
 .fs-skip:active,.fs-play:active{transform:scale(.93)}
-.fs-play{width:92px;height:92px;border-radius:50%;border:0;background:var(--sun);color:var(--sky-top)!important;display:grid;place-items:center;box-shadow:0 14px 34px -12px rgba(0,0,0,.55)}
+.fs-play{width:84px;height:84px;flex:0 0 84px;border-radius:50%;border:0;background:var(--sun);color:var(--sky-top)!important;display:grid;place-items:center;box-shadow:0 14px 34px -12px rgba(0,0,0,.55)}
 .fs-play svg{width:40px;height:40px}
 .fs-speed{display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
 .fs-speed button{font:700 13px var(--f-ui);border:1px solid rgba(255,255,255,.35);background:transparent;border-radius:999px;padding:6px 12px}
@@ -536,6 +545,8 @@ body.audio-only #drQuizMode,body.audio-only #drOpen{display:none}
   <symbol id="i-chat" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.5a9.5 9.5 0 0 0-8.3 14.1L2.5 21.5l5-1.2A9.5 9.5 0 1 0 12 2.5zm-4 8.2a1.3 1.3 0 1 1 0 2.6 1.3 1.3 0 0 1 0-2.6zm4 0a1.3 1.3 0 1 1 0 2.6 1.3 1.3 0 0 1 0-2.6zm4 0a1.3 1.3 0 1 1 0 2.6 1.3 1.3 0 0 1 0-2.6z"/></symbol>
   <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3-4.6-4.4 6.3-.9z"/></symbol>
   <symbol id="i-play" viewBox="0 0 24 24"><path fill="currentColor" d="M8 5.5v13a1 1 0 001.5.9l10-6.5a1 1 0 000-1.7l-10-6.5A1 1 0 008 5.5z"/></symbol>
+  <symbol id="i-prev" viewBox="0 0 24 24"><g fill="currentColor"><rect x="5" y="5" width="2.6" height="14" rx="1"/><path d="M19 6.2v11.6a1 1 0 01-1.5.8L9.3 12.8a1 1 0 010-1.6l8.2-5.8a1 1 0 011.5.8z"/></g></symbol>
+  <symbol id="i-next" viewBox="0 0 24 24"><g fill="currentColor"><rect x="16.4" y="5" width="2.6" height="14" rx="1"/><path d="M5 6.2v11.6a1 1 0 001.5.8l8.2-5.8a1 1 0 000-1.6L6.5 5.4A1 1 0 005 6.2z"/></g></symbol>
   <symbol id="i-pause" viewBox="0 0 24 24"><g fill="currentColor"><rect x="6.5" y="5" width="4" height="14" rx="1.2"/><rect x="13.5" y="5" width="4" height="14" rx="1.2"/></g></symbol>
  </defs>
 </svg>
@@ -630,9 +641,15 @@ body.audio-only #drQuizMode,body.audio-only #drOpen{display:none}
   <div class="fs-info"><b id="fsTitle">Voice note</b><span id="fsSub"></span></div>
   <div class="fs-track"><input type="range" id="fsSeek" min="0" max="1" step="0.1" value="0" aria-label="Seek"><div class="t"><span id="fsCur">0:00</span><span id="fsDur">0:00</span></div></div>
   <div class="fs-ctrls">
+    <button class="fs-nav" id="fsPrev" type="button" aria-label="Previous voice note"><svg aria-hidden="true"><use href="#i-prev"/></svg></button>
     <button class="fs-skip" id="fsBack" type="button" aria-label="Back 5 seconds"><span>↺</span><small>5s</small></button>
     <button class="fs-play" id="fsPlay" type="button" aria-label="Play"><svg aria-hidden="true"><use href="#i-play"/></svg></button>
     <button class="fs-skip" id="fsFwd" type="button" aria-label="Forward 5 seconds"><span>↻</span><small>5s</small></button>
+    <button class="fs-nav" id="fsNext" type="button" aria-label="Next voice note"><svg aria-hidden="true"><use href="#i-next"/></svg></button>
+  </div>
+  <div class="fs-days">
+    <button class="fs-day" id="fsPrevDay" type="button"><small>‹ Previous day</small><b></b></button>
+    <button class="fs-day nx" id="fsNextDay" type="button"><small>Next day ›</small><b></b></button>
   </div>
   <div class="fs-speed" id="fsSpeed" role="group" aria-label="Playback speed"></div>
 </div>
@@ -820,16 +837,17 @@ function wire(box){
     if (cur.audios.every(x => heard[x]) && first) toast(`<span class="ar">مَبْرُوكْ!</span> You heard every note for Day ${cur.day} 🎉`);
     else if (first) toast(`<span class="ar">أَحْسَنْتْ</span> · Well done! Note ${cur.audios.indexOf(f)+1} heard`);
     // Audio only mode (or the Auto-play toggle): chime, then the next note; at the end of a day, on to the next day
-    const chain = autoNext || document.body.classList.contains("audio-only");
+    const fsOn = !document.getElementById("fsp").hidden;
+    const chain = autoNext || fsOn || document.body.classList.contains("audio-only");
     if (chain && nx) {
       chime(false);
       setTimeout(() => { wire(nx); nx.scrollIntoView({block:"center", behavior: reduce ? "auto" : "smooth"}); nx.querySelector("audio").play().catch(()=>{}); }, 1100);
-    } else if (chain && document.body.classList.contains("audio-only")) {
+    } else if (chain && (fsOn || document.body.classList.contains("audio-only"))) {
       const nextDay = DAYS.slice(DAYS.indexOf(cur) + 1).find(d => d.audios.length);
       chime(true);
       if (nextDay) {
         toast(`Day ${cur.day} done · starting Day ${nextDay.day} 🎧`);
-        setTimeout(() => { go(nextDay.day, true); const b = document.querySelector(".audio"); if (b) { wire(b); b.querySelector("audio").play().catch(()=>{}); } }, 1800);
+        setTimeout(() => playDay(nextDay, "first"), 1500);
       } else toast(`<span class="ar">مَبْرُوكْ!</span> That was the last voice note 🎉`);
     }
   });
@@ -954,8 +972,60 @@ function fsSync(){
   $("#fsCur").textContent = mmss(a.currentTime); $("#fsDur").textContent = mmss(d);
   $("#fsPlay").setAttribute("aria-label", a.paused ? "Play" : "Pause");
   $("#fsPlay").innerHTML = `<svg aria-hidden="true"><use href="#i-${a.paused ? "play" : "pause"}"/></svg>`;
+  const L = dayBoxes(), i = L.indexOf(box), pd = dayStep(-1), nd = dayStep(1);
+  $("#fsNext").disabled = i === L.length - 1 && !nd;
+  $("#fsPrevDay").disabled = !pd; $("#fsNextDay").disabled = !nd;
+  $("#fsPrevDay b").textContent = pd ? `Day ${pd.day} · ${pd.title}` : "—";
+  $("#fsNextDay b").textContent = nd ? `Day ${nd.day} · ${nd.title}` : "—";
   $("#fsSpeed").innerHTML = [...box.querySelectorAll(".speed button")].map(b => `<button type="button" data-fr="${b.dataset.rate}" aria-pressed="${b.getAttribute("aria-pressed")}">${b.textContent}</button>`).join("");
 }
+/* previous / next voice note and day; a new day is announced ("Day 15. Topic") before its first note plays */
+const audioDays = () => DAYS.filter(d => d.audios.length);
+const dayStep = n => { const L = audioDays(), i = L.indexOf(cur); return i < 0 ? null : L[i + n] || null; };
+const dayBoxes = () => [...document.querySelectorAll("#day .audio")];
+let annTok = 0;
+function playBox(box){
+  annTok++; if (window.speechSynthesis) speechSynthesis.cancel(); fsp.classList.remove("announcing");
+  wire(box); document.querySelectorAll(".audio audio").forEach(a => a.pause());
+  const a = box.querySelector("audio"); a.currentTime = 0; playingBox = box;
+  if (fsp.hidden) box.scrollIntoView({block:"center", behavior: reduce ? "auto" : "smooth"});
+  a.play().catch(()=>{}); fsSync(); miniSync();
+}
+function announce(text, done){
+  const tok = ++annTok; let fired = false;
+  const fin = () => { if (fired || tok !== annTok) return; fired = true; fsp.classList.remove("announcing"); done(); };
+  fsp.classList.add("announcing");
+  try {
+    if (!window.speechSynthesis) throw 0;
+    speechSynthesis.cancel();
+    const u = new SpeechSynthesisUtterance(text); u.lang = "en-US"; u.rate = 0.95;
+    u.onend = fin; u.onerror = fin; speechSynthesis.speak(u);
+    setTimeout(fin, 7000);
+  } catch { setTimeout(fin, 1200); }
+}
+function playDay(d, which){
+  const keep = !fsp.hidden;
+  go(d.day, true);
+  const boxes = dayBoxes(), box = which === "last" ? boxes[boxes.length - 1] : boxes[0];
+  if (!box) return;
+  wire(box); playingBox = box;
+  if (keep) { fsp.hidden = false; document.body.style.overflow = "hidden"; }
+  fsSync(); miniSync();
+  toast(`🎧 Day ${d.day} · ${esc(d.title)}`);
+  announce(`Day ${d.day}. ${d.title.replace(/&/g, "and")}`, () => playBox(box));
+}
+function noteStep(n){
+  const box = playingBox; if (!box) return;
+  const a = box.querySelector("audio");
+  if (n < 0 && a.currentTime > 3) { a.currentTime = 0; fsSync(); return; }
+  const L = dayBoxes(), nb = L[L.indexOf(box) + n];
+  if (nb) { playBox(nb); return; }
+  const d = dayStep(n); if (d) playDay(d, n < 0 ? "last" : "first");
+}
+$("#fsPrev").addEventListener("click", () => noteStep(-1));
+$("#fsNext").addEventListener("click", () => noteStep(1));
+$("#fsPrevDay").addEventListener("click", () => { const d = dayStep(-1); if (d) playDay(d, "first"); });
+$("#fsNextDay").addEventListener("click", () => { const d = dayStep(1); if (d) playDay(d, "first"); });
 $("#fsClose").addEventListener("click", () => fsOpen(false));
 $("#fsGo").addEventListener("click", () => { const b = playingBox; fsOpen(false); b && b.scrollIntoView({block:"center", behavior: reduce ? "auto" : "smooth"}); });
 $("#fsPlay").addEventListener("click", () => { const a = fsAudio(); if (a) a.paused ? a.play().catch(()=>{}) : a.pause(); });
