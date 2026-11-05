@@ -207,6 +207,44 @@ body.quiz .meaning.show{filter:none}
 .audio .speed{display:flex;gap:4px;flex-wrap:wrap}
 .audio .speed button{font:700 12px var(--f-ui);border:1px solid color-mix(in srgb,var(--coral) 45%,transparent);background:transparent;color:var(--coral);border-radius:7px;padding:3px 8px;cursor:pointer}
 .audio .speed button[aria-pressed="true"]{background:var(--coral);color:#fff}
+.audio .ctrl-row{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
+.audio .skip{display:flex;gap:6px}
+.audio .skip button{font:700 13px var(--f-ui);border:0;background:var(--coral);color:#fff;border-radius:999px;padding:5px 12px;cursor:pointer;font-variant-numeric:tabular-nums}
+.audio .skip button:active{transform:scale(.94)}
+
+/* ---------- Full-screen player (opens from the floating mini-player) ---------- */
+.fsp{position:fixed;inset:0;z-index:60;color:var(--hero-fg);background:linear-gradient(180deg,var(--sky-top),var(--sky-mid) 60%,var(--sky-low));
+  display:flex;flex-direction:column;align-items:center;justify-content:space-between;gap:18px;overflow-y:auto;animation:fsin .28s cubic-bezier(.2,.9,.3,1);
+  padding:calc(14px + env(safe-area-inset-top,0px)) max(20px,env(safe-area-inset-right,0px)) calc(28px + env(safe-area-inset-bottom,0px)) max(20px,env(safe-area-inset-left,0px))}
+.fsp[hidden]{display:none}
+@keyframes fsin{from{transform:translateY(40px);opacity:0}}
+.fsp button{color:inherit;cursor:pointer}
+.fs-top{width:100%;max-width:520px;display:flex;align-items:center;justify-content:space-between;gap:10px}
+.fs-top small{font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;opacity:.85}
+.fs-ic{width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.14);font-size:20px;line-height:1;display:grid;place-items:center}
+.fs-go{border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.14);border-radius:999px;padding:8px 14px;font:700 13px var(--f-ui)}
+.fs-art{position:relative;width:min(62vw,250px);aspect-ratio:1;border-radius:50%;display:grid;place-items:center;
+  background:radial-gradient(circle,color-mix(in srgb,var(--sun) 55%,transparent),transparent 70%)}
+.fs-art .disc{width:72%;aspect-ratio:1;border-radius:50%;background:var(--sun);color:var(--sky-top);display:grid;place-items:center;
+  font:800 clamp(40px,12vw,64px)/1 var(--f-display);box-shadow:0 20px 50px -20px rgba(0,0,0,.5)}
+.fs-art .disc small{display:block;font:700 13px var(--f-ui);letter-spacing:.1em;text-transform:uppercase;text-align:center;margin-bottom:4px}
+.fsp.playing .fs-art .disc{animation:fsbreath 2.4s ease-in-out infinite}
+@keyframes fsbreath{50%{transform:scale(1.04)}}
+.fs-info{text-align:center;display:flex;flex-direction:column;gap:4px;max-width:520px}
+.fs-info b{font:800 clamp(22px,6vw,30px)/1.15 var(--f-display)}
+.fs-info span{opacity:.85;font-size:14px}
+.fs-track{width:100%;max-width:520px;display:flex;flex-direction:column;gap:4px}
+.fs-track input{width:100%;accent-color:var(--sun);height:28px}
+.fs-track .t{display:flex;justify-content:space-between;font-size:13px;font-variant-numeric:tabular-nums;opacity:.9}
+.fs-ctrls{display:flex;align-items:center;justify-content:center;gap:clamp(18px,7vw,40px)}
+.fs-skip{width:68px;height:68px;border-radius:50%;border:1.5px solid rgba(255,255,255,.4);background:rgba(255,255,255,.14);display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1}
+.fs-skip span{font-size:24px}.fs-skip small{font:800 12px var(--f-ui);margin-top:2px}
+.fs-skip:active,.fs-play:active{transform:scale(.93)}
+.fs-play{width:92px;height:92px;border-radius:50%;border:0;background:var(--sun);color:var(--sky-top)!important;display:grid;place-items:center;box-shadow:0 14px 34px -12px rgba(0,0,0,.55)}
+.fs-play svg{width:40px;height:40px}
+.fs-speed{display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
+.fs-speed button{font:700 13px var(--f-ui);border:1px solid rgba(255,255,255,.35);background:transparent;border-radius:999px;padding:6px 12px}
+.fs-speed button[aria-pressed="true"]{background:var(--hero-fg);color:var(--sky-top)}
 
 /* ---------- Activity & nav ---------- */
 .activity{background:var(--surface);border:2px dashed var(--dc);border-radius:16px;padding:14px 16px;display:flex;flex-direction:column;gap:10px}
@@ -577,6 +615,19 @@ body.audio-only #drQuizMode,body.audio-only #drOpen{display:none}
   <button class="mtxt" id="miniGo" type="button" aria-label="Scroll to this voice note"><b id="miniTitle">Voice note</b><small id="miniTime">0:00</small></button>
   <button class="mx" id="miniClose" type="button" aria-label="Stop and close">✕</button>
 </div>
+<div class="fsp" id="fsp" hidden role="dialog" aria-modal="true" aria-label="Voice note player">
+  <div class="fs-top"><button class="fs-ic" id="fsClose" type="button" aria-label="Close full-screen player">⌄</button><small>Now playing</small>
+    <button class="fs-go" id="fsGo" type="button">Show in lesson</button></div>
+  <div class="fs-art" aria-hidden="true"><div class="disc"><div><small id="fsDayLbl">Day</small><span id="fsDay"></span></div></div></div>
+  <div class="fs-info"><b id="fsTitle">Voice note</b><span id="fsSub"></span></div>
+  <div class="fs-track"><input type="range" id="fsSeek" min="0" max="1" step="0.1" value="0" aria-label="Seek"><div class="t"><span id="fsCur">0:00</span><span id="fsDur">0:00</span></div></div>
+  <div class="fs-ctrls">
+    <button class="fs-skip" id="fsBack" type="button" aria-label="Back 5 seconds"><span>↺</span><small>5s</small></button>
+    <button class="fs-play" id="fsPlay" type="button" aria-label="Play"><svg aria-hidden="true"><use href="#i-play"/></svg></button>
+    <button class="fs-skip" id="fsFwd" type="button" aria-label="Forward 5 seconds"><span>↻</span><small>5s</small></button>
+  </div>
+  <div class="fs-speed" id="fsSpeed" role="group" aria-label="Playback speed"></div>
+</div>
 <canvas id="fx" aria-hidden="true"></canvas>
 
 <script>
@@ -653,7 +704,10 @@ const audioCard = (a) => `
       <span class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
     </div>
     <div class="track"><span class="cur">0:00</span><input type="range" min="0" max="${a.dur}" step="0.1" value="0" aria-label="Seek"><span>${mmss(a.dur)}</span></div>
-    <div class="speed" role="group" aria-label="Playback speed">${[0.75,1,1.25,1.5].map(r => `<button type="button" data-rate="${r}" aria-pressed="${r===1}">${r}×</button>`).join("")}</div>
+    <div class="ctrl-row">
+      <div class="skip" role="group" aria-label="Skip"><button type="button" data-skip="-5" aria-label="Back 5 seconds">↺ 5s</button><button type="button" data-skip="5" aria-label="Forward 5 seconds">5s ↻</button></div>
+      <div class="speed" role="group" aria-label="Playback speed">${[0.75,1,1.25,1.5].map(r => `<button type="button" data-rate="${r}" aria-pressed="${r===1}">${r}×</button>`).join("")}</div>
+    </div>
     <audio preload="none" src="audio/${esc(a.file)}"></audio>
   </div>`;
 
@@ -732,6 +786,12 @@ addEventListener("hashchange", () => { if (location.hash === "#quiz") { if (mode
 /* ---------- audio ---------- */
 let autoNext = false, playingBox = null;
 function stopAll(){ if (typeof clipStop === "function") clipStop(); document.querySelectorAll(".audio audio").forEach(a => a.pause()); playingBox = null; if (typeof miniSync === "function") miniSync(); }
+function skip(a, s, box){
+  const d = a.duration || +box?.querySelector("input[type=range]")?.max || Infinity;
+  a.currentTime = Math.max(0, Math.min(d - 0.05, a.currentTime + s));
+  if (box) { box.querySelector("input[type=range]").value = a.currentTime; box.querySelector(".cur").textContent = mmss(a.currentTime); }
+  if (typeof fsSync === "function") fsSync(); if (typeof miniSync === "function") miniSync();
+}
 function setPlayIcon(box, on){ box.querySelector(".play").innerHTML = icon(on ? "pause" : "play"); box.classList.toggle("playing", on); }
 function wire(box){
   if (box.dataset.wired) return; box.dataset.wired = 1;
@@ -788,6 +848,8 @@ $("#day").addEventListener("click", e => {
   const t = e.target;
   const play = t.closest(".play");
   if (play) { const box = play.closest(".audio"); wire(box); const a = box.querySelector("audio"); a.paused ? a.play().catch(()=>{}) : a.pause(); return; }
+  const sk = t.closest("[data-skip]");
+  if (sk) { const box = sk.closest(".audio"); wire(box); skip(box.querySelector("audio"), +sk.dataset.skip, box); return; }
   const sp = t.closest(".speed button");
   if (sp) { const box = sp.closest(".audio"); wire(box); box.querySelector("audio").playbackRate = +sp.dataset.rate;
     box.querySelectorAll(".speed button").forEach(x => x.setAttribute("aria-pressed", x === sp)); return; }
@@ -838,9 +900,9 @@ function miniSync(){
   const a = box.querySelector("audio"), r = box.getBoundingClientRect();
   const offscreen = r.bottom < 90 || r.top > innerHeight - 40;
   const active = !a.paused || a.currentTime > 0;
-  mini.classList.toggle("on", active && offscreen);
+  mini.classList.toggle("on", active && offscreen && document.getElementById("fsp").hidden);
   mini.classList.toggle("playing", !a.paused);
-  $("#miniBtn").setAttribute("aria-label", a.paused ? "Play" : "Pause");
+  $("#miniBtn").setAttribute("aria-label", "Open full-screen player");
   $("#miniBtn .ic").innerHTML = `<use href="#i-${a.paused ? "play" : "pause"}"/>`;
   $("#miniTitle").textContent = `Day ${cur.day} · ` + box.querySelector(".a-title").textContent.replace("Teacher's voice note", "Note");
   const d = a.duration || +box.querySelector("input[type=range]").max || 1;
@@ -861,8 +923,45 @@ addEventListener("scroll", () => { if (!miniRaf) miniRaf = requestAnimationFrame
 document.addEventListener("play", miniSync, true);
 document.addEventListener("pause", miniSync, true);
 document.addEventListener("timeupdate", miniSync, true);
-$("#miniBtn").addEventListener("click", () => { if (!playingBox) return; const a = playingBox.querySelector("audio"); a.paused ? a.play().catch(()=>{}) : a.pause(); });
-$("#miniGo").addEventListener("click", () => playingBox && playingBox.scrollIntoView({block:"center", behavior: reduce ? "auto" : "smooth"}));
+$("#miniBtn").addEventListener("click", () => fsOpen(true));
+$("#miniGo").addEventListener("click", () => fsOpen(true));
+
+/* ---------- full-screen player: play/pause, 5 s back/forward, seek, speed ---------- */
+const fsp = $("#fsp");
+const fsAudio = () => playingBox && document.body.contains(playingBox) ? playingBox.querySelector("audio") : null;
+function fsOpen(on){
+  if (on && !fsAudio()) return;
+  fsp.hidden = !on; document.body.style.overflow = on ? "hidden" : "";
+  if (on) { fsSync(); $("#fsPlay").focus({preventScroll:true}); } else miniSync();
+}
+function fsSync(){
+  if (fsp.hidden) return;
+  const a = fsAudio(); if (!a) { fsOpen(false); return; }
+  const box = playingBox, d = a.duration || +box.querySelector("input[type=range]").max || 1;
+  fsp.classList.toggle("playing", !a.paused);
+  $("#fsDay").textContent = cur.day;
+  $("#fsTitle").textContent = box.querySelector(".a-title").textContent.replace("Teacher's voice note", "Voice note");
+  $("#fsSub").textContent = `Day ${cur.day} · ${box.querySelector(".a-sub").textContent.replace(/ · \d+:\d+$/, "")}`;
+  const sk = $("#fsSeek"); sk.max = d; if (!sk.matches(":active")) sk.value = a.currentTime;
+  $("#fsCur").textContent = mmss(a.currentTime); $("#fsDur").textContent = mmss(d);
+  $("#fsPlay").setAttribute("aria-label", a.paused ? "Play" : "Pause");
+  $("#fsPlay").innerHTML = `<svg aria-hidden="true"><use href="#i-${a.paused ? "play" : "pause"}"/></svg>`;
+  $("#fsSpeed").innerHTML = [...box.querySelectorAll(".speed button")].map(b => `<button type="button" data-fr="${b.dataset.rate}" aria-pressed="${b.getAttribute("aria-pressed")}">${b.textContent}</button>`).join("");
+}
+$("#fsClose").addEventListener("click", () => fsOpen(false));
+$("#fsGo").addEventListener("click", () => { const b = playingBox; fsOpen(false); b && b.scrollIntoView({block:"center", behavior: reduce ? "auto" : "smooth"}); });
+$("#fsPlay").addEventListener("click", () => { const a = fsAudio(); if (a) a.paused ? a.play().catch(()=>{}) : a.pause(); });
+$("#fsBack").addEventListener("click", () => { const a = fsAudio(); if (a) skip(a, -5, playingBox); });
+$("#fsFwd").addEventListener("click", () => { const a = fsAudio(); if (a) skip(a, 5, playingBox); });
+$("#fsSeek").addEventListener("input", e => { const a = fsAudio(); if (a) { a.currentTime = +e.target.value; $("#fsCur").textContent = mmss(a.currentTime); } });
+$("#fsSpeed").addEventListener("click", e => { const b = e.target.closest("[data-fr]"); if (!b || !playingBox) return;
+  playingBox.querySelector(`.speed button[data-rate="${b.dataset.fr}"]`)?.click(); fsSync(); });
+["play","pause","timeupdate","ended","loadedmetadata"].forEach(ev => document.addEventListener(ev, fsSync, true));
+addEventListener("keydown", e => { if (fsp.hidden) return;
+  if (e.key === "Escape") fsOpen(false);
+  else if (e.key === "ArrowLeft") { e.preventDefault(); $("#fsBack").click(); }
+  else if (e.key === "ArrowRight") { e.preventDefault(); $("#fsFwd").click(); }
+  else if (e.key === " " && document.activeElement?.id !== "fsPlay") { e.preventDefault(); $("#fsPlay").click(); } });
 $("#miniClose").addEventListener("click", () => { if (playingBox) { const a = playingBox.querySelector("audio"); a.pause(); a.currentTime = 0; } playingBox = null; miniSync(); });
 
 
