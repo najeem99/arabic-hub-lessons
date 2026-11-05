@@ -268,9 +268,9 @@
 }
 },
 {
-"ar": "[r:مِنُو|مَنْ] قَالْ لَكْ [b:جِي|كِذَا]؟",
-"ten": "[r:Minu|Man] gal lak [b:jee|kida]?",
-"tta": "[r:மினூ|மன்] கால் லக் [b:ஜீ|கிதா]?",
+"ar": "[r:مِنُو|مَنْ] قَالْ لَكْ [b:چِذِي|كِذَا]؟",
+"ten": "[r:Minu|Man] gal lak [b:chithi|kitha]?",
+"tta": "[r:மினூ|மன்] கால் லக் [b:சிதி|கிதா]?",
 "en": "Who told you that?",
 "tm": "உனக்கு அப்படி யார் சொன்னது?",
 "w": [
@@ -291,12 +291,12 @@
 "to you"
 ],
 [
-"[b:جِي]",
-"like that (Gulf)"
+"[b:چِذِي]",
+"like that (UAE; lesson جِي)"
 ],
 [
 "[b:كِذَا]",
-"like that (lesson)"
+"like that (lesson كدا)"
 ]
 ],
 "wa": {
