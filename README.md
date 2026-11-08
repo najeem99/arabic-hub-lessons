@@ -14,7 +14,7 @@ Every lesson day becomes a tab with:
 - **search** across all days in Arabic (harakat optional), sound, English or Tamil — results show day and topic and jump to the card
 - star ☆ "I know this", listened ✓ progress, light / dark theme, phone side menu
 
-Days 3–16 are included (Day 2 had no text; Day 11 was a revision class; Days 15–16 have no voice notes yet).
+Days 3–17 are included (Day 2 had no text; Day 11 was a revision class). Days 16–17 have voice notes but no "Teacher says it" clips yet.
 
 ## Project layout
 

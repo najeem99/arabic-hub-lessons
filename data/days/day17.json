@@ -1,0 +1,979 @@
+{
+"day": 17,
+"icon": "people",
+"title": "Who / Whose & Family",
+"arTitle": "مِنُو · الْأَهْلْ",
+"ta": "யார் / யாருடையது · குடும்பம்",
+"keys": [
+"مِنُو",
+"مِنُو وِيَّاكْ؟",
+"مِنُو يَبَا؟",
+"خَالْ"
+],
+"activity": {
+"items": [
+{
+"ta": "மேலாளருடன் யார் இருக்கிறார்?",
+"en": "Who is with the manager?"
+},
+{
+"ta": "உனது மாமா யார்?",
+"en": "Who is your uncle (mother's brother)?"
+},
+{
+"ta": "யாருடைய கார் இது?",
+"en": "Whose car is this?"
+},
+{
+"ta": "கடையின் முதலாளி யார்?",
+"en": "Who is the owner of the shop?"
+},
+{
+"ta": "யாருக்கு பிரியாணி வேண்டும்?",
+"en": "Who wants biryani?"
+}
+],
+"hint": "இந்த வாக்கியங்களை அரபியில் மாற்றவும் — مِنُو, وِيَّا, خَالْ, صَاحِبْ الْمَحَلّْ, يَبَا பயன்படுத்துங்கள். “யாருடைய” = பொருள் + مِنُو (سَيَّارَةْ مِنُو؟)."
+},
+"blocks": [
+{
+"audio": [
+"AUD-20261104-175820.mp3",
+"AUD-20261104-175909.mp3",
+"AUD-20261104-175945.mp3"
+],
+"sections": [
+{
+"title": "1. Who / Whose",
+"ar": "مِنُو · مِينْ",
+"ta": "யார் / யாருடையது",
+"note": {
+"en": "In the UAE you'll hear مِنُو (Minu) most for “who”; مَنْ (Man) is the formal word in the lesson. For “whose”, people usually put مِنُو after the thing: سَيَّارَةْ مِنُو؟ = whose car?",
+"ta": "அமீரகத்தில் “யார்” என்பதற்கு مِنُو அதிகம் கேட்கும். “யாருடைய” என்றால் பொருளுக்குப் பின் مِنُو சேர்க்கவும்: سَيَّارَةْ مِنُو؟ = யாருடைய கார்?"
+},
+"items": [
+{
+"ar": "[r:مِنُو|مَنْ]",
+"ten": "[r:Minu|Man]",
+"tta": "[r:மினூ|மன்]",
+"en": "Who?",
+"tm": "யார்?",
+"w": [
+[
+"[r:مِنُو]",
+"who (Gulf)"
+],
+[
+"[r:مَنْ]",
+"who (lesson, formal)"
+]
+],
+"key": true,
+"wa": {
+"ar": "من / منو",
+"lines": [
+"(மன்-மினூ) Who",
+"(Man - Minu)",
+"யார்"
+]
+}
+},
+{
+"ar": "مِينْ",
+"ten": "Meen",
+"tta": "மீன்",
+"en": "Whose (as in the lesson)",
+"tm": "யாருடையது",
+"w": [
+[
+"مِينْ",
+"whose (lesson)"
+]
+],
+"wa": {
+"ar": "مين",
+"lines": [
+"(மீன்) Whose",
+"(Meen)",
+"யாருடையது"
+]
+}
+}
+]
+},
+{
+"title": "2. Asking “who?”",
+"ar": "مِنُو …؟",
+"ta": "யார்…? கேள்விகள்",
+"items": [
+{
+"ar": "[r:مِنُو|مَنْ] إِنْتَ؟",
+"ten": "[r:Minu|Man] inta?",
+"tta": "[r:மினூ|மன்] இன்த?",
+"en": "Who are you?",
+"tm": "நீ யார்?",
+"w": [
+[
+"[r:مِنُو]",
+"who (Gulf)"
+],
+[
+"[r:مَنْ]",
+"who (lesson, formal)"
+],
+[
+"إِنْتَ",
+"you (man)"
+]
+],
+"key": true,
+"wa": {
+"ar": "من أنت؟",
+"lines": [
+"(மன் இன்த்)",
+"(Man inth)",
+"Who are you ?",
+"நீ யார்?"
+]
+}
+},
+{
+"ar": "[r:مِنُو|مَنْ] هُوَّ؟",
+"ten": "[r:Minu|Man] huwwa?",
+"tta": "[r:மினூ|மன்] ஹுவ்வ?",
+"en": "Who is he?",
+"tm": "அவர் யார்?",
+"w": [
+[
+"[r:مِنُو]",
+"who (Gulf)"
+],
+[
+"[r:مَنْ]",
+"who (lesson, formal)"
+],
+[
+"هُوَّ",
+"he"
+]
+],
+"wa": {
+"ar": "من هو؟",
+"lines": [
+"(மன் ஹுவ)",
+"(Man Huwa)",
+"Who is he ?",
+"அவர் யார்?"
+]
+}
+},
+{
+"ar": "مِنُو [r:وِيَّاكْ|مَعَاكْ]؟",
+"ten": "Minu [r:wiyyak|ma'ak]?",
+"tta": "மினூ [r:விய்யாக்|மஅக்]?",
+"en": "Who is with you?",
+"tm": "உன்னுடன் இருப்பது யார்?",
+"w": [
+[
+"مِنُو",
+"who (Gulf)"
+],
+[
+"[r:وِيَّاكْ]",
+"with you (Gulf)"
+],
+[
+"[r:مَعَاكْ]",
+"with you (formal)"
+]
+],
+"key": true,
+"wa": {
+"ar": "منو وياك / معاك ؟",
+"lines": [
+"(மினூ விய்யாக் / ம'அக்)",
+"(Minu viyyak/ ma'ak)",
+"Who is with you?",
+"உன்னுடன் இருப்பது யார்?"
+]
+}
+},
+{
+"ar": "[r:مِنُو|مَنْ] فِي دَاخِلْ الْمَكْتَبْ؟",
+"ten": "[r:Minu|Man] fi dakhil al-maktab?",
+"tta": "[r:மினூ|மன்] ஃபீ தாஹில் அல்மக்தப்?",
+"en": "Who is in the office?",
+"tm": "அலுவலகத்தில் யார் இருக்கிறார்?",
+"w": [
+[
+"[r:مِنُو]",
+"who (Gulf)"
+],
+[
+"[r:مَنْ]",
+"who (lesson, formal)"
+],
+[
+"فِي",
+"in"
+],
+[
+"دَاخِلْ",
+"inside"
+],
+[
+"الْمَكْتَبْ",
+"the office"
+]
+],
+"wa": {
+"ar": "من في داخل المكتب ؟",
+"lines": [
+"(மன் ஃபீ தாஹிலல் மக்தப்)",
+"(Man fi dakhil al-maktab)",
+"Who is in the office?",
+"அலுவலகத்தில் யார் இருக்கிறார்?"
+]
+}
+},
+{
+"ar": "[r:مِنُو|مَنْ] مُدِيرَكْ؟",
+"ten": "[r:Minu|Man] mudeerak?",
+"tta": "[r:மினூ|மன்] முதீரக்?",
+"en": "Who is your manager?",
+"tm": "உனது மேலாளர் யார்?",
+"w": [
+[
+"[r:مِنُو]",
+"who (Gulf)"
+],
+[
+"[r:مَنْ]",
+"who (lesson, formal)"
+],
+[
+"مُدِيرَكْ",
+"your manager"
+]
+],
+"key": true,
+"wa": {
+"ar": "من مديرك ؟",
+"lines": [
+"(மன் முதீரக்)",
+"(Man mudeerak)",
+"Who is your manager ?",
+"உனது மேலாளர் யார்?"
+]
+}
+},
+{
+"ar": "[r:مِنُو|مَنْ] قَالْ لَكْ [b:چِذِي|كِذَا]؟",
+"ten": "[r:Minu|Man] gal lak [b:chithi|kitha]?",
+"tta": "[r:மினூ|மன்] கால் லக் [b:சிதி|கிதா]?",
+"en": "Who told you that?",
+"tm": "உனக்கு அப்படி யார் சொன்னது?",
+"w": [
+[
+"[r:مِنُو]",
+"who (Gulf)"
+],
+[
+"[r:مَنْ]",
+"who (lesson, formal)"
+],
+[
+"قَالْ",
+"said / told (ق = g in Gulf)"
+],
+[
+"لَكْ",
+"to you"
+],
+[
+"[b:چِذِي]",
+"like that (UAE; lesson جِي)"
+],
+[
+"[b:كِذَا]",
+"like that (lesson كدا)"
+]
+],
+"wa": {
+"ar": "من قال لك كدا/ جي ؟",
+"lines": [
+"(மன் கால் லக் கிதா / ஜீ)",
+"(Man qal lak kida/ je)",
+"Who told you that?",
+"உனக்கு அப்படி /அதை யார் சொன்னது?"
+]
+}
+},
+{
+"ar": "مِنُو [r:هَاذَا|هَاذِي]؟",
+"ten": "Minu [r:hatha|hathi]?",
+"tta": "மினூ [r:ஹாதா|ஹாதீ]?",
+"en": "Who is this? (man / woman)",
+"tm": "யார் இவன் / இவள்?",
+"w": [
+[
+"مِنُو",
+"who (Gulf)"
+],
+[
+"[r:هَاذَا]",
+"this (man)"
+],
+[
+"[r:هَاذِي]",
+"this (woman, Gulf; lesson هذه hathihi)"
+]
+],
+"key": true,
+"wa": {
+"ar": "منو هذا؟ 👨🏻‍🦰/ منو هذه 👩🏻‍🦰",
+"lines": [
+"(மினூ ஹாதா / மினூ ஹாதிஹி)",
+"(Minu Hatha/ Minu hathihe)",
+"Who is this?",
+"யார் இவன் / இவள்?"
+]
+}
+},
+{
+"ar": "مِنُو يَبَا؟",
+"ten": "Minu yaba?",
+"tta": "மினூ யபா?",
+"en": "Who wants (it)?",
+"tm": "யாருக்கு வேண்டும்?",
+"w": [
+[
+"مِنُو",
+"who (Gulf)"
+],
+[
+"يَبَا",
+"wants (Gulf)"
+]
+],
+"key": true,
+"wa": {
+"ar": "منو يبا ؟",
+"lines": [
+"(மினூ இபா)",
+"(Minu eiba?)",
+"Who wants ?",
+"யாருக்கு வேண்டும்?"
+]
+}
+},
+{
+"ar": "مِنُو وِيَّا الْمُدِيرْ؟",
+"ten": "Minu wiyya l-mudeer?",
+"tta": "மினூ விய்யா அல்முதீர்?",
+"en": "Who is with the manager?",
+"tm": "மேலாளருடன் யார் இருக்கிறார்?",
+"w": [
+[
+"مِنُو",
+"who (Gulf)"
+],
+[
+"وِيَّا",
+"with (Gulf)"
+],
+[
+"الْمُدِيرْ",
+"the manager"
+]
+],
+"wa": {
+"ar": "منو ويا مدير؟",
+"lines": [
+"(மினூ விய்யா முதீர்)",
+"(Minu viyya mudeer?)",
+"Who is with manager ?",
+"மேலாளருடன் யார் இருக்கிறார்?"
+]
+}
+},
+{
+"ar": "مِنُو كَانْ يِقْدَرْ يِتْخَيَّلْ؟",
+"ten": "Minu kan yigdar yitkhayyal?",
+"tta": "மினூ கான் யிக்தர் யித்ஹய்யல்?",
+"en": "Who could have imagined?",
+"tm": "யாரால் கற்பனை செய்து பார்த்திருக்க முடியும்?",
+"w": [
+[
+"مِنُو",
+"who (Gulf)"
+],
+[
+"كَانْ",
+"was"
+],
+[
+"يِقْدَرْ",
+"can / is able (ق = g; lesson yaqdir)"
+],
+[
+"يِتْخَيَّلْ",
+"imagine"
+]
+],
+"wa": {
+"ar": "منو كان يقدر يتخيل؟",
+"lines": [
+"(மினூ கான் யக்திர் யத்ஹைய்யல்)",
+"(Minu Kan yaqdir yatkhayyal?)",
+"Who could have imagined ?",
+"யாரால் கற்பனை செய்து பார்த்திருக்க முடியும்?"
+]
+}
+},
+{
+"ar": "مِنُو أَحْمَدْ [r:هِنِي|هِنَا]؟",
+"ten": "Minu Ahmad [r:hini|hina]?",
+"tta": "மினூ அஹ்மத் [r:ஹினி|ஹினா]?",
+"en": "Who is Ahmed here?",
+"tm": "இங்கே யார் அஹ்மத்?",
+"w": [
+[
+"مِنُو",
+"who (Gulf)"
+],
+[
+"أَحْمَدْ",
+"Ahmed"
+],
+[
+"[r:هِنِي]",
+"here (Gulf)"
+],
+[
+"[r:هِنَا]",
+"here (lesson)"
+]
+],
+"wa": {
+"ar": "منو أحمد هنا ؟",
+"lines": [
+"(மினூ அஹ்மத் ஹினா )",
+"(Minu Ahmad hina?)",
+"Who is Ahmed here?",
+"இங்கே யார் அஹ்மத்?"
+]
+}
+},
+{
+"ar": "مِنُو [r:صَاحِبْ الْمَحَلّْ|الْمَالِكْ]؟",
+"ten": "Minu [r:sahib al-mahal|al-malik]?",
+"tta": "மினூ [r:ஸாஹிபுல் மஹல்|அல்மாலிக்]?",
+"en": "Who is the (shop) owner?",
+"tm": "யார் முதலாளி?",
+"w": [
+[
+"مِنُو",
+"who (Gulf)"
+],
+[
+"[r:صَاحِبْ]",
+"owner of"
+],
+[
+"[r:الْمَحَلّْ]",
+"the shop"
+],
+[
+"[r:الْمَالِكْ]",
+"the owner (formal)"
+]
+],
+"key": true,
+"wa": {
+"ar": "منو المالك / صاحب المحل ؟",
+"lines": [
+"(மினூ அல்மாலிக் / சாஹிபுல் மஹல்)",
+"(Minu Al-Malik/ sahib al-mahal?)",
+"Who is the owner?",
+"யார் முதலாளி?"
+]
+}
+},
+{
+"ar": "مِنُو أَبْلَة؟",
+"ten": "Minu abla?",
+"tta": "மினூ அப்லா?",
+"en": "Who is the teacher? (woman)",
+"tm": "யார் ஆசிரியர்?",
+"w": [
+[
+"مِنُو",
+"who (Gulf)"
+],
+[
+"أَبْلَة",
+"teacher, woman (Gulf)"
+]
+],
+"wa": {
+"ar": "منو أبلة ؟🧑🏼‍🏫",
+"lines": [
+"(மினூ அபல்லா)",
+"(Minu aballa)",
+"Who is the teacher ?",
+"யார் ஆசிரியர் ?"
+]
+}
+},
+{
+"ar": "مِنُو كَفِيلَكْ؟",
+"ten": "Minu kafeelak?",
+"tta": "மினூ கஃபீலக்?",
+"en": "Who is your sponsor?",
+"tm": "உனது ஸ்பான்சர் யார்?",
+"w": [
+[
+"مِنُو",
+"who (Gulf)"
+],
+[
+"كَفِيلَكْ",
+"your sponsor (visa)"
+]
+],
+"key": true,
+"wa": {
+"ar": "منو كفيلك ؟",
+"lines": [
+"(மினூ கஃபீலக் )",
+"(Minu kafeelak?)",
+"Who is your sponsor ?",
+"யார் உனது ஆதரவாளர்?"
+]
+}
+}
+]
+},
+{
+"title": "3. Family",
+"ar": "الْأَهْلْ",
+"ta": "குடும்பம்",
+"grid": true,
+"items": [
+{
+"ar": "[r:الْأَهْلْ|الْعَائِلَة|الْأُسْرَة]",
+"ten": "[r:Al-ahl|Al-'aa'ila|Al-usra]",
+"tta": "[r:அல்அஹ்ல்|அல்ஆயிலா|அல்உஸ்ரா]",
+"en": "Family",
+"tm": "குடும்பம்",
+"w": [
+[
+"[r:الْأَهْلْ]",
+"family / folks (Gulf)"
+],
+[
+"[r:الْعَائِلَة]",
+"family"
+],
+[
+"[r:الْأُسْرَة]",
+"family (formal)"
+]
+],
+"wa": {
+"ar": "الأسرة/عائلة /أهل",
+"lines": [
+"(Al-Usrah / ‘Aa'ilah / Ahl)",
+"Family"
+]
+}
+},
+{
+"ar": "[r:بَابَا|الْأَبْ|وَالِدْ]",
+"ten": "[r:Baba|Al-ab|Walid]",
+"tta": "[r:பாபா|அல்அப்|வாலித்]",
+"en": "Father",
+"tm": "அப்பா",
+"w": [
+[
+"[r:بَابَا]",
+"dad (everyday)"
+],
+[
+"[r:الْأَبْ]",
+"the father"
+],
+[
+"[r:وَالِدْ]",
+"father (formal)"
+]
+],
+"wa": {
+"ar": "الأب/والد/بابا",
+"lines": [
+"(Al-Ab / Walid / Baba)"
+]
+}
+},
+{
+"ar": "[r:مَامَا|الْأُمّْ|وَالِدَة]",
+"ten": "[r:Mama|Al-umm|Walida]",
+"tta": "[r:மாமா|அல்உம்ம்|வாலிதா]",
+"en": "Mother",
+"tm": "அம்மா",
+"w": [
+[
+"[r:مَامَا]",
+"mum (everyday)"
+],
+[
+"[r:الْأُمّْ]",
+"the mother"
+],
+[
+"[r:وَالِدَة]",
+"mother (formal)"
+]
+],
+"wa": {
+"ar": "الأم/والدة/ماما",
+"lines": [
+"(Al-Um / Walidah / Mama)"
+]
+}
+},
+{
+"ar": "[r:إِبْنْ|نَجْلْ]",
+"ten": "[r:Ibn|Najl]",
+"tta": "[r:இப்ன்|நஜ்ல்]",
+"en": "Son",
+"tm": "மகன்",
+"w": [
+[
+"[r:إِبْنْ]",
+"son"
+],
+[
+"[r:نَجْلْ]",
+"son (formal)"
+]
+],
+"wa": {
+"ar": "إبن / نجل",
+"lines": [
+"(Ibn / Najl)"
+]
+}
+},
+{
+"ar": "بِنْتْ",
+"ten": "Bint",
+"tta": "பின்த்",
+"en": "Daughter",
+"tm": "மகள்",
+"w": [
+[
+"بِنْتْ",
+"daughter / girl"
+]
+],
+"wa": {
+"ar": "بنت",
+"lines": [
+"(Bint)"
+]
+}
+},
+{
+"ar": "حَفِيدْ",
+"ten": "Hafeed",
+"tta": "ஹஃபீத்",
+"en": "Grandson",
+"tm": "பேரன்",
+"w": [
+[
+"حَفِيدْ",
+"grandson"
+]
+],
+"wa": {
+"ar": "حفيد",
+"lines": [
+"(Hafeed)"
+]
+}
+},
+{
+"ar": "جَدّْ",
+"ten": "Jadd",
+"tta": "ஜத்",
+"en": "Grandfather",
+"tm": "தாத்தா",
+"w": [
+[
+"جَدّْ",
+"grandfather"
+]
+],
+"wa": {
+"ar": "جدّ",
+"lines": [
+"(Jadd)"
+]
+}
+},
+{
+"ar": "جَدَّة",
+"ten": "Jadda",
+"tta": "ஜத்தா",
+"en": "Grandmother",
+"tm": "பாட்டி",
+"w": [
+[
+"جَدَّة",
+"grandmother"
+]
+],
+"wa": {
+"ar": "جدة",
+"lines": [
+"(Jaddah)"
+]
+}
+},
+{
+"ar": "عَمّْ",
+"ten": "'Amm",
+"tta": "அம்ம்",
+"en": "Uncle (father's brother)",
+"tm": "சித்தப்பா / பெரியப்பா",
+"w": [
+[
+"عَمّْ",
+"paternal uncle"
+]
+],
+"wa": {
+"ar": "عمّ",
+"lines": [
+"(‘Amm)"
+]
+}
+},
+{
+"ar": "عَمَّة",
+"ten": "'Amma",
+"tta": "அம்மா",
+"en": "Aunt (father's sister)",
+"tm": "அத்தை",
+"w": [
+[
+"عَمَّة",
+"paternal aunt"
+]
+],
+"wa": {
+"ar": "عمة",
+"lines": [
+"(‘Ammah)"
+]
+}
+},
+{
+"ar": "خَالْ",
+"ten": "Khal",
+"tta": "ஹால்",
+"en": "Uncle (mother's brother)",
+"tm": "மாமா",
+"w": [
+[
+"خَالْ",
+"maternal uncle"
+]
+],
+"wa": {
+"ar": "خال",
+"lines": [
+"(Khaal)"
+]
+}
+},
+{
+"ar": "خَالَة",
+"ten": "Khala",
+"tta": "ஹாலா",
+"en": "Aunt (mother's sister)",
+"tm": "சித்தி / பெரியம்மா",
+"w": [
+[
+"خَالَة",
+"maternal aunt"
+]
+],
+"wa": {
+"ar": "خالة",
+"lines": [
+"(Khaalah)"
+]
+}
+},
+{
+"ar": "زَوْجْ",
+"ten": "Zawj",
+"tta": "ஸவ்ஜ்",
+"en": "Husband",
+"tm": "கணவர்",
+"w": [
+[
+"زَوْجْ",
+"husband"
+]
+],
+"wa": {
+"ar": "زوج",
+"lines": [
+"(Zawj)"
+]
+}
+},
+{
+"ar": "زَوْجَة",
+"ten": "Zawja",
+"tta": "ஸவ்ஜா",
+"en": "Wife",
+"tm": "மனைவி",
+"w": [
+[
+"زَوْجَة",
+"wife"
+]
+],
+"wa": {
+"ar": "زوجة",
+"lines": [
+"(Zawjah)"
+]
+}
+},
+{
+"ar": "الْأَقْرِبَاءْ",
+"ten": "Al-aqriba'",
+"tta": "அல்அக்ரிபா",
+"en": "Relatives",
+"tm": "உறவினர்கள்",
+"w": [
+[
+"الْأَقْرِبَاءْ",
+"the relatives"
+]
+],
+"wa": {
+"ar": "الأقرباء",
+"lines": [
+"(Al-Aqriba’a)"
+]
+}
+},
+{
+"ar": "[r:الْكَبِيرْ|الْأَكْبَرْ]",
+"ten": "[r:Al-kabeer|Al-akbar]",
+"tta": "[r:அல்கபீர்|அல்அக்பர்]",
+"en": "The older one (older brother)",
+"tm": "மூத்தவன் (அண்ணன்)",
+"w": [
+[
+"[r:الْكَبِيرْ]",
+"the big / older one"
+],
+[
+"[r:الْأَكْبَرْ]",
+"the oldest"
+]
+],
+"wa": {
+"ar": "الأكبر / الكبير",
+"lines": [
+"(Al-Akbar / Al-Kabeer)"
+]
+}
+},
+{
+"ar": "الْوَلَدْ الْكَبِيرْ",
+"ten": "Al-walad al-kabeer",
+"tta": "அல்வலத் அல்கபீர்",
+"en": "Older son",
+"tm": "மூத்த மகன்",
+"w": [
+[
+"الْوَلَدْ",
+"the boy / son"
+],
+[
+"الْكَبِيرْ",
+"the big / older"
+]
+],
+"wa": {
+"ar": "الولد الكبير",
+"lines": [
+"(Al-Walad Al-Kabeer)"
+]
+}
+},
+{
+"ar": "[r:الصَّغِيرْ|الْأَصْغَرْ]",
+"ten": "[r:As-sagheer|Al-asghar]",
+"tta": "[r:அஸ்ஸகீர்|அல்அஸ்கர்]",
+"en": "The little one / youngest (brother)",
+"tm": "இளையவன் (தம்பி)",
+"w": [
+[
+"[r:الصَّغِيرْ]",
+"the small / younger one"
+],
+[
+"[r:الْأَصْغَرْ]",
+"the youngest"
+]
+],
+"wa": {
+"ar": "الصغير / الأصغر",
+"lines": [
+"(Al-Sagheer / Al-Asghar)"
+]
+}
+},
+{
+"ar": "[r:أَخُويْ|أَخِي] الصَّغِيرْ",
+"ten": "[r:Akhuy|Akhi] as-sagheer",
+"tta": "[r:அஹூய்|அஹீ] அஸ்ஸகீர்",
+"en": "My little brother",
+"tm": "என் தம்பி",
+"w": [
+[
+"[r:أَخُويْ]",
+"my brother (Gulf)"
+],
+[
+"[r:أَخِي]",
+"my brother (lesson)"
+],
+[
+"الصَّغِيرْ",
+"the little"
+]
+],
+"wa": {
+"ar": "أخي الصغير",
+"lines": [
+"(Akhi Al-Sagheer)"
+]
+}
+}
+]
+}
+]
+}
+]
+}
