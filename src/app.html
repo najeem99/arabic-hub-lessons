@@ -137,6 +137,16 @@ section{display:flex;flex-direction:column;gap:12px}
 .sec-head h3{margin:0;font-family:var(--f-display);font-size:20px;font-weight:700}
 .sec-head .ar{font-family:var(--f-ar);font-size:24px;color:var(--dc);direction:rtl}
 .sec-head .ta{font-family:var(--f-ta);font-size:13px;color:var(--muted)}
+/* Collapsible sections: tap the heading to fold a section away */
+.sec-head{cursor:pointer;user-select:none;-webkit-tap-highlight-color:transparent}
+.sec-head .row{padding-right:34px;position:relative}
+.sec-head .chev{position:absolute;right:0;top:50%;width:28px;height:28px;margin-top:-14px;border-radius:50%;background:color-mix(in srgb,var(--dc) 15%,transparent);
+  color:var(--dc);display:grid;place-items:center;font-size:14px;font-weight:800;transition:transform .2s}
+section.collapsed .sec-head .chev{transform:rotate(-90deg)}
+section.collapsed>:not(.sec-head){display:none!important}
+section.collapsed .sec-head{border-bottom-style:dashed;opacity:.85}
+.sec-head .cnt{font:600 12px var(--f-ui);color:var(--muted);display:none}
+section.collapsed .sec-head .cnt{display:block}
 .note{background:var(--teal-soft);border-radius:12px;padding:10px 14px;font-size:14px}
 .note .ta{font-family:var(--f-ta);display:block;color:var(--muted);font-size:13px;margin-top:2px}
 .cards{display:flex;flex-direction:column;gap:12px}
@@ -787,6 +797,7 @@ function renderDay(d){
     <div class="toolbar">
       <button class="tbtn" id="quizBtn" type="button" aria-pressed="${document.body.classList.contains("quiz")}">🙈 Hide meanings</button>
       <button class="tbtn" id="openBtn" type="button" aria-pressed="false">📖 Open all word-by-word</button>
+      <button class="tbtn" id="foldAllBtn" type="button">▾ Collapse all sections</button>
       <button class="tbtn" id="autoBtn" type="button" aria-pressed="${autoNext}">▶︎ Auto-play next note</button>
       <button class="tbtn" id="dayQuizBtn" type="button">🎯 Quiz this whole day</button>
     </div>
@@ -794,8 +805,9 @@ function renderDay(d){
       <div class="ta">ஒரே நிறம் = ஒரே பொருள். ஒவ்வொரு ஆடியோவும் அது விளக்கும் வாக்கியங்களுக்கு மேலே உள்ளது.</div>
       <div class="ex"><span class="alt alt-r"><span class="opt">Option A</span><span class="or">/</span><span class="opt">Option B</span></span><span class="alt alt-b"><span class="opt">Option C</span><span class="or">/</span><span class="opt">Option D</span></span></div></div>
     ${d.guide ? `<div class="guide"><h3>${esc(d.guide.title)}</h3><ul>${d.guide.rows.map(r => `<li><span class="g-ar" lang="ar">${esc(r.ar)}</span><span class="g-txt"><b>${esc(r.head)}</b>${r.en ? `<span>${esc(r.en)}</span>` : ""}${r.ta ? `<span class="ta" lang="ta">${esc(r.ta)}</span>` : ""}</span></li>`).join("")}</ul></div>` : ""}
-    ${d.sections.map((s, si) => `<section id="sec-${si}">
-      <div class="sec-head"><div class="row"><h3>${esc(s.title)}</h3>${s.ar ? `<span class="ar" lang="ar">${fmt(s.ar)}</span>` : ""}</div>${s.ta ? `<span class="ta" lang="ta">${esc(s.ta)}</span>` : ""}</div>
+    ${d.sections.map((s, si) => `<section id="sec-${si}"${folded[`${d.day}-${si}`] ? ' class="collapsed"' : ""}>
+      <div class="sec-head" role="button" tabindex="0" data-fold="${si}" aria-expanded="${!folded[`${d.day}-${si}`]}"><div class="row"><h3>${esc(s.title)}</h3>${s.ar ? `<span class="ar" lang="ar">${fmt(s.ar)}</span>` : ""}<span class="chev" aria-hidden="true">▾</span></div>${s.ta ? `<span class="ta" lang="ta">${esc(s.ta)}</span>` : ""}
+        <span class="cnt">${s.items.filter(i => !i.audio).length} phrases${s.items.some(i => i.audio) ? ` · 🎧 ${s.items.filter(i => i.audio).length}` : ""} · tap to open</span></div>
       ${s.note ? `<div class="note">${esc(s.note.en)}${s.note.ta ? `<span class="ta" lang="ta">${esc(s.note.ta)}</span>` : ""}</div>` : ""}
       <div class="cards${s.grid ? " grid" : ""}">${s.items.map(card).join("")}</div>
       <button class="qbtn" type="button" data-sq="${si}">${icon("target")}<span><b>Quiz this section</b><small>${s.items.filter(i => !i.audio).length} phrases · ${esc(s.title)}</small></span><span class="go">Start →</span></button></section>`).join("")}
@@ -804,7 +816,7 @@ function renderDay(d){
       ${prev ? `<button type="button" data-go="${prev.day}"><small>← Previous</small>Day ${prev.day} · ${esc(prev.title)}</button>` : "<span></span>"}
       ${next ? `<button type="button" data-go="${next.day}"><small>Next →</small>Day ${next.day} · ${esc(next.title)}</button>` : "<span></span>"}
     </div>`;
-  renderMeter(d);
+  renderMeter(d); foldBtnSync();
 }
 function renderMeter(d){
   const m = $("#meter"); if (!m) return;
@@ -824,6 +836,18 @@ function go(day, push){
 const fromHash = () => { const m = location.hash.match(/^#day-(\d+)$/); return m ? +m[1] : null; };
 addEventListener("hashchange", () => { if (location.hash === "#quiz") { if (mode !== "quiz") openQuizSetup(false); return; }
   const n = fromHash(); if (n && (mode === "quiz" || !cur || n !== cur.day)) go(n, false); });
+
+/* ---------- collapsible sections (remembered per viewer) ---------- */
+let folded = store.get("alh-folded");
+function setFold(sec, on){ if (!sec || !cur) return; const k = `${cur.day}-${sec.id.replace("sec-", "")}`;
+  sec.classList.toggle("collapsed", on); sec.querySelector(".sec-head")?.setAttribute("aria-expanded", !on);
+  if (on) folded[k] = 1; else delete folded[k]; store.set("alh-folded", folded); }
+function foldBtnSync(){ const b = $("#foldAllBtn"); if (!b) return; const secs = [...document.querySelectorAll("#day section")];
+  b.textContent = secs.length && secs.every(x => x.classList.contains("collapsed")) ? "▸ Expand all sections" : "▾ Collapse all sections"; }
+// keyboard: Enter / Space on a section heading
+document.addEventListener("keydown", e => { const h = e.target.closest?.("[data-fold]"); if (h && (e.key === "Enter" || e.key === " ")) { e.preventDefault(); h.click(); } });
+// a note that starts playing (or a search result) opens its section
+document.addEventListener("play", e => { const sec = e.target.closest?.("section.collapsed"); if (sec) { setFold(sec, false); foldBtnSync(); } }, true);
 
 /* ---------- audio ---------- */
 let autoNext = false, playingBox = null;
@@ -895,6 +919,10 @@ $("#day").addEventListener("click", e => {
   const t = e.target;
   const play = t.closest(".play");
   if (play) { const box = play.closest(".audio"); wire(box); const a = box.querySelector("audio"); a.paused ? a.play().catch(()=>{}) : a.pause(); return; }
+  const fh = t.closest("[data-fold]");
+  if (fh && !t.closest("button,a,.say,.wa-btn")) { setFold(fh.closest("section"), !fh.closest("section").classList.contains("collapsed")); foldBtnSync(); return; }
+  if (t.closest("#foldAllBtn")) { const secs = [...document.querySelectorAll("#day section")], close = secs.some(x => !x.classList.contains("collapsed"));
+    secs.forEach(x => setFold(x, close)); foldBtnSync(); return; }
   const sk = t.closest("[data-skip]");
   if (sk) { const box = sk.closest(".audio"); wire(box); skip(box.querySelector("audio"), +sk.dataset.skip, box); return; }
   const sp = t.closest(".speed button");
@@ -1285,7 +1313,7 @@ $("#drQuizMode").addEventListener("click", () => { if (mode === "quiz") return; 
 $("#drOpen").addEventListener("click", () => { if (mode === "quiz") return; $("#openBtn")?.click(); renderDrawer(); });
 drawer.addEventListener("click", e => {
   const s = e.target.closest("[data-drs]"), d = e.target.closest("[data-drd]"), q = e.target.closest("[data-drq]");
-  if (s) { drawerOpen(false); $(`#sec-${s.dataset.drs}`)?.scrollIntoView({behavior: reduce ? "auto" : "smooth"}); }
+  if (s) { drawerOpen(false); const sec = $(`#sec-${s.dataset.drs}`); if (sec?.classList.contains("collapsed")) { setFold(sec, false); foldBtnSync(); } sec?.scrollIntoView({behavior: reduce ? "auto" : "smooth"}); }
   else if (d) { drawerOpen(false); go(+d.dataset.drd, true); }
   else if (q) { drawerOpen(false); q.dataset.drq === "day" ? startQuiz(poolFor([cur.day]), `Day ${cur.day} · ${cur.title}`, {count: 10, type: "mix", back: cur.day}) : openQuizSetup(true); }
 });
@@ -1416,6 +1444,7 @@ function pickHit(k){
   if (mode === "quiz" || !cur || cur.day !== x.d.day) go(x.d.day, true);
   requestAnimationFrame(() => {
     const el = document.querySelector(`.card[data-id="${x.i.id}"]`); if (!el) return;
+    const fs = el.closest("section.collapsed"); if (fs) { setFold(fs, false); foldBtnSync(); }
     el.querySelector("details.words")?.setAttribute("open", "");
     el.scrollIntoView({block: "center", behavior: reduce ? "auto" : "smooth"});
     el.classList.remove("found"); void el.offsetWidth; el.classList.add("found");
