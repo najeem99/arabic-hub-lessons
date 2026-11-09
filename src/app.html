@@ -462,6 +462,47 @@ body.audio-only #day:not(.quizview) section:not(:has(.audio)){display:none}
 body.audio-only .dr-sec .sec small{visibility:hidden}
 body.audio-only #drQuizMode,body.audio-only #drOpen{display:none}
 
+/* ---------- Materials (course PDFs) ---------- */
+.mats{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,260px),1fr));gap:14px}
+.mat{background:var(--surface);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;box-shadow:var(--shadow);min-width:0}
+.mat .thumb{display:block;position:relative;aspect-ratio:16/9;background:var(--surface-2);border-bottom:1px solid var(--line);overflow:hidden}
+.mat .thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s}
+.mat .thumb:hover img{transform:scale(1.03)}
+.mat .thumb .pg{position:absolute;right:8px;bottom:8px;background:rgba(10,20,22,.72);color:#fff;font:700 11.5px var(--f-ui);border-radius:999px;padding:2px 9px;font-variant-numeric:tabular-nums}
+.mat .body{padding:12px 14px 14px;display:flex;flex-direction:column;gap:4px;flex:1}
+.mat .dchip{align-self:flex-start;font:800 11.5px var(--f-ui);color:#fff;background:var(--dc);border-radius:999px;padding:2px 9px;border:0;cursor:pointer}
+.mat h3{margin:2px 0 0;font-family:var(--f-display);font-size:18px;line-height:1.2}
+.mat .ar{font-family:var(--f-ar);font-size:20px;font-weight:700;color:var(--dc);direction:rtl;text-align:right;line-height:1.7}
+.mat .ta{font-family:var(--f-ta);font-size:13px;color:var(--muted)}
+.mat .by{font-size:12.5px;color:var(--muted)}
+.mat .btns{display:flex;gap:8px;margin-top:auto;padding-top:8px;flex-wrap:wrap}
+.mat .btns a{flex:1 1 auto;justify-content:center;text-decoration:none;color:var(--fg)}
+.mat .btns a.pri{background:var(--dc);border-color:var(--dc);color:#fff}
+.mat-note{font-size:13px;color:var(--muted)}
+.mat-note a{color:var(--teal);font-weight:700}
+.pdf-link{display:inline-flex;align-items:center;gap:10px;align-self:flex-start;text-decoration:none;color:var(--fg);background:var(--surface);border:1.5px solid var(--dc);
+  border-radius:14px;padding:8px 14px 8px 8px;box-shadow:var(--shadow);transition:transform .15s}
+.pdf-link:hover{transform:translateY(-1px)}
+.pdf-link img{width:64px;height:36px;object-fit:cover;border-radius:6px;border:1px solid var(--line)}
+.pdf-link span{display:flex;flex-direction:column;line-height:1.2}
+.pdf-link small{color:var(--muted);font-size:12px}
+body.audio-only #day:not(.quizview) .pdf-link{display:none}
+.mat .btns button{flex:1 1 auto;justify-content:center}
+.mat .btns .pri{background:var(--dc);border-color:var(--dc);color:#fff}
+.reader{position:fixed;inset:0;z-index:55;background:var(--bg);display:flex;flex-direction:column;animation:fsin .25s cubic-bezier(.2,.9,.3,1)}
+.reader[hidden]{display:none}
+.rd-bar{display:flex;align-items:center;gap:10px;border-bottom:1px solid var(--line);background:var(--surface);
+  padding:calc(8px + env(safe-area-inset-top,0px)) max(12px,env(safe-area-inset-right,0px)) 8px max(12px,env(safe-area-inset-left,0px))}
+.rd-bar .t{min-width:0;flex:1;display:flex;flex-direction:column;line-height:1.2}
+.rd-bar .t b{font-family:var(--f-display);font-size:16px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rd-bar .t small{color:var(--muted);font-size:12px;font-variant-numeric:tabular-nums}
+.rd-bar .tbtn{padding:8px 10px}
+.rd-pages{flex:1;overflow-y:auto;overscroll-behavior:contain;display:flex;flex-direction:column;align-items:center;gap:12px;
+  padding:12px max(12px,env(safe-area-inset-right,0px)) calc(24px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px))}
+.rd-pages canvas{width:100%;max-width:900px;height:auto;border-radius:8px;box-shadow:var(--shadow);background:#fff}
+.rd-msg{margin:auto;text-align:center;color:var(--muted);display:flex;flex-direction:column;gap:10px;align-items:center;max-width:320px}
+.rd-msg a{color:var(--teal);font-weight:700}
+
 /* ---------- Search ---------- */
 .search{position:fixed;inset:0;z-index:50;background:rgba(5,12,14,.55);backdrop-filter:blur(3px);display:flex;justify-content:center;align-items:flex-start;
   padding:calc(env(safe-area-inset-top,0px) + 6vh) max(12px,env(safe-area-inset-right,0px)) 12px max(12px,env(safe-area-inset-left,0px));animation:fade .15s}
@@ -533,6 +574,7 @@ body.audio-only #drQuizMode,body.audio-only #drOpen{display:none}
   <symbol id="i-question" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="8.5"/><path d="M9.6 9.6a2.5 2.5 0 014.9.6c0 1.7-2.5 2-2.5 3.6"/><circle cx="12" cy="16.9" r=".6" fill="currentColor"/></g></symbol>
   <symbol id="i-book" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M4 5.5A2.5 2.5 0 016.5 3H20v15H6.5A2.5 2.5 0 004 20.5zM4 20.5V5.5"/></symbol>
   <symbol id="i-target" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1" fill="currentColor"/></g></symbol>
+  <symbol id="i-file" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 00-2 2v14a2 2 0 002 2h10a2 2 0 002-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></g></symbol>
   <symbol id="i-search" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5l5 5"/></g></symbol>
   <symbol id="i-chat" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.5a9.5 9.5 0 0 0-8.3 14.1L2.5 21.5l5-1.2A9.5 9.5 0 1 0 12 2.5zm-4 8.2a1.3 1.3 0 1 1 0 2.6 1.3 1.3 0 0 1 0-2.6zm4 0a1.3 1.3 0 1 1 0 2.6 1.3 1.3 0 0 1 0-2.6zm4 0a1.3 1.3 0 1 1 0 2.6 1.3 1.3 0 0 1 0-2.6z"/></symbol>
   <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3-4.6-4.4 6.3-.9z"/></symbol>
@@ -616,6 +658,12 @@ body.audio-only #drQuizMode,body.audio-only #drOpen{display:none}
     <div class="s-results" id="sResults" role="listbox"></div>
   </div>
 </div>
+<div class="reader" id="reader" hidden role="dialog" aria-modal="true" aria-label="PDF reader">
+  <div class="rd-bar"><button class="dr-x" id="rdClose" type="button" aria-label="Close PDF" style="margin:0">✕</button>
+    <div class="t"><b id="rdTitle"></b><small id="rdSub"></small></div>
+    <button class="tbtn" id="rdDl" type="button" hidden>⬇︎ Download</button></div>
+  <div class="rd-pages" id="rdPages"></div>
+</div>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 <div class="mini" id="mini" role="region" aria-label="Now playing">
   <button class="mbtn" id="miniBtn" type="button" aria-label="Pause">
@@ -649,6 +697,8 @@ body.audio-only #drQuizMode,body.audio-only #drOpen{display:none}
 
 <script>
 const DAYS = __DATA__;
+const MATS = __MATERIALS__;
+const NOTION_CLASS = "https://www.notion.so/3da403f939f28093bedccd24f25e0c0e";
 const HUES = ["--teal","--coral","--sand","--indigo","--green"];
 const $ = s => document.querySelector(s);
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
@@ -681,7 +731,7 @@ const totalCards = DAYS.reduce((n,d) => n + d.cards, 0), totalAud = DAYS.reduce(
 function renderStats(){
   const h = DAYS.reduce((n,d) => n + heardIn(d), 0), k = DAYS.reduce((n,d) => n + knownIn(d), 0);
   $("#stats").innerHTML = `<span class="stat">${DAYS.length} days</span><span class="stat">${totalCards} phrases</span>
-    <span class="stat">🎧 ${h}/${totalAud} voice notes heard</span><span class="stat">⭐ ${k} phrases known</span>`;
+    <span class="stat">🎧 ${h}/${totalAud} voice notes heard</span><span class="stat">⭐ ${k} phrases known</span>${MATS.length ? `<button class="stat" type="button" data-mats="1" style="color:inherit;font-family:inherit;cursor:pointer">📄 ${MATS.length} PDFs</button>` : ""}`;
 }
 (function letters(){
   if (reduce) return;
@@ -755,6 +805,7 @@ function renderDay(d){
         ${d.arTitle ? `<span class="ar" lang="ar">${esc(d.arTitle)}</span>` : ""}<span class="ta" lang="ta">${esc(d.ta)}</span>
       </div>
     </div>
+    ${MATS.filter(m => m.day === d.day).map(m => `<a class="pdf-link" href="materials/${esc(m.file)}" data-read="${esc(m.file)}"><img src="materials/${esc(m.thumb)}" alt="" loading="lazy"><span><b>📄 Lesson PDF</b><small>${esc(m.title)} · ${m.pages} pages</small></span></a>`).join("")}
     ${d.keys ? `<div class="keys">${d.keys.map(k => `<span lang="ar">${esc(k)}</span>`).join("")}</div>` : ""}
     <div class="ao-note"><div><b>🎧 Audio only</b> · just the teacher's voice notes, text hidden. Notes play one after another with a ding between them, then carry on to the next day.<span class="ta" lang="ta">ஆடியோ மட்டும் · எழுத்து மறைக்கப்பட்டுள்ளது.</span></div>
       <button class="tbtn" type="button" data-ao-off="1">Show text</button></div>
@@ -790,7 +841,7 @@ function renderMeter(d){
 
 function go(day, push){
   const d = DAYS.find(x => x.day === day) || DAYS[0];
-  stopAll(); mode = "day"; $("#day").classList.remove("quizview");
+  stopAll(); mode = "day"; $("#day").classList.remove("quizview", "matview");
   cur = d; renderTabs(d.day); renderDay(d); renderDrawer();
   if (push) { history.replaceState(null, "", `#day-${d.day}`); }
   if (push) window.scrollTo({top: $(".daybar").offsetTop, behavior: reduce ? "auto" : "smooth"});
@@ -798,7 +849,8 @@ function go(day, push){
 }
 const fromHash = () => { const m = location.hash.match(/^#day-(\d+)$/); return m ? +m[1] : null; };
 addEventListener("hashchange", () => { if (location.hash === "#quiz") { if (mode !== "quiz") openQuizSetup(false); return; }
-  const n = fromHash(); if (n && (mode === "quiz" || !cur || n !== cur.day)) go(n, false); });
+  if (location.hash === "#materials") { if (mode !== "materials") openMaterials(false); return; }
+  const n = fromHash(); if (n && (mode !== "day" || !cur || n !== cur.day)) go(n, false); });
 
 /* ---------- audio ---------- */
 let autoNext = false, playingBox = null;
@@ -1044,9 +1096,91 @@ let qsel = null, qcount = 10, qtype = "mix", Q = null;
 
 function enterQuizMode(){
   stopAll(); mode = "quiz"; renderTabs(cur ? cur.day : null); renderDrawer();
-  const root = $("#day"); root.classList.add("quizview"); root.style.setProperty("--dc", "var(--coral)");
+  const root = $("#day"); root.classList.remove("matview"); root.classList.add("quizview"); root.style.setProperty("--dc", "var(--coral)");
   if (location.hash !== "#quiz") history.replaceState(null, "", "#quiz");
 }
+/* ---------- Materials: the course PDFs (same files as in Notion) ---------- */
+const kb = n => n >= 1048576 ? (n/1048576).toFixed(1) + " MB" : Math.round(n/1024) + " KB";
+function openMaterials(scroll){
+  stopAll(); mode = "materials"; renderTabs(cur ? cur.day : null);
+  const root = $("#day"); root.classList.add("quizview", "matview"); root.style.setProperty("--dc", "var(--teal)");
+  if (location.hash !== "#materials") history.replaceState(null, "", "#materials");
+  root.innerHTML = `
+    <div class="qhero"><span class="eyebrow" style="color:var(--teal);font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:700">Materials · <span lang="ar" style="font-family:var(--f-ar)">الْمَوَادّْ</span></span>
+      <h2>Course PDFs</h2><p>The trainers' slides for each lesson. Tap a cover to read it here, page by page.</p>
+      <span class="ta" lang="ta" style="font-family:var(--f-ta);color:var(--muted);font-size:13px">பாடங்களின் PDF கோப்புகள் · திறக்க அல்லது பதிவிறக்க தட்டவும்</span></div>
+    <div class="mats">${MATS.map(m => { const d = DAYS.find(x => x.day === m.day); const dc = d ? dayColor(d) : "var(--teal)";
+      return `<article class="mat" style="--dc:${dc}">
+        <a class="thumb" href="materials/${esc(m.file)}" data-read="${esc(m.file)}" aria-label="Open ${esc(m.title)} PDF"><img src="materials/${esc(m.thumb)}" alt="" loading="lazy"><span class="pg">${m.pages} pages</span></a>
+        <div class="body">
+          ${d ? `<button class="dchip" type="button" data-go="${m.day}">Day ${m.day} · open lesson →</button>` : ""}
+          <h3>${esc(m.title)}</h3>${m.ar ? `<span class="ar" lang="ar">${esc(m.ar)}</span>` : ""}${m.ta ? `<span class="ta" lang="ta">${esc(m.ta)}</span>` : ""}
+          <span class="by">${esc(m.by || "")}${m.size ? ` · PDF ${kb(m.size)}` : ""}</span>
+          <div class="btns"><button class="tbtn pri" type="button" data-read="${esc(m.file)}">📄 Open</button><button class="tbtn" type="button" data-dl="${esc(m.file)}" ${dlApi ? "" : "hidden"}>⬇︎ Download</button></div>
+        </div></article>`; }).join("")}</div>
+    <p class="mat-note">Pages open right here. These are the PDFs from your <a href="${NOTION_CLASS}" target="_blank" rel="noopener">Arabic Class page in Notion</a>.</p>`;
+  renderDrawer();
+  if (scroll) window.scrollTo({top: $(".daybar").offsetTop, behavior: reduce ? "auto" : "smooth"});
+}
+
+let dlApi = null;
+(async () => { try { dlApi = await window.claude?.use?.("downloads"); } catch { dlApi = null; }
+  if (dlApi) { document.querySelectorAll("[data-dl]").forEach(b => b.hidden = false); if (rd.file) $("#rdDl").hidden = false; } })();
+const pdfCache = {};
+const getPdf = f => pdfCache[f] ||= fetch("materials/" + f).then(r => { if (!r.ok) throw new Error(r.status); return r.arrayBuffer(); }).catch(e => { delete pdfCache[f]; throw e; });
+async function savePdf(f){
+  if (!dlApi) return;
+  try { const buf = await getPdf(f); await dlApi.save({filename: f, data: new Blob([buf.slice(0)], {type: "application/pdf"})}); toast("⬇︎ Saved " + esc(f)); }
+  catch (e) { if (e && e.code === "declined") return; toast(e && e.code === "rate_limited" ? "One moment, then try again" : "Couldn't save that file here"); }
+}
+let pdfjs = null;
+function loadPdfJs(){
+  return pdfjs ||= new Promise((ok, no) => {
+    const sc = document.createElement("script");
+    sc.src = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js";
+    sc.onload = () => { const L = window.pdfjsLib; if (!L) return no(new Error("pdf.js")); L.GlobalWorkerOptions.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js"; ok(L); };
+    sc.onerror = () => { pdfjs = null; no(new Error("pdf.js")); };
+    document.head.appendChild(sc);
+  });
+}
+const rd = {file: null, token: 0};
+async function openReader(f){
+  const m = MATS.find(x => x.file === f); if (!m) return;
+  const tok = ++rd.token; rd.file = f; stopAll();
+  $("#reader").hidden = false; document.body.style.overflow = "hidden";
+  $("#rdTitle").textContent = m.title; $("#rdSub").textContent = `Day ${m.day} · ${m.pages} pages · loading…`;
+  $("#rdDl").hidden = !dlApi; $("#rdDl").dataset.dl = f;
+  const box = $("#rdPages"); box.innerHTML = `<div class="rd-msg">Opening the PDF…</div>`; $("#rdClose").focus({preventScroll: true});
+  try {
+    const [L, buf] = await Promise.all([loadPdfJs(), getPdf(f)]);
+    const doc = await L.getDocument({data: new Uint8Array(buf.slice(0))}).promise;
+    if (tok !== rd.token) return;
+    box.innerHTML = "";
+    const W = Math.min(box.clientWidth - 24, 900), dpr = Math.min(devicePixelRatio || 1, 2);
+    for (let i = 1; i <= doc.numPages; i++) {
+      const pg = await doc.getPage(i); if (tok !== rd.token) return;
+      const vp0 = pg.getViewport({scale: 1}), vp = pg.getViewport({scale: W / vp0.width * dpr});
+      const c = document.createElement("canvas"); c.width = vp.width; c.height = vp.height; c.setAttribute("aria-label", `Page ${i}`);
+      box.appendChild(c);
+      await pg.render({canvasContext: c.getContext("2d"), viewport: vp}).promise;
+      $("#rdSub").textContent = `Day ${m.day} · ${i < doc.numPages ? `page ${i} of ${doc.numPages}…` : `${doc.numPages} pages`}`;
+    }
+  } catch {
+    if (tok !== rd.token) return;
+    $("#rdSub").textContent = `Day ${m.day} · ${m.pages} pages`;
+    box.innerHTML = `<div class="rd-msg"><span>The reader couldn't load here.</span><a href="materials/${esc(f)}" target="_blank" rel="noopener">Open the PDF in a new tab</a>${dlApi ? "" : ""}</div>`;
+  }
+}
+function closeReader(){ rd.token++; rd.file = null; $("#reader").hidden = true; $("#rdPages").innerHTML = ""; document.body.style.overflow = ""; }
+$("#rdClose").addEventListener("click", closeReader);
+$("#rdDl").addEventListener("click", e => savePdf(e.currentTarget.dataset.dl));
+addEventListener("keydown", e => { if (e.key === "Escape" && !$("#reader").hidden) closeReader(); });
+document.addEventListener("click", e => {
+  const r = e.target.closest("[data-read]"), d = e.target.closest("[data-dl]:not(#rdDl)");
+  if (r) { e.preventDefault(); if (drawer.classList.contains("open")) drawerOpen(false); openReader(r.dataset.read); }
+  else if (d) { e.preventDefault(); savePdf(d.dataset.dl); }
+});
+
 function openQuizSetup(scroll){
   enterQuizMode();
   if (!qsel) qsel = new Set([cur ? cur.day : DAYS[DAYS.length-1].day]);
@@ -1201,17 +1335,19 @@ function drawerOpen(on){
   if (on) { renderDrawer(); $("#drClose").focus({preventScroll:true}); }
 }
 function renderDrawer(){
-  const quiz = mode === "quiz";
-  $("#mcur").innerHTML = quiz ? `<b>Quiz</b><small>Pick days · score</small>` : `<b>Day ${cur.day}</b><small>${esc(cur.title)}</small>`;
+  const quiz = mode === "quiz", mats = mode === "materials";
+  $("#mcur").innerHTML = quiz ? `<b>Quiz</b><small>Pick days · score</small>` : mats ? `<b>Materials</b><small>Course PDFs</small>` : `<b>Day ${cur.day}</b><small>${esc(cur.title)}</small>`;
   $("#drQuizMode").setAttribute("aria-pressed", document.body.classList.contains("quiz"));
   $("#drOpen").setAttribute("aria-pressed", $("#openBtn")?.getAttribute("aria-pressed") === "true");
-  $("#drSecTitle").textContent = quiz ? "Quiz" : `Day ${cur.day} · sections`;
+  $("#drSecTitle").textContent = quiz ? "Quiz" : mats ? "Materials" : `Day ${cur.day} · sections`;
   $("#drSections").innerHTML = quiz ? `<button class="dr-link sec" type="button" data-drq="1"><span class="n">🎯</span><span class="t"><b>Quiz setup</b><small>Choose days and start</small></span></button>`
+    : mats ? MATS.map(m => `<a class="dr-link sec" href="materials/${esc(m.file)}" data-read="${esc(m.file)}" style="text-decoration:none"><span class="n">📄</span><span class="t"><b>${esc(m.title)}</b><small>Day ${m.day} · ${m.pages} pages</small></span></a>`).join("")
     : cur.sections.map((s, si) => `<button class="dr-link sec" type="button" data-drs="${si}" style="--dc:${dayColor(cur)}"><span class="n">${si+1}</span>
       <span class="t"><b>${esc(s.title.replace(/^\d+\.\s*/, ""))}</b><small>${s.items.filter(i => !i.audio).length} phrases · ${s.items.filter(i => i.audio).length} notes</small></span>${s.ar ? `<span class="ar" lang="ar">${fmt(s.ar).replace(/<[^>]+>/g, "").split(" ")[0]}</span>` : ""}</button>`).join("")
       + `<button class="dr-link sec" type="button" data-drq="day"><span class="n">🎯</span><span class="t"><b>Quiz this day</b><small>10 random questions</small></span></button>`;
   $("#drDays").innerHTML = `<button class="dr-link" type="button" data-drq="1" aria-current="${quiz}" style="--dc:var(--coral)">${icon("target")}<span class="t"><b>Quiz</b><small>Pick one or more days</small></span></button>` +
-    DAYS.map(d => `<button class="dr-link" type="button" data-drd="${d.day}" aria-current="${!quiz && cur.day === d.day}" style="--dc:${dayColor(d)}">${icon(d.icon)}
+    (MATS.length ? `<button class="dr-link" type="button" data-drm="1" aria-current="${mats}" style="--dc:var(--teal)">${icon("file")}<span class="t"><b>Materials</b><small>${MATS.length} course PDFs</small></span></button>` : "") +
+    DAYS.map(d => `<button class="dr-link" type="button" data-drd="${d.day}" aria-current="${mode === "day" && cur.day === d.day}" style="--dc:${dayColor(d)}">${icon(d.icon)}
       <span class="t"><b>Day ${d.day}</b><small>${esc(d.title)}</small></span><span class="pc">🎧${heardIn(d)}/${d.audios.length}</span></button>`).join("");
   drawerSync();
 }
@@ -1233,15 +1369,17 @@ $("#drClose").addEventListener("click", () => drawerOpen(false));
 scrim.addEventListener("click", () => drawerOpen(false));
 addEventListener("keydown", e => { if (e.key === "Escape" && drawer.classList.contains("open")) drawerOpen(false); });
 $("#mQuiz").addEventListener("click", () => openQuizSetup(true));
+$("#stats").addEventListener("click", e => { if (e.target.closest("[data-mats]")) openMaterials(true); });
 $("#dpBtn").addEventListener("click", () => {
   if (clipBtn) { clipStop(); drawerSync(); return; }
   if (playingBox) { const a = playingBox.querySelector("audio"); a.paused ? a.play().catch(()=>{}) : a.pause(); }
 });
-$("#drQuizMode").addEventListener("click", () => { if (mode === "quiz") return; $("#quizBtn")?.click(); renderDrawer(); });
-$("#drOpen").addEventListener("click", () => { if (mode === "quiz") return; $("#openBtn")?.click(); renderDrawer(); });
+$("#drQuizMode").addEventListener("click", () => { if (mode !== "day") return; $("#quizBtn")?.click(); renderDrawer(); });
+$("#drOpen").addEventListener("click", () => { if (mode !== "day") return; $("#openBtn")?.click(); renderDrawer(); });
 drawer.addEventListener("click", e => {
-  const s = e.target.closest("[data-drs]"), d = e.target.closest("[data-drd]"), q = e.target.closest("[data-drq]");
-  if (s) { drawerOpen(false); $(`#sec-${s.dataset.drs}`)?.scrollIntoView({behavior: reduce ? "auto" : "smooth"}); }
+  const s = e.target.closest("[data-drs]"), d = e.target.closest("[data-drd]"), q = e.target.closest("[data-drq]"), m = e.target.closest("[data-drm]");
+  if (m) { drawerOpen(false); openMaterials(true); }
+  else if (s) { drawerOpen(false); $(`#sec-${s.dataset.drs}`)?.scrollIntoView({behavior: reduce ? "auto" : "smooth"}); }
   else if (d) { drawerOpen(false); go(+d.dataset.drd, true); }
   else if (q) { drawerOpen(false); q.dataset.drq === "day" ? startQuiz(poolFor([cur.day]), `Day ${cur.day} · ${cur.title}`, {count: 10, type: "mix", back: cur.day}) : openQuizSetup(true); }
 });
@@ -1369,7 +1507,7 @@ function closeSearch(){ $("#search").hidden = true; document.body.style.overflow
 function pickHit(k){
   const x = sHits[k]; if (!x) return;
   closeSearch();
-  if (mode === "quiz" || !cur || cur.day !== x.d.day) go(x.d.day, true);
+  if (mode !== "day" || !cur || cur.day !== x.d.day) go(x.d.day, true);
   requestAnimationFrame(() => {
     const el = document.querySelector(`.card[data-id="${x.i.id}"]`); if (!el) return;
     el.querySelector("details.words")?.setAttribute("open", "");
@@ -1407,4 +1545,5 @@ let startDay = fromHash();
 if (!startDay) { try { startDay = +localStorage.getItem("alh-last") || null; } catch {} }
 go(DAYS.some(d => d.day === startDay) ? startDay : DAYS[DAYS.length-1].day, false);
 if (location.hash === "#quiz") openQuizSetup(false);
+if (location.hash === "#materials") openMaterials(false);
 </script>
