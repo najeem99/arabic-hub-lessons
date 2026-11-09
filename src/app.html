@@ -661,7 +661,7 @@ body.audio-only #drQuizMode,body.audio-only #drOpen{display:none}
   </div>
   <div class="fs-row2">
     <button class="fs-skip" id="fsBack" type="button" aria-label="Back 5 seconds"><span>↺</span><small>5s</small></button>
-    <button class="fs-rep" id="fsRep" type="button" aria-pressed="false"><span id="fsRepIc">🔁</span><small id="fsRepTx">Repeat off</small></button>
+    <button class="fs-rep" id="fsRep" type="button" aria-pressed="false"><span id="fsRepIc">➡️</span><small id="fsRepTx">Repeat off</small></button>
     <button class="fs-skip" id="fsFwd" type="button" aria-label="Forward 5 seconds"><span>↻</span><small>5s</small></button>
   </div>
   <div class="fs-days">
@@ -862,7 +862,7 @@ function wire(box){
     } else if (chain && dayNx) {
       chime(false); setTimeout(() => playNote(dayNx), 1100);
     } else if (repeat === "day") {
-      chime(true); toast(`🔁 Day ${cur.day} again`); setTimeout(() => playDay(cur, "first"), 1500);
+      chime(true); toast(`📅 Day ${cur.day} again`); setTimeout(() => playDay(cur, "first"), 1500);
     } else if (chain && (fsOn || document.body.classList.contains("audio-only"))) {
       const nextDay = DAYS.slice(DAYS.indexOf(cur) + 1).find(d => d.audios.length);
       chime(true);
@@ -1040,7 +1040,7 @@ function playDay(d, which){
 }
 /* Repeat: off → this audio → this whole day */
 let repeat = "off"; try { repeat = localStorage.getItem("alh-repeat") || "off"; } catch {}
-const REP = { off: ["🔁", "Repeat off"], one: ["🔂", "Repeat audio"], day: ["🔁", "Repeat day"] };
+const REP = { off: ["➡️", "Repeat off"], one: ["🔂", "Repeat audio"], day: ["📅", "Repeat day"] };
 function repSync(){ const [ic, tx] = REP[repeat] || REP.off; $("#fsRepIc").textContent = ic; $("#fsRepTx").textContent = tx;
   $("#fsRep").setAttribute("aria-pressed", repeat !== "off"); $("#fsRep").setAttribute("aria-label", tx); }
 $("#fsRep").addEventListener("click", () => { repeat = {off: "one", one: "day", day: "off"}[repeat] || "off";
