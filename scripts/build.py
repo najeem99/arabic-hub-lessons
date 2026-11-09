@@ -89,13 +89,14 @@ def prepare(path):
             for f, x, cut in zip(auds, durs, cuts):
                 n += 1
                 used.append(f)
-                si, ii = flat[cut - 1]
+                # the note goes BEFORE the phrases it explains: listen first, then scroll through the words
+                si, ii = flat[prev]
                 cnt = cut - prev
-                label = f"Explains the {cnt} phrases above" if cnt > 1 else "Explains the phrase above"
+                label = f"Explains the {cnt} phrases below" if cnt > 1 else "Explains the phrase below"
                 inserts.append((si, ii, {"audio": {"file": f, "n": n, "of": total_audio, "dur": x, "label": label}}))
                 prev = cut
             for si, ii, a in sorted(inserts, key=lambda t: (t[0], t[1]), reverse=True):
-                secs[si]["items"].insert(ii + 1, a)
+                secs[si]["items"].insert(ii, a)
         sections += secs
     page = {k: d[k] for k in ("day", "icon", "title", "arTitle", "ta", "keys", "guide", "activity") if k in d}
     if page.get("icon") not in ICONS:
