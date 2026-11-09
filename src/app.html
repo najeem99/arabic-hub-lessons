@@ -511,6 +511,16 @@ body.audio-only #drQuizMode,body.audio-only #drOpen{display:none}
 .mat .btns a{flex:1 1 auto;justify-content:center;text-decoration:none;color:var(--fg)}
 .mat .btns a.pri{background:var(--dc);border-color:var(--dc);color:#fff}
 .mat-note{font-size:13px;color:var(--muted)}
+.vids{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,260px),1fr));gap:10px}
+.vid{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--fg);background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--dc);
+  border-radius:14px;padding:10px 12px;box-shadow:var(--shadow);min-width:0;transition:transform .15s}
+.vid:hover{transform:translateY(-1px)}
+.vid .yt{flex:0 0 46px;width:46px;height:32px;border-radius:9px;background:#e62117;color:#fff;display:grid;place-items:center}
+.vid .yt svg{width:16px;height:16px}
+.vid .t{min-width:0;flex:1;display:flex;flex-direction:column;line-height:1.25}
+.vid .t small{color:var(--muted);font-size:12px}
+.vid .t .k{font:800 11px var(--f-ui);color:var(--dc);letter-spacing:.04em;text-transform:uppercase}
+.vid .go{color:var(--muted);font-size:13px;flex:0 0 auto}
 .mat-note a{color:var(--teal);font-weight:700}
 .pdf-link{display:inline-flex;align-items:center;gap:10px;align-self:flex-start;text-decoration:none;color:var(--fg);background:var(--surface);border:1.5px solid var(--dc);
   border-radius:14px;padding:8px 14px 8px 8px;box-shadow:var(--shadow);transition:transform .15s}
@@ -519,6 +529,8 @@ body.audio-only #drQuizMode,body.audio-only #drOpen{display:none}
 .pdf-link span{display:flex;flex-direction:column;line-height:1.2}
 .pdf-link small{color:var(--muted);font-size:12px}
 body.audio-only #day:not(.quizview) .pdf-link{display:none}
+.pdf-link .yt{width:64px;height:36px;border-radius:6px;background:#e62117;color:#fff;display:grid;place-items:center}.pdf-link .yt svg{width:18px;height:18px}
+.lesson-links{display:flex;gap:10px;flex-wrap:wrap}
 .mat .btns button{flex:1 1 auto;justify-content:center}
 .mat .btns .pri{background:var(--dc);border-color:var(--dc);color:#fff}
 .reader{position:fixed;inset:0;z-index:55;background:var(--bg);display:flex;flex-direction:column;animation:fsin .25s cubic-bezier(.2,.9,.3,1)}
@@ -734,6 +746,7 @@ body.audio-only #day:not(.quizview) .pdf-link{display:none}
 <script>
 const DAYS = __DATA__;
 const MATS = __MATERIALS__;
+const VIDS = __VIDEOS__;
 const NOTION_CLASS = "https://www.notion.so/3da403f939f28093bedccd24f25e0c0e";
 const HUES = ["--teal","--coral","--sand","--indigo","--green"];
 const $ = s => document.querySelector(s);
@@ -767,7 +780,7 @@ const totalCards = DAYS.reduce((n,d) => n + d.cards, 0), totalAud = DAYS.reduce(
 function renderStats(){
   const h = DAYS.reduce((n,d) => n + heardIn(d), 0), k = DAYS.reduce((n,d) => n + knownIn(d), 0);
   $("#stats").innerHTML = `<span class="stat">${DAYS.length} days</span><span class="stat">${totalCards} phrases</span>
-    <span class="stat">🎧 ${h}/${totalAud} voice notes heard</span><span class="stat">⭐ ${k} phrases known</span>${MATS.length ? `<button class="stat" type="button" data-mats="1" style="color:inherit;font-family:inherit;cursor:pointer">📄 ${MATS.length} PDFs</button>` : ""}`;
+    <span class="stat">🎧 ${h}/${totalAud} voice notes heard</span><span class="stat">⭐ ${k} phrases known</span>${MATS.length ? `<button class="stat" type="button" data-mats="1" style="color:inherit;font-family:inherit;cursor:pointer">📄 ${MATS.length} PDFs · ▶ ${VIDS.length} videos</button>` : ""}`;
 }
 (function letters(){
   if (reduce) return;
@@ -841,7 +854,8 @@ function renderDay(d){
         ${d.arTitle ? `<span class="ar" lang="ar">${esc(d.arTitle)}</span>` : ""}<span class="ta" lang="ta">${esc(d.ta)}</span>
       </div>
     </div>
-    ${MATS.filter(m => m.day === d.day).map(m => `<a class="pdf-link" href="materials/${esc(m.file)}" data-read="${esc(m.file)}"><img src="materials/${esc(m.thumb)}" alt="" loading="lazy"><span><b>📄 Lesson PDF</b><small>${esc(m.title)} · ${m.pages} pages</small></span></a>`).join("")}
+    <div class="lesson-links">${VIDS.filter(v => v.day === d.day).map(v => `<a class="pdf-link" href="https://www.youtube.com/watch?v=${esc(v.id)}" target="_blank" rel="noopener"><span class="yt">${icon("play")}</span><span><b>▶ Training video</b><small>${esc(v.title)} · YouTube</small></span></a>`).join("")}
+    ${MATS.filter(m => m.day === d.day).map(m => `<a class="pdf-link" href="materials/${esc(m.file)}" data-read="${esc(m.file)}"><img src="materials/${esc(m.thumb)}" alt="" loading="lazy"><span><b>📄 Lesson PDF</b><small>${esc(m.title)} · ${m.pages} pages</small></span></a>`).join("")}</div>
     ${d.keys ? `<div class="keys">${d.keys.map(k => `<span lang="ar">${esc(k)}</span>`).join("")}</div>` : ""}
     <div class="ao-note"><div><b>🎧 Audio only</b> · just the teacher's voice notes, text hidden. Notes play one after another with a ding between them, then carry on to the next day.<span class="ta" lang="ta">ஆடியோ மட்டும் · எழுத்து மறைக்கப்பட்டுள்ளது.</span></div>
       <button class="tbtn" type="button" data-ao-off="1">Show text</button></div>
@@ -1175,6 +1189,10 @@ function enterQuizMode(){
 /* ---------- Materials: the course PDFs (same files as in Notion) ---------- */
 let matSort = "asc"; try { matSort = localStorage.getItem("alh-msort") || "asc"; } catch {}
 const matList = byDay => MATS.filter(m => !!m.day === byDay).sort((a, b) => byDay ? (matSort === "asc" ? a.day - b.day : b.day - a.day) : 0);
+const vidList = () => { const by = VIDS.filter(v => v.day).sort((a, b) => matSort === "asc" ? a.day - b.day : b.day - a.day); return [...by, ...VIDS.filter(v => !v.day)]; };
+function vidCard(v){ const d = DAYS.find(x => x.day === v.day); const dc = d ? dayColor(d) : "var(--teal)";
+  return `<a class="vid" href="https://www.youtube.com/watch?v=${esc(v.id)}" target="_blank" rel="noopener" style="--dc:${dc}"><span class="yt">${icon("play")}</span>
+    <span class="t"><span class="k">${v.day ? `Day ${v.day}` : esc(v.kind || "Video")}</span><b>${esc(v.title)}</b><small>Arabic Language Hub Tamil · YouTube</small></span><span class="go">↗</span></a>`; }
 function matCard(m){ const d = DAYS.find(x => x.day === m.day); const dc = d ? dayColor(d) : "var(--teal)";
   return `<article class="mat" style="--dc:${dc}">
         <a class="thumb" href="materials/${esc(m.file)}" data-read="${esc(m.file)}" aria-label="Open ${esc(m.title)} PDF"><img src="materials/${esc(m.thumb)}" alt="" loading="lazy"><span class="pg">${m.pages} ${m.pages > 1 ? "pages" : "page"}</span></a>
@@ -1191,13 +1209,15 @@ function openMaterials(scroll){
   if (location.hash !== "#materials") history.replaceState(null, "", "#materials");
   root.innerHTML = `
     <div class="qhero"><span class="eyebrow" style="color:var(--teal);font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:700">Materials · <span lang="ar" style="font-family:var(--f-ar)">الْمَوَادّْ</span></span>
-      <h2>Course PDFs</h2><p>The trainers' slides for each lesson. Tap a cover to read it here, page by page.</p>
+      <h2>Course materials</h2><p>The trainers' slides and training videos for each lesson. Tap a cover to read the slides here, page by page; videos open on YouTube.</p>
       <span class="ta" lang="ta" style="font-family:var(--f-ta);color:var(--muted);font-size:13px">பாடங்களின் PDF கோப்புகள் · திறக்க அல்லது பதிவிறக்க தட்டவும்</span></div>
     <div class="row" role="group" aria-label="Sort PDFs" style="display:flex;gap:8px;flex-wrap:wrap;align-items:center">
       <small style="color:var(--muted)">Sort:</small>
       ${[["asc","Day 3 → last"],["desc","Latest day first"]].map(([k,l]) => `<button class="chip" type="button" data-msort="${k}" aria-pressed="${matSort===k}" style="--dc:var(--teal)">${l}</button>`).join("")}</div>
     <div class="sec-head" style="--dc:var(--teal)"><div class="row"><h3>By day</h3><span class="ar" lang="ar">حَسَبْ الْيُومْ</span></div></div>
     <div class="mats">${matList(true).map(matCard).join("")}</div>
+    ${VIDS.length ? `<div class="sec-head" style="--dc:var(--teal)"><div class="row"><h3>Training videos</h3><span class="ar" lang="ar">فِيدْيُوهَاتْ</span></div><span class="ta" lang="ta">பயிற்சி வீடியோக்கள் · YouTube-ல் திறக்கும்</span></div>
+    <div class="vids">${vidList().map(vidCard).join("")}</div>` : ""}
     <div class="sec-head" style="--dc:var(--teal)"><div class="row"><h3>Course outline & reference</h3><span class="ar" lang="ar">مَرَاجِعْ</span></div></div>
     <div class="mats">${matList(false).map(matCard).join("")}</div>
     <p class="mat-note">Pages open right here. These are the PDFs from your <a href="${NOTION_CLASS}" target="_blank" rel="noopener">Arabic Class page in Notion</a>.</p>`;
@@ -1426,7 +1446,7 @@ function drawerOpen(on){
 }
 function renderDrawer(){
   const quiz = mode === "quiz", mats = mode === "materials";
-  $("#mcur").innerHTML = quiz ? `<b>Quiz</b><small>Pick days · score</small>` : mats ? `<b>Materials</b><small>Course PDFs</small>` : `<b>Day ${cur.day}</b><small>${esc(cur.title)}</small>`;
+  $("#mcur").innerHTML = quiz ? `<b>Quiz</b><small>Pick days · score</small>` : mats ? `<b>Materials</b><small>PDFs & videos</small>` : `<b>Day ${cur.day}</b><small>${esc(cur.title)}</small>`;
   $("#drQuizMode").setAttribute("aria-pressed", document.body.classList.contains("quiz"));
   $("#drOpen").setAttribute("aria-pressed", $("#openBtn")?.getAttribute("aria-pressed") === "true");
   $("#drSecTitle").textContent = quiz ? "Quiz" : mats ? "Materials" : `Day ${cur.day} · sections`;
@@ -1436,7 +1456,7 @@ function renderDrawer(){
       <span class="t"><b>${esc(s.title.replace(/^\d+\.\s*/, ""))}</b><small>${s.items.filter(i => !i.audio).length} phrases · ${s.items.filter(i => i.audio).length} notes</small></span>${s.ar ? `<span class="ar" lang="ar">${fmt(s.ar).replace(/<[^>]+>/g, "").split(" ")[0]}</span>` : ""}</button>`).join("")
       + `<button class="dr-link sec" type="button" data-drq="day"><span class="n">🎯</span><span class="t"><b>Quiz this day</b><small>10 random questions</small></span></button>`;
   $("#drDays").innerHTML = `<button class="dr-link" type="button" data-drq="1" aria-current="${quiz}" style="--dc:var(--coral)">${icon("target")}<span class="t"><b>Quiz</b><small>Pick one or more days</small></span></button>` +
-    (MATS.length ? `<button class="dr-link" type="button" data-drm="1" aria-current="${mats}" style="--dc:var(--teal)">${icon("file")}<span class="t"><b>Materials</b><small>${MATS.length} course PDFs</small></span></button>` : "") +
+    (MATS.length ? `<button class="dr-link" type="button" data-drm="1" aria-current="${mats}" style="--dc:var(--teal)">${icon("file")}<span class="t"><b>Materials</b><small>${MATS.length} PDFs · ${VIDS.length} videos</small></span></button>` : "") +
     DAYS.map(d => `<button class="dr-link" type="button" data-drd="${d.day}" aria-current="${mode === "day" && cur.day === d.day}" style="--dc:${dayColor(d)}">${icon(d.icon)}
       <span class="t"><b>Day ${d.day}</b><small>${esc(d.title)}</small></span><span class="pc">🎧${heardIn(d)}/${d.audios.length}</span></button>`).join("");
   drawerSync();
