@@ -3,7 +3,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@500;700;800&family=Figtree:wght@400;600;700&family=Noto+Naskh+Arabic:wght@500;700&family=Noto+Sans+Arabic:wght@500;600&family=Noto+Sans+Tamil:wght@400;600&display=swap">
 <style>
 /* Layout: dusk-over-dunes hero band → sticky day picker → one day's lesson as a column of phrase cards,
-   each teacher voice note placed right after the phrases it explains. */
+   each teacher voice note placed right before the phrases it explains. */
 :root{
   --bg:#eef3f2; --surface:#ffffff; --surface-2:#f6f9f8; --fg:#162423; --muted:#566b68; --line:#d5e1de;
   --teal:#0e7069; --teal-soft:#dcefeb; --sand:#d99a2b; --sand-soft:#fbf0dc; --coral:#e2634f; --coral-soft:#fde6e1;
@@ -790,8 +790,8 @@ function renderDay(d){
       <button class="tbtn" id="autoBtn" type="button" aria-pressed="${autoNext}">▶︎ Auto-play next note</button>
       <button class="tbtn" id="dayQuizBtn" type="button">🎯 Quiz this whole day</button>
     </div>
-    <div class="legend"><div><b>Same colour = same meaning.</b> Pick any one word from a colour group. 🎧 Each voice note sits right after the phrases it explains. “Teacher says it” plays his own pronunciation; ≈ means the timing is approximate. Tap ☆ when you know a phrase.</div>
-      <div class="ta">ஒரே நிறம் = ஒரே பொருள். ஒவ்வொரு ஆடியோவும் அது விளக்கும் வாக்கியங்களுக்கு கீழே உள்ளது.</div>
+    <div class="legend"><div><b>Same colour = same meaning.</b> Pick any one word from a colour group. 🎧 Each voice note comes first, right before the phrases it explains. “Teacher says it” plays his own pronunciation; ≈ means the timing is approximate. Tap ☆ when you know a phrase.</div>
+      <div class="ta">ஒரே நிறம் = ஒரே பொருள். ஒவ்வொரு ஆடியோவும் அது விளக்கும் வாக்கியங்களுக்கு மேலே உள்ளது.</div>
       <div class="ex"><span class="alt alt-r"><span class="opt">Option A</span><span class="or">/</span><span class="opt">Option B</span></span><span class="alt alt-b"><span class="opt">Option C</span><span class="or">/</span><span class="opt">Option D</span></span></div></div>
     ${d.guide ? `<div class="guide"><h3>${esc(d.guide.title)}</h3><ul>${d.guide.rows.map(r => `<li><span class="g-ar" lang="ar">${esc(r.ar)}</span><span class="g-txt"><b>${esc(r.head)}</b>${r.en ? `<span>${esc(r.en)}</span>` : ""}${r.ta ? `<span class="ta" lang="ta">${esc(r.ta)}</span>` : ""}</span></li>`).join("")}</ul></div>` : ""}
     ${d.sections.map((s, si) => `<section id="sec-${si}">
