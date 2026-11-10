@@ -305,7 +305,7 @@ footer .ar{font-family:var(--f-ar);font-size:18px}
   border-radius:999px;padding:10px 18px;font-weight:700;z-index:40;transition:transform .35s cubic-bezier(.2,1.4,.4,1);max-width:calc(100% - 32px);text-align:center;visibility:hidden}
 .toast.on{transform:translate(-50%,0);visibility:visible}
 .toast .ar{font-family:var(--f-ar)}
-/* Floating mini-player: shows while a note is active and its card is off-screen */
+/* Floating mini-player: shows whenever a note is playing or paused part-way. Round button = play/pause, title area = open full player */
 .mini{position:fixed;z-index:38;right:calc(16px + env(safe-area-inset-right,0px));bottom:calc(76px + env(safe-area-inset-bottom,0px));
   display:flex;align-items:center;gap:10px;background:var(--surface);border:1px solid color-mix(in srgb,var(--coral) 45%,var(--line));
   border-radius:999px;padding:6px 14px 6px 6px;box-shadow:0 12px 30px -10px rgba(0,0,0,.45);max-width:calc(100% - 32px);
@@ -316,7 +316,10 @@ footer .ar{font-family:var(--f-ar);font-size:18px}
 .mini .mbtn svg.prog{position:absolute;inset:-4px;width:60px;height:60px;transform:rotate(-90deg)}
 .mini.playing .mbtn{animation:pulse 1.8s ease-out infinite}
 @keyframes pulse{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--coral) 55%,transparent)}100%{box-shadow:0 0 0 14px transparent}}
-.mini .mtxt{min-width:0;display:flex;flex-direction:column;line-height:1.2;background:none;border:0;padding:0;text-align:left;cursor:pointer}
+.mini .mtxt{min-width:0;flex:1 1 auto;display:flex;align-items:center;gap:8px;min-height:52px;background:none;border:0;padding:0 4px 0 2px;text-align:left;cursor:pointer;color:inherit;font:inherit;border-radius:12px}
+.mini .mtxt .mt{min-width:0;display:flex;flex-direction:column;line-height:1.2}
+.mini .mtxt .mup{flex:0 0 auto;width:18px;height:18px;color:var(--coral)}
+body.mini-on{padding-bottom:calc(84px + env(safe-area-inset-bottom,0px))}
 .mini .mtxt b{font-family:var(--f-display);font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .mini .mtxt small{font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums}
 .mini .mx{background:none;border:0;color:var(--muted);cursor:pointer;font-size:18px;line-height:1;padding:4px}
@@ -716,7 +719,7 @@ body.audio-only #day:not(.quizview) .pdf-link{display:none}
       <circle id="miniRing" cx="30" cy="30" r="27" fill="none" stroke="var(--sand)" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="169.6" stroke-dashoffset="169.6"/></svg>
     <svg class="ic" aria-hidden="true"><use href="#i-pause"/></svg>
   </button>
-  <button class="mtxt" id="miniGo" type="button" aria-label="Scroll to this voice note"><b id="miniTitle">Voice note</b><small id="miniTime">0:00</small></button>
+  <button class="mtxt" id="miniGo" type="button" aria-label="Open full-screen player"><span class="mt"><b id="miniTitle">Voice note</b><small id="miniTime">0:00</small></span><svg class="mup" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 15l6-6 6 6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
   <button class="mx" id="miniClose" type="button" aria-label="Stop and close">✕</button>
 </div>
 <div class="fsp" id="fsp" hidden role="dialog" aria-modal="true" aria-label="Voice note player">
@@ -1040,13 +1043,13 @@ function tick(){
 const mini = $("#mini");
 function miniSync(){
   const box = playingBox && document.body.contains(playingBox) ? playingBox : null;
-  if (!box) { mini.classList.remove("on"); return; }
-  const a = box.querySelector("audio"), r = box.getBoundingClientRect();
-  const offscreen = r.bottom < 90 || r.top > innerHeight - 40;
+  if (!box) { mini.classList.remove("on"); document.body.classList.remove("mini-on"); return; }
+  const a = box.querySelector("audio");
   const active = !a.paused || a.currentTime > 0;
-  mini.classList.toggle("on", active && offscreen && document.getElementById("fsp").hidden);
+  const show = active && document.getElementById("fsp").hidden;
+  mini.classList.toggle("on", show); document.body.classList.toggle("mini-on", show);
   mini.classList.toggle("playing", !a.paused);
-  $("#miniBtn").setAttribute("aria-label", "Open full-screen player");
+  $("#miniBtn").setAttribute("aria-label", a.paused ? "Play" : "Pause");
   $("#miniBtn .ic").innerHTML = `<use href="#i-${a.paused ? "play" : "pause"}"/>`;
   $("#miniTitle").textContent = `Day ${cur.day} · ` + box.querySelector(".a-title").textContent.replace("Teacher's voice note", "Note");
   const d = a.duration || +box.querySelector("input[type=range]").max || 1;
@@ -1067,7 +1070,8 @@ addEventListener("scroll", () => { if (!miniRaf) miniRaf = requestAnimationFrame
 document.addEventListener("play", miniSync, true);
 document.addEventListener("pause", miniSync, true);
 document.addEventListener("timeupdate", miniSync, true);
-$("#miniBtn").addEventListener("click", () => fsOpen(true));
+$("#miniBtn").addEventListener("click", () => { const box = playingBox && document.body.contains(playingBox) ? playingBox : null; if (!box) return;
+  const a = box.querySelector("audio"); a.paused ? a.play().catch(()=>{}) : a.pause(); });
 $("#miniGo").addEventListener("click", () => fsOpen(true));
 
 /* ---------- full-screen player: play/pause, 5 s back/forward, seek, speed ---------- */
