@@ -13,6 +13,7 @@ Every lesson day becomes a tab with:
 - a **quiz** across one or more days, with score, streak and review of misses
 - **search** across all days in Arabic (harakat optional), sound, English or Tamil — results show day and topic and jump to the card
 - a **Materials** view: the course PDFs (read in the page, sorted by day) and the training videos on YouTube, plus a "Lesson PDF" / "Training video" link on matching days
+- **Cheat sheets**: the chart pages of the course PDFs (pronouns, possessive endings, verb forms, numbers, ordinals, days, time, prepositions, directions, broken plurals…) as tables with Arabic + harakat, transliteration, English and Tamil, Gulf word first. Filter by topic, jump to the source PDF page, or hide the Arabic to test yourself. Matching days link to their sheet.
 - star ☆ "I know this", listened ✓ progress, light / dark theme, phone side menu
 
 Days 3–17 are included (Day 2 had no text; Day 11 was a revision class). Days 16–17 have voice notes but no "Teacher says it" clips yet.
@@ -29,6 +30,7 @@ docs/index.html         the built site (served by GitHub Pages)
 docs/audio/             compressed voice notes (mono 48 kbps MP3)
 docs/materials/         course PDFs + first-page covers (listed in data/materials.json)
 data/videos.json        training videos (YouTube ids, matched to days)
+data/cheatsheets.json   cheat-sheet tables (cols: ar / txt / ta; "t" = transliteration key, "under" = folds under another column on phones)
 scripts/                build, compress, transcribe, match
 ```
 

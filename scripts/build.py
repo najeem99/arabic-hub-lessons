@@ -1,6 +1,6 @@
 """Stitch every day in data/days/*.json into ONE page: docs/index.html (audio in docs/audio/)
 
-Training videos (YouTube): data/videos.json. Course PDFs: list them in data/materials.json and put the files (plus a first-page .jpg) in docs/materials/.
+Training videos (YouTube): data/videos.json. Cheat sheets (chart pages from the PDFs, as tables): data/cheatsheets.json. Course PDFs: list them in data/materials.json and put the files (plus a first-page .jpg) in docs/materials/.
 
 Add a new day: drop data/days/dayNN.json in (same format), put its voice notes in docs/audio/, run
     python3 scripts/build.py
@@ -117,6 +117,12 @@ def main():
     tpl = open(os.path.join(ROOT, "src", "app.html"), encoding="utf-8").read()
     vids = json.load(open(os.path.join(DATA, "videos.json"), encoding="utf-8")) if os.path.exists(os.path.join(DATA, "videos.json")) else []
     mats = json.load(open(os.path.join(DATA, "materials.json"), encoding="utf-8")) if os.path.exists(os.path.join(DATA, "materials.json")) else []
+    sheets = json.load(open(os.path.join(DATA, "cheatsheets.json"), encoding="utf-8")) if os.path.exists(os.path.join(DATA, "cheatsheets.json")) else []
+    for sh in sheets:
+        for r in sh["rows"]:
+            for c in sh["cols"]:
+                if c.get("t") and r.get(c["k"]) and not r.get(c["t"]):
+                    print(f"WARNING cheat sheet {sh['id']}: no transliteration for {r[c['k']]}")
     for m in mats:  # course PDFs live in docs/materials/ (published next to the page)
         f = os.path.join(DOCS, "materials", m["file"])
         if os.path.exists(f):
@@ -125,6 +131,7 @@ def main():
             print("WARNING missing material in docs/materials:", m["file"])
     body = (tpl.replace("__DATA__", json.dumps(days, ensure_ascii=False, separators=(",", ":")))
                .replace("__MATERIALS__", json.dumps(mats, ensure_ascii=False, separators=(",", ":")))
+               .replace("__SHEETS__", json.dumps(sheets, ensure_ascii=False, separators=(",", ":")))
                .replace("__VIDEOS__", json.dumps(vids, ensure_ascii=False, separators=(",", ":"))))
     missing = [f for f in used if not os.path.exists(os.path.join(AUDIO, f))]
     if missing:
@@ -139,7 +146,7 @@ def main():
     # dist/artifact.html: same page without the document wrapper (for a claude.ai Artifact)
     os.makedirs(os.path.join(ROOT, "dist"), exist_ok=True)
     open(os.path.join(ROOT, "dist", "artifact.html"), "w", encoding="utf-8").write(body)
-    print(f"{len(days)} days, {len(used)} voice notes, {len(mats)} materials -> docs/index.html")
+    print(f"{len(days)} days, {len(used)} voice notes, {len(mats)} materials, {len(sheets)} cheat sheets -> docs/index.html")
 
 
 if __name__ == "__main__":
