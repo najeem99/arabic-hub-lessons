@@ -537,17 +537,35 @@ body.audio-only #day:not(.quizview) .pdf-link{display:none}
 .mat .btns button{flex:1 1 auto;justify-content:center}
 .mat .btns .pri{background:var(--dc);border-color:var(--dc);color:#fff}
 /* ---------- Cheat sheets (the chart pages of the PDFs, as tables) ---------- */
-.sheet-card .sh-head{cursor:pointer;position:relative;padding-right:28px}
-.sheet-card .sh-head::after{content:"▾";position:absolute;right:2px;top:2px;font-size:18px;color:var(--dc);transition:transform .2s}
-.sheet-card.closed .sh-head::after{transform:rotate(-90deg)}
-.sheet-card.closed .sh-body{display:none}
-.sheet-card.closed{gap:0}
 #day.sheetview{max-width:980px}
 .sh-filter{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
 .sh-jump{display:flex;gap:6px;flex-wrap:wrap}
 .sh-jump a{font:600 12.5px var(--f-ui);color:var(--fg);text-decoration:none;background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--dc);border-radius:8px;padding:4px 9px}
 .sheet-card{background:var(--surface);border:1px solid var(--line);border-top:4px solid var(--dc);border-radius:16px;box-shadow:var(--shadow);padding:14px 16px 16px;display:flex;flex-direction:column;gap:10px;min-width:0;scroll-margin-top:110px}
 .sheet-card[hidden]{display:none}
+.sheet-card{gap:0;padding:0;overflow:hidden}
+.sheet-card .sh-toggle{all:unset;box-sizing:border-box;width:100%;cursor:pointer;display:flex;align-items:center;gap:12px;padding:12px 14px 12px 16px}
+.sheet-card .sh-right{flex:0 0 auto;display:flex;align-items:center;gap:10px}
+@media (max-width:620px){.sheet-card .sh-toggle .sh-ar{font-size:16px}.sheet-card .h3{font-size:17px}}
+.sheet-card .sh-toggle:focus-visible{outline:2px solid var(--dc);outline-offset:-2px}
+.sheet-card .sh-tt{flex:1 1 auto;min-width:0;display:flex;flex-direction:column;gap:1px}
+.sheet-card .h3{font-family:var(--f-display);font-size:19px;font-weight:800;line-height:1.2}
+.sheet-card .sh-toggle .sh-ar{font-size:19px}
+.sh-chev{font-size:22px;line-height:1;color:var(--muted);transition:transform .2s;display:inline-block}
+.sheet-card.open .sh-chev,.dr-fold.open .dr-chev,.dr-h[aria-expanded="true"] .sh-chev{transform:rotate(90deg)}
+.sheet-card .sh-body{padding:0 16px 16px;display:flex;flex-direction:column;gap:10px}
+.sheet-card .sh-body[hidden]{display:none}
+.sh-list{display:flex;flex-direction:column;gap:10px}
+.sh-acts{margin-left:auto;display:flex;gap:8px;flex-wrap:wrap}
+.dr-h{all:unset;box-sizing:border-box;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:8px;width:100%;padding:2px 0}
+.dr-h .sh-chev{font-size:18px}
+.dr-sec.folded > :not(.dr-h){display:none}
+.dr-frow{display:flex;align-items:stretch;gap:4px}
+.dr-frow .dr-link{flex:1;min-width:0}
+.dr-chev{flex:0 0 40px;border:1px solid var(--line);background:var(--surface);border-radius:12px;font-size:22px;color:var(--muted);cursor:pointer;display:grid;place-items:center;transition:transform .2s}
+.dr-fold.open .dr-chev{transform:rotate(90deg)}
+.dr-flist{display:flex;flex-direction:column;gap:4px;padding:4px 0 6px 14px;border-left:2px solid var(--line);margin-left:16px}
+.dr-flist[hidden]{display:none}
 .sheet-card .sh-head{display:flex;justify-content:space-between;align-items:flex-start;gap:6px 14px;flex-wrap:wrap}
 .sheet-card .sh-head > div{min-width:0;display:flex;flex-direction:column;gap:1px}
 .sheet-card .grp{font:800 11px var(--f-ui);letter-spacing:.08em;text-transform:uppercase;color:var(--dc)}
@@ -565,6 +583,7 @@ table.sheet th{font:800 11.5px var(--f-ui);letter-spacing:.05em;text-transform:u
 table.sheet th.c-ar{text-align:right}
 table.sheet td{padding:7px 10px;border-bottom:1px dashed var(--line);vertical-align:middle}
 table.sheet tbody tr:last-child td{border-bottom:0}
+table.sheet tbody tr.sep td{border-top:2px solid color-mix(in srgb,var(--dc) 45%,var(--line))}
 table.sheet tbody tr:nth-child(even){background:color-mix(in srgb,var(--surface-2) 70%,transparent)}
 table.sheet td.c-ar{text-align:right}
 table.sheet .sa{display:block;font-family:var(--f-ar);font-size:21px;font-weight:700;color:var(--dc);direction:rtl;line-height:1.55}
@@ -746,8 +765,8 @@ table.sheet .usub{display:none}
     <button class="chip" id="drTheme" type="button">🌙 Dark mode</button>
     <button class="chip" id="drAudio" type="button" aria-pressed="false">🎧 Audio only</button>
   </div>
-  <div class="dr-sec"><h4 id="drSecTitle">This day</h4><div id="drSections"></div></div>
-  <div class="dr-sec"><h4>All days</h4><div id="drDays"></div></div>
+  <div class="dr-sec"><button class="dr-h" type="button" data-drsec="this" aria-expanded="true"><h4 id="drSecTitle">This day</h4><span class="sh-chev" aria-hidden="true">›</span></button><div id="drSections"></div></div>
+  <div class="dr-sec"><button class="dr-h" type="button" data-drsec="all" aria-expanded="true"><h4>Menu · all days</h4><span class="sh-chev" aria-hidden="true">›</span></button><div id="drDays"></div></div>
 </aside>
 
 <main class="gut"><div class="inner" id="day"></div></main>
@@ -842,7 +861,7 @@ const totalCards = DAYS.reduce((n,d) => n + d.cards, 0), totalAud = DAYS.reduce(
 function renderStats(){
   const h = DAYS.reduce((n,d) => n + heardIn(d), 0), k = DAYS.reduce((n,d) => n + knownIn(d), 0);
   $("#stats").innerHTML = `<span class="stat">${DAYS.length} days</span><span class="stat">${totalCards} phrases</span>
-    <span class="stat">🎧 ${h}/${totalAud} voice notes heard</span><span class="stat">⭐ ${k} phrases known</span>${MATS.length ? `<button class="stat" type="button" data-mats="1" style="color:inherit;font-family:inherit;cursor:pointer">📄 ${MATS.length} PDFs · ▶ ${VIDS.length} videos</button>` : ""}${SHEETS.length ? `<button class="stat" type="button" data-sheets="1" style="color:inherit;font-family:inherit;cursor:pointer">📋 ${SHEETS.length} cheat sheets</button>` : ""}`;
+    <span class="stat">🎧 ${h}/${totalAud} voice notes heard</span><span class="stat">⭐ ${k} phrases known</span>${MATS.length ? `<button class="stat" type="button" data-mats="1" style="color:inherit;font-family:inherit;cursor:pointer">📄 ${MATS.length} PDFs · ▶ ${VIDS.length} videos</button>` : ""}${SHEET_SETS.map(k => `<button class="stat" type="button" data-sheets="${k}" style="color:inherit;font-family:inherit;cursor:pointer">${SETS[k].emoji} ${SETS[k].title}</button>`).join("")}`;
 }
 (function letters(){
   if (reduce) return;
@@ -859,9 +878,9 @@ function renderTabs(cur){
   const searchTab = `<button class="dtab stab" type="button" id="tab-search" aria-label="Search words" style="--dc:var(--teal)">
       <span class="ring"><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="17" fill="var(--teal)"/></svg><span class="ic" style="color:#fff">${icon("search")}</span></span>
       <span class="txt"><b>Search</b><small>Press /</small></span></button>`;
-  const sheetTab = SHEETS.length ? `<button class="dtab qtab" role="tab" type="button" id="tab-sheets" aria-selected="${mode==="sheets"}" data-shtab="1" style="--dc:var(--sand)">
-      <span class="ring"><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="17" fill="var(--sand)"/></svg><span class="ic" style="color:#fff">${icon("table")}</span></span>
-      <span class="txt"><b>Cheat sheets</b><small>Charts from the PDFs</small></span></button>` : "";
+  const sheetTab = SHEET_SETS.map(k => `<button class="dtab qtab" role="tab" type="button" id="tab-${k}" aria-selected="${mode==="sheets" && shSet===k}" data-shtab="${k}" style="--dc:${SETS[k].color}">
+      <span class="ring"><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="17" fill="${SETS[k].color}"/></svg><span class="ic" style="color:#fff">${icon(SETS[k].icon)}</span></span>
+      <span class="txt"><b>${SETS[k].title}</b><small>${SETS[k].sub}</small></span></button>`).join("");
   $("#tabs").innerHTML = searchTab + quizTab + sheetTab + DAYS_NEWEST().map(d => {
     const p = d.audios.length ? heardIn(d)/d.audios.length : 0, C = 2*Math.PI*17;
     return `<button class="dtab" role="tab" type="button" id="tab-${d.day}" aria-selected="${mode==="day" && d.day===cur}" data-day="${d.day}" style="--dc:${dayColor(d)}">
@@ -870,9 +889,9 @@ function renderTabs(cur){
         <span class="ic">${icon(d.icon)}</span></span>
       <span class="txt"><b>Day ${d.day}</b><small>${esc(d.title)}</small></span></button>`;
   }).join("");
-  const t = mode === "quiz" ? $("#tab-quiz") : mode === "sheets" ? $("#tab-sheets") : $(`#tab-${cur}`); if (t) t.scrollIntoView({block:"nearest", inline:"center", behavior: reduce ? "auto" : "smooth"});
+  const t = mode === "quiz" ? $("#tab-quiz") : mode === "sheets" ? $(`#tab-${shSet}`) : $(`#tab-${cur}`); if (t) t.scrollIntoView({block:"nearest", inline:"center", behavior: reduce ? "auto" : "smooth"});
 }
-$("#tabs").addEventListener("click", e => { const b = e.target.closest(".dtab"); if (!b) return; if (b.id === "tab-search") { openSearch(); return; } if (b.dataset.quiz) openQuizSetup(true); else if (b.dataset.shtab) openSheets(true); else go(+b.dataset.day, true); });
+$("#tabs").addEventListener("click", e => { const b = e.target.closest(".dtab"); if (!b) return; if (b.id === "tab-search") { openSearch(); return; } if (b.dataset.quiz) openQuizSetup(true); else if (b.dataset.shtab) openSheets(true, null, b.dataset.shtab); else go(+b.dataset.day, true); });
 
 /* ---------- day ---------- */
 const audioCard = (a) => `
@@ -968,7 +987,7 @@ function go(day, push){
 const fromHash = () => { const m = location.hash.match(/^#day-(\d+)$/); return m ? +m[1] : null; };
 addEventListener("hashchange", () => { if (location.hash === "#quiz") { if (mode !== "quiz") openQuizSetup(false); return; }
   if (location.hash === "#materials") { if (mode !== "materials") openMaterials(false); return; }
-  if (location.hash === "#sheets") { if (mode !== "sheets") openSheets(false); return; }
+  const hs = SHEET_SETS.find(k => SETS[k].hash === location.hash); if (hs) { if (mode !== "sheets" || shSet !== hs) openSheets(false, null, hs); return; }
   const n = fromHash(); if (n && (mode !== "day" || !cur || n !== cur.day)) go(n, false); });
 
 /* ---------- collapsible sections (remembered per viewer) ---------- */
@@ -1293,12 +1312,19 @@ function openMaterials(scroll){
   if (scroll) window.scrollTo({top: $(".daybar").offsetTop, behavior: reduce ? "auto" : "smooth"});
 }
 
-/* ---------- Cheat sheets: the chart pages of the PDFs, as tables ---------- */
-const SH_GROUPS = [...new Set(SHEETS.map(s => s.group))];
-let shGroup = "All"; try { shGroup = localStorage.getItem("alh-shgroup") || "All"; } catch {}
-if (shGroup !== "All" && !SH_GROUPS.includes(shGroup)) shGroup = "All";
-const SH_HUES = {"Grammar": "var(--coral)", "Greetings": "var(--teal)", "Numbers": "var(--indigo)", "Days & time": "var(--sand)", "Directions": "var(--green)"};
+/* ---------- Cheat sheets (grammar charts) and On the go (numbers, time, phrases): tables, collapsed by default ---------- */
+const SETS = {
+  cheat: {title: "Cheat sheets", sub: "Pronouns & tenses", emoji: "📋", icon: "table", color: "var(--sand)", hash: "#sheets", ar: "جَدَاوِلْ",
+    desc: "The essentials: pronouns, possessive endings and the tense charts. Gulf words first, the lesson's formal word next to it.", ta: "அடிப்படை இலக்கணம் · பிரதிப்பெயர்கள், காலங்கள்"},
+  go: {title: "On the go", sub: "Numbers, time, phrases", emoji: "🚶", icon: "compass", color: "var(--green)", hash: "#onthego", ar: "عَلَى الطَّايِرْ",
+    desc: "Quick help for daily life: everyday phrases (work, going, asking), numbers, days and time, directions and greetings.", ta: "தினசரி பயன்பாடு · எண்கள், நேரம், வாக்கியங்கள்"}};
+const SHEET_SETS = Object.keys(SETS).filter(k => SHEETS.some(s => s.set === k));
+let shSet = "cheat";
+const shGroups = {}; SHEET_SETS.forEach(k => { try { shGroups[k] = localStorage.getItem("alh-shg-" + k) || "All"; } catch { shGroups[k] = "All"; } });
+const SH_HUES = {"Pronouns": "var(--coral)", "Tenses": "var(--indigo)", "Phrases": "var(--teal)", "Greetings": "var(--teal)", "Numbers": "var(--indigo)", "Days & time": "var(--sand)", "Directions": "var(--green)", "Words": "var(--coral)"};
 const shColor = s => SH_HUES[s.group] || "var(--teal)";
+const setSheets = k => SHEETS.filter(s => s.set === k);
+const shOpen = new Set();  // sheets opened this visit (all start collapsed)
 const arInline = t => esc(t).replace(/([\u0600-\u06FF][\u0600-\u06FF\u064B-\u0652\u0670\s،]*[\u0600-\u06FF\u064B-\u0652\u0670])/g, '<span lang="ar">$1</span>');
 function sheetCell(c, r, cols){
   const v = r[c.k], lab = `data-l="${esc(c.label)}"`, und = c.under ? " is-under" : "";
@@ -1311,38 +1337,47 @@ function sheetCell(c, r, cols){
 }
 function sheetCard(s){
   const d = DAYS.find(x => x.day === s.day), m = s.src && MATS.find(x => x.file === s.src.file);
-  const gulf = s.rows.filter(r => r.gulf);
-  return `<article class="sheet-card${shOpen.has(s.id) ? "" : " closed"}" id="sh-${esc(s.id)}" data-group="${esc(s.group)}" style="--dc:${shColor(s)}" ${shGroup !== "All" && s.group !== shGroup ? "hidden" : ""}>
-    <div class="sh-head" role="button" tabindex="0" aria-expanded="${shOpen.has(s.id)}"><div><span class="grp">${esc(s.group)}</span><h3>${esc(s.title)}</h3>
-      ${s.ar ? `<span class="sh-ar" lang="ar">${esc(s.ar)}</span>` : ""}${s.ta ? `<span class="sh-ta" lang="ta">${esc(s.ta)}</span>` : ""}</div>
-      <div class="sh-links">${m ? `<button class="tbtn" type="button" data-read="${esc(m.file)}" data-page="${s.src.p || 1}">📄 ${m.day ? `Day ${m.day} slides` : esc(m.title)} · ${esc(s.src.pages)}</button>` : s.from ? `<span class="sh-from">${esc(s.from)}</span>` : ""}
-        ${d ? `<button class="tbtn" type="button" data-go="${d.day}">Day ${d.day} lesson →</button>` : ""}</div></div>
-    <div class="sh-body">${s.note ? `<p class="sh-note">${arInline(s.note)}</p>` : ""}
+  const gulf = s.rows.filter(r => r.gulf), g = shGroups[s.set], open = shOpen.has(s.id);
+  return `<article class="sheet-card${open ? " open" : ""}" id="sh-${esc(s.id)}" data-group="${esc(s.group)}" style="--dc:${shColor(s)}" ${g !== "All" && s.group !== g ? "hidden" : ""}>
+    <button class="sh-toggle" type="button" data-shopen="${esc(s.id)}" aria-expanded="${open}" aria-controls="shb-${esc(s.id)}">
+      <span class="sh-tt"><span class="grp">${esc(s.group)} · ${s.rows.length} rows</span><span class="h3">${esc(s.title)}</span>${s.ta ? `<span class="sh-ta" lang="ta">${esc(s.ta)}</span>` : ""}</span>
+      <span class="sh-right">${s.ar ? `<span class="sh-ar" lang="ar">${esc(s.ar)}</span>` : ""}<span class="sh-chev" aria-hidden="true">›</span></span></button>
+    <div class="sh-body" id="shb-${esc(s.id)}" ${open ? "" : "hidden"}>
+    <div class="sh-links">${m ? `<button class="tbtn" type="button" data-read="${esc(m.file)}" data-page="${s.src.p || 1}">📄 ${m.day ? `Day ${m.day} slides` : esc(m.title)} · ${esc(s.src.pages)}</button>` : s.from ? `<span class="sh-from">${arInline(s.from)}</span>` : ""}
+      ${d ? `<button class="tbtn" type="button" data-go="${d.day}">Day ${d.day} lesson →</button>` : ""}</div>
+    ${s.note ? `<p class="sh-note">${arInline(s.note)}</p>` : ""}
     <div class="sh-wrap"><table class="sheet"><thead><tr>${s.cols.map(c => `<th class="${c.type === "ar" ? "c-ar" : ""}${c.under ? " is-under" : ""}" scope="col">${esc(c.label)}</th>`).join("")}</tr></thead>
-      <tbody>${s.rows.map(r => `<tr>${s.cols.map(c => sheetCell(c, r, s.cols)).join("")}</tr>`).join("")}</tbody></table></div>
-    ${gulf.length ? `<ul class="sh-gulf">${gulf.map(r => `<li>${arInline(r.gulf)}</li>`).join("")}</ul>` : ""}</div>
-  </article>`;
+      <tbody>${s.rows.map(r => `<tr${r.sep ? ' class="sep"' : ""}>${s.cols.map(c => sheetCell(c, r, s.cols)).join("")}</tr>`).join("")}</tbody></table></div>
+    ${gulf.length ? `<ul class="sh-gulf">${gulf.map(r => `<li>${arInline(r.gulf)}</li>`).join("")}</ul>` : ""}
+    </div></article>`;
 }
-const shOpen = new Set();
-function shSet(card, on){ card.classList.toggle("closed", !on); card.querySelector(".sh-head").setAttribute("aria-expanded", on);
-  on ? shOpen.add(card.id.slice(3)) : shOpen.delete(card.id.slice(3)); }
-function openSheets(scroll, id){
-  if (id) shOpen.add(id);
+function shSetOpen(card, on){
+  card.classList.toggle("open", on); card.querySelector(".sh-body").hidden = !on;
+  card.querySelector(".sh-toggle").setAttribute("aria-expanded", on);
+  const id = card.id.slice(3); on ? shOpen.add(id) : shOpen.delete(id);
+  const all = $("#shAll"); if (all) all.textContent = [...document.querySelectorAll(".sheet-card:not([hidden])")].every(c => c.classList.contains("open")) ? "Close all" : "Open all";
+}
+function openSheets(scroll, id, set){
+  if (id) set = SHEETS.find(x => x.id === id)?.set || set;
+  shSet = SHEET_SETS.includes(set) ? set : SHEET_SETS[0];
+  const S = SETS[shSet], list = setSheets(shSet), groups = [...new Set(list.map(s => s.group))];
+  if (!groups.includes(shGroups[shSet])) shGroups[shSet] = "All";
+  if (id) { const s = SHEETS.find(x => x.id === id); if (s && shGroups[shSet] !== "All" && s.group !== shGroups[shSet]) shGroups[shSet] = "All"; shOpen.add(id); }
   stopAll(); mode = "sheets"; renderTabs(cur ? cur.day : null);
-  const root = $("#day"); root.classList.remove("matview"); root.classList.add("quizview", "sheetview"); root.style.setProperty("--dc", "var(--sand)");
-  if (location.hash !== "#sheets") history.replaceState(null, "", "#sheets");
-  if (id) { const s = SHEETS.find(x => x.id === id); if (s && shGroup !== "All" && s.group !== shGroup) shGroup = "All"; }
+  const root = $("#day"); root.classList.remove("matview"); root.classList.add("quizview", "sheetview"); root.style.setProperty("--dc", S.color);
+  if (location.hash !== S.hash) history.replaceState(null, "", S.hash);
+  const g = shGroups[shSet];
   root.innerHTML = `
-    <div class="qhero"><span class="eyebrow" style="color:var(--sand);font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:700">Cheat sheets · <span lang="ar" style="font-family:var(--f-ar)">جَدَاوِلْ</span></span>
-      <h2>Cheat sheets</h2><p>The chart pages from the trainers' PDFs (pronouns, possessive endings, numbers, time, plurals…) as tables you can scan quickly. Gulf words come first; the slide's formal word is shown next to it.</p>
-      <span class="ta" lang="ta" style="font-family:var(--f-ta);color:var(--muted);font-size:13px">PDF அட்டவணைகள் · ஒரே பார்வையில்</span></div>
+    <div class="qhero"><span class="eyebrow" style="color:${S.color};font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:700">${S.title} · <span lang="ar" style="font-family:var(--f-ar)">${S.ar}</span></span>
+      <h2>${S.emoji} ${S.title}</h2><p>${S.desc} Tap a sheet to open it.</p>
+      <span class="ta" lang="ta" style="font-family:var(--f-ta);color:var(--muted);font-size:13px">${S.ta}</span></div>
     <div class="sh-filter" role="group" aria-label="Show sheets">
-      ${["All", ...SH_GROUPS].map(g => `<button class="chip" type="button" data-shg="${esc(g)}" aria-pressed="${shGroup === g}" style="--dc:${g === "All" ? "var(--sand)" : SH_HUES[g] || "var(--teal)"}">${esc(g)}${g !== "All" ? ` <small>${SHEETS.filter(s => s.group === g).length}</small>` : ""}</button>`).join("")}
-      <button class="tbtn" id="shAll" type="button">▾ Open all</button>
-      <button class="tbtn" id="shTest" type="button" aria-pressed="${document.body.classList.contains("sheet-test")}" style="margin-left:auto">🙈 Hide Arabic · test me</button></div>
-    <nav class="sh-jump" aria-label="Jump to a sheet">${SHEETS.map(s => `<a href="#sh-${esc(s.id)}" data-shj="${esc(s.id)}" style="--dc:${shColor(s)}" ${shGroup !== "All" && s.group !== shGroup ? "hidden" : ""}>${esc(s.title.split(/[:(]/)[0].trim())}</a>`).join("")}</nav>
-    ${SHEETS.map(sheetCard).join("")}
-    <p class="mat-note">Made from the PDFs in <a href="#materials">Materials</a>. Tap “📄 slides” on a sheet to see the original page.</p>`;
+      ${groups.length > 1 ? ["All", ...groups].map(x => `<button class="chip" type="button" data-shg="${esc(x)}" aria-pressed="${g === x}" style="--dc:${x === "All" ? S.color : SH_HUES[x] || "var(--teal)"}">${esc(x)}${x !== "All" ? ` <small>${list.filter(s => s.group === x).length}</small>` : ""}</button>`).join("") : ""}
+      <span class="sh-acts"><button class="tbtn" id="shAll" type="button">Open all</button>
+      <button class="tbtn" id="shTest" type="button" aria-pressed="${document.body.classList.contains("sheet-test")}">🙈 Hide Arabic · test me</button></span></div>
+    <div class="sh-list">${list.map(sheetCard).join("")}</div>
+    <p class="mat-note">${shSet === "cheat" ? `Numbers, time and everyday phrases are in <a href="${SETS.go.hash}">On the go</a>.` : `Pronouns and tenses are in <a href="${SETS.cheat.hash}">Cheat sheets</a>.`} Made from your lessons and the PDFs in <a href="#materials">Materials</a>.</p>`;
+  const all = $("#shAll"); all.textContent = list.length && list.every(s => shOpen.has(s.id)) ? "Close all" : "Open all";
   renderDrawer();
   const target = id && $(`#sh-${id}`);
   if (target) target.scrollIntoView({behavior: reduce ? "auto" : "smooth"});
@@ -1351,24 +1386,21 @@ function openSheets(scroll, id){
 document.addEventListener("click", e => {
   const t = e.target;
   const sh = t.closest("[data-sheet]"); if (sh) { e.preventDefault(); openSheets(true, sh.dataset.sheet); return; }
-  if (t.closest("[data-sheets]")) { openSheets(true); return; }
+  const ss = t.closest("[data-sheets]"); if (ss) { e.preventDefault(); openSheets(true, null, ss.dataset.sheets); return; }
   if (mode !== "sheets") return;
+  const tg = t.closest("[data-shopen]"); if (tg) { const c = tg.closest(".sheet-card"); shSetOpen(c, !c.classList.contains("open")); return; }
   const g = t.closest("[data-shg]");
-  if (g) { shGroup = g.dataset.shg; try { localStorage.setItem("alh-shgroup", shGroup); } catch {}
+  if (g) { const v = g.dataset.shg; shGroups[shSet] = v; try { localStorage.setItem("alh-shg-" + shSet, v); } catch {}
     document.querySelectorAll("[data-shg]").forEach(b => b.setAttribute("aria-pressed", b === g));
-    document.querySelectorAll(".sheet-card").forEach(c => c.hidden = shGroup !== "All" && c.dataset.group !== shGroup);
-    document.querySelectorAll("[data-shj]").forEach(a => { const s = SHEETS.find(x => x.id === a.dataset.shj); a.hidden = shGroup !== "All" && s.group !== shGroup; });
+    document.querySelectorAll(".sheet-card").forEach(c => c.hidden = v !== "All" && c.dataset.group !== v);
     return; }
-  if (t.closest("#shAll")) { const cards = [...document.querySelectorAll(".sheet-card")], open = cards.some(c => c.classList.contains("closed"));
-    cards.forEach(c => shSet(c, open)); t.closest("#shAll").textContent = open ? "▴ Close all" : "▾ Open all"; return; }
-  const hd = t.closest(".sheet-card .sh-head"); if (hd && !t.closest("button,a")) { const c = hd.closest(".sheet-card"); shSet(c, c.classList.contains("closed")); return; }
-  const j = t.closest("[data-shj]"); if (j) { e.preventDefault(); const c = $(`#sh-${j.dataset.shj}`); if (c) shSet(c, true); c?.scrollIntoView({behavior: reduce ? "auto" : "smooth"}); return; }
+  if (t.closest("#shAll")) { const cards = [...document.querySelectorAll(".sheet-card:not([hidden])")], on = !cards.every(c => c.classList.contains("open"));
+    cards.forEach(c => shSetOpen(c, on)); return; }
   if (t.closest("#shTest")) { const on = document.body.classList.toggle("sheet-test"); t.closest("#shTest").setAttribute("aria-pressed", on);
     document.querySelectorAll("table.sheet td.show").forEach(x => x.classList.remove("show")); if (on) toast("Say it out loud, then tap to check"); return; }
   const cell = t.closest("table.sheet td.c-ar"); if (cell && document.body.classList.contains("sheet-test")) cell.classList.toggle("show");
 });
 
-document.addEventListener("keydown", e => { if ((e.key === "Enter" || e.key === " ") && e.target.matches?.(".sheet-card .sh-head")) { e.preventDefault(); e.target.click(); } });
 let dlApi = null;
 (async () => { try { dlApi = await window.claude?.use?.("downloads"); } catch { dlApi = null; }
   if (dlApi) { document.querySelectorAll("[data-dl]").forEach(b => b.hidden = false); if (rd.file) $("#rdDl").hidden = false; } })();
@@ -1589,21 +1621,24 @@ function drawerOpen(on){
   $("#menuBtn").setAttribute("aria-expanded", on);
   if (on) { renderDrawer(); $("#drClose").focus({preventScroll:true}); }
 }
+const drFold = new Set();  // Cheat sheets / On the go lists in the menu: closed until opened
 function renderDrawer(){
   const quiz = mode === "quiz", mats = mode === "materials", shs = mode === "sheets";
-  $("#mcur").innerHTML = quiz ? `<b>Quiz</b><small>Pick days · score</small>` : mats ? `<b>Materials</b><small>PDFs & videos</small>` : shs ? `<b>Cheat sheets</b><small>Charts from the PDFs</small>` : `<b>Day ${cur.day}</b><small>${esc(cur.title)}</small>`;
+  $("#mcur").innerHTML = quiz ? `<b>Quiz</b><small>Pick days · score</small>` : mats ? `<b>Materials</b><small>PDFs & videos</small>` : shs ? `<b>${SETS[shSet].title}</b><small>${SETS[shSet].sub}</small>` : `<b>Day ${cur.day}</b><small>${esc(cur.title)}</small>`;
   $("#drQuizMode").setAttribute("aria-pressed", document.body.classList.contains("quiz"));
   $("#drOpen").setAttribute("aria-pressed", $("#openBtn")?.getAttribute("aria-pressed") === "true");
-  $("#drSecTitle").textContent = quiz ? "Quiz" : mats ? "Materials" : shs ? "Cheat sheets" : `Day ${cur.day} · sections`;
+  $("#drSecTitle").textContent = quiz ? "Quiz" : mats ? "Materials" : shs ? SETS[shSet].title : `Day ${cur.day} · sections`;
   $("#drSections").innerHTML = quiz ? `<button class="dr-link sec" type="button" data-drq="1"><span class="n">🎯</span><span class="t"><b>Quiz setup</b><small>Choose days and start</small></span></button>`
-    : shs ? SHEETS.map((s, i) => `<button class="dr-link sec" type="button" data-sheet="${esc(s.id)}" style="--dc:${shColor(s)}"><span class="n">${i+1}</span><span class="t"><b>${esc(s.title)}</b><small>${esc(s.group)} · ${s.rows.length} rows</small></span>${s.ar ? `<span class="ar" lang="ar">${esc(s.ar.split(" ")[0])}</span>` : ""}</button>`).join("")
+    : shs ? setSheets(shSet).map((s, i) => `<button class="dr-link sec" type="button" data-sheet="${esc(s.id)}" style="--dc:${shColor(s)}"><span class="n">${i+1}</span><span class="t"><b>${esc(s.title)}</b><small>${esc(s.group)} · ${s.rows.length} rows</small></span>${s.ar ? `<span class="ar" lang="ar">${esc(s.ar.split(" ")[0])}</span>` : ""}</button>`).join("")
     : mats ? [...matList(true), ...matList(false)].map(m => `<a class="dr-link sec" href="materials/${esc(m.file)}" data-read="${esc(m.file)}" style="text-decoration:none"><span class="n">📄</span><span class="t"><b>${esc(m.title)}</b><small>${m.day ? `Day ${m.day}` : esc(m.kind || "Reference")} · ${m.pages} ${m.pages > 1 ? "pages" : "page"}</small></span></a>`).join("")
     : cur.sections.map((s, si) => `<button class="dr-link sec" type="button" data-drs="${si}" style="--dc:${dayColor(cur)}"><span class="n">${si+1}</span>
       <span class="t"><b>${esc(s.title.replace(/^\d+\.\s*/, ""))}</b><small>${s.items.filter(i => !i.audio).length} phrases · ${s.items.filter(i => i.audio).length} notes</small></span>${s.ar ? `<span class="ar" lang="ar">${fmt(s.ar).replace(/<[^>]+>/g, "").split(" ")[0]}</span>` : ""}</button>`).join("")
       + `<button class="dr-link sec" type="button" data-drq="day"><span class="n">🎯</span><span class="t"><b>Quiz this day</b><small>10 random questions</small></span></button>`;
   $("#drDays").innerHTML = `<button class="dr-link" type="button" data-drq="1" aria-current="${quiz}" style="--dc:var(--coral)">${icon("target")}<span class="t"><b>Quiz</b><small>Pick one or more days</small></span></button>` +
     (MATS.length ? `<button class="dr-link" type="button" data-drm="1" aria-current="${mats}" style="--dc:var(--teal)">${icon("file")}<span class="t"><b>Materials</b><small>${MATS.length} PDFs · ${VIDS.length} videos</small></span></button>` : "") +
-    (SHEETS.length ? `<button class="dr-link" type="button" data-sheets="1" aria-current="${shs}" style="--dc:var(--sand)">${icon("table")}<span class="t"><b>Cheat sheets</b><small>${SHEETS.length} tables from the PDFs</small></span></button>` : "") +
+    SHEET_SETS.map(k => `<div class="dr-fold${drFold.has(k) ? " open" : ""}"><div class="dr-frow"><button class="dr-link" type="button" data-sheets="${k}" aria-current="${shs && shSet === k}" style="--dc:${SETS[k].color}">${icon(SETS[k].icon)}<span class="t"><b>${SETS[k].title}</b><small>${SETS[k].sub} · ${setSheets(k).length} sheets</small></span></button>
+      <button class="dr-chev" type="button" data-drfold="${k}" aria-expanded="${drFold.has(k)}" aria-label="Show the ${SETS[k].title} list">›</button></div>
+      <div class="dr-flist" ${drFold.has(k) ? "" : "hidden"}>${setSheets(k).map(s => `<button class="dr-link sec" type="button" data-sheet="${esc(s.id)}" style="--dc:${shColor(s)}"><span class="t"><b>${esc(s.title)}</b><small>${esc(s.group)}</small></span></button>`).join("")}</div></div>`).join("") +
     DAYS_NEWEST().map(d => `<button class="dr-link" type="button" data-drd="${d.day}" aria-current="${mode === "day" && cur.day === d.day}" style="--dc:${dayColor(d)}">${icon(d.icon)}
       <span class="t"><b>Day ${d.day}</b><small>${esc(d.title)}</small></span><span class="pc">🎧${heardIn(d)}/${d.audios.length}</span></button>`).join("");
   drawerSync();
@@ -1635,6 +1670,12 @@ $("#drQuizMode").addEventListener("click", () => { if (mode !== "day") return; $
 $("#drOpen").addEventListener("click", () => { if (mode !== "day") return; $("#openBtn")?.click(); renderDrawer(); });
 drawer.addEventListener("click", e => {
   const s = e.target.closest("[data-drs]"), d = e.target.closest("[data-drd]"), q = e.target.closest("[data-drq]"), m = e.target.closest("[data-drm]");
+  const fb = e.target.closest("[data-drfold]");
+  if (fb) { const k = fb.dataset.drfold, on = !drFold.has(k); on ? drFold.add(k) : drFold.delete(k);
+    fb.setAttribute("aria-expanded", on); fb.closest(".dr-fold").classList.toggle("open", on); fb.closest(".dr-fold").querySelector(".dr-flist").hidden = !on; return; }
+  const hd = e.target.closest("[data-drsec]");
+  if (hd) { const sec = hd.closest(".dr-sec"), on = sec.classList.toggle("folded"); hd.setAttribute("aria-expanded", !on);
+    try { const f = JSON.parse(localStorage.getItem("alh-drfold") || "{}"); f[hd.dataset.drsec] = on; localStorage.setItem("alh-drfold", JSON.stringify(f)); } catch {} return; }
   const sh = e.target.closest("[data-sheet], [data-sheets]");
   if (sh) { drawerOpen(false); return; }  // the document click handler opens the sheet
   if (m) { drawerOpen(false); openMaterials(true); }
@@ -1800,11 +1841,12 @@ document.addEventListener("click", e => {
   const open = box.hidden; box.hidden = !open; b.setAttribute("aria-expanded", open);
 });
 /* ---------- start ---------- */
+try { const f = JSON.parse(localStorage.getItem("alh-drfold") || "{}"); document.querySelectorAll("[data-drsec]").forEach(h => { if (f[h.dataset.drsec]) { h.closest(".dr-sec").classList.add("folded"); h.setAttribute("aria-expanded", "false"); } }); } catch {}
 renderStats();
 let startDay = fromHash();
 if (!startDay) { try { startDay = +localStorage.getItem("alh-last") || null; } catch {} }
 go(DAYS.some(d => d.day === startDay) ? startDay : DAYS[DAYS.length-1].day, false);
 if (location.hash === "#quiz") openQuizSetup(false);
 if (location.hash === "#materials") openMaterials(false);
-if (location.hash === "#sheets") openSheets(false);
+{ const hs = SHEET_SETS.find(k => SETS[k].hash === location.hash); if (hs) openSheets(false, null, hs); }
 </script>

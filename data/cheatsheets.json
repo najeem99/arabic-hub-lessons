@@ -1,7 +1,7 @@
 [
  {
   "id": "pronouns",
-  "group": "Grammar",
+  "group": "Pronouns",
   "title": "Pronouns",
   "ar": "الضَّمَائِرْ",
   "ta": "பிரதிப்பெயர்கள்",
@@ -117,11 +117,12 @@
     "exen": "We are students",
     "gulf": "إِحْنَا is spoken Gulf; the slide also gives نَحْنُ (formal)."
    }
-  ]
+  ],
+  "set": "cheat"
  },
  {
   "id": "possessive",
-  "group": "Grammar",
+  "group": "Pronouns",
   "title": "Possessive endings (my, your, his…)",
   "ar": "الضَّمَائِرْ الْمِلْكِيَّة",
   "ta": "உடைமை பிரதிப்பெயர்கள்",
@@ -238,18 +239,107 @@
     "ext": "Sayyaratna",
     "exen": "Our car"
    }
+  ],
+  "set": "cheat"
+ },
+ {
+  "id": "t-past",
+  "set": "cheat",
+  "group": "Tenses",
+  "title": "Past tense: he drank, I drank…",
+  "ar": "الْفِعْلْ الْمَاضِي",
+  "ta": "இறந்த காலம்",
+  "day": null,
+  "src": {
+   "file": "past-tense.pdf",
+   "pages": "pages 2–3"
+  },
+  "note": "He = the plain verb (شَرَبْ). Add the ending for the others: they -oo, she -at, you / I -t, you all -too, you (f) -ti, we -na.",
+  "cols": [
+   {
+    "k": "ar",
+    "label": "Arabic",
+    "type": "ar",
+    "t": "t"
+   },
+   {
+    "k": "ta",
+    "label": "Tamil sound",
+    "type": "ta"
+   },
+   {
+    "k": "en",
+    "label": "English",
+    "type": "txt"
+   }
+  ],
+  "rows": [
+   {
+    "ar": "هُوَّ شَرَبْ",
+    "t": "Huwa sharab",
+    "ta": "ஷரப்",
+    "en": "He drank"
+   },
+   {
+    "ar": "هُمْ شَرَبُوا",
+    "t": "Hum sharaboo",
+    "ta": "ஷரபூ",
+    "en": "They drank"
+   },
+   {
+    "ar": "هِيَّ شَرَبَتْ",
+    "t": "Hiya sharabat",
+    "ta": "ஷரபத்",
+    "en": "She drank"
+   },
+   {
+    "ar": "إِنْتَ شَرَبْتْ",
+    "t": "Inta sharabt",
+    "ta": "ஷரப்த்",
+    "en": "You drank",
+    "sep": 1
+   },
+   {
+    "ar": "إِنْتُو شَرَبْتُوا",
+    "t": "Intu sharabtoo",
+    "ta": "ஷரப்தூ",
+    "en": "You all drank"
+   },
+   {
+    "ar": "إِنْتِي شَرَبْتِي",
+    "t": "Inti sharabti",
+    "ta": "ஷரப்தீ",
+    "en": "You (f) drank"
+   },
+   {
+    "ar": "أَنَا شَرَبْتْ",
+    "t": "Ana sharabt",
+    "ta": "ஷரப்த்",
+    "en": "I drank",
+    "sep": 1
+   },
+   {
+    "ar": "[r:إِحْنَا|نَحْنُ] شَرَبْنَا",
+    "t": "[r:Ihna|Nahn] sharabna",
+    "ta": "ஷரப்னா",
+    "en": "We drank",
+    "gulf": "إِحْنَا is spoken Gulf; the slide writes نَحْنُ (Nahn)."
+   }
   ]
  },
  {
-  "id": "verbs-present",
-  "group": "Grammar",
-  "title": "Verbs now: I go, you go…",
-  "ar": "الْفِعْلْ الْمُضَارِعْ",
-  "ta": "நிகழ்கால வினைச்சொல்",
-  "day": 10,
-  "src": null,
-  "from": "From the Day 10 lesson (there is no PDF for this day yet)",
-  "note": "The start and end of the verb change with the person: أَ (I), تْ (you, man), تْ…ِينْ (you, woman), تْ…ُونْ (you all).",
+  "id": "t-past-key",
+  "set": "cheat",
+  "group": "Tenses",
+  "title": "Past tense practice: opened, sat, accepted",
+  "ar": "تَمْرِينْ الْمَاضِي",
+  "ta": "பயிற்சி · விடை",
+  "day": null,
+  "src": {
+   "file": "past-tense.pdf",
+   "pages": "pages 4–5"
+  },
+  "note": "The slide's practice verbs with the answer key. Same endings as شَرَبْ.",
   "cols": [
    {
     "k": "p",
@@ -258,75 +348,1920 @@
     "t": "pt"
    },
    {
-    "k": "pat",
-    "label": "Pattern",
-    "type": "ar"
+    "k": "a",
+    "label": "فَتَحْ · opened",
+    "type": "ar",
+    "t": "at"
    },
    {
-    "k": "go",
-    "label": "Go",
+    "k": "b",
+    "label": "جَلَسْ · sat",
     "type": "ar",
-    "t": "got"
+    "t": "bt"
    },
    {
-    "k": "see",
-    "label": "See",
+    "k": "c",
+    "label": "قَبِلْ · accepted",
     "type": "ar",
-    "t": "seet"
+    "t": "ct"
+   }
+  ],
+  "rows": [
+   {
+    "p": "هُوَّ",
+    "pt": "Huwa",
+    "a": "فَتَحْ",
+    "at": "ஃபதஹ்",
+    "b": "جَلَسْ",
+    "bt": "ஜலஸ்",
+    "c": "قَبِلْ",
+    "ct": "கபில்"
+   },
+   {
+    "p": "هُمْ",
+    "pt": "Hum",
+    "a": "فَتَحُوا",
+    "at": "ஃபதஹூ",
+    "b": "جَلَسُوا",
+    "bt": "ஜலஸூ",
+    "c": "قَبِلُوا",
+    "ct": "கபிலூ"
+   },
+   {
+    "p": "هِيَّ",
+    "pt": "Hiya",
+    "a": "فَتَحَتْ",
+    "at": "ஃபதஹத்",
+    "b": "جَلَسَتْ",
+    "bt": "ஜலஸத்",
+    "c": "قَبِلَتْ",
+    "ct": "கபிலத்"
+   },
+   {
+    "p": "إِنْتَ",
+    "pt": "Inta",
+    "a": "فَتَحْتْ",
+    "at": "ஃபதஹ்த்",
+    "b": "جَلَسْتْ",
+    "bt": "ஜலஸ்த்",
+    "c": "قَبِلْتْ",
+    "ct": "கபில்த்",
+    "sep": 1
+   },
+   {
+    "p": "إِنْتُو",
+    "pt": "Intu",
+    "a": "فَتَحْتُوا",
+    "at": "ஃபதஹ்தூ",
+    "b": "جَلَسْتُوا",
+    "bt": "ஜலஸ்தூ",
+    "c": "قَبِلْتُوا",
+    "ct": "கபில்தூ"
+   },
+   {
+    "p": "إِنْتِي",
+    "pt": "Inti",
+    "a": "فَتَحْتِي",
+    "at": "ஃபதஹ்தீ",
+    "b": "جَلَسْتِي",
+    "bt": "ஜலஸ்தீ",
+    "c": "قَبِلْتِي",
+    "ct": "கபில்தீ"
+   },
+   {
+    "p": "أَنَا",
+    "pt": "Ana",
+    "a": "فَتَحْتْ",
+    "at": "ஃபதஹ்த்",
+    "b": "جَلَسْتْ",
+    "bt": "ஜலஸ்த்",
+    "c": "قَبِلْتْ",
+    "ct": "கபில்த்",
+    "sep": 1
+   },
+   {
+    "p": "[r:إِحْنَا|نَحْنُ]",
+    "pt": "[r:Ihna|Nahn]",
+    "a": "فَتَحْنَا",
+    "at": "ஃபதஹ்னா",
+    "b": "جَلَسْنَا",
+    "bt": "ஜலஸ்னா",
+    "c": "قَبِلْنَا",
+    "ct": "கபில்னா"
+   }
+  ]
+ },
+ {
+  "id": "t-present",
+  "set": "cheat",
+  "group": "Tenses",
+  "title": "Present tense: he drinks, I drink…",
+  "ar": "الْفِعْلْ الْمُضَارِعْ",
+  "ta": "நிகழ் காலம்",
+  "day": null,
+  "src": {
+   "file": "present-future-tense.pdf",
+   "pages": "pages 2–3"
+  },
+  "note": "Remember NATY: put ن (N, we), أ (A, I), ت (T, you / she) or ي (Y, he / they) in front of the verb. You all and they add -oon, you (f) adds -een.",
+  "cols": [
+   {
+    "k": "ar",
+    "label": "Arabic",
+    "type": "ar",
+    "t": "t"
+   },
+   {
+    "k": "ta",
+    "label": "Tamil sound",
+    "type": "ta"
+   },
+   {
+    "k": "en",
+    "label": "English",
+    "type": "txt"
+   }
+  ],
+  "rows": [
+   {
+    "ar": "هُوَّ يِشْرَبْ",
+    "t": "Huwa yishrab",
+    "ta": "யிஷ்ரப்",
+    "en": "He drinks"
+   },
+   {
+    "ar": "هُمْ يِشْرَبُونْ",
+    "t": "Hum yishraboon",
+    "ta": "யிஷ்ரபூன்",
+    "en": "They drink"
+   },
+   {
+    "ar": "هِيَّ تِشْرَبْ",
+    "t": "Hiya tishrab",
+    "ta": "திஷ்ரப்",
+    "en": "She drinks"
+   },
+   {
+    "ar": "إِنْتَ تِشْرَبْ",
+    "t": "Inta tishrab",
+    "ta": "திஷ்ரப்",
+    "en": "You drink",
+    "sep": 1
+   },
+   {
+    "ar": "إِنْتُو تِشْرَبُونْ",
+    "t": "Intu tishraboon",
+    "ta": "திஷ்ரபூன்",
+    "en": "You all drink"
+   },
+   {
+    "ar": "إِنْتِي تِشْرَبِينْ",
+    "t": "Inti tishrabeen",
+    "ta": "திஷ்ரபீன்",
+    "en": "You (f) drink"
+   },
+   {
+    "ar": "أَنَا أَشْرَبْ",
+    "t": "Ana ashrab",
+    "ta": "அஷ்ரப்",
+    "en": "I drink",
+    "sep": 1
+   },
+   {
+    "ar": "[r:إِحْنَا|نَحْنُ] نِشْرَبْ",
+    "t": "[r:Ihna|Nahn] nishrab",
+    "ta": "நிஷ்ரப்",
+    "en": "We drink"
+   }
+  ]
+ },
+ {
+  "id": "t-present-key",
+  "set": "cheat",
+  "group": "Tenses",
+  "title": "Present tense practice: opens, sits, accepts",
+  "ar": "تَمْرِينْ الْمُضَارِعْ",
+  "ta": "பயிற்சி · விடை",
+  "day": null,
+  "src": {
+   "file": "present-future-tense.pdf",
+   "pages": "page 4"
+  },
+  "note": "The slide's practice verbs with the answer key.",
+  "cols": [
+   {
+    "k": "p",
+    "label": "Person",
+    "type": "ar",
+    "t": "pt"
+   },
+   {
+    "k": "a",
+    "label": "يِفْتَحْ · opens",
+    "type": "ar",
+    "t": "at"
+   },
+   {
+    "k": "b",
+    "label": "يِجْلِسْ · sits",
+    "type": "ar",
+    "t": "bt"
+   },
+   {
+    "k": "c",
+    "label": "يِقْبَلْ · accepts",
+    "type": "ar",
+    "t": "ct"
+   }
+  ],
+  "rows": [
+   {
+    "p": "هُوَّ",
+    "pt": "Huwa",
+    "a": "يِفْتَحْ",
+    "at": "யிஃப்தஹ்",
+    "b": "يِجْلِسْ",
+    "bt": "யிஜ்லிஸ்",
+    "c": "يِقْبَلْ",
+    "ct": "யிக்பல்"
+   },
+   {
+    "p": "هُمْ",
+    "pt": "Hum",
+    "a": "يِفْتَحُونْ",
+    "at": "யிஃப்தஹூன்",
+    "b": "يِجْلِسُونْ",
+    "bt": "யிஜ்லிஸூன்",
+    "c": "يِقْبَلُونْ",
+    "ct": "யிக்பலூன்"
+   },
+   {
+    "p": "هِيَّ",
+    "pt": "Hiya",
+    "a": "تِفْتَحْ",
+    "at": "திஃப்தஹ்",
+    "b": "تِجْلِسْ",
+    "bt": "திஜ்லிஸ்",
+    "c": "تِقْبَلْ",
+    "ct": "திக்பல்"
+   },
+   {
+    "p": "إِنْتَ",
+    "pt": "Inta",
+    "a": "تِفْتَحْ",
+    "at": "திஃப்தஹ்",
+    "b": "تِجْلِسْ",
+    "bt": "திஜ்லிஸ்",
+    "c": "تِقْبَلْ",
+    "ct": "திக்பல்",
+    "sep": 1
+   },
+   {
+    "p": "إِنْتُو",
+    "pt": "Intu",
+    "a": "تِفْتَحُونْ",
+    "at": "திஃப்தஹூன்",
+    "b": "تِجْلِسُونْ",
+    "bt": "திஜ்லிஸூன்",
+    "c": "تِقْبَلُونْ",
+    "ct": "திக்பலூன்"
+   },
+   {
+    "p": "إِنْتِي",
+    "pt": "Inti",
+    "a": "تِفْتَحِينْ",
+    "at": "திஃப்தஹீன்",
+    "b": "تِجْلِسِينْ",
+    "bt": "திஜ்லிஸீன்",
+    "c": "تِقْبَلِينْ",
+    "ct": "திக்பலீன்"
+   },
+   {
+    "p": "أَنَا",
+    "pt": "Ana",
+    "a": "أَفْتَحْ",
+    "at": "அஃப்தஹ்",
+    "b": "أَجْلِسْ",
+    "bt": "அஜ்லிஸ்",
+    "c": "أَقْبَلْ",
+    "ct": "அக்பல்",
+    "sep": 1
+   },
+   {
+    "p": "[r:إِحْنَا|نَحْنُ]",
+    "pt": "[r:Ihna|Nahn]",
+    "a": "نِفْتَحْ",
+    "at": "நிஃப்தஹ்",
+    "b": "نِجْلِسْ",
+    "bt": "நிஜ்லிஸ்",
+    "c": "نِقْبَلْ",
+    "ct": "நிக்பல்"
+   }
+  ]
+ },
+ {
+  "id": "t-future",
+  "set": "cheat",
+  "group": "Tenses",
+  "title": "Future tense: he will drink…",
+  "ar": "الْفِعْلْ الْمُسْتَقْبَلْ",
+  "ta": "எதிர் காலம்",
+  "day": null,
+  "src": {
+   "file": "present-future-tense.pdf",
+   "pages": "pages 7–8"
+  },
+  "note": "بـ (bi) + the present verb. For أَنَا drop the أ and add بـ straight on: أَشْرَبْ → بَشْرَبْ (Ana bashrab).",
+  "cols": [
+   {
+    "k": "ar",
+    "label": "Arabic",
+    "type": "ar",
+    "t": "t"
+   },
+   {
+    "k": "ta",
+    "label": "Tamil sound",
+    "type": "ta"
+   },
+   {
+    "k": "en",
+    "label": "English",
+    "type": "txt"
+   }
+  ],
+  "rows": [
+   {
+    "ar": "هُوَّ بِيِشْرَبْ",
+    "t": "Huwa biyishrab",
+    "ta": "பியிஷ்ரப்",
+    "en": "He will drink"
+   },
+   {
+    "ar": "هُمْ بِيِشْرَبُونْ",
+    "t": "Hum biyishraboon",
+    "ta": "பியிஷ்ரபூன்",
+    "en": "They will drink"
+   },
+   {
+    "ar": "هِيَّ بِتِشْرَبْ",
+    "t": "Hiya bitishrab",
+    "ta": "பிதிஷ்ரப்",
+    "en": "She will drink"
+   },
+   {
+    "ar": "إِنْتَ بِتِشْرَبْ",
+    "t": "Inta bitishrab",
+    "ta": "பிதிஷ்ரப்",
+    "en": "You will drink",
+    "sep": 1
+   },
+   {
+    "ar": "إِنْتُو بِتِشْرَبُونْ",
+    "t": "Intu bitishraboon",
+    "ta": "பிதிஷ்ரபூன்",
+    "en": "You all will drink"
+   },
+   {
+    "ar": "إِنْتِي بِتِشْرَبِينْ",
+    "t": "Inti bitishrabeen",
+    "ta": "பிதிஷ்ரபீன்",
+    "en": "You (f) will drink"
+   },
+   {
+    "ar": "أَنَا بَشْرَبْ",
+    "t": "Ana bashrab",
+    "ta": "பஷ்ரப்",
+    "en": "I will drink",
+    "sep": 1
+   },
+   {
+    "ar": "[r:إِحْنَا|نَحْنُ] بِنِشْرَبْ",
+    "t": "[r:Ihna|Nahn] binishrab",
+    "ta": "பிநிஷ்ரப்",
+    "en": "We will drink"
+   }
+  ]
+ },
+ {
+  "id": "t-compare",
+  "set": "cheat",
+  "group": "Tenses",
+  "title": "Past · present · future side by side",
+  "ar": "الْمَاضِي · الْمُضَارِعْ · الْمُسْتَقْبَلْ",
+  "ta": "மூன்று காலங்கள்",
+  "day": null,
+  "src": {
+   "file": "present-future-tense.pdf",
+   "pages": "page 11"
+  },
+  "note": "All with هُوَّ (he). Present = NATY + past; future = بـ + present.",
+  "cols": [
+   {
+    "k": "en",
+    "label": "Verb",
+    "type": "txt"
+   },
+   {
+    "k": "pa",
+    "label": "Past",
+    "type": "ar",
+    "t": "pat"
+   },
+   {
+    "k": "pr",
+    "label": "Present (NATY + past)",
+    "type": "ar",
+    "t": "prt"
+   },
+   {
+    "k": "fu",
+    "label": "Future (bi + present)",
+    "type": "ar",
+    "t": "fut"
+   }
+  ],
+  "rows": [
+   {
+    "en": "Eat",
+    "pa": "هُوَّ أَكَلْ",
+    "pat": "Huwa akal",
+    "pr": "هُوَّ يَاكِلْ",
+    "prt": "Huwa yaakil",
+    "fu": "هُوَّ بِيَاكِلْ",
+    "fut": "Huwa bi-yaakil"
+   },
+   {
+    "en": "Go",
+    "pa": "هُوَّ رَاحْ",
+    "pat": "Huwa raah",
+    "pr": "هُوَّ يِرُوحْ",
+    "prt": "Huwa yirooh",
+    "fu": "هُوَّ بِيِرُوحْ",
+    "fut": "Huwa bi-yirooh",
+    "gulf": "In the UAE you'll also hear سَارْ / يِسِيرْ for “go” (Day 10 and Day 13)."
+   },
+   {
+    "en": "Work",
+    "pa": "هُوَّ اشْتَغَلْ",
+    "pat": "Huwa ishtaghal",
+    "pr": "هُوَّ يِشْتَغِلْ",
+    "prt": "Huwa yishtaghil",
+    "fu": "هُوَّ بِيِشْتَغِلْ",
+    "fut": "Huwa bi-yishtaghil"
+   },
+   {
+    "en": "Sleep",
+    "pa": "هُوَّ نَامْ",
+    "pat": "Huwa naam",
+    "pr": "هُوَّ يِنَامْ",
+    "prt": "Huwa yinaam",
+    "fu": "هُوَّ بِيِنَامْ",
+    "fut": "Huwa bi-yinaam"
+   },
+   {
+    "en": "Drink",
+    "pa": "هُوَّ شَرَبْ",
+    "pat": "Huwa sharab",
+    "pr": "هُوَّ يِشْرَبْ",
+    "prt": "Huwa yishrab",
+    "fu": "هُوَّ بِيِشْرَبْ",
+    "fut": "Huwa bi-yishrab"
+   },
+   {
+    "en": "Read",
+    "pa": "هُوَّ قَرَا",
+    "pat": "Huwa gara",
+    "pr": "هُوَّ يِقْرَا",
+    "prt": "Huwa yigra",
+    "fu": "هُوَّ بِيِقْرَا",
+    "fut": "Huwa bi-yigra"
+   },
+   {
+    "en": "Write",
+    "pa": "هُوَّ كَتَبْ",
+    "pat": "Huwa katab",
+    "pr": "هُوَّ يِكْتِبْ",
+    "prt": "Huwa yiktib",
+    "fu": "هُوَّ بِيِكْتِبْ",
+    "fut": "Huwa bi-yiktib"
+   },
+   {
+    "en": "Watch / see",
+    "pa": "هُوَّ شَافْ",
+    "pat": "Huwa shaaf",
+    "pr": "هُوَّ يِشُوفْ",
+    "prt": "Huwa yishoof",
+    "fu": "هُوَّ بِيِشُوفْ",
+    "fut": "Huwa bi-yishoof"
+   },
+   {
+    "en": "Buy",
+    "pa": "هُوَّ اشْتَرَى",
+    "pat": "Huwa ishtara",
+    "pr": "هُوَّ يِشْتِرِي",
+    "prt": "Huwa yishtiri",
+    "fu": "هُوَّ بِيِشْتِرِي",
+    "fut": "Huwa bi-yishtiri"
+   }
+  ]
+ },
+ {
+  "id": "t-pastcont",
+  "set": "cheat",
+  "group": "Tenses",
+  "title": "Past continuous: he was drinking…",
+  "ar": "الْمَاضِي الْمُسْتَمِرّْ",
+  "ta": "இறந்த கால தொடர்வினை",
+  "day": null,
+  "src": {
+   "file": "past-continuous-tense.pdf",
+   "pages": "pages 2–4"
+  },
+  "note": "كَانْ (was) + the present verb. كَانْ changes with the person, the verb keeps its present form.",
+  "cols": [
+   {
+    "k": "k",
+    "label": "Was",
+    "type": "ar",
+    "t": "kt"
+   },
+   {
+    "k": "ar",
+    "label": "Was drinking",
+    "type": "ar",
+    "t": "t"
+   },
+   {
+    "k": "ta",
+    "label": "Tamil sound",
+    "type": "ta",
+    "under": "ar"
+   },
+   {
+    "k": "en",
+    "label": "English",
+    "type": "txt",
+    "under": "ar"
+   }
+  ],
+  "rows": [
+   {
+    "k": "كَانْ",
+    "kt": "Kaan",
+    "ar": "هُوَّ كَانْ يِشْرَبْ",
+    "t": "Huwa kaan yishrab",
+    "ta": "ஹுவ கான் யிஷ்ரப்",
+    "en": "He was drinking"
+   },
+   {
+    "k": "كَانُوا",
+    "kt": "Kaanu",
+    "ar": "هُمْ كَانُوا يِشْرَبُونْ",
+    "t": "Hum kaanu yishraboon",
+    "ta": "ஹும் கானூ யிஷ்ரபூன்",
+    "en": "They were drinking"
+   },
+   {
+    "k": "كَانَتْ",
+    "kt": "Kaanat",
+    "ar": "هِيَّ كَانَتْ تِشْرَبْ",
+    "t": "Hiya kaanat tishrab",
+    "ta": "ஹிய கானத் திஷ்ரப்",
+    "en": "She was drinking"
+   },
+   {
+    "k": "كِنْتْ",
+    "kt": "Kint",
+    "ar": "إِنْتَ كِنْتْ تِشْرَبْ",
+    "t": "Inta kint tishrab",
+    "ta": "இன்த் கின்த் திஷ்ரப்",
+    "en": "You were drinking",
+    "sep": 1
+   },
+   {
+    "k": "كِنْتُوا",
+    "kt": "Kintu",
+    "ar": "إِنْتُو كِنْتُوا تِشْرَبُونْ",
+    "t": "Intu kintu tishraboon",
+    "ta": "இன்தூ கின்தூ திஷ்ரபூன்",
+    "en": "You all were drinking"
+   },
+   {
+    "k": "كِنْتِي",
+    "kt": "Kinti",
+    "ar": "إِنْتِي كِنْتِي تِشْرَبِينْ",
+    "t": "Inti kinti tishrabeen",
+    "ta": "இன்தீ கின்தீ திஷ்ரபீன்",
+    "en": "You (f) were drinking"
+   },
+   {
+    "k": "كِنْتْ",
+    "kt": "Kint",
+    "ar": "أَنَا كِنْتْ أَشْرَبْ",
+    "t": "Ana kint ashrab",
+    "ta": "அன கின்த் அஷ்ரப்",
+    "en": "I was drinking",
+    "sep": 1
+   },
+   {
+    "k": "كِنَّا",
+    "kt": "Kunna",
+    "ar": "[r:إِحْنَا|نَحْنُ] كِنَّا نِشْرَبْ",
+    "t": "[r:Ihna|Nahn] kunna nishrab",
+    "ta": "நஹ்ன் குன்னா நிஷ்ரப்",
+    "en": "We were drinking"
+   }
+  ]
+ },
+ {
+  "id": "phrases",
+  "set": "go",
+  "group": "Phrases",
+  "title": "Everyday phrases: work, going, asking",
+  "ar": "كَلَامْ كِلّْ يُومْ",
+  "ta": "தினசரி வாக்கியங்கள்",
+  "day": null,
+  "src": null,
+  "from": "Picked from your lessons (day shown on each row)",
+  "cols": [
+   {
+    "k": "ar",
+    "label": "Arabic",
+    "type": "ar",
+    "t": "t"
+   },
+   {
+    "k": "en",
+    "label": "English",
+    "type": "txt"
    },
    {
     "k": "ta",
     "label": "Tamil",
     "type": "ta",
-    "under": "p"
+    "under": "en"
+   },
+   {
+    "k": "day",
+    "label": "Lesson",
+    "type": "txt",
+    "under": "en"
    }
   ],
   "rows": [
    {
-    "p": "أَنَا",
-    "pt": "Ana · I",
-    "pat": "أَ…",
-    "go": "أَسِيرْ",
-    "got": "Aseer",
-    "see": "أَشُوفْ",
-    "seet": "Ashoof",
-    "ta": "நான் போகிறேன் / பார்க்கிறேன்"
+    "ar": "أَنَا فِي الشُّغُلْ",
+    "t": "Ana fish-shughul",
+    "en": "I am at work",
+    "ta": "நான் வேலையில் இருக்கிறேன்",
+    "day": "Day 13"
    },
    {
-    "p": "إِنْتَ",
-    "pt": "Inta · you (man)",
-    "pat": "تْ…",
-    "go": "تْسِيرْ",
-    "got": "Tseer",
-    "see": "تْشُوفْ",
-    "seet": "Tshoof",
-    "ta": "நீ போகிறாய் (ஆண்)"
+    "ar": "أَنَا دَاخِلِ الْمَكْتَبْ",
+    "t": "Ana dakhil al-maktab",
+    "en": "I'm in the office",
+    "ta": "நான் அலுவலகத்தில் இருக்கிறேன்",
+    "day": "Day 13"
    },
    {
-    "p": "إِنْتِي",
-    "pt": "Inti · you (woman)",
-    "pat": "تْ…ِينْ",
-    "go": "تْسِيرِينْ",
-    "got": "Tseereen",
-    "see": "تْشُوفِينْ",
-    "seet": "Tshoofeen",
-    "ta": "நீ போகிறாய் (பெண்)"
+    "ar": "أَنَا بَرَّا الْبَيْتْ",
+    "t": "Ana barra al-bait",
+    "en": "I'm outside the house",
+    "ta": "நான் வீட்டை விட்டு வெளியே உள்ளேன்",
+    "day": "Day 13"
    },
    {
-    "p": "إِنْتُو",
-    "pt": "Intu · you all",
-    "pat": "تْ…ُونْ",
-    "go": "تْسِيرُونْ",
-    "got": "Tseeroon",
-    "see": "تْشُوفُونْ",
-    "seet": "Tshoofoon",
-    "ta": "நீங்கள் போகிறீர்கள்"
+    "ar": "أَنَا [r:يَايْ|جَايْ] الْحِينْ",
+    "t": "Ana [r:yai|jai] al-heen",
+    "en": "I am coming now",
+    "ta": "நான் வந்துகொண்டு இருக்கிறேன்",
+    "day": "Day 13"
+   },
+   {
+    "ar": "رِحْتْ إِلَى السُّوقْ وَبَعْدَيْنْ سِرْتْ إِلَى الدَّوَامْ",
+    "t": "Riht ilas-soog wa ba'dain sirt ilad-dawam",
+    "en": "I went to the market and then went to work",
+    "ta": "நான் சந்தைக்குப் போய்விட்டு பின் வேலைக்குச் சென்றேன்",
+    "day": "Day 13"
+   },
+   {
+    "ar": "[r:أَبَا|أَبْغَى] أَسِيرِ [b:الدَّوَامْ|الشُّغُلْ] بَعْدْ سَاعَة",
+    "t": "[r:Aba|Abgha] aseer [b:ad-dawam|ash-shughul] ba'ad sa'a",
+    "en": "I have to go to work after an hour",
+    "ta": "ஒரு மணி நேரம் கழித்து நான் வேலைக்கு செல்ல வேண்டும்",
+    "day": "Day 13"
+   },
+   {
+    "ar": "وِينْ مَحَطَّةِ الْقِطَارْ؟",
+    "t": "Ween mahattat al-gitar?",
+    "en": "Where is the train station?",
+    "ta": "ரயில் நிலையம் எங்கு இருக்கிறது?",
+    "day": "Day 13"
+   },
+   {
+    "ar": "اِمْشِ [r:سِيدَا|طَوَّالِي] وْخِذْ يَمِينْ",
+    "t": "Imshi [r:seeda|tawwali] w-khidh yameen",
+    "en": "Walk straight and take a right",
+    "ta": "நேராக நட, வலதுபுறம் செல்",
+    "day": "Day 13"
+   },
+   {
+    "ar": "قَرِيبْ مِنْ هِنِي",
+    "t": "Gareeb min hini",
+    "en": "Near here",
+    "ta": "இங்கிருந்து பக்கமாக இருக்கிறது",
+    "day": "Day 13"
+   },
+   {
+    "ar": "مُبْ بَعْدَيْنْ، أَبَاهْ الْحِينْ",
+    "t": "Mub ba'dain, abah al-heen",
+    "en": "Not later, I want it now",
+    "ta": "எனக்கு பிறகு அல்ல, இப்போதே வேண்டும்",
+    "day": "Day 13"
+   },
+   {
+    "ar": "أَنَا أَشْرَبِ الْقَهْوَة كِلّْ يُومْ",
+    "t": "Ana ashrab al-gahwa kill yoom",
+    "en": "I drink coffee every day",
+    "ta": "நான் தினமும் காபி குடிப்பேன்",
+    "day": "Day 6"
+   },
+   {
+    "ar": "الْيُومْ إِجَازَة",
+    "t": "Al-yoom ijaza",
+    "en": "Today is a holiday",
+    "ta": "இன்று விடுமுறை",
+    "day": "Day 6"
+   },
+   {
+    "ar": "هُوَّ [r:يَايْ بَاچِرْ|يِيجِي بُكْرَة]",
+    "t": "Huwa [r:yai bachir|yeeji bukra]",
+    "en": "He is coming tomorrow",
+    "ta": "அவன் நாளை வருகிறான்",
+    "day": "Day 6"
+   },
+   {
+    "ar": "[r:السَّاعَة كَمْ|كَمِ السَّاعَة]؟",
+    "t": "[r:As-sa'a kam|Kamis-sa'a]?",
+    "en": "What time is it?",
+    "ta": "மணி என்ன?",
+    "day": "Day 8"
+   },
+   {
+    "ar": "شُو اسْمَكْ؟",
+    "t": "Shu ismak?",
+    "en": "What's your name?",
+    "ta": "உனது பெயர் என்ன?",
+    "day": "Day 14"
+   },
+   {
+    "ar": "اِسْمِي عَبْدُ الْعَزِيزْ",
+    "t": "Ismi Abdul Azeez",
+    "en": "My name is Abdul Azeez",
+    "ta": "என் பெயர் அப்துல் அஜீஸ்",
+    "day": "Day 15"
+   },
+   {
+    "ar": "مُمْكِنْ [r:عَطْنِي|تَعْطِينِي] رَقْمَكْ؟",
+    "t": "Mumkin [r:'atni|ta'tini] ragmak?",
+    "en": "Can you give me your number?",
+    "ta": "தயவுசெய்து உங்களது நம்பரை எனக்கு தர முடியுமா?",
+    "day": "Day 9"
+   },
+   {
+    "ar": "[r:مِنْ فَضْلَكْ|لَوْ سَمَحْتْ] قَلَمَكْ؟",
+    "t": "[r:Min fadhlak|Law samaht] galamak?",
+    "en": "Your pen, please?",
+    "ta": "தயவுசெய்து எனக்கு உங்களது பேனாவை கொடுங்கள்",
+    "day": "Day 9"
+   },
+   {
+    "ar": "[r:شُكْرًا|مَشْكُورْ|تِسْلَمْ]",
+    "t": "[r:Shukran|Mashkoor|Tislam]",
+    "en": "Thank you",
+    "ta": "நன்றி",
+    "day": "Day 3"
+   },
+   {
+    "ar": "[r:أَبَا|أَبِي|أَبْغَى] أَشْتَرِي [b:تِلِفُونْ|جَوَّالْ] مِنْ لُولُو",
+    "t": "[r:Aba|Abi|Abgha] ashtari [b:tilifoon|jawwal] min Lulu",
+    "en": "I want to buy a mobile from Lulu",
+    "ta": "நான் லூலூவில் இருந்து மொபைல் வாங்க விரும்புகிறேன்",
+    "day": "Day 13"
    }
   ]
  },
  {
+  "id": "num-1-20",
+  "group": "Numbers",
+  "title": "Numbers 0–20",
+  "ar": "الْأَرْقَامْ",
+  "ta": "எண்கள் 0–20",
+  "day": 7,
+  "src": {
+   "file": "day07-numbers.pdf",
+   "pages": "pages 2 & 5",
+   "p": 2
+  },
+  "note": "3 to 10 take a plural noun: عِنْدِي أَرْبَعَة كُتُبْ (I have 4 books). 11 and up take a singular noun: تِسْعْطَعَشْ قَلَمْ (19 pens).",
+  "cols": [
+   {
+    "k": "n",
+    "label": "#",
+    "type": "txt"
+   },
+   {
+    "k": "ar",
+    "label": "Gulf",
+    "type": "ar",
+    "t": "t"
+   },
+   {
+    "k": "lw",
+    "label": "Lesson word (formal)",
+    "type": "ar",
+    "t": "lt"
+   },
+   {
+    "k": "ta",
+    "label": "Tamil",
+    "type": "ta",
+    "under": "ar"
+   }
+  ],
+  "rows": [
+   {
+    "n": "0",
+    "ar": "صِفْرْ",
+    "t": "Sifr",
+    "ta": "பூஜ்ஜியம்"
+   },
+   {
+    "n": "1",
+    "ar": "وَاحِدْ",
+    "t": "Wahid",
+    "ta": "ஒன்று"
+   },
+   {
+    "n": "2",
+    "ar": "ثْنَيْنْ",
+    "t": "Thnain",
+    "lw": "اثْنَانْ",
+    "lt": "Ithnan",
+    "ta": "இரண்டு"
+   },
+   {
+    "n": "3",
+    "ar": "ثَلَاثَة",
+    "t": "Thalatha",
+    "ta": "மூன்று"
+   },
+   {
+    "n": "4",
+    "ar": "أَرْبَعَة",
+    "t": "Arba'a",
+    "ta": "நான்கு"
+   },
+   {
+    "n": "5",
+    "ar": "خَمْسَة",
+    "t": "Khamsa",
+    "ta": "ஐந்து"
+   },
+   {
+    "n": "6",
+    "ar": "سِتَّة",
+    "t": "Sitta",
+    "ta": "ஆறு"
+   },
+   {
+    "n": "7",
+    "ar": "سَبْعَة",
+    "t": "Sab'a",
+    "ta": "ஏழு"
+   },
+   {
+    "n": "8",
+    "ar": "ثَمَانْيَة",
+    "t": "Thamanya",
+    "ta": "எட்டு"
+   },
+   {
+    "n": "9",
+    "ar": "تِسْعَة",
+    "t": "Tis'a",
+    "ta": "ஒன்பது"
+   },
+   {
+    "n": "10",
+    "ar": "عَشْرَة",
+    "t": "'Ashra",
+    "ta": "பத்து"
+   },
+   {
+    "n": "11",
+    "ar": "إِحْدَعَشْ",
+    "t": "Ihda'ash",
+    "lw": "إِحْدَى عَشَرْ",
+    "lt": "Ihda 'ashar",
+    "ta": "பதினொன்று"
+   },
+   {
+    "n": "12",
+    "ar": "ثْنَعَشْ",
+    "t": "Thna'ash",
+    "lw": "اثْنَا عَشَرْ",
+    "lt": "Ithna 'ashar",
+    "ta": "பன்னிரண்டு"
+   },
+   {
+    "n": "13",
+    "ar": "ثَلَاثْطَعَشْ",
+    "t": "Thalatta'ash",
+    "lw": "ثَلَاثَةَ عَشَرْ",
+    "lt": "Thalathat 'ashar",
+    "ta": "பதிமூன்று"
+   },
+   {
+    "n": "14",
+    "ar": "أَرْبَعْطَعَشْ",
+    "t": "Arba'ta'ash",
+    "lw": "أَرْبَعَةَ عَشَرْ",
+    "lt": "Arba'at 'ashar",
+    "ta": "பதினான்கு"
+   },
+   {
+    "n": "15",
+    "ar": "خَمْسْطَعَشْ",
+    "t": "Khamsta'ash",
+    "lw": "خَمْسَةَ عَشَرْ",
+    "lt": "Khamsat 'ashar",
+    "ta": "பதினைந்து"
+   },
+   {
+    "n": "16",
+    "ar": "سِتَّطَعَشْ",
+    "t": "Sitta'ash",
+    "lw": "سِتَّةَ عَشَرْ",
+    "lt": "Sittat 'ashar",
+    "ta": "பதினாறு"
+   },
+   {
+    "n": "17",
+    "ar": "سَبْعْطَعَشْ",
+    "t": "Sab'ta'ash",
+    "lw": "سَبْعَةَ عَشَرْ",
+    "lt": "Sab'at 'ashar",
+    "ta": "பதினேழு"
+   },
+   {
+    "n": "18",
+    "ar": "ثَمَنْطَعَشْ",
+    "t": "Thamanta'ash",
+    "lw": "ثَمَانْيَةَ عَشَرْ",
+    "lt": "Thamaniyat 'ashar",
+    "ta": "பதினெட்டு"
+   },
+   {
+    "n": "19",
+    "ar": "تِسْعْطَعَشْ",
+    "t": "Tis'ta'ash",
+    "lw": "تِسْعَةَ عَشَرْ",
+    "lt": "Tis'at 'ashar",
+    "ta": "பத்தொன்பது"
+   },
+   {
+    "n": "20",
+    "ar": "عِشْرِينْ",
+    "t": "'Ishreen",
+    "lw": "عِشْرُونْ",
+    "lt": "'Ishroon",
+    "ta": "இருபது"
+   }
+  ],
+  "set": "go"
+ },
+ {
+  "id": "num-big",
+  "group": "Numbers",
+  "title": "Tens, hundreds, thousands",
+  "ar": "الْعَشَرَاتْ وَالْمِيَّاتْ وَالْآلَافْ",
+  "ta": "பத்துகள், நூறுகள், ஆயிரங்கள்",
+  "day": 7,
+  "src": {
+   "file": "day07-numbers.pdf",
+   "pages": "pages 8, 10 & 14",
+   "p": 8
+  },
+  "note": "21–99: say the ones first, then وْ (and), then the tens: 36 = سِتَّة وْثَلَاثِينْ (six and thirty). Over 100, join every part with وْ: 151 = مِيَّة وْوَاحِدْ وْخَمْسِينْ.",
+  "cols": [
+   {
+    "k": "n",
+    "label": "#",
+    "type": "txt"
+   },
+   {
+    "k": "ar",
+    "label": "Gulf",
+    "type": "ar",
+    "t": "t"
+   },
+   {
+    "k": "lw",
+    "label": "Lesson word (formal)",
+    "type": "ar",
+    "t": "lt"
+   },
+   {
+    "k": "ta",
+    "label": "Tamil",
+    "type": "ta",
+    "under": "ar"
+   }
+  ],
+  "rows": [
+   {
+    "n": "20",
+    "ar": "عِشْرِينْ",
+    "t": "'Ishreen",
+    "ta": "இருபது"
+   },
+   {
+    "n": "21",
+    "ar": "وَاحِدْ وْعِشْرِينْ",
+    "t": "Wahid w 'ishreen",
+    "ta": "இருபத்தொன்று"
+   },
+   {
+    "n": "30",
+    "ar": "ثَلَاثِينْ",
+    "t": "Thalatheen",
+    "lw": "ثَلَاثُونْ",
+    "lt": "Thalathoon",
+    "ta": "முப்பது"
+   },
+   {
+    "n": "40",
+    "ar": "أَرْبَعِينْ",
+    "t": "Arba'een",
+    "lw": "أَرْبَعُونْ",
+    "lt": "Arba'oon",
+    "ta": "நாற்பது"
+   },
+   {
+    "n": "50",
+    "ar": "خَمْسِينْ",
+    "t": "Khamseen",
+    "lw": "خَمْسُونْ",
+    "lt": "Khamsoon",
+    "ta": "ஐம்பது"
+   },
+   {
+    "n": "60",
+    "ar": "سِتِّينْ",
+    "t": "Sitteen",
+    "lw": "سِتُّونْ",
+    "lt": "Sittoon",
+    "ta": "அறுபது"
+   },
+   {
+    "n": "70",
+    "ar": "سَبْعِينْ",
+    "t": "Sab'een",
+    "lw": "سَبْعُونْ",
+    "lt": "Sab'oon",
+    "ta": "எழுபது"
+   },
+   {
+    "n": "80",
+    "ar": "ثَمَانِينْ",
+    "t": "Thamaneen",
+    "lw": "ثَمَانُونْ",
+    "lt": "Thamanoon",
+    "ta": "எண்பது"
+   },
+   {
+    "n": "90",
+    "ar": "تِسْعِينْ",
+    "t": "Tis'een",
+    "lw": "تِسْعُونْ",
+    "lt": "Tis'oon",
+    "ta": "தொண்ணூறு"
+   },
+   {
+    "n": "100",
+    "ar": "مِيَّة",
+    "t": "Miyya",
+    "lw": "مِئَة",
+    "lt": "Mi'a",
+    "ta": "நூறு"
+   },
+   {
+    "n": "200",
+    "ar": "مِيتَيْنْ",
+    "t": "Mitain",
+    "lw": "مِئَتَيْنْ",
+    "lt": "Mi'atain",
+    "ta": "இருநூறு"
+   },
+   {
+    "n": "300",
+    "ar": "ثَلَاثْ مِيَّة",
+    "t": "Thalath miyya",
+    "ta": "முன்னூறு"
+   },
+   {
+    "n": "400",
+    "ar": "أَرْبَعْ مِيَّة",
+    "t": "Arba' miyya",
+    "ta": "நானூறு"
+   },
+   {
+    "n": "500",
+    "ar": "خَمْسْ مِيَّة",
+    "t": "Khams miyya",
+    "ta": "ஐநூறு"
+   },
+   {
+    "n": "600",
+    "ar": "سِتّْ مِيَّة",
+    "t": "Sitt miyya",
+    "ta": "அறுநூறு"
+   },
+   {
+    "n": "700",
+    "ar": "سَبْعْ مِيَّة",
+    "t": "Sab' miyya",
+    "ta": "எழுநூறு"
+   },
+   {
+    "n": "800",
+    "ar": "ثَمَانْ مِيَّة",
+    "t": "Thaman miyya",
+    "ta": "எண்ணூறு"
+   },
+   {
+    "n": "900",
+    "ar": "تِسْعْ مِيَّة",
+    "t": "Tis' miyya",
+    "ta": "தொள்ளாயிரம்"
+   },
+   {
+    "n": "1000",
+    "ar": "أَلْفْ",
+    "t": "Alf",
+    "ta": "ஆயிரம்"
+   },
+   {
+    "n": "2000",
+    "ar": "أَلْفَيْنْ",
+    "t": "Alfain",
+    "ta": "இரண்டாயிரம்"
+   },
+   {
+    "n": "3000",
+    "ar": "ثَلَاثَةْ آلَافْ",
+    "t": "Thalathat alaf",
+    "ta": "மூவாயிரம்"
+   },
+   {
+    "n": "5000",
+    "ar": "خَمْسَةْ آلَافْ",
+    "t": "Khamsat alaf",
+    "ta": "ஐயாயிரம்"
+   },
+   {
+    "n": "10,000",
+    "ar": "عَشَرَةْ آلَافْ",
+    "t": "'Asharat alaf",
+    "ta": "பத்தாயிரம்"
+   },
+   {
+    "n": "100,000",
+    "ar": "مِيَّةْ أَلْفْ",
+    "t": "Miyyat alf",
+    "ta": "ஒரு லட்சம்"
+   },
+   {
+    "n": "1,000,000",
+    "ar": "مِلْيُونْ",
+    "t": "Milyoon",
+    "ta": "பத்து லட்சம்"
+   }
+  ],
+  "set": "go"
+ },
+ {
+  "id": "ordinals",
+  "group": "Numbers",
+  "title": "First, second, third…",
+  "ar": "الْأَعْدَادْ التَّرْتِيبِيَّة",
+  "ta": "வரிசை எண்கள்",
+  "day": 7,
+  "src": {
+   "file": "day07-numbers.pdf",
+   "pages": "pages 17–19",
+   "p": 17
+  },
+  "note": "Use the feminine form with a feminine word: الْغُرْفَة الْخَامْسَة (the 5th room), الصَّفّْ السَّابِعْ (the 7th class).",
+  "cols": [
+   {
+    "k": "n",
+    "label": "#",
+    "type": "txt"
+   },
+   {
+    "k": "m",
+    "label": "Masculine",
+    "type": "ar",
+    "t": "mt"
+   },
+   {
+    "k": "f",
+    "label": "Feminine",
+    "type": "ar",
+    "t": "ft"
+   },
+   {
+    "k": "ta",
+    "label": "Tamil",
+    "type": "ta",
+    "under": "m"
+   }
+  ],
+  "rows": [
+   {
+    "n": "1st",
+    "m": "الْأَوَّلْ",
+    "mt": "Al-awwal",
+    "f": "الْأُولَى",
+    "ft": "Al-oola",
+    "ta": "முதலாவது"
+   },
+   {
+    "n": "2nd",
+    "m": "الثَّانِي",
+    "mt": "Ath-thani",
+    "f": "الثَّانْيَة",
+    "ft": "Ath-thanya",
+    "ta": "இரண்டாவது"
+   },
+   {
+    "n": "3rd",
+    "m": "الثَّالِثْ",
+    "mt": "Ath-thalith",
+    "f": "الثَّالْثَة",
+    "ft": "Ath-thaltha",
+    "ta": "மூன்றாவது"
+   },
+   {
+    "n": "4th",
+    "m": "الرَّابِعْ",
+    "mt": "Ar-rabi'",
+    "f": "الرَّابْعَة",
+    "ft": "Ar-rab'a",
+    "ta": "நான்காவது"
+   },
+   {
+    "n": "5th",
+    "m": "الْخَامِسْ",
+    "mt": "Al-khamis",
+    "f": "الْخَامْسَة",
+    "ft": "Al-khamsa",
+    "ta": "ஐந்தாவது"
+   },
+   {
+    "n": "6th",
+    "m": "السَّادِسْ",
+    "mt": "As-sadis",
+    "f": "السَّادْسَة",
+    "ft": "As-sadsa",
+    "ta": "ஆறாவது"
+   },
+   {
+    "n": "7th",
+    "m": "السَّابِعْ",
+    "mt": "As-sabi'",
+    "f": "السَّابْعَة",
+    "ft": "As-sab'a",
+    "ta": "ஏழாவது"
+   },
+   {
+    "n": "8th",
+    "m": "الثَّامِنْ",
+    "mt": "Ath-thamin",
+    "f": "الثَّامْنَة",
+    "ft": "Ath-thamna",
+    "ta": "எட்டாவது"
+   },
+   {
+    "n": "9th",
+    "m": "التَّاسِعْ",
+    "mt": "At-tasi'",
+    "f": "التَّاسْعَة",
+    "ft": "At-tas'a",
+    "ta": "ஒன்பதாவது"
+   },
+   {
+    "n": "10th",
+    "m": "الْعَاشِرْ",
+    "mt": "Al-'ashir",
+    "f": "الْعَاشْرَة",
+    "ft": "Al-'ashra",
+    "ta": "பத்தாவது"
+   },
+   {
+    "n": "11th",
+    "m": "الْحَادِي عَشَرْ",
+    "mt": "Al-hadi 'ashar",
+    "f": "الْحَادْيَة عَشْرَة",
+    "ft": "Al-hadya 'ashra",
+    "ta": "பதினொன்றாவது"
+   },
+   {
+    "n": "12th",
+    "m": "الثَّانِي عَشَرْ",
+    "mt": "Ath-thani 'ashar",
+    "f": "الثَّانْيَة عَشْرَة",
+    "ft": "Ath-thanya 'ashra",
+    "ta": "பன்னிரண்டாவது"
+   },
+   {
+    "n": "20th",
+    "m": "الْعِشْرِينْ",
+    "mt": "Al-'ishreen",
+    "f": "الْعِشْرِينْ",
+    "ft": "Al-'ishreen",
+    "ta": "இருபதாவது"
+   },
+   {
+    "n": "21st",
+    "m": "الْحَادِي وَالْعِشْرِينْ",
+    "mt": "Al-hadi wal-'ishreen",
+    "f": "الْحَادْيَة وَالْعِشْرِينْ",
+    "ft": "Al-hadya wal-'ishreen",
+    "ta": "இருபத்தொன்றாவது"
+   }
+  ],
+  "set": "go"
+ },
+ {
+  "id": "weekdays",
+  "group": "Days & time",
+  "title": "Days of the week",
+  "ar": "أَيَّامْ الْأُسْبُوعْ",
+  "ta": "வாரத்தின் நாட்கள்",
+  "day": 6,
+  "src": {
+   "file": "day06-days-and-time.pdf",
+   "pages": "page 2",
+   "p": 2
+  },
+  "note": "Put يُومْ (day) in front: عِنْدَنَا اجْتِمَاعْ يُومِ السَّبْتْ (We have a meeting on Saturday).",
+  "cols": [
+   {
+    "k": "en",
+    "label": "English",
+    "type": "txt"
+   },
+   {
+    "k": "ar",
+    "label": "Arabic",
+    "type": "ar",
+    "t": "t"
+   },
+   {
+    "k": "ta",
+    "label": "Tamil",
+    "type": "ta",
+    "under": "en"
+   }
+  ],
+  "rows": [
+   {
+    "en": "Sunday",
+    "ar": "الْأَحَدْ",
+    "t": "Al-ahad",
+    "ta": "ஞாயிற்றுக்கிழமை"
+   },
+   {
+    "en": "Monday",
+    "ar": "الْإِثْنَيْنْ",
+    "t": "Al-ithnain",
+    "ta": "திங்கட்கிழமை"
+   },
+   {
+    "en": "Tuesday",
+    "ar": "الثُّلَاثَاءْ",
+    "t": "Ath-thulatha",
+    "ta": "செவ்வாய்க்கிழமை"
+   },
+   {
+    "en": "Wednesday",
+    "ar": "الْأَرْبِعَاءْ",
+    "t": "Al-arbi'a",
+    "ta": "புதன்கிழமை"
+   },
+   {
+    "en": "Thursday",
+    "ar": "الْخَمِيسْ",
+    "t": "Al-khamees",
+    "ta": "வியாழக்கிழமை"
+   },
+   {
+    "en": "Friday",
+    "ar": "الْجُمْعَة",
+    "t": "Al-jum'a",
+    "ta": "வெள்ளிக்கிழமை"
+   },
+   {
+    "en": "Saturday",
+    "ar": "السَّبْتْ",
+    "t": "As-sabt",
+    "ta": "சனிக்கிழமை"
+   }
+  ],
+  "set": "go"
+ },
+ {
+  "id": "timewords",
+  "group": "Days & time",
+  "title": "Time words",
+  "ar": "كَلِمَاتْ الْوَقْتْ",
+  "ta": "நேரச் சொற்கள்",
+  "day": 6,
+  "src": {
+   "file": "day06-days-and-time.pdf",
+   "pages": "pages 4, 5 & 9",
+   "p": 4
+  },
+  "note": "Gulf words come first; the second word in a pair is the one the slide also gives.",
+  "cols": [
+   {
+    "k": "en",
+    "label": "English",
+    "type": "txt"
+   },
+   {
+    "k": "ar",
+    "label": "Arabic",
+    "type": "ar",
+    "t": "t"
+   },
+   {
+    "k": "ta",
+    "label": "Tamil",
+    "type": "ta",
+    "under": "en"
+   }
+  ],
+  "rows": [
+   {
+    "en": "Minute",
+    "ar": "دَقِيقَة",
+    "t": "Dagiga",
+    "ta": "நிமிடம்"
+   },
+   {
+    "en": "Hour",
+    "ar": "سَاعَة",
+    "t": "Sa'a",
+    "ta": "மணி நேரம்"
+   },
+   {
+    "en": "Today",
+    "ar": "الْيُومْ",
+    "t": "Al-yoom",
+    "ta": "இன்று"
+   },
+   {
+    "en": "Tomorrow",
+    "ar": "[r:بَاچِرْ|بُكْرَة]",
+    "t": "[r:Bachir|Bukra]",
+    "ta": "நாளை"
+   },
+   {
+    "en": "Yesterday",
+    "ar": "[r:الْبَارْحَة|أَمْسْ]",
+    "t": "[r:Al-barha|Ams]",
+    "ta": "நேற்று"
+   },
+   {
+    "en": "Day after tomorrow",
+    "ar": "بَعْدْ [r:بَاچِرْ|بُكْرَة]",
+    "t": "Ba'ad [r:bachir|bukra]",
+    "ta": "நாளை மறுநாள்"
+   },
+   {
+    "en": "Week",
+    "ar": "الْأُسْبُوعْ",
+    "t": "Al-usboo'",
+    "ta": "வாரம்"
+   },
+   {
+    "en": "Month",
+    "ar": "الشَّهَرْ",
+    "t": "Ash-shahar",
+    "ta": "மாதம்"
+   },
+   {
+    "en": "Year",
+    "ar": "[r:السَّنَة|الْعَامْ]",
+    "t": "[r:As-sana|Al-'aam]",
+    "ta": "வருடம்"
+   },
+   {
+    "en": "After",
+    "ar": "[r:عُقُبْ|بَعْدْ]",
+    "t": "[r:'Ugub|Ba'ad]",
+    "ta": "பின்"
+   },
+   {
+    "en": "Before (a month ago)",
+    "ar": "قَبْلْ (قَبْلْ شَهَرْ)",
+    "t": "Gabl (gabl shahar)",
+    "ta": "முன் (ஒரு மாதத்திற்கு முன்)"
+   },
+   {
+    "en": "Every day",
+    "ar": "كِلّْ يُومْ",
+    "t": "Kill yoom",
+    "ta": "ஒவ்வொரு நாளும்"
+   },
+   {
+    "en": "Within",
+    "ar": "خِلَالْ",
+    "t": "Khilal",
+    "ta": "இடைப்பட்ட நேரத்திற்குள்"
+   },
+   {
+    "en": "Next / coming",
+    "ar": "[r:الْيَايْ|الْقَادِمْ]",
+    "t": "[r:Al-yai|Al-gadim]",
+    "ta": "அடுத்த"
+   },
+   {
+    "en": "Next month",
+    "ar": "الشَّهَرْ [r:الْيَايْ|الْقَادِمْ]",
+    "t": "Ash-shahar [r:al-yai|al-gadim]",
+    "ta": "அடுத்த மாதம்"
+   },
+   {
+    "en": "Last / previous",
+    "ar": "الْمَاضِي",
+    "t": "Al-madhi",
+    "ta": "சென்ற"
+   },
+   {
+    "en": "Dawn",
+    "ar": "الْفَجْرْ",
+    "t": "Al-fajr",
+    "ta": "அதிகாலை"
+   },
+   {
+    "en": "Morning",
+    "ar": "الصَّبَاحْ",
+    "t": "As-sabah",
+    "ta": "காலை"
+   },
+   {
+    "en": "Afternoon",
+    "ar": "بَعْدِ الظُّهُرْ",
+    "t": "Ba'd adh-dhuhur",
+    "ta": "மதியம்"
+   },
+   {
+    "en": "Evening",
+    "ar": "الْمَسَاءْ",
+    "t": "Al-masa",
+    "ta": "மாலை"
+   },
+   {
+    "en": "Night",
+    "ar": "اللَّيْلْ",
+    "t": "Al-lail",
+    "ta": "இரவு"
+   }
+  ],
+  "set": "go"
+ },
+ {
+  "id": "clock",
+  "group": "Days & time",
+  "title": "The hours (what time is it?)",
+  "ar": "السَّاعَة كَمْ؟",
+  "ta": "மணி என்ன?",
+  "day": 6,
+  "src": {
+   "file": "day06-days-and-time.pdf",
+   "pages": "pages 10–11",
+   "p": 10
+  },
+  "note": "Spoken Gulf just says السَّاعَة + the number. The slide uses the formal feminine ordinal (السَّاعَة الْوَاحِدَة).",
+  "cols": [
+   {
+    "k": "n",
+    "label": "Time",
+    "type": "txt"
+   },
+   {
+    "k": "ar",
+    "label": "Gulf",
+    "type": "ar",
+    "t": "t"
+   },
+   {
+    "k": "lw",
+    "label": "Lesson word (formal)",
+    "type": "ar",
+    "t": "lt"
+   }
+  ],
+  "rows": [
+   {
+    "n": "1:00",
+    "ar": "السَّاعَة وَحْدَة",
+    "t": "As-sa'a wahda",
+    "lw": "السَّاعَة الْوَاحِدَة",
+    "lt": "As-sa'a al-wahida"
+   },
+   {
+    "n": "2:00",
+    "ar": "السَّاعَة ثِنْتَيْنْ",
+    "t": "As-sa'a thintain",
+    "lw": "السَّاعَة الثَّانْيَة",
+    "lt": "As-sa'a ath-thanya"
+   },
+   {
+    "n": "3:00",
+    "ar": "السَّاعَة ثَلَاثَة",
+    "t": "As-sa'a thalatha",
+    "lw": "السَّاعَة الثَّالْثَة",
+    "lt": "As-sa'a ath-thaltha"
+   },
+   {
+    "n": "4:00",
+    "ar": "السَّاعَة أَرْبَعَة",
+    "t": "As-sa'a arba'a",
+    "lw": "السَّاعَة الرَّابْعَة",
+    "lt": "As-sa'a ar-rab'a"
+   },
+   {
+    "n": "5:00",
+    "ar": "السَّاعَة خَمْسَة",
+    "t": "As-sa'a khamsa",
+    "lw": "السَّاعَة الْخَامْسَة",
+    "lt": "As-sa'a al-khamsa"
+   },
+   {
+    "n": "6:00",
+    "ar": "السَّاعَة سِتَّة",
+    "t": "As-sa'a sitta",
+    "lw": "السَّاعَة السَّادْسَة",
+    "lt": "As-sa'a as-sadsa"
+   },
+   {
+    "n": "7:00",
+    "ar": "السَّاعَة سَبْعَة",
+    "t": "As-sa'a sab'a",
+    "lw": "السَّاعَة السَّابْعَة",
+    "lt": "As-sa'a as-sab'a"
+   },
+   {
+    "n": "8:00",
+    "ar": "السَّاعَة ثَمَانْيَة",
+    "t": "As-sa'a thamanya",
+    "lw": "السَّاعَة الثَّامْنَة",
+    "lt": "As-sa'a ath-thamna"
+   },
+   {
+    "n": "9:00",
+    "ar": "السَّاعَة تِسْعَة",
+    "t": "As-sa'a tis'a",
+    "lw": "السَّاعَة التَّاسْعَة",
+    "lt": "As-sa'a at-tas'a"
+   },
+   {
+    "n": "10:00",
+    "ar": "السَّاعَة عَشْرَة",
+    "t": "As-sa'a 'ashra",
+    "lw": "السَّاعَة الْعَاشْرَة",
+    "lt": "As-sa'a al-'ashra"
+   },
+   {
+    "n": "11:00",
+    "ar": "السَّاعَة إِحْدَعَشْ",
+    "t": "As-sa'a ihda'ash",
+    "lw": "السَّاعَة الْحَادْيَة عَشْرَة",
+    "lt": "As-sa'a al-hadya 'ashra"
+   },
+   {
+    "n": "12:00",
+    "ar": "السَّاعَة ثْنَعَشْ",
+    "t": "As-sa'a thna'ash",
+    "lw": "السَّاعَة الثَّانْيَة عَشْرَة",
+    "lt": "As-sa'a ath-thanya 'ashra"
+   }
+  ],
+  "set": "go"
+ },
+ {
+  "id": "minutes",
+  "group": "Days & time",
+  "title": "Minutes: past & to",
+  "ar": "وْ · إِلَّا",
+  "ta": "கடந்து · இருக்க",
+  "day": 6,
+  "src": {
+   "file": "day06-days-and-time.pdf",
+   "pages": "pages 12–15",
+   "p": 12
+  },
+  "note": "وْ (and) = past the hour. إِلَّا (except) = to the next hour.",
+  "cols": [
+   {
+    "k": "en",
+    "label": "Meaning",
+    "type": "txt"
+   },
+   {
+    "k": "ar",
+    "label": "Say",
+    "type": "ar",
+    "t": "t"
+   },
+   {
+    "k": "ex",
+    "label": "Example",
+    "type": "ar",
+    "t": "ext"
+   },
+   {
+    "k": "n",
+    "label": "Time",
+    "type": "txt",
+    "under": "en"
+   }
+  ],
+  "rows": [
+   {
+    "en": "Exactly",
+    "ar": "[r:بِالضَّبْطْ|تَمَامْ]",
+    "t": "[r:Bidh-dhabt|Tamam]",
+    "ex": "السَّاعَة ثِنْتَيْنْ بِالضَّبْطْ",
+    "ext": "As-sa'a thintain bidh-dhabt",
+    "n": "2:00"
+   },
+   {
+    "en": "Five past",
+    "ar": "وْخَمْسْ دَقَايِقْ",
+    "t": "W khams dagayig",
+    "ex": "السَّاعَة ثِنْتَيْنْ وْخَمْسْ دَقَايِقْ",
+    "ext": "As-sa'a thintain w khams dagayig",
+    "n": "2:05"
+   },
+   {
+    "en": "Ten past",
+    "ar": "وْعَشْرْ دَقَايِقْ",
+    "t": "W 'ashr dagayig",
+    "ex": "السَّاعَة ثِنْتَيْنْ وْعَشْرْ دَقَايِقْ",
+    "ext": "As-sa'a thintain w 'ashr dagayig",
+    "n": "2:10"
+   },
+   {
+    "en": "Quarter past",
+    "ar": "وْرُبُعْ",
+    "t": "W rubu'",
+    "ex": "السَّاعَة ثِنْتَيْنْ وْرُبُعْ",
+    "ext": "As-sa'a thintain w rubu'",
+    "n": "2:15"
+   },
+   {
+    "en": "Twenty past (a third)",
+    "ar": "وْثُلُثْ",
+    "t": "W thulth",
+    "ex": "السَّاعَة ثِنْتَيْنْ وْثُلُثْ",
+    "ext": "As-sa'a thintain w thulth",
+    "n": "2:20"
+   },
+   {
+    "en": "Half past",
+    "ar": "[r:وْنُصّْ|وْنِصْفْ]",
+    "t": "[r:W nuss|W nisf]",
+    "ex": "السَّاعَة ثِنْتَيْنْ وْنُصّْ",
+    "ext": "As-sa'a thintain w nuss",
+    "n": "2:30"
+   },
+   {
+    "en": "Twenty to",
+    "ar": "إِلَّا ثُلُثْ",
+    "t": "Illa thulth",
+    "ex": "السَّاعَة ثَلَاثَة إِلَّا ثُلُثْ",
+    "ext": "As-sa'a thalatha illa thulth",
+    "n": "2:40"
+   },
+   {
+    "en": "Quarter to",
+    "ar": "إِلَّا رُبُعْ",
+    "t": "Illa rubu'",
+    "ex": "السَّاعَة ثَلَاثَة إِلَّا رُبُعْ",
+    "ext": "As-sa'a thalatha illa rubu'",
+    "n": "2:45"
+   },
+   {
+    "en": "Ten to",
+    "ar": "إِلَّا عَشْرْ دَقَايِقْ",
+    "t": "Illa 'ashr dagayig",
+    "ex": "السَّاعَة ثَلَاثَة إِلَّا عَشْرْ دَقَايِقْ",
+    "ext": "As-sa'a thalatha illa 'ashr dagayig",
+    "n": "2:50"
+   },
+   {
+    "en": "Five to",
+    "ar": "إِلَّا خَمْسْ دَقَايِقْ",
+    "t": "Illa khams dagayig",
+    "ex": "السَّاعَة ثَلَاثَة إِلَّا خَمْسْ دَقَايِقْ",
+    "ext": "As-sa'a thalatha illa khams dagayig",
+    "n": "2:55"
+   }
+  ],
+  "set": "go"
+ },
+ {
+  "id": "howareyou",
+  "group": "Greetings",
+  "title": "“How are you?” around the Gulf",
+  "ar": "كَيْفَ حَالَكْ؟",
+  "ta": "நலம் விசாரித்தல்",
+  "day": 3,
+  "src": {
+   "file": "day03-greetings.pdf",
+   "pages": "pages 4–5",
+   "p": 4
+  },
+  "note": "Any of these works in the UAE. Answer with الْحَمْدُ لِلّٰهْ، زِينْ or أَنَا بِخَيْرْ.",
+  "cols": [
+   {
+    "k": "where",
+    "label": "Where",
+    "type": "txt"
+   },
+   {
+    "k": "m",
+    "label": "To a man",
+    "type": "ar",
+    "t": "mt"
+   },
+   {
+    "k": "f",
+    "label": "To a woman",
+    "type": "ar",
+    "t": "ft"
+   }
+  ],
+  "rows": [
+   {
+    "where": "Everywhere",
+    "m": "[r:كَيْفَكْ|كَيْفْ حَالَكْ]؟",
+    "mt": "[r:Kaifak|Kaif halak]",
+    "f": "[r:كَيْفِچْ|كَيْفْ حَالِچْ]؟",
+    "ft": "[r:Kaifach|Kaif halach]"
+   },
+   {
+    "where": "Emirates 🇦🇪",
+    "m": "شُو حَالَكْ؟",
+    "mt": "Shu halak (Shhalak)",
+    "f": "شُو حَالِچْ؟",
+    "ft": "Shu halach (Shhalach)"
+   },
+   {
+    "where": "Kuwait · Qatar · Bahrain",
+    "m": "شْلُونَكْ؟",
+    "mt": "Shlonak",
+    "f": "شْلُونِچْ؟",
+    "ft": "Shlonach"
+   },
+   {
+    "where": "Saudi",
+    "m": "إِيشْ حَالَكْ؟",
+    "mt": "Eish halak",
+    "f": "إِيشْ حَالِچْ؟",
+    "ft": "Eish halach"
+   },
+   {
+    "where": "Reply: I'm fine",
+    "m": "[r:زِينْ|أَنَا بِخَيْرْ]",
+    "mt": "[r:Zain|Ana bikhair]",
+    "f": "[r:زِينَة|أَنَا بِخَيْرْ]",
+    "ft": "[r:Zaina|Ana bikhair]"
+   }
+  ],
+  "set": "go"
+ },
+ {
   "id": "mfp",
-  "group": "Grammar",
+  "group": "Greetings",
   "title": "Man, woman, group: same phrase, three endings",
   "ar": "مُذَكَّرْ · مُؤَنَّثْ · جَمْعْ",
   "ta": "ஆண் · பெண் · பன்மை",
@@ -417,11 +2352,282 @@
     "p": "طَيِّبِينْ",
     "pt": "Tayyibeen"
    }
-  ]
+  ],
+  "set": "go"
+ },
+ {
+  "id": "directions",
+  "group": "Directions",
+  "title": "Direction words",
+  "ar": "الِاتِّجَاهَاتْ",
+  "ta": "திசைச் சொற்கள்",
+  "day": 13,
+  "src": {
+   "file": "day13-directions-prepositions.pdf",
+   "pages": "pages 5–6",
+   "p": 5
+  },
+  "note": "Pairs: the first word is the Gulf one you'll hear most.",
+  "cols": [
+   {
+    "k": "ar",
+    "label": "Word",
+    "type": "ar",
+    "t": "t"
+   },
+   {
+    "k": "en",
+    "label": "English",
+    "type": "txt"
+   },
+   {
+    "k": "ta",
+    "label": "Tamil",
+    "type": "ta",
+    "under": "en"
+   }
+  ],
+  "rows": [
+   {
+    "ar": "وِينْ؟",
+    "t": "Ween?",
+    "en": "Where?",
+    "ta": "எங்கே?"
+   },
+   {
+    "ar": "أَسِيرْ",
+    "t": "Aseer",
+    "en": "I'm going",
+    "ta": "நான் போகிறேன்"
+   },
+   {
+    "ar": "[r:سِيدَا|طَوَّالِي]",
+    "t": "[r:Seeda|Tawwali]",
+    "en": "Straight",
+    "ta": "நேராக"
+   },
+   {
+    "ar": "يَمِينْ",
+    "t": "Yameen",
+    "en": "Right",
+    "ta": "வலது"
+   },
+   {
+    "ar": "يَسَارْ",
+    "t": "Yasar",
+    "en": "Left",
+    "ta": "இடது"
+   },
+   {
+    "ar": "[r:قِدَّامْ|أَمَامْ]",
+    "t": "[r:Giddam|Amam]",
+    "en": "In front",
+    "ta": "முன்னால்"
+   },
+   {
+    "ar": "[r:وَرَا|خَلْفْ]",
+    "t": "[r:Wara|Khalf]",
+    "en": "Behind",
+    "ta": "பின்னால்"
+   },
+   {
+    "ar": "فُوقْ",
+    "t": "Foog",
+    "en": "Above / up",
+    "ta": "மேலே"
+   },
+   {
+    "ar": "تَحَتْ",
+    "t": "Tahat",
+    "en": "Under / below",
+    "ta": "கீழே"
+   },
+   {
+    "ar": "[r:بَرَّا|خَارِجْ]",
+    "t": "[r:Barra|Kharij]",
+    "en": "Outside",
+    "ta": "வெளியே"
+   },
+   {
+    "ar": "دَاخِلْ",
+    "t": "Dakhil",
+    "en": "Inside",
+    "ta": "உள்ளே"
+   },
+   {
+    "ar": "قَرِيبْ / قَرِيبَة",
+    "t": "Gareeb / Gareeba",
+    "en": "Near (m / f)",
+    "ta": "அருகில்"
+   },
+   {
+    "ar": "بَعِيدْ / بَعِيدَة",
+    "t": "Ba'eed / Ba'eeda",
+    "en": "Far (m / f)",
+    "ta": "தூரம்"
+   },
+   {
+    "ar": "مُقَابِلْ",
+    "t": "Mugabil",
+    "en": "Opposite",
+    "ta": "எதிரே"
+   },
+   {
+    "ar": "قَبْلْ",
+    "t": "Gabl",
+    "en": "Before",
+    "ta": "முன்"
+   },
+   {
+    "ar": "[r:عُقُبْ|بَعْدْ]",
+    "t": "[r:'Ugub|Ba'ad]",
+    "en": "After",
+    "ta": "பின்"
+   },
+   {
+    "ar": "الْحِينْ",
+    "t": "Al-heen",
+    "en": "Now",
+    "ta": "இப்போது"
+   },
+   {
+    "ar": "بَعْدَيْنْ",
+    "t": "Ba'dain",
+    "en": "Later",
+    "ta": "பிறகு"
+   },
+   {
+    "ar": "وَايِدْ",
+    "t": "Wayid",
+    "en": "Very / a lot",
+    "ta": "மிகவும்"
+   }
+  ],
+  "set": "go"
+ },
+ {
+  "id": "prepositions",
+  "group": "Directions",
+  "title": "Little linking words (prepositions)",
+  "ar": "حُرُوفْ الْجَرّْ",
+  "ta": "முன்னிடைச்சொற்கள்",
+  "day": 13,
+  "src": {
+   "file": "day13-directions-prepositions.pdf",
+   "pages": "page 2",
+   "p": 2
+  },
+  "cols": [
+   {
+    "k": "ar",
+    "label": "Word",
+    "type": "ar",
+    "t": "t"
+   },
+   {
+    "k": "en",
+    "label": "English",
+    "type": "txt"
+   },
+   {
+    "k": "ta",
+    "label": "Tamil",
+    "type": "ta",
+    "under": "en"
+   },
+   {
+    "k": "ex",
+    "label": "Example",
+    "type": "ar",
+    "t": "ext"
+   },
+   {
+    "k": "exen",
+    "label": "Meaning",
+    "type": "txt",
+    "under": "ex"
+   }
+  ],
+  "rows": [
+   {
+    "ar": "مِنْ",
+    "t": "Min",
+    "en": "From",
+    "ta": "இருந்து",
+    "ex": "مِنْ تَامِلْ نَادُو",
+    "ext": "Min Tamil Nadu",
+    "exen": "From Tamil Nadu"
+   },
+   {
+    "ar": "إِلَى",
+    "t": "Ila",
+    "en": "To",
+    "ta": "க்கு",
+    "ex": "إِلَى الْمَطَارْ",
+    "ext": "Ilal-matar",
+    "exen": "To the airport"
+   },
+   {
+    "ar": "عَنْ",
+    "t": "'An",
+    "en": "About",
+    "ta": "பற்றி",
+    "ex": "عَنِ الشَّرِكَة",
+    "ext": "'Anish-sharika",
+    "exen": "About the company"
+   },
+   {
+    "ar": "[r:لِينْ|حَتَّى]",
+    "t": "[r:Leen|Hatta]",
+    "en": "Until",
+    "ta": "வரை",
+    "ex": "[r:لِينْ|حَتَّى] الصَّبَاحْ",
+    "ext": "[r:Leen|Hatta] as-sabah",
+    "exen": "Until the morning",
+    "gulf": "لِينْ is spoken Gulf; the slide uses حَتَّى."
+   },
+   {
+    "ar": "فِي",
+    "t": "Fi",
+    "en": "In",
+    "ta": "உள்ளே / இல்",
+    "ex": "أَنَا فِي الشُّغُلْ",
+    "ext": "Ana fish-shughul",
+    "exen": "I am at work"
+   },
+   {
+    "ar": "عَلَى",
+    "t": "'Ala",
+    "en": "On",
+    "ta": "மேலே",
+    "ex": "عَلَى الطَّاوْلَة",
+    "ext": "'Alat-tawla",
+    "exen": "On the table"
+   },
+   {
+    "ar": "بَيْنْ",
+    "t": "Bain",
+    "en": "Between",
+    "ta": "இடையில்",
+    "ex": "بَيْنِ الْمِلَفَّاتْ",
+    "ext": "Bainal-milaffat",
+    "exen": "Between the files"
+   },
+   {
+    "ar": "خِلَالْ",
+    "t": "Khilal",
+    "en": "Within / during",
+    "ta": "இடைப்பட்ட நேரத்திற்குள்",
+    "ex": "خِلَالْ أُسْبُوعْ",
+    "ext": "Khilal usboo'",
+    "exen": "Within a week"
+   }
+  ],
+  "set": "go"
  },
  {
   "id": "plurals",
-  "group": "Grammar",
+  "group": "Words",
   "title": "One, two, many (broken plurals)",
   "ar": "جَمْعْ التَّكْسِيرْ",
   "ta": "ஒருமை, இருமை, பன்மை",
@@ -764,1373 +2970,7 @@
     "p": "جِبَالْ",
     "pt": "Jibal"
    }
-  ]
- },
- {
-  "id": "howareyou",
-  "group": "Greetings",
-  "title": "“How are you?” around the Gulf",
-  "ar": "كَيْفَ حَالَكْ؟",
-  "ta": "நலம் விசாரித்தல்",
-  "day": 3,
-  "src": {
-   "file": "day03-greetings.pdf",
-   "pages": "pages 4–5",
-   "p": 4
-  },
-  "note": "Any of these works in the UAE. Answer with الْحَمْدُ لِلّٰهْ، زِينْ or أَنَا بِخَيْرْ.",
-  "cols": [
-   {
-    "k": "where",
-    "label": "Where",
-    "type": "txt"
-   },
-   {
-    "k": "m",
-    "label": "To a man",
-    "type": "ar",
-    "t": "mt"
-   },
-   {
-    "k": "f",
-    "label": "To a woman",
-    "type": "ar",
-    "t": "ft"
-   }
   ],
-  "rows": [
-   {
-    "where": "Everywhere",
-    "m": "[r:كَيْفَكْ|كَيْفْ حَالَكْ]؟",
-    "mt": "[r:Kaifak|Kaif halak]",
-    "f": "[r:كَيْفِچْ|كَيْفْ حَالِچْ]؟",
-    "ft": "[r:Kaifach|Kaif halach]"
-   },
-   {
-    "where": "Emirates 🇦🇪",
-    "m": "شُو حَالَكْ؟",
-    "mt": "Shu halak (Shhalak)",
-    "f": "شُو حَالِچْ؟",
-    "ft": "Shu halach (Shhalach)"
-   },
-   {
-    "where": "Kuwait · Qatar · Bahrain",
-    "m": "شْلُونَكْ؟",
-    "mt": "Shlonak",
-    "f": "شْلُونِچْ؟",
-    "ft": "Shlonach"
-   },
-   {
-    "where": "Saudi",
-    "m": "إِيشْ حَالَكْ؟",
-    "mt": "Eish halak",
-    "f": "إِيشْ حَالِچْ؟",
-    "ft": "Eish halach"
-   },
-   {
-    "where": "Reply: I'm fine",
-    "m": "[r:زِينْ|أَنَا بِخَيْرْ]",
-    "mt": "[r:Zain|Ana bikhair]",
-    "f": "[r:زِينَة|أَنَا بِخَيْرْ]",
-    "ft": "[r:Zaina|Ana bikhair]"
-   }
-  ]
- },
- {
-  "id": "num-1-20",
-  "group": "Numbers",
-  "title": "Numbers 0–20",
-  "ar": "الْأَرْقَامْ",
-  "ta": "எண்கள் 0–20",
-  "day": 7,
-  "src": {
-   "file": "day07-numbers.pdf",
-   "pages": "pages 2 & 5",
-   "p": 2
-  },
-  "note": "3 to 10 take a plural noun: عِنْدِي أَرْبَعَة كُتُبْ (I have 4 books). 11 and up take a singular noun: تِسْعْطَعَشْ قَلَمْ (19 pens).",
-  "cols": [
-   {
-    "k": "n",
-    "label": "#",
-    "type": "txt"
-   },
-   {
-    "k": "ar",
-    "label": "Gulf",
-    "type": "ar",
-    "t": "t"
-   },
-   {
-    "k": "lw",
-    "label": "Lesson word (formal)",
-    "type": "ar",
-    "t": "lt"
-   },
-   {
-    "k": "ta",
-    "label": "Tamil",
-    "type": "ta",
-    "under": "ar"
-   }
-  ],
-  "rows": [
-   {
-    "n": "0",
-    "ar": "صِفْرْ",
-    "t": "Sifr",
-    "ta": "பூஜ்ஜியம்"
-   },
-   {
-    "n": "1",
-    "ar": "وَاحِدْ",
-    "t": "Wahid",
-    "ta": "ஒன்று"
-   },
-   {
-    "n": "2",
-    "ar": "ثْنَيْنْ",
-    "t": "Thnain",
-    "lw": "اثْنَانْ",
-    "lt": "Ithnan",
-    "ta": "இரண்டு"
-   },
-   {
-    "n": "3",
-    "ar": "ثَلَاثَة",
-    "t": "Thalatha",
-    "ta": "மூன்று"
-   },
-   {
-    "n": "4",
-    "ar": "أَرْبَعَة",
-    "t": "Arba'a",
-    "ta": "நான்கு"
-   },
-   {
-    "n": "5",
-    "ar": "خَمْسَة",
-    "t": "Khamsa",
-    "ta": "ஐந்து"
-   },
-   {
-    "n": "6",
-    "ar": "سِتَّة",
-    "t": "Sitta",
-    "ta": "ஆறு"
-   },
-   {
-    "n": "7",
-    "ar": "سَبْعَة",
-    "t": "Sab'a",
-    "ta": "ஏழு"
-   },
-   {
-    "n": "8",
-    "ar": "ثَمَانْيَة",
-    "t": "Thamanya",
-    "ta": "எட்டு"
-   },
-   {
-    "n": "9",
-    "ar": "تِسْعَة",
-    "t": "Tis'a",
-    "ta": "ஒன்பது"
-   },
-   {
-    "n": "10",
-    "ar": "عَشْرَة",
-    "t": "'Ashra",
-    "ta": "பத்து"
-   },
-   {
-    "n": "11",
-    "ar": "إِحْدَعَشْ",
-    "t": "Ihda'ash",
-    "lw": "إِحْدَى عَشَرْ",
-    "lt": "Ihda 'ashar",
-    "ta": "பதினொன்று"
-   },
-   {
-    "n": "12",
-    "ar": "ثْنَعَشْ",
-    "t": "Thna'ash",
-    "lw": "اثْنَا عَشَرْ",
-    "lt": "Ithna 'ashar",
-    "ta": "பன்னிரண்டு"
-   },
-   {
-    "n": "13",
-    "ar": "ثَلَاثْطَعَشْ",
-    "t": "Thalatta'ash",
-    "lw": "ثَلَاثَةَ عَشَرْ",
-    "lt": "Thalathat 'ashar",
-    "ta": "பதிமூன்று"
-   },
-   {
-    "n": "14",
-    "ar": "أَرْبَعْطَعَشْ",
-    "t": "Arba'ta'ash",
-    "lw": "أَرْبَعَةَ عَشَرْ",
-    "lt": "Arba'at 'ashar",
-    "ta": "பதினான்கு"
-   },
-   {
-    "n": "15",
-    "ar": "خَمْسْطَعَشْ",
-    "t": "Khamsta'ash",
-    "lw": "خَمْسَةَ عَشَرْ",
-    "lt": "Khamsat 'ashar",
-    "ta": "பதினைந்து"
-   },
-   {
-    "n": "16",
-    "ar": "سِتَّطَعَشْ",
-    "t": "Sitta'ash",
-    "lw": "سِتَّةَ عَشَرْ",
-    "lt": "Sittat 'ashar",
-    "ta": "பதினாறு"
-   },
-   {
-    "n": "17",
-    "ar": "سَبْعْطَعَشْ",
-    "t": "Sab'ta'ash",
-    "lw": "سَبْعَةَ عَشَرْ",
-    "lt": "Sab'at 'ashar",
-    "ta": "பதினேழு"
-   },
-   {
-    "n": "18",
-    "ar": "ثَمَنْطَعَشْ",
-    "t": "Thamanta'ash",
-    "lw": "ثَمَانْيَةَ عَشَرْ",
-    "lt": "Thamaniyat 'ashar",
-    "ta": "பதினெட்டு"
-   },
-   {
-    "n": "19",
-    "ar": "تِسْعْطَعَشْ",
-    "t": "Tis'ta'ash",
-    "lw": "تِسْعَةَ عَشَرْ",
-    "lt": "Tis'at 'ashar",
-    "ta": "பத்தொன்பது"
-   },
-   {
-    "n": "20",
-    "ar": "عِشْرِينْ",
-    "t": "'Ishreen",
-    "lw": "عِشْرُونْ",
-    "lt": "'Ishroon",
-    "ta": "இருபது"
-   }
-  ]
- },
- {
-  "id": "num-big",
-  "group": "Numbers",
-  "title": "Tens, hundreds, thousands",
-  "ar": "الْعَشَرَاتْ وَالْمِيَّاتْ وَالْآلَافْ",
-  "ta": "பத்துகள், நூறுகள், ஆயிரங்கள்",
-  "day": 7,
-  "src": {
-   "file": "day07-numbers.pdf",
-   "pages": "pages 8, 10 & 14",
-   "p": 8
-  },
-  "note": "21–99: say the ones first, then وْ (and), then the tens: 36 = سِتَّة وْثَلَاثِينْ (six and thirty). Over 100, join every part with وْ: 151 = مِيَّة وْوَاحِدْ وْخَمْسِينْ.",
-  "cols": [
-   {
-    "k": "n",
-    "label": "#",
-    "type": "txt"
-   },
-   {
-    "k": "ar",
-    "label": "Gulf",
-    "type": "ar",
-    "t": "t"
-   },
-   {
-    "k": "lw",
-    "label": "Lesson word (formal)",
-    "type": "ar",
-    "t": "lt"
-   },
-   {
-    "k": "ta",
-    "label": "Tamil",
-    "type": "ta",
-    "under": "ar"
-   }
-  ],
-  "rows": [
-   {
-    "n": "20",
-    "ar": "عِشْرِينْ",
-    "t": "'Ishreen",
-    "ta": "இருபது"
-   },
-   {
-    "n": "21",
-    "ar": "وَاحِدْ وْعِشْرِينْ",
-    "t": "Wahid w 'ishreen",
-    "ta": "இருபத்தொன்று"
-   },
-   {
-    "n": "30",
-    "ar": "ثَلَاثِينْ",
-    "t": "Thalatheen",
-    "lw": "ثَلَاثُونْ",
-    "lt": "Thalathoon",
-    "ta": "முப்பது"
-   },
-   {
-    "n": "40",
-    "ar": "أَرْبَعِينْ",
-    "t": "Arba'een",
-    "lw": "أَرْبَعُونْ",
-    "lt": "Arba'oon",
-    "ta": "நாற்பது"
-   },
-   {
-    "n": "50",
-    "ar": "خَمْسِينْ",
-    "t": "Khamseen",
-    "lw": "خَمْسُونْ",
-    "lt": "Khamsoon",
-    "ta": "ஐம்பது"
-   },
-   {
-    "n": "60",
-    "ar": "سِتِّينْ",
-    "t": "Sitteen",
-    "lw": "سِتُّونْ",
-    "lt": "Sittoon",
-    "ta": "அறுபது"
-   },
-   {
-    "n": "70",
-    "ar": "سَبْعِينْ",
-    "t": "Sab'een",
-    "lw": "سَبْعُونْ",
-    "lt": "Sab'oon",
-    "ta": "எழுபது"
-   },
-   {
-    "n": "80",
-    "ar": "ثَمَانِينْ",
-    "t": "Thamaneen",
-    "lw": "ثَمَانُونْ",
-    "lt": "Thamanoon",
-    "ta": "எண்பது"
-   },
-   {
-    "n": "90",
-    "ar": "تِسْعِينْ",
-    "t": "Tis'een",
-    "lw": "تِسْعُونْ",
-    "lt": "Tis'oon",
-    "ta": "தொண்ணூறு"
-   },
-   {
-    "n": "100",
-    "ar": "مِيَّة",
-    "t": "Miyya",
-    "lw": "مِئَة",
-    "lt": "Mi'a",
-    "ta": "நூறு"
-   },
-   {
-    "n": "200",
-    "ar": "مِيتَيْنْ",
-    "t": "Mitain",
-    "lw": "مِئَتَيْنْ",
-    "lt": "Mi'atain",
-    "ta": "இருநூறு"
-   },
-   {
-    "n": "300",
-    "ar": "ثَلَاثْ مِيَّة",
-    "t": "Thalath miyya",
-    "ta": "முன்னூறு"
-   },
-   {
-    "n": "400",
-    "ar": "أَرْبَعْ مِيَّة",
-    "t": "Arba' miyya",
-    "ta": "நானூறு"
-   },
-   {
-    "n": "500",
-    "ar": "خَمْسْ مِيَّة",
-    "t": "Khams miyya",
-    "ta": "ஐநூறு"
-   },
-   {
-    "n": "600",
-    "ar": "سِتّْ مِيَّة",
-    "t": "Sitt miyya",
-    "ta": "அறுநூறு"
-   },
-   {
-    "n": "700",
-    "ar": "سَبْعْ مِيَّة",
-    "t": "Sab' miyya",
-    "ta": "எழுநூறு"
-   },
-   {
-    "n": "800",
-    "ar": "ثَمَانْ مِيَّة",
-    "t": "Thaman miyya",
-    "ta": "எண்ணூறு"
-   },
-   {
-    "n": "900",
-    "ar": "تِسْعْ مِيَّة",
-    "t": "Tis' miyya",
-    "ta": "தொள்ளாயிரம்"
-   },
-   {
-    "n": "1000",
-    "ar": "أَلْفْ",
-    "t": "Alf",
-    "ta": "ஆயிரம்"
-   },
-   {
-    "n": "2000",
-    "ar": "أَلْفَيْنْ",
-    "t": "Alfain",
-    "ta": "இரண்டாயிரம்"
-   },
-   {
-    "n": "3000",
-    "ar": "ثَلَاثَةْ آلَافْ",
-    "t": "Thalathat alaf",
-    "ta": "மூவாயிரம்"
-   },
-   {
-    "n": "5000",
-    "ar": "خَمْسَةْ آلَافْ",
-    "t": "Khamsat alaf",
-    "ta": "ஐயாயிரம்"
-   },
-   {
-    "n": "10,000",
-    "ar": "عَشَرَةْ آلَافْ",
-    "t": "'Asharat alaf",
-    "ta": "பத்தாயிரம்"
-   },
-   {
-    "n": "100,000",
-    "ar": "مِيَّةْ أَلْفْ",
-    "t": "Miyyat alf",
-    "ta": "ஒரு லட்சம்"
-   },
-   {
-    "n": "1,000,000",
-    "ar": "مِلْيُونْ",
-    "t": "Milyoon",
-    "ta": "பத்து லட்சம்"
-   }
-  ]
- },
- {
-  "id": "ordinals",
-  "group": "Numbers",
-  "title": "First, second, third…",
-  "ar": "الْأَعْدَادْ التَّرْتِيبِيَّة",
-  "ta": "வரிசை எண்கள்",
-  "day": 7,
-  "src": {
-   "file": "day07-numbers.pdf",
-   "pages": "pages 17–19",
-   "p": 17
-  },
-  "note": "Use the feminine form with a feminine word: الْغُرْفَة الْخَامْسَة (the 5th room), الصَّفّْ السَّابِعْ (the 7th class).",
-  "cols": [
-   {
-    "k": "n",
-    "label": "#",
-    "type": "txt"
-   },
-   {
-    "k": "m",
-    "label": "Masculine",
-    "type": "ar",
-    "t": "mt"
-   },
-   {
-    "k": "f",
-    "label": "Feminine",
-    "type": "ar",
-    "t": "ft"
-   },
-   {
-    "k": "ta",
-    "label": "Tamil",
-    "type": "ta",
-    "under": "m"
-   }
-  ],
-  "rows": [
-   {
-    "n": "1st",
-    "m": "الْأَوَّلْ",
-    "mt": "Al-awwal",
-    "f": "الْأُولَى",
-    "ft": "Al-oola",
-    "ta": "முதலாவது"
-   },
-   {
-    "n": "2nd",
-    "m": "الثَّانِي",
-    "mt": "Ath-thani",
-    "f": "الثَّانْيَة",
-    "ft": "Ath-thanya",
-    "ta": "இரண்டாவது"
-   },
-   {
-    "n": "3rd",
-    "m": "الثَّالِثْ",
-    "mt": "Ath-thalith",
-    "f": "الثَّالْثَة",
-    "ft": "Ath-thaltha",
-    "ta": "மூன்றாவது"
-   },
-   {
-    "n": "4th",
-    "m": "الرَّابِعْ",
-    "mt": "Ar-rabi'",
-    "f": "الرَّابْعَة",
-    "ft": "Ar-rab'a",
-    "ta": "நான்காவது"
-   },
-   {
-    "n": "5th",
-    "m": "الْخَامِسْ",
-    "mt": "Al-khamis",
-    "f": "الْخَامْسَة",
-    "ft": "Al-khamsa",
-    "ta": "ஐந்தாவது"
-   },
-   {
-    "n": "6th",
-    "m": "السَّادِسْ",
-    "mt": "As-sadis",
-    "f": "السَّادْسَة",
-    "ft": "As-sadsa",
-    "ta": "ஆறாவது"
-   },
-   {
-    "n": "7th",
-    "m": "السَّابِعْ",
-    "mt": "As-sabi'",
-    "f": "السَّابْعَة",
-    "ft": "As-sab'a",
-    "ta": "ஏழாவது"
-   },
-   {
-    "n": "8th",
-    "m": "الثَّامِنْ",
-    "mt": "Ath-thamin",
-    "f": "الثَّامْنَة",
-    "ft": "Ath-thamna",
-    "ta": "எட்டாவது"
-   },
-   {
-    "n": "9th",
-    "m": "التَّاسِعْ",
-    "mt": "At-tasi'",
-    "f": "التَّاسْعَة",
-    "ft": "At-tas'a",
-    "ta": "ஒன்பதாவது"
-   },
-   {
-    "n": "10th",
-    "m": "الْعَاشِرْ",
-    "mt": "Al-'ashir",
-    "f": "الْعَاشْرَة",
-    "ft": "Al-'ashra",
-    "ta": "பத்தாவது"
-   },
-   {
-    "n": "11th",
-    "m": "الْحَادِي عَشَرْ",
-    "mt": "Al-hadi 'ashar",
-    "f": "الْحَادْيَة عَشْرَة",
-    "ft": "Al-hadya 'ashra",
-    "ta": "பதினொன்றாவது"
-   },
-   {
-    "n": "12th",
-    "m": "الثَّانِي عَشَرْ",
-    "mt": "Ath-thani 'ashar",
-    "f": "الثَّانْيَة عَشْرَة",
-    "ft": "Ath-thanya 'ashra",
-    "ta": "பன்னிரண்டாவது"
-   },
-   {
-    "n": "20th",
-    "m": "الْعِشْرِينْ",
-    "mt": "Al-'ishreen",
-    "f": "الْعِشْرِينْ",
-    "ft": "Al-'ishreen",
-    "ta": "இருபதாவது"
-   },
-   {
-    "n": "21st",
-    "m": "الْحَادِي وَالْعِشْرِينْ",
-    "mt": "Al-hadi wal-'ishreen",
-    "f": "الْحَادْيَة وَالْعِشْرِينْ",
-    "ft": "Al-hadya wal-'ishreen",
-    "ta": "இருபத்தொன்றாவது"
-   }
-  ]
- },
- {
-  "id": "weekdays",
-  "group": "Days & time",
-  "title": "Days of the week",
-  "ar": "أَيَّامْ الْأُسْبُوعْ",
-  "ta": "வாரத்தின் நாட்கள்",
-  "day": 6,
-  "src": {
-   "file": "day06-days-and-time.pdf",
-   "pages": "page 2",
-   "p": 2
-  },
-  "note": "Put يُومْ (day) in front: عِنْدَنَا اجْتِمَاعْ يُومِ السَّبْتْ (We have a meeting on Saturday).",
-  "cols": [
-   {
-    "k": "en",
-    "label": "English",
-    "type": "txt"
-   },
-   {
-    "k": "ar",
-    "label": "Arabic",
-    "type": "ar",
-    "t": "t"
-   },
-   {
-    "k": "ta",
-    "label": "Tamil",
-    "type": "ta",
-    "under": "en"
-   }
-  ],
-  "rows": [
-   {
-    "en": "Sunday",
-    "ar": "الْأَحَدْ",
-    "t": "Al-ahad",
-    "ta": "ஞாயிற்றுக்கிழமை"
-   },
-   {
-    "en": "Monday",
-    "ar": "الْإِثْنَيْنْ",
-    "t": "Al-ithnain",
-    "ta": "திங்கட்கிழமை"
-   },
-   {
-    "en": "Tuesday",
-    "ar": "الثُّلَاثَاءْ",
-    "t": "Ath-thulatha",
-    "ta": "செவ்வாய்க்கிழமை"
-   },
-   {
-    "en": "Wednesday",
-    "ar": "الْأَرْبِعَاءْ",
-    "t": "Al-arbi'a",
-    "ta": "புதன்கிழமை"
-   },
-   {
-    "en": "Thursday",
-    "ar": "الْخَمِيسْ",
-    "t": "Al-khamees",
-    "ta": "வியாழக்கிழமை"
-   },
-   {
-    "en": "Friday",
-    "ar": "الْجُمْعَة",
-    "t": "Al-jum'a",
-    "ta": "வெள்ளிக்கிழமை"
-   },
-   {
-    "en": "Saturday",
-    "ar": "السَّبْتْ",
-    "t": "As-sabt",
-    "ta": "சனிக்கிழமை"
-   }
-  ]
- },
- {
-  "id": "timewords",
-  "group": "Days & time",
-  "title": "Time words",
-  "ar": "كَلِمَاتْ الْوَقْتْ",
-  "ta": "நேரச் சொற்கள்",
-  "day": 6,
-  "src": {
-   "file": "day06-days-and-time.pdf",
-   "pages": "pages 4, 5 & 9",
-   "p": 4
-  },
-  "note": "Gulf words come first; the second word in a pair is the one the slide also gives.",
-  "cols": [
-   {
-    "k": "en",
-    "label": "English",
-    "type": "txt"
-   },
-   {
-    "k": "ar",
-    "label": "Arabic",
-    "type": "ar",
-    "t": "t"
-   },
-   {
-    "k": "ta",
-    "label": "Tamil",
-    "type": "ta",
-    "under": "en"
-   }
-  ],
-  "rows": [
-   {
-    "en": "Minute",
-    "ar": "دَقِيقَة",
-    "t": "Dagiga",
-    "ta": "நிமிடம்"
-   },
-   {
-    "en": "Hour",
-    "ar": "سَاعَة",
-    "t": "Sa'a",
-    "ta": "மணி நேரம்"
-   },
-   {
-    "en": "Today",
-    "ar": "الْيُومْ",
-    "t": "Al-yoom",
-    "ta": "இன்று"
-   },
-   {
-    "en": "Tomorrow",
-    "ar": "[r:بَاچِرْ|بُكْرَة]",
-    "t": "[r:Bachir|Bukra]",
-    "ta": "நாளை"
-   },
-   {
-    "en": "Yesterday",
-    "ar": "[r:الْبَارْحَة|أَمْسْ]",
-    "t": "[r:Al-barha|Ams]",
-    "ta": "நேற்று"
-   },
-   {
-    "en": "Day after tomorrow",
-    "ar": "بَعْدْ [r:بَاچِرْ|بُكْرَة]",
-    "t": "Ba'ad [r:bachir|bukra]",
-    "ta": "நாளை மறுநாள்"
-   },
-   {
-    "en": "Week",
-    "ar": "الْأُسْبُوعْ",
-    "t": "Al-usboo'",
-    "ta": "வாரம்"
-   },
-   {
-    "en": "Month",
-    "ar": "الشَّهَرْ",
-    "t": "Ash-shahar",
-    "ta": "மாதம்"
-   },
-   {
-    "en": "Year",
-    "ar": "[r:السَّنَة|الْعَامْ]",
-    "t": "[r:As-sana|Al-'aam]",
-    "ta": "வருடம்"
-   },
-   {
-    "en": "After",
-    "ar": "[r:عُقُبْ|بَعْدْ]",
-    "t": "[r:'Ugub|Ba'ad]",
-    "ta": "பின்"
-   },
-   {
-    "en": "Before (a month ago)",
-    "ar": "قَبْلْ (قَبْلْ شَهَرْ)",
-    "t": "Gabl (gabl shahar)",
-    "ta": "முன் (ஒரு மாதத்திற்கு முன்)"
-   },
-   {
-    "en": "Every day",
-    "ar": "كِلّْ يُومْ",
-    "t": "Kill yoom",
-    "ta": "ஒவ்வொரு நாளும்"
-   },
-   {
-    "en": "Within",
-    "ar": "خِلَالْ",
-    "t": "Khilal",
-    "ta": "இடைப்பட்ட நேரத்திற்குள்"
-   },
-   {
-    "en": "Next / coming",
-    "ar": "[r:الْيَايْ|الْقَادِمْ]",
-    "t": "[r:Al-yai|Al-gadim]",
-    "ta": "அடுத்த"
-   },
-   {
-    "en": "Next month",
-    "ar": "الشَّهَرْ [r:الْيَايْ|الْقَادِمْ]",
-    "t": "Ash-shahar [r:al-yai|al-gadim]",
-    "ta": "அடுத்த மாதம்"
-   },
-   {
-    "en": "Last / previous",
-    "ar": "الْمَاضِي",
-    "t": "Al-madhi",
-    "ta": "சென்ற"
-   },
-   {
-    "en": "Dawn",
-    "ar": "الْفَجْرْ",
-    "t": "Al-fajr",
-    "ta": "அதிகாலை"
-   },
-   {
-    "en": "Morning",
-    "ar": "الصَّبَاحْ",
-    "t": "As-sabah",
-    "ta": "காலை"
-   },
-   {
-    "en": "Afternoon",
-    "ar": "بَعْدِ الظُّهُرْ",
-    "t": "Ba'd adh-dhuhur",
-    "ta": "மதியம்"
-   },
-   {
-    "en": "Evening",
-    "ar": "الْمَسَاءْ",
-    "t": "Al-masa",
-    "ta": "மாலை"
-   },
-   {
-    "en": "Night",
-    "ar": "اللَّيْلْ",
-    "t": "Al-lail",
-    "ta": "இரவு"
-   }
-  ]
- },
- {
-  "id": "clock",
-  "group": "Days & time",
-  "title": "The hours (what time is it?)",
-  "ar": "السَّاعَة كَمْ؟",
-  "ta": "மணி என்ன?",
-  "day": 6,
-  "src": {
-   "file": "day06-days-and-time.pdf",
-   "pages": "pages 10–11",
-   "p": 10
-  },
-  "note": "Spoken Gulf just says السَّاعَة + the number. The slide uses the formal feminine ordinal (السَّاعَة الْوَاحِدَة).",
-  "cols": [
-   {
-    "k": "n",
-    "label": "Time",
-    "type": "txt"
-   },
-   {
-    "k": "ar",
-    "label": "Gulf",
-    "type": "ar",
-    "t": "t"
-   },
-   {
-    "k": "lw",
-    "label": "Lesson word (formal)",
-    "type": "ar",
-    "t": "lt"
-   }
-  ],
-  "rows": [
-   {
-    "n": "1:00",
-    "ar": "السَّاعَة وَحْدَة",
-    "t": "As-sa'a wahda",
-    "lw": "السَّاعَة الْوَاحِدَة",
-    "lt": "As-sa'a al-wahida"
-   },
-   {
-    "n": "2:00",
-    "ar": "السَّاعَة ثِنْتَيْنْ",
-    "t": "As-sa'a thintain",
-    "lw": "السَّاعَة الثَّانْيَة",
-    "lt": "As-sa'a ath-thanya"
-   },
-   {
-    "n": "3:00",
-    "ar": "السَّاعَة ثَلَاثَة",
-    "t": "As-sa'a thalatha",
-    "lw": "السَّاعَة الثَّالْثَة",
-    "lt": "As-sa'a ath-thaltha"
-   },
-   {
-    "n": "4:00",
-    "ar": "السَّاعَة أَرْبَعَة",
-    "t": "As-sa'a arba'a",
-    "lw": "السَّاعَة الرَّابْعَة",
-    "lt": "As-sa'a ar-rab'a"
-   },
-   {
-    "n": "5:00",
-    "ar": "السَّاعَة خَمْسَة",
-    "t": "As-sa'a khamsa",
-    "lw": "السَّاعَة الْخَامْسَة",
-    "lt": "As-sa'a al-khamsa"
-   },
-   {
-    "n": "6:00",
-    "ar": "السَّاعَة سِتَّة",
-    "t": "As-sa'a sitta",
-    "lw": "السَّاعَة السَّادْسَة",
-    "lt": "As-sa'a as-sadsa"
-   },
-   {
-    "n": "7:00",
-    "ar": "السَّاعَة سَبْعَة",
-    "t": "As-sa'a sab'a",
-    "lw": "السَّاعَة السَّابْعَة",
-    "lt": "As-sa'a as-sab'a"
-   },
-   {
-    "n": "8:00",
-    "ar": "السَّاعَة ثَمَانْيَة",
-    "t": "As-sa'a thamanya",
-    "lw": "السَّاعَة الثَّامْنَة",
-    "lt": "As-sa'a ath-thamna"
-   },
-   {
-    "n": "9:00",
-    "ar": "السَّاعَة تِسْعَة",
-    "t": "As-sa'a tis'a",
-    "lw": "السَّاعَة التَّاسْعَة",
-    "lt": "As-sa'a at-tas'a"
-   },
-   {
-    "n": "10:00",
-    "ar": "السَّاعَة عَشْرَة",
-    "t": "As-sa'a 'ashra",
-    "lw": "السَّاعَة الْعَاشْرَة",
-    "lt": "As-sa'a al-'ashra"
-   },
-   {
-    "n": "11:00",
-    "ar": "السَّاعَة إِحْدَعَشْ",
-    "t": "As-sa'a ihda'ash",
-    "lw": "السَّاعَة الْحَادْيَة عَشْرَة",
-    "lt": "As-sa'a al-hadya 'ashra"
-   },
-   {
-    "n": "12:00",
-    "ar": "السَّاعَة ثْنَعَشْ",
-    "t": "As-sa'a thna'ash",
-    "lw": "السَّاعَة الثَّانْيَة عَشْرَة",
-    "lt": "As-sa'a ath-thanya 'ashra"
-   }
-  ]
- },
- {
-  "id": "minutes",
-  "group": "Days & time",
-  "title": "Minutes: past & to",
-  "ar": "وْ · إِلَّا",
-  "ta": "கடந்து · இருக்க",
-  "day": 6,
-  "src": {
-   "file": "day06-days-and-time.pdf",
-   "pages": "pages 12–15",
-   "p": 12
-  },
-  "note": "وْ (and) = past the hour. إِلَّا (except) = to the next hour.",
-  "cols": [
-   {
-    "k": "en",
-    "label": "Meaning",
-    "type": "txt"
-   },
-   {
-    "k": "ar",
-    "label": "Say",
-    "type": "ar",
-    "t": "t"
-   },
-   {
-    "k": "ex",
-    "label": "Example",
-    "type": "ar",
-    "t": "ext"
-   },
-   {
-    "k": "n",
-    "label": "Time",
-    "type": "txt",
-    "under": "en"
-   }
-  ],
-  "rows": [
-   {
-    "en": "Exactly",
-    "ar": "[r:بِالضَّبْطْ|تَمَامْ]",
-    "t": "[r:Bidh-dhabt|Tamam]",
-    "ex": "السَّاعَة ثِنْتَيْنْ بِالضَّبْطْ",
-    "ext": "As-sa'a thintain bidh-dhabt",
-    "n": "2:00"
-   },
-   {
-    "en": "Five past",
-    "ar": "وْخَمْسْ دَقَايِقْ",
-    "t": "W khams dagayig",
-    "ex": "السَّاعَة ثِنْتَيْنْ وْخَمْسْ دَقَايِقْ",
-    "ext": "As-sa'a thintain w khams dagayig",
-    "n": "2:05"
-   },
-   {
-    "en": "Ten past",
-    "ar": "وْعَشْرْ دَقَايِقْ",
-    "t": "W 'ashr dagayig",
-    "ex": "السَّاعَة ثِنْتَيْنْ وْعَشْرْ دَقَايِقْ",
-    "ext": "As-sa'a thintain w 'ashr dagayig",
-    "n": "2:10"
-   },
-   {
-    "en": "Quarter past",
-    "ar": "وْرُبُعْ",
-    "t": "W rubu'",
-    "ex": "السَّاعَة ثِنْتَيْنْ وْرُبُعْ",
-    "ext": "As-sa'a thintain w rubu'",
-    "n": "2:15"
-   },
-   {
-    "en": "Twenty past (a third)",
-    "ar": "وْثُلُثْ",
-    "t": "W thulth",
-    "ex": "السَّاعَة ثِنْتَيْنْ وْثُلُثْ",
-    "ext": "As-sa'a thintain w thulth",
-    "n": "2:20"
-   },
-   {
-    "en": "Half past",
-    "ar": "[r:وْنُصّْ|وْنِصْفْ]",
-    "t": "[r:W nuss|W nisf]",
-    "ex": "السَّاعَة ثِنْتَيْنْ وْنُصّْ",
-    "ext": "As-sa'a thintain w nuss",
-    "n": "2:30"
-   },
-   {
-    "en": "Twenty to",
-    "ar": "إِلَّا ثُلُثْ",
-    "t": "Illa thulth",
-    "ex": "السَّاعَة ثَلَاثَة إِلَّا ثُلُثْ",
-    "ext": "As-sa'a thalatha illa thulth",
-    "n": "2:40"
-   },
-   {
-    "en": "Quarter to",
-    "ar": "إِلَّا رُبُعْ",
-    "t": "Illa rubu'",
-    "ex": "السَّاعَة ثَلَاثَة إِلَّا رُبُعْ",
-    "ext": "As-sa'a thalatha illa rubu'",
-    "n": "2:45"
-   },
-   {
-    "en": "Ten to",
-    "ar": "إِلَّا عَشْرْ دَقَايِقْ",
-    "t": "Illa 'ashr dagayig",
-    "ex": "السَّاعَة ثَلَاثَة إِلَّا عَشْرْ دَقَايِقْ",
-    "ext": "As-sa'a thalatha illa 'ashr dagayig",
-    "n": "2:50"
-   },
-   {
-    "en": "Five to",
-    "ar": "إِلَّا خَمْسْ دَقَايِقْ",
-    "t": "Illa khams dagayig",
-    "ex": "السَّاعَة ثَلَاثَة إِلَّا خَمْسْ دَقَايِقْ",
-    "ext": "As-sa'a thalatha illa khams dagayig",
-    "n": "2:55"
-   }
-  ]
- },
- {
-  "id": "prepositions",
-  "group": "Directions",
-  "title": "Little linking words (prepositions)",
-  "ar": "حُرُوفْ الْجَرّْ",
-  "ta": "முன்னிடைச்சொற்கள்",
-  "day": 13,
-  "src": {
-   "file": "day13-directions-prepositions.pdf",
-   "pages": "page 2",
-   "p": 2
-  },
-  "cols": [
-   {
-    "k": "ar",
-    "label": "Word",
-    "type": "ar",
-    "t": "t"
-   },
-   {
-    "k": "en",
-    "label": "English",
-    "type": "txt"
-   },
-   {
-    "k": "ta",
-    "label": "Tamil",
-    "type": "ta",
-    "under": "en"
-   },
-   {
-    "k": "ex",
-    "label": "Example",
-    "type": "ar",
-    "t": "ext"
-   },
-   {
-    "k": "exen",
-    "label": "Meaning",
-    "type": "txt",
-    "under": "ex"
-   }
-  ],
-  "rows": [
-   {
-    "ar": "مِنْ",
-    "t": "Min",
-    "en": "From",
-    "ta": "இருந்து",
-    "ex": "مِنْ تَامِلْ نَادُو",
-    "ext": "Min Tamil Nadu",
-    "exen": "From Tamil Nadu"
-   },
-   {
-    "ar": "إِلَى",
-    "t": "Ila",
-    "en": "To",
-    "ta": "க்கு",
-    "ex": "إِلَى الْمَطَارْ",
-    "ext": "Ilal-matar",
-    "exen": "To the airport"
-   },
-   {
-    "ar": "عَنْ",
-    "t": "'An",
-    "en": "About",
-    "ta": "பற்றி",
-    "ex": "عَنِ الشَّرِكَة",
-    "ext": "'Anish-sharika",
-    "exen": "About the company"
-   },
-   {
-    "ar": "[r:لِينْ|حَتَّى]",
-    "t": "[r:Leen|Hatta]",
-    "en": "Until",
-    "ta": "வரை",
-    "ex": "[r:لِينْ|حَتَّى] الصَّبَاحْ",
-    "ext": "[r:Leen|Hatta] as-sabah",
-    "exen": "Until the morning",
-    "gulf": "لِينْ is spoken Gulf; the slide uses حَتَّى."
-   },
-   {
-    "ar": "فِي",
-    "t": "Fi",
-    "en": "In",
-    "ta": "உள்ளே / இல்",
-    "ex": "أَنَا فِي الشُّغُلْ",
-    "ext": "Ana fish-shughul",
-    "exen": "I am at work"
-   },
-   {
-    "ar": "عَلَى",
-    "t": "'Ala",
-    "en": "On",
-    "ta": "மேலே",
-    "ex": "عَلَى الطَّاوْلَة",
-    "ext": "'Alat-tawla",
-    "exen": "On the table"
-   },
-   {
-    "ar": "بَيْنْ",
-    "t": "Bain",
-    "en": "Between",
-    "ta": "இடையில்",
-    "ex": "بَيْنِ الْمِلَفَّاتْ",
-    "ext": "Bainal-milaffat",
-    "exen": "Between the files"
-   },
-   {
-    "ar": "خِلَالْ",
-    "t": "Khilal",
-    "en": "Within / during",
-    "ta": "இடைப்பட்ட நேரத்திற்குள்",
-    "ex": "خِلَالْ أُسْبُوعْ",
-    "ext": "Khilal usboo'",
-    "exen": "Within a week"
-   }
-  ]
- },
- {
-  "id": "directions",
-  "group": "Directions",
-  "title": "Direction words",
-  "ar": "الِاتِّجَاهَاتْ",
-  "ta": "திசைச் சொற்கள்",
-  "day": 13,
-  "src": {
-   "file": "day13-directions-prepositions.pdf",
-   "pages": "pages 5–6",
-   "p": 5
-  },
-  "note": "Pairs: the first word is the Gulf one you'll hear most.",
-  "cols": [
-   {
-    "k": "ar",
-    "label": "Word",
-    "type": "ar",
-    "t": "t"
-   },
-   {
-    "k": "en",
-    "label": "English",
-    "type": "txt"
-   },
-   {
-    "k": "ta",
-    "label": "Tamil",
-    "type": "ta",
-    "under": "en"
-   }
-  ],
-  "rows": [
-   {
-    "ar": "وِينْ؟",
-    "t": "Ween?",
-    "en": "Where?",
-    "ta": "எங்கே?"
-   },
-   {
-    "ar": "أَسِيرْ",
-    "t": "Aseer",
-    "en": "I'm going",
-    "ta": "நான் போகிறேன்"
-   },
-   {
-    "ar": "[r:سِيدَا|طَوَّالِي]",
-    "t": "[r:Seeda|Tawwali]",
-    "en": "Straight",
-    "ta": "நேராக"
-   },
-   {
-    "ar": "يَمِينْ",
-    "t": "Yameen",
-    "en": "Right",
-    "ta": "வலது"
-   },
-   {
-    "ar": "يَسَارْ",
-    "t": "Yasar",
-    "en": "Left",
-    "ta": "இடது"
-   },
-   {
-    "ar": "[r:قِدَّامْ|أَمَامْ]",
-    "t": "[r:Giddam|Amam]",
-    "en": "In front",
-    "ta": "முன்னால்"
-   },
-   {
-    "ar": "[r:وَرَا|خَلْفْ]",
-    "t": "[r:Wara|Khalf]",
-    "en": "Behind",
-    "ta": "பின்னால்"
-   },
-   {
-    "ar": "فُوقْ",
-    "t": "Foog",
-    "en": "Above / up",
-    "ta": "மேலே"
-   },
-   {
-    "ar": "تَحَتْ",
-    "t": "Tahat",
-    "en": "Under / below",
-    "ta": "கீழே"
-   },
-   {
-    "ar": "[r:بَرَّا|خَارِجْ]",
-    "t": "[r:Barra|Kharij]",
-    "en": "Outside",
-    "ta": "வெளியே"
-   },
-   {
-    "ar": "دَاخِلْ",
-    "t": "Dakhil",
-    "en": "Inside",
-    "ta": "உள்ளே"
-   },
-   {
-    "ar": "قَرِيبْ / قَرِيبَة",
-    "t": "Gareeb / Gareeba",
-    "en": "Near (m / f)",
-    "ta": "அருகில்"
-   },
-   {
-    "ar": "بَعِيدْ / بَعِيدَة",
-    "t": "Ba'eed / Ba'eeda",
-    "en": "Far (m / f)",
-    "ta": "தூரம்"
-   },
-   {
-    "ar": "مُقَابِلْ",
-    "t": "Mugabil",
-    "en": "Opposite",
-    "ta": "எதிரே"
-   },
-   {
-    "ar": "قَبْلْ",
-    "t": "Gabl",
-    "en": "Before",
-    "ta": "முன்"
-   },
-   {
-    "ar": "[r:عُقُبْ|بَعْدْ]",
-    "t": "[r:'Ugub|Ba'ad]",
-    "en": "After",
-    "ta": "பின்"
-   },
-   {
-    "ar": "الْحِينْ",
-    "t": "Al-heen",
-    "en": "Now",
-    "ta": "இப்போது"
-   },
-   {
-    "ar": "بَعْدَيْنْ",
-    "t": "Ba'dain",
-    "en": "Later",
-    "ta": "பிறகு"
-   },
-   {
-    "ar": "وَايِدْ",
-    "t": "Wayid",
-    "en": "Very / a lot",
-    "ta": "மிகவும்"
-   }
-  ]
+  "set": "go"
  }
 ]
