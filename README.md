@@ -18,6 +18,8 @@ Every lesson day becomes a tab with:
 
 Days 3–19 are included (Day 2 had no text; Day 11 was a revision class). Days 16–17 have voice notes but no "Teacher says it" clips yet.
 
+> Working with Claude? Read [CLAUDE.md](CLAUDE.md) first: it holds the standing rules and workflows.
+
 ## Project layout
 
 ```
