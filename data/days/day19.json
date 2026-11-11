@@ -1,0 +1,921 @@
+{
+ "day": 19,
+ "icon": "question",
+ "title": "Questions 2 · When? / Is…?",
+ "arTitle": "الْأَسْئِلَة ٢ · مَتَى · هَلْ",
+ "ta": "கேள்விகள் 2",
+ "keys": [
+  "مَتَى",
+  "هَلْ",
+  "مَتَى الْاِجْتِمَاعْ؟",
+  "هَلْ إِنْتَ مِتْزَوِّجْ؟"
+ ],
+ "activity": {
+  "items": [
+   {
+    "ta": "Meeting எப்போது நிகழும்?",
+    "en": "When is the meeting?"
+   },
+   {
+    "ta": "உங்களின் திருமணம் எப்போது நிகழும்?",
+    "en": "When is your wedding?"
+   },
+   {
+    "ta": "நீங்கள் ஒரு மருத்துவரா?",
+    "en": "Are you a doctor?"
+   },
+   {
+    "ta": "நீங்கள் எப்போது இங்கு வந்தீர்கள்?",
+    "en": "When did you come here?"
+   },
+   {
+    "ta": "உங்களை நான் எப்போது பார்க்கலாம்?",
+    "en": "When can I see you?"
+   }
+  ],
+  "hint": "مَتَى, هَلْ, الْاِجْتِمَاعْ, زَوَاجْ / زَفَافْ, دَكْتُورْ, يِيتْ / جِئْتْ, أَقْدَرْ أَشُوفَكْ பயன்படுத்துங்கள்."
+ },
+ "blocks": [
+  {
+   "audio": [
+    "AUD-20261111-WA0012.mp3"
+   ],
+   "sections": [
+    {
+     "title": "1. When?",
+     "ar": "مَتَى",
+     "ta": "எப்போது?",
+     "items": [
+      {
+       "ar": "مَتَى",
+       "ten": "Mata",
+       "tta": "மதா",
+       "en": "When?",
+       "tm": "எப்போது?",
+       "w": [
+        [
+         "مَتَى",
+         "when"
+        ]
+       ],
+       "key": true,
+       "wa": {
+        "ar": "متى",
+        "lines": [
+         "(மதா) (Mata)",
+         "When எப்போது"
+        ]
+       }
+      },
+      {
+       "ar": "مَتَى [r:يِيتْ|جِئْتْ] هْنِي؟",
+       "ten": "Mata [r:yeet|ji't] hni?",
+       "tta": "மதா [r:யீத்|ஜிஃத்] ஹ்னி?",
+       "en": "When did you come here?",
+       "tm": "எப்பொழுது நீ இங்கு வந்தாய்?",
+       "w": [
+        [
+         "مَتَى",
+         "when"
+        ],
+        [
+         "[r:يِيتْ]",
+         "you came (UAE, ج = y)"
+        ],
+        [
+         "[r:جِئْتْ]",
+         "you came (lesson)"
+        ],
+        [
+         "هْنِي",
+         "here (Gulf; lesson هِنَا)"
+        ]
+       ],
+       "key": true,
+       "wa": {
+        "ar": "متى جئت هنا؟",
+        "lines": [
+         "(Mata jeeth hina?)"
+        ]
+       }
+      },
+      {
+       "ar": "مَتَى الْاِجْتِمَاعْ؟",
+       "ten": "Mata al-ijtima'?",
+       "tta": "மதா அல்இஜ்திமாஃ?",
+       "en": "When is the meeting?",
+       "tm": "கூட்டம் எப்போது?",
+       "w": [
+        [
+         "مَتَى",
+         "when"
+        ],
+        [
+         "الْاِجْتِمَاعْ",
+         "the meeting"
+        ]
+       ],
+       "key": true,
+       "wa": {
+        "ar": "متى الإجتماع؟",
+        "lines": [
+         "(Mata al-ijtima?)"
+        ]
+       }
+      },
+      {
+       "ar": "مَتَى بِتْسَافِرْ؟ · بِتْسَافْرِينْ؟",
+       "ten": "Mata bitsafir? · bitsafreen?",
+       "tta": "மதா பித்ஸாஃபிர்? · பித்ஸாஃப்ரீன்?",
+       "en": "When will you travel?",
+       "tm": "நீங்கள் எப்போது பயணம் செய்வீர்கள்?",
+       "w": [
+        [
+         "مَتَى",
+         "when"
+        ],
+        [
+         "بِتْسَافِرْ",
+         "you will travel (to a man)"
+        ],
+        [
+         "بِتْسَافْرِينْ",
+         "you will travel (to a woman)"
+        ]
+       ],
+       "wa": {
+        "ar": "متى بتسافر/بتسافرين؟",
+        "lines": [
+         "(Mata batisafir/ batisafireen?)"
+        ]
+       }
+      },
+      {
+       "ar": "مَتَى كَانْ زَفَافَهْ؟",
+       "ten": "Mata kan zafafah?",
+       "tta": "மதா கான் ஸஃபாஃபஹ்?",
+       "en": "When was his wedding?",
+       "tm": "அவருடைய திருமணம் எப்போது நடந்தது?",
+       "w": [
+        [
+         "مَتَى",
+         "when"
+        ],
+        [
+         "كَانْ",
+         "was"
+        ],
+        [
+         "زَفَافَهْ",
+         "his wedding"
+        ]
+       ],
+       "wa": {
+        "ar": "متى كان زفافه؟",
+        "lines": [
+         "(Mata Kan zafafuh?)"
+        ]
+       }
+      },
+      {
+       "ar": "مَتَى بِتْيِي؟ · بِتْيِينْ؟",
+       "ten": "Mata bityi? · bityeen?",
+       "tta": "மதா பித்யீ? · பித்யீன்?",
+       "en": "When will you come?",
+       "tm": "நீ எப்போது வருவாய்?",
+       "w": [
+        [
+         "مَتَى",
+         "when"
+        ],
+        [
+         "بِتْيِي",
+         "you will come (to a man, UAE)"
+        ],
+        [
+         "بِتْيِينْ",
+         "you will come (to a woman)"
+        ]
+       ],
+       "key": true,
+       "wa": {
+        "ar": "متى بتيي؟ / متى بتيين؟",
+        "lines": [
+         "(Mata Batee/ batieen?)"
+        ]
+       }
+      },
+      {
+       "ar": "مَتَى شِفْتْنِي؟",
+       "ten": "Mata shiftni?",
+       "tta": "மதா ஷிஃப்த்னீ?",
+       "en": "When did you see me?",
+       "tm": "என்னை நீ எப்போது பார்த்தாய்?",
+       "w": [
+        [
+         "مَتَى",
+         "when"
+        ],
+        [
+         "شِفْتْنِي",
+         "you saw me"
+        ]
+       ],
+       "wa": {
+        "ar": "متى شفتني؟",
+        "lines": [
+         "(Mata shuftani?)"
+        ]
+       }
+      },
+      {
+       "ar": "مَتَى أَقْدَرْ أَشُوفَكْ؟",
+       "ten": "Mata agdar ashoofak?",
+       "tta": "மதா அக்தர் அஷூஃபக்?",
+       "en": "When can I see you?",
+       "tm": "உங்களை நான் எப்போது பார்க்கலாம்?",
+       "w": [
+        [
+         "مَتَى",
+         "when"
+        ],
+        [
+         "أَقْدَرْ",
+         "I can (ق = g)"
+        ],
+        [
+         "أَشُوفَكْ",
+         "I see you"
+        ]
+       ],
+       "key": true,
+       "wa": {
+        "ar": "متى أقدر أشوفك؟",
+        "lines": [
+         "(Mata agdir ashoofak?)"
+        ]
+       }
+      },
+      {
+       "ar": "مَتَى الْمَوْعِدْ؟",
+       "ten": "Mata al-maw'id?",
+       "tta": "மதா அல்மௌஇத்?",
+       "en": "When is the appointment?",
+       "tm": "அப்பாயின்ட்மென்ட் எப்போது?",
+       "w": [
+        [
+         "مَتَى",
+         "when"
+        ],
+        [
+         "الْمَوْعِدْ",
+         "the appointment"
+        ]
+       ],
+       "wa": {
+        "ar": "متى الموعد؟",
+        "lines": [
+         "(Mata Al-maw'eid?)"
+        ]
+       }
+      },
+      {
+       "ar": "مَتَى تَنَامْ؟",
+       "ten": "Mata tanam?",
+       "tta": "மதா தனாம்?",
+       "en": "When do you sleep?",
+       "tm": "நீ எப்போது உறங்குவாய்?",
+       "w": [
+        [
+         "مَتَى",
+         "when"
+        ],
+        [
+         "تَنَامْ",
+         "you sleep"
+        ]
+       ],
+       "wa": {
+        "ar": "متى تنام؟",
+        "lines": [
+         "(Mata tanam?)"
+        ]
+       }
+      },
+      {
+       "ar": "مَتَى قِمْتْ الْيُومْ؟",
+       "ten": "Mata gimt al-yoom?",
+       "tta": "மதா கிம்த் அல்யூம்?",
+       "en": "When did you get up today?",
+       "tm": "இன்று எப்பொழுது எழுந்தாய்?",
+       "w": [
+        [
+         "مَتَى",
+         "when"
+        ],
+        [
+         "قِمْتْ",
+         "you got up (ق = g)"
+        ],
+        [
+         "الْيُومْ",
+         "today"
+        ]
+       ],
+       "wa": {
+        "ar": "متى قمت اليوم؟",
+        "lines": [
+         "(Mata qumth alyom?)"
+        ]
+       }
+      },
+      {
+       "ar": "مَتَى نِرْتَاحْ مِنْ كُورُونَا؟",
+       "ten": "Mata nirtah min korona?",
+       "tta": "மதா நிர்தாஹ் மின் கொரோனா?",
+       "en": "When will we be free of corona?",
+       "tm": "கொரோனாவிலிருந்து நமக்கு எப்போது நிவாரணம்?",
+       "w": [
+        [
+         "مَتَى",
+         "when"
+        ],
+        [
+         "نِرْتَاحْ",
+         "we get relief, rest"
+        ],
+        [
+         "مِنْ",
+         "from"
+        ],
+        [
+         "كُورُونَا",
+         "corona"
+        ]
+       ],
+       "wa": {
+        "ar": "متى نرتاح من كرونا",
+        "lines": [
+         "(Mata nartah min corona?)"
+        ]
+       }
+      },
+      {
+       "ar": "مَتَى نِلْتَقِي؟",
+       "ten": "Mata niltaqi?",
+       "tta": "மதா நில்தகீ?",
+       "en": "When shall we meet?",
+       "tm": "நாம் எப்போது சந்திப்போம்?",
+       "w": [
+        [
+         "مَتَى",
+         "when"
+        ],
+        [
+         "نِلْتَقِي",
+         "we meet"
+        ]
+       ],
+       "key": true,
+       "wa": {
+        "ar": "متى نلتقي؟",
+        "lines": [
+         "(Mata naltaqi?)"
+        ]
+       }
+      },
+      {
+       "ar": "مَتَى الْإِجَازَة؟",
+       "ten": "Mata al-ijaza?",
+       "tta": "மதா அல்இஜாஸா?",
+       "en": "When is the holiday / leave?",
+       "tm": "எப்போது விடுமுறை?",
+       "w": [
+        [
+         "مَتَى",
+         "when"
+        ],
+        [
+         "الْإِجَازَة",
+         "the holiday, leave"
+        ]
+       ],
+       "key": true,
+       "wa": {
+        "ar": "متى الإجازة؟",
+        "lines": [
+         "(Mata Al-ijaza?)"
+        ]
+       }
+      }
+     ],
+     "note": {
+      "en": "مَتَى asks “when?”. هَلْ turns a sentence into a yes/no question. In UAE speech هَلْ is often dropped and the voice just rises: إِنْتَ مِتْزَوِّجْ؟",
+      "ta": "مَتَى = “எப்போது?”. هَلْ வாக்கியத்தை ஆம்/இல்லை கேள்வியாக மாற்றும். அமீரகப் பேச்சில் هَلْ அடிக்கடி விடப்பட்டு, குரலை உயர்த்தியே கேட்பார்கள்."
+     }
+    }
+   ]
+  },
+  {
+   "audio": [
+    "AUD-20261111-WA0011.mp3"
+   ],
+   "sections": [
+    {
+     "title": "2. Is / are…?",
+     "ar": "هَلْ",
+     "ta": "…ஆ? கேள்விகள்",
+     "items": [
+      {
+       "ar": "هَلْ",
+       "ten": "Hal",
+       "tta": "ஹல்",
+       "en": "Is / do / are…? (question word)",
+       "tm": "…ஆ? (கேள்விச் சொல்)",
+       "w": [
+        [
+         "هَلْ",
+         "yes/no question word"
+        ]
+       ],
+       "wa": {
+        "ar": "هل",
+        "lines": [
+         "(ஹல்)(Hal)",
+         "Do you  கேள்வி வினா"
+        ]
+       }
+      },
+      {
+       "ar": "هَلْ إِنْتَ؟",
+       "ten": "Hal inta?",
+       "tta": "ஹல் இன்த?",
+       "en": "Is it you?",
+       "tm": "நீங்களா?",
+       "w": [
+        [
+         "هَلْ",
+         "question word"
+        ],
+        [
+         "إِنْتَ",
+         "you (man)"
+        ]
+       ],
+       "wa": {
+        "ar": "هل انت؟",
+        "lines": [
+         "(Hal inth?)"
+        ]
+       }
+      },
+      {
+       "ar": "هَلْ إِنْتُو؟ · هَلْ أَنْتُمْ؟",
+       "ten": "Hal intu? · Hal antum?",
+       "tta": "ஹல் இன்து? · ஹல் அன்தும்?",
+       "en": "Is it you all?",
+       "tm": "நீங்களா? (பலர்)",
+       "w": [
+        [
+         "هَلْ",
+         "question word"
+        ],
+        [
+         "إِنْتُو",
+         "you all (Gulf)"
+        ],
+        [
+         "أَنْتُمْ",
+         "you all (lesson)"
+        ]
+       ],
+       "wa": {
+        "ar": "هل أنتم؟",
+        "lines": [
+         "(Hal intum?)"
+        ]
+       }
+      },
+      {
+       "ar": "هَلْ هُوَّ؟",
+       "ten": "Hal huwwa?",
+       "tta": "ஹல் ஹுவ்வ?",
+       "en": "Is it him?",
+       "tm": "அவரா?",
+       "w": [
+        [
+         "هَلْ",
+         "question word"
+        ],
+        [
+         "هُوَّ",
+         "he"
+        ]
+       ],
+       "wa": {
+        "ar": "هل هو؟",
+        "lines": [
+         "(Hal Huwa?)"
+        ]
+       }
+      },
+      {
+       "ar": "هَلْ هِيَّ؟",
+       "ten": "Hal hiyya?",
+       "tta": "ஹல் ஹிய்ய?",
+       "en": "Is it her?",
+       "tm": "அவளா?",
+       "w": [
+        [
+         "هَلْ",
+         "question word"
+        ],
+        [
+         "هِيَّ",
+         "she"
+        ]
+       ],
+       "wa": {
+        "ar": "هل هي؟",
+        "lines": [
+         "(Hal hiya?)"
+        ]
+       }
+      },
+      {
+       "ar": "هَلْ هُمْ؟",
+       "ten": "Hal hum?",
+       "tta": "ஹல் ஹும்?",
+       "en": "Is it them?",
+       "tm": "அவர்களா?",
+       "w": [
+        [
+         "هَلْ",
+         "question word"
+        ],
+        [
+         "هُمْ",
+         "they"
+        ]
+       ],
+       "wa": {
+        "ar": "هل هم؟",
+        "lines": [
+         "(Hal hum?)"
+        ]
+       }
+      },
+      {
+       "ar": "هَلْ إِنْتَ مِتْأَخِّرْ؟",
+       "ten": "Hal inta mit'akhkhir?",
+       "tta": "ஹல் இன்த மித்அஹ்ஹிர்?",
+       "en": "Are you late?",
+       "tm": "நீங்கள் தாமதமாகிவிட்டீர்களா?",
+       "w": [
+        [
+         "هَلْ",
+         "question word"
+        ],
+        [
+         "إِنْتَ",
+         "you"
+        ],
+        [
+         "مِتْأَخِّرْ",
+         "late"
+        ]
+       ],
+       "wa": {
+        "ar": "هل أنت متأخر ؟",
+        "lines": [
+         "(Hal inth metakkhir?)"
+        ]
+       }
+      },
+      {
+       "ar": "هَلْ إِنْتَ مِتْزَوِّجْ؟",
+       "ten": "Hal inta mitzawwij?",
+       "tta": "ஹல் இன்த மித்ஸவ்விஜ்?",
+       "en": "Are you married?",
+       "tm": "நீங்கள் திருமணமானவரா?",
+       "w": [
+        [
+         "هَلْ",
+         "question word"
+        ],
+        [
+         "إِنْتَ",
+         "you"
+        ],
+        [
+         "مِتْزَوِّجْ",
+         "married (man)"
+        ]
+       ],
+       "key": true,
+       "wa": {
+        "ar": "هل أنت متزوج؟",
+        "lines": [
+         "(Hal inth metzawwij?)"
+        ]
+       }
+      },
+      {
+       "ar": "هَلْ إِنْتَ صَحّْ؟ · صَحِيحْ؟",
+       "ten": "Hal inta sahh? · saheeh?",
+       "tta": "ஹல் இன்த ஸஹ்? · ஸஹீஹ்?",
+       "en": "Are you right? (Is what you say true?)",
+       "tm": "நீங்கள் சொல்வது சரியா?",
+       "w": [
+        [
+         "هَلْ",
+         "question word"
+        ],
+        [
+         "إِنْتَ",
+         "you"
+        ],
+        [
+         "صَحّْ",
+         "right (Gulf)"
+        ],
+        [
+         "صَحِيحْ",
+         "right, correct (lesson)"
+        ]
+       ],
+       "wa": {
+        "ar": "هل أنت صحيح؟",
+        "lines": [
+         "(Hal inth sahih?)"
+        ]
+       }
+      },
+      {
+       "ar": "هَلْ إِنْتَ أَوَّلْ مَرَّة هْنِي؟",
+       "ten": "Hal inta awwal marra hni?",
+       "tta": "ஹல் இன்த அவ்வல் மர்ரா ஹ்னி?",
+       "en": "Is this your first time here?",
+       "tm": "நீங்கள் இங்கு முதல் முறையாக வருகிறீர்களா?",
+       "w": [
+        [
+         "هَلْ",
+         "question word"
+        ],
+        [
+         "إِنْتَ",
+         "you"
+        ],
+        [
+         "أَوَّلْ",
+         "first"
+        ],
+        [
+         "مَرَّة",
+         "time"
+        ],
+        [
+         "هْنِي",
+         "here (Gulf; lesson هِنَا)"
+        ]
+       ],
+       "key": true,
+       "wa": {
+        "ar": "هل أنت أول مرة هنا؟",
+        "lines": [
+         "(Hal inth awwal marra hina?)"
+        ]
+       }
+      },
+      {
+       "ar": "هَلْ إِنْتَ مِتْخَرِّجْ؟",
+       "ten": "Hal inta mitkharrij?",
+       "tta": "ஹல் இன்த மித்ஹர்ரிஜ்?",
+       "en": "Are you a graduate?",
+       "tm": "நீங்கள் பட்டதாரியா?",
+       "w": [
+        [
+         "هَلْ",
+         "question word"
+        ],
+        [
+         "إِنْتَ",
+         "you"
+        ],
+        [
+         "مِتْخَرِّجْ",
+         "graduated"
+        ]
+       ],
+       "wa": {
+        "ar": "هل أنت متخرج؟",
+        "lines": [
+         "(Hal inth mutkharrij?)"
+        ]
+       }
+      },
+      {
+       "ar": "هَلْ إِنْتَ فِي دُبَيّ؟",
+       "ten": "Hal inta fi Dubayy?",
+       "tta": "ஹல் இன்த ஃபீ துபய்?",
+       "en": "Are you in Dubai?",
+       "tm": "நீங்கள் துபாயில் இருக்கிறீர்களா?",
+       "w": [
+        [
+         "هَلْ",
+         "question word"
+        ],
+        [
+         "إِنْتَ",
+         "you"
+        ],
+        [
+         "فِي",
+         "in"
+        ],
+        [
+         "دُبَيّ",
+         "Dubai"
+        ]
+       ],
+       "key": true,
+       "wa": {
+        "ar": "هل أنت في دبي ؟",
+        "lines": [
+         "(Hal inth fi Dubai?)"
+        ]
+       }
+      },
+      {
+       "ar": "هَلْ إِنْتَ سَاكِنْ فِي عَجْمَانْ؟",
+       "ten": "Hal inta sakin fi 'Ajman?",
+       "tta": "ஹல் இன்த ஸாகின் ஃபீ அஜ்மான்?",
+       "en": "Do you live in Ajman?",
+       "tm": "நீங்கள் அஜ்மானில் வசிக்கிறீர்களா?",
+       "w": [
+        [
+         "هَلْ",
+         "question word"
+        ],
+        [
+         "إِنْتَ",
+         "you"
+        ],
+        [
+         "سَاكِنْ",
+         "living"
+        ],
+        [
+         "فِي",
+         "in"
+        ],
+        [
+         "عَجْمَانْ",
+         "Ajman"
+        ]
+       ],
+       "wa": {
+        "ar": "هل أنت ساكن في عجمان ؟",
+        "lines": [
+         "(Hal inth Sakin fi Ajman?)"
+        ]
+       }
+      },
+      {
+       "ar": "هَلْ إِنْتَ تِشْتَغِلْ [r:وِيَّا|مَعَ] بَابَا؟",
+       "ten": "Hal inta tishtaghil [r:wiyya|ma'a] baba?",
+       "tta": "ஹல் இன்த திஷ்தகில் [r:விய்யா|மஅ] பாபா?",
+       "en": "Do you work with (my) dad?",
+       "tm": "நீங்கள் என் தந்தையுடன் வேலை செய்கிறீர்களா?",
+       "w": [
+        [
+         "هَلْ",
+         "question word"
+        ],
+        [
+         "إِنْتَ",
+         "you"
+        ],
+        [
+         "تِشْتَغِلْ",
+         "you work"
+        ],
+        [
+         "[r:وِيَّا]",
+         "with (Gulf)"
+        ],
+        [
+         "[r:مَعَ]",
+         "with (lesson)"
+        ],
+        [
+         "بَابَا",
+         "dad"
+        ]
+       ],
+       "wa": {
+        "ar": "هل أنت تشتغل مع بابا ؟",
+        "lines": [
+         "(Hal inth tashtaghil ma' baba?)"
+        ]
+       }
+      },
+      {
+       "ar": "هَلْ إِنْتَ قَادِمْ مِنْ الْهِنْدْ؟",
+       "ten": "Hal inta qadim min al-Hind?",
+       "tta": "ஹல் இன்த காதிம் மினல் ஹிந்த்?",
+       "en": "Are you coming from India?",
+       "tm": "நீங்கள் இந்தியாவில் இருந்து வருகிறீர்களா?",
+       "w": [
+        [
+         "هَلْ",
+         "question word"
+        ],
+        [
+         "إِنْتَ",
+         "you"
+        ],
+        [
+         "قَادِمْ",
+         "coming"
+        ],
+        [
+         "مِنْ",
+         "from"
+        ],
+        [
+         "الْهِنْدْ",
+         "India"
+        ]
+       ],
+       "wa": {
+        "ar": "هل أنت قادم من الهند ؟",
+        "lines": [
+         "(Hal inth qadim minal Hind?)"
+        ]
+       }
+      },
+      {
+       "ar": "هَلْ عِنْدَكْ شَنْطَة؟ · حَقِيبَة؟",
+       "ten": "Hal 'indak shanta? · haqeeba?",
+       "tta": "ஹல் இந்தக் ஷன்தா? · ஹகீபா?",
+       "en": "Do you have a bag?",
+       "tm": "உங்களிடம் பை இருக்கிறதா?",
+       "w": [
+        [
+         "هَلْ",
+         "question word"
+        ],
+        [
+         "عِنْدَكْ",
+         "you have"
+        ],
+        [
+         "شَنْطَة",
+         "bag (Gulf)"
+        ],
+        [
+         "حَقِيبَة",
+         "bag (lesson)"
+        ]
+       ],
+       "wa": {
+        "ar": "هل عندك حقيبة؟",
+        "lines": [
+         "(Hal indak haqeeba?)"
+        ]
+       }
+      },
+      {
+       "ar": "هَلْ إِنْتَ رَجُلْ أَعْمَالْ؟",
+       "ten": "Hal inta rajul a'mal?",
+       "tta": "ஹல் இன்த ரஜுல் அஃமால்?",
+       "en": "Are you a businessman?",
+       "tm": "நீங்கள் ஒரு தொழிலதிபரா?",
+       "w": [
+        [
+         "هَلْ",
+         "question word"
+        ],
+        [
+         "إِنْتَ",
+         "you"
+        ],
+        [
+         "رَجُلْ أَعْمَالْ",
+         "businessman (man of business)"
+        ]
+       ],
+       "wa": {
+        "ar": "هل أنت رجل أعمال؟",
+        "lines": [
+         "(Hal inth rajul aa'mal?)"
+        ]
+       }
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -5,5 +5,9 @@
   {"file": "day06-days-and-time.pdf", "thumb": "day06-days-and-time.jpg", "day": 6, "title": "Days & Time", "ar": "الْأَيَّامْ وَالْوَقْتْ", "ta": "நாட்களும் நேரமும்", "by": "Trainer: Fathima", "pages": 17},
   {"file": "day07-numbers.pdf", "thumb": "day07-numbers.jpg", "day": 7, "title": "Numbers", "ar": "أَرْقَامْ", "ta": "எண்கள்", "by": "Presented by Ayesha Asma", "pages": 21},
   {"file": "day13-directions-prepositions.pdf", "thumb": "day13-directions-prepositions.jpg", "day": 13, "title": "Directions & Prepositions", "ar": "الْاِتِّجَاهَاتْ / حَرْفْ الْجَرّْ", "ta": "திசைகள் / முன்னிடைச்சொல்", "by": "Arabic Language Hub", "pages": 13},
-  {"file": "broken-plurals.pdf", "thumb": "broken-plurals.jpg", "day": null, "kind": "Reference", "title": "Common Broken Plurals", "ar": "جَمْعْ التَّكْسِيرْ", "ta": "பன்மை வடிவங்கள் · ஒருமை, இருமை, பன்மை", "by": "Singular · dual · plural table", "pages": 1}
+  {"file": "broken-plurals.pdf", "thumb": "broken-plurals.jpg", "day": null, "kind": "Reference", "title": "Common Broken Plurals", "ar": "جَمْعْ التَّكْسِيرْ", "ta": "பன்மை வடிவங்கள் · ஒருமை, இருமை, பன்மை", "by": "Singular · dual · plural table", "pages": 1},
+  {"file": "past-tense.pdf", "thumb": "past-tense.jpg", "day": null, "kind": "Live class · 3 Nov", "title": "Past Tense", "ar": "الْمَاضِي", "ta": "இறந்த காலம்", "by": "Trainer: Imam", "pages": 12},
+  {"file": "present-future-tense.pdf", "thumb": "present-future-tense.jpg", "day": null, "kind": "Live class · 5 Nov", "title": "Present & Future Tense", "ar": "الْمُضَارِعْ وَالْمُسْتَقْبَلْ", "ta": "நிகழ் காலம் & எதிர் காலம்", "by": "Trainer: Imam", "pages": 12},
+  {"file": "past-continuous-tense.pdf", "thumb": "past-continuous-tense.jpg", "day": null, "kind": "Live class · 9 Nov", "title": "Past Continuous Tense", "ar": "الْمَاضِي الْمُسْتَمِرّْ", "ta": "இறந்த கால தொடர்வினை", "by": "Trainer: Imam", "pages": 10},
+  {"file": "meet-new-person.pdf", "thumb": "meet-new-person.jpg", "day": null, "kind": "Live class · 11 Nov", "title": "Meet a New Person", "ar": "مُقَابَلَةْ شَخْصْ جَدِيدْ", "ta": "புதிய நபரை சந்தித்தல்", "by": "Trainer: Fathima Khairunnisa", "pages": 16}
 ]

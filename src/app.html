@@ -537,6 +537,11 @@ body.audio-only #day:not(.quizview) .pdf-link{display:none}
 .mat .btns button{flex:1 1 auto;justify-content:center}
 .mat .btns .pri{background:var(--dc);border-color:var(--dc);color:#fff}
 /* ---------- Cheat sheets (the chart pages of the PDFs, as tables) ---------- */
+.sheet-card .sh-head{cursor:pointer;position:relative;padding-right:28px}
+.sheet-card .sh-head::after{content:"▾";position:absolute;right:2px;top:2px;font-size:18px;color:var(--dc);transition:transform .2s}
+.sheet-card.closed .sh-head::after{transform:rotate(-90deg)}
+.sheet-card.closed .sh-body{display:none}
+.sheet-card.closed{gap:0}
 #day.sheetview{max-width:980px}
 .sh-filter{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
 .sh-jump{display:flex;gap:6px;flex-wrap:wrap}
@@ -1307,18 +1312,22 @@ function sheetCell(c, r, cols){
 function sheetCard(s){
   const d = DAYS.find(x => x.day === s.day), m = s.src && MATS.find(x => x.file === s.src.file);
   const gulf = s.rows.filter(r => r.gulf);
-  return `<article class="sheet-card" id="sh-${esc(s.id)}" data-group="${esc(s.group)}" style="--dc:${shColor(s)}" ${shGroup !== "All" && s.group !== shGroup ? "hidden" : ""}>
-    <div class="sh-head"><div><span class="grp">${esc(s.group)}</span><h3>${esc(s.title)}</h3>
+  return `<article class="sheet-card${shOpen.has(s.id) ? "" : " closed"}" id="sh-${esc(s.id)}" data-group="${esc(s.group)}" style="--dc:${shColor(s)}" ${shGroup !== "All" && s.group !== shGroup ? "hidden" : ""}>
+    <div class="sh-head" role="button" tabindex="0" aria-expanded="${shOpen.has(s.id)}"><div><span class="grp">${esc(s.group)}</span><h3>${esc(s.title)}</h3>
       ${s.ar ? `<span class="sh-ar" lang="ar">${esc(s.ar)}</span>` : ""}${s.ta ? `<span class="sh-ta" lang="ta">${esc(s.ta)}</span>` : ""}</div>
       <div class="sh-links">${m ? `<button class="tbtn" type="button" data-read="${esc(m.file)}" data-page="${s.src.p || 1}">📄 ${m.day ? `Day ${m.day} slides` : esc(m.title)} · ${esc(s.src.pages)}</button>` : s.from ? `<span class="sh-from">${esc(s.from)}</span>` : ""}
         ${d ? `<button class="tbtn" type="button" data-go="${d.day}">Day ${d.day} lesson →</button>` : ""}</div></div>
-    ${s.note ? `<p class="sh-note">${arInline(s.note)}</p>` : ""}
+    <div class="sh-body">${s.note ? `<p class="sh-note">${arInline(s.note)}</p>` : ""}
     <div class="sh-wrap"><table class="sheet"><thead><tr>${s.cols.map(c => `<th class="${c.type === "ar" ? "c-ar" : ""}${c.under ? " is-under" : ""}" scope="col">${esc(c.label)}</th>`).join("")}</tr></thead>
       <tbody>${s.rows.map(r => `<tr>${s.cols.map(c => sheetCell(c, r, s.cols)).join("")}</tr>`).join("")}</tbody></table></div>
-    ${gulf.length ? `<ul class="sh-gulf">${gulf.map(r => `<li>${arInline(r.gulf)}</li>`).join("")}</ul>` : ""}
+    ${gulf.length ? `<ul class="sh-gulf">${gulf.map(r => `<li>${arInline(r.gulf)}</li>`).join("")}</ul>` : ""}</div>
   </article>`;
 }
+const shOpen = new Set();
+function shSet(card, on){ card.classList.toggle("closed", !on); card.querySelector(".sh-head").setAttribute("aria-expanded", on);
+  on ? shOpen.add(card.id.slice(3)) : shOpen.delete(card.id.slice(3)); }
 function openSheets(scroll, id){
+  if (id) shOpen.add(id);
   stopAll(); mode = "sheets"; renderTabs(cur ? cur.day : null);
   const root = $("#day"); root.classList.remove("matview"); root.classList.add("quizview", "sheetview"); root.style.setProperty("--dc", "var(--sand)");
   if (location.hash !== "#sheets") history.replaceState(null, "", "#sheets");
@@ -1329,6 +1338,7 @@ function openSheets(scroll, id){
       <span class="ta" lang="ta" style="font-family:var(--f-ta);color:var(--muted);font-size:13px">PDF அட்டவணைகள் · ஒரே பார்வையில்</span></div>
     <div class="sh-filter" role="group" aria-label="Show sheets">
       ${["All", ...SH_GROUPS].map(g => `<button class="chip" type="button" data-shg="${esc(g)}" aria-pressed="${shGroup === g}" style="--dc:${g === "All" ? "var(--sand)" : SH_HUES[g] || "var(--teal)"}">${esc(g)}${g !== "All" ? ` <small>${SHEETS.filter(s => s.group === g).length}</small>` : ""}</button>`).join("")}
+      <button class="tbtn" id="shAll" type="button">▾ Open all</button>
       <button class="tbtn" id="shTest" type="button" aria-pressed="${document.body.classList.contains("sheet-test")}" style="margin-left:auto">🙈 Hide Arabic · test me</button></div>
     <nav class="sh-jump" aria-label="Jump to a sheet">${SHEETS.map(s => `<a href="#sh-${esc(s.id)}" data-shj="${esc(s.id)}" style="--dc:${shColor(s)}" ${shGroup !== "All" && s.group !== shGroup ? "hidden" : ""}>${esc(s.title.split(/[:(]/)[0].trim())}</a>`).join("")}</nav>
     ${SHEETS.map(sheetCard).join("")}
@@ -1349,12 +1359,16 @@ document.addEventListener("click", e => {
     document.querySelectorAll(".sheet-card").forEach(c => c.hidden = shGroup !== "All" && c.dataset.group !== shGroup);
     document.querySelectorAll("[data-shj]").forEach(a => { const s = SHEETS.find(x => x.id === a.dataset.shj); a.hidden = shGroup !== "All" && s.group !== shGroup; });
     return; }
-  const j = t.closest("[data-shj]"); if (j) { e.preventDefault(); $(`#sh-${j.dataset.shj}`)?.scrollIntoView({behavior: reduce ? "auto" : "smooth"}); return; }
+  if (t.closest("#shAll")) { const cards = [...document.querySelectorAll(".sheet-card")], open = cards.some(c => c.classList.contains("closed"));
+    cards.forEach(c => shSet(c, open)); t.closest("#shAll").textContent = open ? "▴ Close all" : "▾ Open all"; return; }
+  const hd = t.closest(".sheet-card .sh-head"); if (hd && !t.closest("button,a")) { const c = hd.closest(".sheet-card"); shSet(c, c.classList.contains("closed")); return; }
+  const j = t.closest("[data-shj]"); if (j) { e.preventDefault(); const c = $(`#sh-${j.dataset.shj}`); if (c) shSet(c, true); c?.scrollIntoView({behavior: reduce ? "auto" : "smooth"}); return; }
   if (t.closest("#shTest")) { const on = document.body.classList.toggle("sheet-test"); t.closest("#shTest").setAttribute("aria-pressed", on);
     document.querySelectorAll("table.sheet td.show").forEach(x => x.classList.remove("show")); if (on) toast("Say it out loud, then tap to check"); return; }
   const cell = t.closest("table.sheet td.c-ar"); if (cell && document.body.classList.contains("sheet-test")) cell.classList.toggle("show");
 });
 
+document.addEventListener("keydown", e => { if ((e.key === "Enter" || e.key === " ") && e.target.matches?.(".sheet-card .sh-head")) { e.preventDefault(); e.target.click(); } });
 let dlApi = null;
 (async () => { try { dlApi = await window.claude?.use?.("downloads"); } catch { dlApi = null; }
   if (dlApi) { document.querySelectorAll("[data-dl]").forEach(b => b.hidden = false); if (rd.file) $("#rdDl").hidden = false; } })();
