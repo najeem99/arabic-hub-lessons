@@ -133,6 +133,12 @@ def main():
                .replace("__MATERIALS__", json.dumps(mats, ensure_ascii=False, separators=(",", ":")))
                .replace("__SHEETS__", json.dumps(sheets, ensure_ascii=False, separators=(",", ":")))
                .replace("__VIDEOS__", json.dumps(vids, ensure_ascii=False, separators=(",", ":"))))
+    # "Last updated" stamp at the end of the side menu: build time in UAE time (Asia/Dubai)
+    from datetime import datetime
+    from zoneinfo import ZoneInfo
+    now = datetime.now(ZoneInfo("Asia/Dubai"))
+    body = (body.replace("__BUILT_ISO__", now.isoformat(timespec="minutes"))
+                .replace("__BUILT__", now.strftime("%d %b %Y, %I:%M %p").replace(" 0", " ").lstrip("0")))
     missing = [f for f in used if not os.path.exists(os.path.join(AUDIO, f))]
     if missing:
         print("WARNING missing audio in docs/audio:", ", ".join(missing))

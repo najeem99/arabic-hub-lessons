@@ -42,6 +42,7 @@ One page (`docs/index.html`) built from `src/app.html` + the JSON in `data/`. Ph
 | **Materials** | Course PDFs (in-page reader with prev/next, sortable by day: `alh-msort2`) + training videos on YouTube. Hash `#materials`. Days link to their "Lesson PDF" / "Training video". | Najeem wants them openable in any order. |
 | **📋 Cheat sheets** (`#sheets`) | **Essentials only**: pronouns, possessive endings, and the tense charts from the live-class PPTs (past, present, future, past continuous, the practice answer keys, a past · present · future table), laid out **like the PPT slides** (verb شَرَبْ, order he/they/she · you · I/we). | Every sheet starts **collapsed**; Open all / Close all; filter by topic; 🙈 Hide Arabic to self-test; link to the source PDF page. |
 | **🚶 On the go** (`#onthego`) | Practical sheets: everyday phrases from the lessons (I'm at work, I'm coming now…), numbers, ordinals, days, time, directions, greetings, plurals. | Numbers belong here, **not** in Cheat sheets. |
+| **Last updated stamp** | Last line of the side menu: "Last updated · 15 Nov 2026, 11:07 PM (UAE time)". `build.py` fills `__BUILT__` / `__BUILT_ISO__` in `src/app.html` with the build time in Asia/Dubai. | Najeem uses it to see whether a deploy went live. Every rebuild changes it, so always rebuild right before committing. |
 | Other | ☆ "I know this" stars, ✓ listened progress, light/dark theme (`alh-theme`), last day opened (`alh-last`). | localStorage keys all start `alh-`. |
 
 ---
@@ -116,8 +117,8 @@ Najeem uploads a **WhatsApp chat export `.zip`** (a `WhatsApp Chat with ….txt`
 ```
 CLAUDE.md                this file (keep it current)
 README.md                human-facing overview, build and add-a-day steps
-src/app.html             the whole app: CSS + JS; placeholders __DATA__, __MATERIALS__, __SHEETS__, __VIDEOS__
-data/days/dayNN.json     lesson content, one file per day (Days 3–19 now; no 11)
+src/app.html             the whole app: CSS + JS; placeholders __DATA__, __MATERIALS__, __SHEETS__, __VIDEOS__, __BUILT__, __BUILT_ISO__
+data/days/dayNN.json     lesson content, one file per day (Days 3–20 now; no 11)
 data/clips.json          per-phrase teacher clips {day: {items: {"block.sec.item": {f,s,e,r,approx?}}, splits}} (match.py)
 data/transcripts/        whisper word timestamps per note (transcribe.py)
 data/whatsapp.json       original WhatsApp text per card (whatsapp_source.py)
@@ -161,6 +162,7 @@ Only when Najeem asks. `python3 scripts/build.py` writes `dist/artifact.html`; p
 
 ## 9. History of Najeem's requests (newest first)
 
+- 2026-11-15: Day 20 (Possibility · مُمْكِنْ; Hugging Face blocked again, so no clips); "Last updated" stamp (UAE time) at the end of the side menu.
 - 2026-11-11: this CLAUDE.md; keep it updated with every workflow/feature change.
 - 2026-11-11: Cheat sheets = essentials laid out like the PPT; new On the go menu; numbers moved there; everything collapsible, collapsed by default.
 - 2026-11-11: Cheat sheets from the PDF chart pages as tables; Days 18 (Adjectives) and 19 (Questions 2) added with 4 live-class PDFs (past, present & future, past continuous, meet a new person).

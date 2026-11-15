@@ -1,0 +1,321 @@
+{
+ "day": 20,
+ "icon": "question",
+ "title": "Possibility · Maybe",
+ "arTitle": "مُمْكِنْ",
+ "ta": "சாத்தியம் (முடியக்கூடியது)",
+ "keys": [
+  "مُمْكِنْ",
+  "مُمْكِنْ هُوَّ فِي الشُّغُلْ",
+  "مُمْكِنْ أَنَا فَاضِي بَاچِرْ",
+  "مُمْكِنْ مَا عِنْدَه إِنْتَرْنِتْ"
+ ],
+ "activity": {
+  "items": [
+   {
+    "ta": "ஒருவேளை அவர் இன்று வரலாம்",
+    "en": "Maybe he will come today"
+   },
+   {
+    "ta": "ஒருவேளை நான் நாளை free - யா இருக்கலாம்",
+    "en": "Maybe I am free tomorrow"
+   },
+   {
+    "ta": "ஒருவேளை அவர் தயாராகாமல் இருக்கலாம்",
+    "en": "Maybe he is not ready"
+   },
+   {
+    "ta": "ஒருவேளை அவரிடம் பணம் இல்லாமல் இருக்கலாம்",
+    "en": "Maybe he doesn't have money"
+   },
+   {
+    "ta": "ஒருவேளை அவர் துபாயில் இருக்கலாம்",
+    "en": "Maybe he is in Dubai"
+   }
+  ],
+  "hint": "مُمْكِنْ + sentence. Use هُوَّ يِيِي الْيُومْ (Day 6), أَنَا فَاضِي بَاچِرْ, مُبْ جَاهِزْ, مَا عِنْدَه, فِي دُبَيّ பயன்படுத்துங்கள்."
+ },
+ "blocks": [
+  {
+   "audio": [
+    "AUD-20261114-WA0007.mp3",
+    "AUD-20261114-WA0008.mp3"
+   ],
+   "sections": [
+    {
+     "title": "1. Maybe",
+     "ar": "مُمْكِنْ",
+     "ta": "இருக்கலாம்",
+     "note": "مُمْكِنْ + any sentence = \"maybe…\". (On Day 9 the same word asked \"can you…?\".)",
+     "items": [
+      {
+       "ar": "مُمْكِنْ",
+       "ten": "Mumkin",
+       "tta": "மும்கின்",
+       "en": "Maybe",
+       "tm": "இருக்கலாம் / ஒருவேளை",
+       "w": [
+        [
+         "مُمْكِنْ",
+         "maybe / possibly (Day 9: can you…?)"
+        ]
+       ],
+       "key": true
+      },
+      {
+       "ar": "مُمْكِنْ الْيُومْ يْصُبّْ مَطَرْ",
+       "ten": "Mumkin al-yom yisubb matar",
+       "tta": "மும்கின் அல் யோம் யசுப் மதர்",
+       "en": "Maybe it will rain today",
+       "tm": "இன்று மழை பெய்யலாம்",
+       "w": [
+        [
+         "مُمْكِنْ",
+         "maybe"
+        ],
+        [
+         "الْيُومْ",
+         "today (Gulf; lesson الْيَوْمْ)"
+        ],
+        [
+         "يْصُبّْ",
+         "it pours"
+        ],
+        [
+         "مَطَرْ",
+         "rain"
+        ]
+       ],
+       "key": true
+      },
+      {
+       "ar": "مُمْكِنْ هُوَّ فِي الشُّغُلْ",
+       "ten": "Mumkin huwwa fish-shughul",
+       "tta": "மும்கின் ஹுவ ஃபிஷ் ஷுகுல்",
+       "en": "Maybe he is at work",
+       "tm": "ஒருவேளை அவர் வேலையில் இருக்கலாம்",
+       "w": [
+        [
+         "مُمْكِنْ",
+         "maybe"
+        ],
+        [
+         "هُوَّ",
+         "he"
+        ],
+        [
+         "فِي",
+         "in / at"
+        ],
+        [
+         "الشُّغُلْ",
+         "the work"
+        ]
+       ],
+       "key": true
+      },
+      {
+       "ar": "مُمْكِنْ هُوَّ مَوْجُودْ فِي الْغُرْفَة",
+       "ten": "Mumkin huwwa mawjood fil-ghurfa",
+       "tta": "மும்கின் ஹுவ மவ்ஜூத் ஃபில் குர்ஃபா",
+       "en": "Maybe he is in the room",
+       "tm": "ஒருவேளை அவர் அறையில் இருக்கலாம்",
+       "w": [
+        [
+         "مُمْكِنْ",
+         "maybe"
+        ],
+        [
+         "هُوَّ",
+         "he"
+        ],
+        [
+         "مَوْجُودْ",
+         "present / there"
+        ],
+        [
+         "فِي",
+         "in"
+        ],
+        [
+         "الْغُرْفَة",
+         "the room"
+        ]
+       ]
+      },
+      {
+       "ar": "مُمْكِنْ هِيَّ نَايْمَة",
+       "ten": "Mumkin hiyya nayma",
+       "tta": "மும்கின் ஹிய நாயிமா",
+       "en": "Maybe she is sleeping",
+       "tm": "ஒருவேளை அவள் தூங்கிக்கொண்டிருக்கலாம்",
+       "w": [
+        [
+         "مُمْكِنْ",
+         "maybe"
+        ],
+        [
+         "هِيَّ",
+         "she"
+        ],
+        [
+         "نَايْمَة",
+         "sleeping (woman)"
+        ]
+       ]
+      },
+      {
+       "ar": "مُمْكِنْ هِنَاكْ زَحْمَة",
+       "ten": "Mumkin hinak zahma",
+       "tta": "மும்கின் ஹுனாக் ஸஹ்மா",
+       "en": "Maybe there is a crowd (traffic)",
+       "tm": "ஒருவேளை அங்கு கூட்டமாக (crowd) இருக்கலாம்",
+       "w": [
+        [
+         "مُمْكِنْ",
+         "maybe"
+        ],
+        [
+         "هِنَاكْ",
+         "there is (lesson; Gulf speakers also say فِيهْ fīh)"
+        ],
+        [
+         "زَحْمَة",
+         "crowd / traffic jam"
+        ]
+       ]
+      },
+      {
+       "ar": "مُمْكِنْ هَاذَا بَيْتْ قَدِيمْ",
+       "ten": "Mumkin hatha bait gadeem",
+       "tta": "மும்கின் ஹாதா பைத் கதீம்",
+       "en": "Maybe this is an old house",
+       "tm": "ஒருவேளை இது பழைய வீடாக இருக்கலாம்",
+       "w": [
+        [
+         "مُمْكِنْ",
+         "maybe"
+        ],
+        [
+         "هَاذَا",
+         "this"
+        ],
+        [
+         "بَيْتْ",
+         "house"
+        ],
+        [
+         "قَدِيمْ",
+         "old (ق = g in Gulf; lesson qadeem)"
+        ]
+       ]
+      },
+      {
+       "ar": "مُمْكِنْ يْسُوقْ السَّيَّارَة",
+       "ten": "Mumkin yisoog as-sayyara",
+       "tta": "மும்கின் யஸூக் சய்யாரா",
+       "en": "Maybe he drives the car",
+       "tm": "ஒருவேளை அவர் காரை ஓட்டலாம்",
+       "w": [
+        [
+         "مُمْكِنْ",
+         "maybe"
+        ],
+        [
+         "يْسُوقْ",
+         "he drives (ق = g in Gulf; lesson yisooq)"
+        ],
+        [
+         "السَّيَّارَة",
+         "the car"
+        ]
+       ]
+      },
+      {
+       "ar": "مُمْكِنْ مَا عِنْدَه إِنْتَرْنِتْ",
+       "ten": "Mumkin ma 'indah internet",
+       "tta": "மும்கின் மா இந்தஹ் இந்தர்நத்",
+       "en": "Maybe he doesn't have the Internet",
+       "tm": "ஒருவேளை அவரிடம் இன்டர்நெட் இல்லாமல் இருக்கலாம்",
+       "w": [
+        [
+         "مُمْكِنْ",
+         "maybe"
+        ],
+        [
+         "مَا",
+         "not (negates)"
+        ],
+        [
+         "عِنْدَه",
+         "he has (lit. with him)"
+        ],
+        [
+         "إِنْتَرْنِتْ",
+         "Internet"
+        ]
+       ],
+       "key": true
+      },
+      {
+       "ar": "مُمْكِنْ أَنَا فَاضِي بَاچِرْ",
+       "ten": "Mumkin ana fadhi bachir",
+       "tta": "மும்கின் அனா ஃபாதீ பாச்சிர்",
+       "en": "Maybe I am free tomorrow",
+       "tm": "ஒருவேளை நான் நாளை (free ஆக) இருக்கலாம்",
+       "w": [
+        [
+         "مُمْكِنْ",
+         "maybe"
+        ],
+        [
+         "أَنَا",
+         "I"
+        ],
+        [
+         "فَاضِي",
+         "free"
+        ],
+        [
+         "بَاچِرْ",
+         "tomorrow (UAE, چ = ch; typed باجر)"
+        ]
+       ],
+       "key": true
+      },
+      {
+       "ar": "مُمْكِنْ هِيَّ [r:مُبْ|مُو] جَاهْزَة",
+       "ten": "Mumkin hiyya [r:mub|mu] jahza",
+       "tta": "மும்கின் ஹிய [r:முப்|மு] ஜாஹிசா",
+       "en": "Maybe she is not ready",
+       "tm": "ஒருவேளை அவள் தயாராக இல்லாமல் இருக்கலாம்",
+       "w": [
+        [
+         "مُمْكِنْ",
+         "maybe"
+        ],
+        [
+         "هِيَّ",
+         "she"
+        ],
+        [
+         "[r:مُبْ]",
+         "not (UAE)"
+        ],
+        [
+         "[r:مُو]",
+         "not (other Gulf)"
+        ],
+        [
+         "جَاهْزَة",
+         "ready (woman)"
+        ]
+       ],
+       "key": true
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
