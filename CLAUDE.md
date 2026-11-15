@@ -98,7 +98,7 @@ Najeem uploads a **WhatsApp chat export `.zip`** (a `WhatsApp Chat with ….txt`
    python3 scripts/match.py            # updates data/clips.json and data splits
    ```
    `match.py` fuzzy-matches each phrase (and its Gulf/lesson variants) against the transcript, keeps teaching order, and fills gaps with approximate clips. Whisper downloads its model from huggingface.co, which was blocked from the cloud container on 2026-11-05 (Days 16–17 have no clips) but worked for Days 18–19 on 2026-11-11. If it's blocked, skip clips and say so; no clip is better than a wrong one.
-5. **WhatsApp text**: `python3 scripts/whatsapp_source.py "path/to/WhatsApp Chat with ….txt"` → `data/whatsapp.json`.
+5. **WhatsApp text**: `python3 scripts/whatsapp_source.py "path/to/WhatsApp Chat with ….txt"` → `data/whatsapp.json`. **Careful:** it rewrites the whole file and empties days that are not in this export, so back the file up first and merge in only the new day (`indent=0`). Days 15–19 carry their WhatsApp text inline as `"wa"` on each item.
 6. **Build, check, push**: `python3 scripts/build.py` (prints phrases / voice notes per day and warns on missing audio, materials or transliteration), commit `data/ docs/` (and README/CLAUDE.md if counts or features changed: README says "Days 3–N are included"), push to `main`, check the Pages run.
 7. **Reply** in 2–3 lines: days added, phrase and voice-note counts, how many phrases got a teacher clip, and anything skipped. Then offer to teach the new day (section 3).
 
