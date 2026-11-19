@@ -149,6 +149,12 @@ def main():
             '<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">\n'
             '<style>:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}'
             'body{margin:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>\n'
+            '<link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48">\n'
+            '<link rel="icon" href="favicon.svg" type="image/svg+xml">\n'
+            '<link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">\n'
+            '<link rel="icon" href="icon-192.png" type="image/png" sizes="192x192">\n'
+            '<link rel="apple-touch-icon" href="apple-touch-icon.png">\n'
+            '<meta name="theme-color" content="#2b2f6b">\n'
             '</head>\n<body>\n' + body + '\n</body>\n</html>\n')
     open(os.path.join(DOCS, "index.html"), "w", encoding="utf-8").write(page)
     # dist/artifact.html: same page without the document wrapper (for a claude.ai Artifact)

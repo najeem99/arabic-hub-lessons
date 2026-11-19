@@ -45,6 +45,7 @@ One page (`docs/index.html`) built from `src/app.html` + the JSON in `data/`. Ph
 | **📋 Cheat sheets** (`#sheets`) | **Essentials only**: pronouns, possessive endings, and the tense charts from the live-class PPTs (past, present, future, past continuous, the practice answer keys, a past · present · future table), laid out **like the PPT slides** (verb شَرَبْ, order he/they/she · you · I/we). | Every sheet starts **collapsed**; Open all / Close all; filter by topic; 🙈 Hide Arabic to self-test; link to the source PDF page. |
 | **🚶 On the go** (`#onthego`) | Practical sheets: everyday phrases from the lessons (I'm at work, I'm coming now…), numbers, ordinals, days, time, directions, greetings, plurals. | Numbers belong here, **not** in Cheat sheets. |
 | **Last updated stamp** | Last line of the side menu: "Last updated · 15 Nov 2026, 11:07 PM (UAE time)". `build.py` fills `__BUILT__` / `__BUILT_ISO__` in `src/app.html` with the build time in Asia/Dubai. | Najeem uses it to see whether a deploy went live. Every rebuild changes it, so always rebuild right before committing. |
+| **Favicon** | Chrome tab / home-screen icon: cream ع on a rounded dusk-over-dunes tile (site colours). `docs/favicon.svg` is the source; `docs/favicon.ico` (16/32/48), `favicon-32.png`, `icon-192.png`, `icon-512.png`, `apple-touch-icon.png` (square, 180 px) are rendered from it by `node scripts/make_icons.js`. `build.py` adds the `<link rel="icon">` tags + `theme-color` to the page head. | Najeem asked for it (2026-11-19). Change the SVG, then re-run the script. |
 | Other | ☆ "I know this" stars, ✓ listened progress, light/dark theme (`alh-theme`), last day opened (`alh-last`). | localStorage keys all start `alh-`. |
 
 ---
@@ -97,7 +98,8 @@ Najeem uploads a **WhatsApp chat export `.zip`** (a `WhatsApp Chat with ….txt`
    ```bash
    pip install -r requirements.txt     # faster-whisper, numpy
    python3 scripts/transcribe.py       # data/transcripts/<note>.json, ~real time on 2 cores; run in background
-   python3 scripts/match.py            # updates data/clips.json and data splits
+   python3 scripts/make_icons.js    docs/favicon.svg -> PNG icons (Playwright); see the Favicon row in section 2
+scripts/match.py            # updates data/clips.json and data splits
    ```
    `match.py` fuzzy-matches each phrase (and its Gulf/lesson variants) against the transcript, keeps teaching order, and fills gaps with approximate clips. It also cuts **word clips**: each word-by-word row is found, in order, among the transcript words inside the phrase clip (`word_clips()`); rows with no reliable match get no button.
    - **Hugging Face blocked?** (it often is from the cloud container). Get the same CTranslate2 Whisper *small* int8 model from npm, which is reachable: download the 4 tarballs `@skillninja/shortmovie-telop-model-p0`…`p3` (`curl` the `dist.tarball` URLs from registry.npmjs.org; don't `npm install`), untar into a scratch folder, `cat model.bin.part0..3 > small/model.bin`, copy the json files from p0, check `sha256sum` against `model.sha256`, then run `WHISPER_MODEL=/path/to/small python3 scripts/transcribe.py`. Worked 2026-11-19.
@@ -134,6 +136,7 @@ data/cheatsheets.json    Cheat sheets + On the go tables
 docs/index.html          BUILT site served by GitHub Pages (don't hand-edit)
 docs/audio/              compressed voice notes (AUD-*.mp3)
 docs/materials/          PDFs + .jpg covers
+docs/favicon.svg + .ico/.png  site icons (source = the SVG; scripts/make_icons.js renders the rest)
 docs/.nojekyll           keep (Pages serves files as-is)
 dist/artifact.html       BUILT page body for the claude.ai artifact (git-ignored)
 scripts/build.py         stitches everything into docs/index.html + dist/artifact.html
@@ -169,6 +172,7 @@ Only when Najeem asks. `python3 scripts/build.py` writes `dist/artifact.html`; p
 ## 9. History of Najeem's requests (newest first)
 
 - 2026-11-19: Materials: all PDFs listed by date (newest first), date shown on each; no "Course outline & reference" group.
+- 2026-11-19: favicon for the Chrome tab (ع on a dusk tile) + apple-touch-icon.
 - 2026-11-19: Day 22 (He was · هُوَّ كَانْ); audio clip for each word in "Word by word" (all days with transcripts); transcripts + clips for Days 16, 17, 20 using the Whisper model from npm.
 - 2026-11-19: in-app volume booster for the quiet WhatsApp notes (default 3×, with limiter); quieter spoken "Day N" announcements.
 - 2026-11-19: side menu lists the days first; Quiz, Materials and the sheets moved to the bottom.
