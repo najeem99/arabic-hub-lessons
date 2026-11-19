@@ -34,6 +34,7 @@ One page (`docs/index.html`) built from `src/app.html` + the JSON in `data/`. Ph
 | **Audio only** | Toggle (like the theme toggle) hiding lesson text, keeping voice notes; plays notes back to back with a chime. | `alh-audio-only` |
 | **Mini player** | Bottom bar shown **whenever a note is playing or paused part-way**. Its round button **only toggles play/pause**; tapping the title area (with ^ chevron) opens the full-screen player. | Don't change this split again. |
 | **Full-screen player** | Built for **driving**: big controls, play/pause, ±5 s skip, previous/next note, previous/next day, speed, Repeat (➡️ off, 🔂 audio, 📅 day; `alh-repeat`), shows and speaks "Day N · Audio x of y" and the day + topic when a new day starts. | Keep controls large and simple. |
+| **Volume boost** | WhatsApp notes are quiet (~-30 dB), so notes and teacher clips play through Web Audio: gain **Normal / 2× / 3× / 4×** (default 3×, `alh-boost`) → compressor/limiter so it never clips. Set in the full-screen player (🔊 Volume row) or the side-menu chip "🔊 Boost". The spoken "Day N · topic" announcement is softer (`ANN_VOL` = 0.45). | A note is only routed through Web Audio once Boost is above Normal. If audio stops when the phone locks, Normal is the fallback. |
 | **Screen stays on** | Wake Lock while audio plays (muted looping video fallback for iPhone), released 12 s after stopping. | |
 | **Headphone / car buttons** | Media Session: next/prev track changes note (crosses days), play/pause, ±5 s seek, lock-screen title. | |
 | **Scroll progress bar** | Thin bar under the sticky header, reaches the end at page bottom. | |
@@ -162,6 +163,7 @@ Only when Najeem asks. `python3 scripts/build.py` writes `dist/artifact.html`; p
 
 ## 9. History of Najeem's requests (newest first)
 
+- 2026-11-19: in-app volume booster for the quiet WhatsApp notes (default 3×, with limiter); quieter spoken "Day N" announcements.
 - 2026-11-19: side menu lists the days first; Quiz, Materials and the sheets moved to the bottom.
 - 2026-11-15: Day 20 (Possibility · مُمْكِنْ; Hugging Face blocked again, so no clips); "Last updated" stamp (UAE time) at the end of the side menu.
 - 2026-11-11: this CLAUDE.md; keep it updated with every workflow/feature change.

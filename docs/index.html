@@ -272,6 +272,7 @@ body.quiz .meaning.show{filter:none}
 .fs-speed{display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
 .fs-speed button{font:700 13px var(--f-ui);border:1px solid rgba(255,255,255,.35);background:transparent;border-radius:999px;padding:6px 12px}
 .fs-speed button[aria-pressed="true"]{background:var(--hero-fg);color:var(--sky-top)}
+.fs-boost{align-items:center}.fs-boost small{font:700 12px var(--f-ui);opacity:.85;margin-right:2px}
 /* Driving-friendly: few, very large targets; the position reads at a glance */
 .fsp{gap:14px;justify-content:space-evenly}
 .fs-art{width:min(36vw,20vh,170px)}
@@ -775,10 +776,11 @@ table.sheet .usub{display:none}
     <button class="chip" id="drOpen" type="button" aria-pressed="false">📖 Word-by-word</button>
     <button class="chip" id="drTheme" type="button">🌙 Dark mode</button>
     <button class="chip" id="drAudio" type="button" aria-pressed="false">🎧 Audio only</button>
+    <button class="chip" id="drBoost" type="button" aria-label="Volume boost for voice notes, tap to change">🔊 Boost 3×</button>
   </div>
   <div class="dr-sec"><button class="dr-h" type="button" data-drsec="this" aria-expanded="true"><h4 id="drSecTitle">This day</h4><span class="sh-chev" aria-hidden="true">›</span></button><div id="drSections"></div></div>
   <div class="dr-sec"><button class="dr-h" type="button" data-drsec="all" aria-expanded="true"><h4>Menu · all days</h4><span class="sh-chev" aria-hidden="true">›</span></button><div id="drDays"></div></div>
-  <p class="dr-built" id="drBuilt">Last updated · <time datetime="2026-11-19T08:44+04:00">19 Nov 2026, 8:44 AM</time> (UAE time)</p>
+  <p class="dr-built" id="drBuilt">Last updated · <time datetime="2026-11-19T08:45+04:00">19 Nov 2026, 8:45 AM</time> (UAE time)</p>
 </aside>
 
 <main class="gut"><div class="inner" id="day"></div></main>
@@ -830,6 +832,7 @@ table.sheet .usub{display:none}
     <button class="fs-day nx" id="fsNextDay" type="button"><small>Next day ›</small><b></b></button>
   </div>
   <div class="fs-speed" id="fsSpeed" role="group" aria-label="Playback speed"></div>
+  <div class="fs-speed fs-boost" id="fsBoost" role="group" aria-label="Volume boost"></div>
 </div>
 <canvas id="fx" aria-hidden="true"></canvas>
 
@@ -1063,6 +1066,50 @@ function wire(box){
   });
   r.addEventListener("input", () => { a.currentTime = +r.value; });
 }
+/* ---------- volume booster: the WhatsApp notes are quiet (about -30 dB), so they play through
+   Web Audio: gain (Normal / 2x / 3x / 4x, alh-boost) -> compressor/limiter (no clipping) -> speakers.
+   The spoken "Day N" announcements are kept softer (ANN_VOL) so they don't blast between notes. ---------- */
+const BOOSTS = [1, 2, 3, 4], ANN_VOL = 0.45;
+let boost = 3; try { const v = +localStorage.getItem("alh-boost"); if (BOOSTS.includes(v)) boost = v; } catch {}
+let boostIn = null; const boosted = new WeakSet();
+function audioCtx(){
+  chimeCtx = chimeCtx || new (window.AudioContext || window.webkitAudioContext)();
+  if (chimeCtx.state !== "running") chimeCtx.resume().catch(() => {});
+  return chimeCtx;
+}
+function boostRoute(a){
+  if (!a || boosted.has(a) || boost === 1) return;   // a note stays on the plain player until Boost is used
+  try {
+    const c = audioCtx();
+    if (!boostIn) {
+      const lim = c.createDynamicsCompressor();
+      lim.threshold.value = -12; lim.knee.value = 8; lim.ratio.value = 12; lim.attack.value = 0.003; lim.release.value = 0.25;
+      boostIn = c.createGain(); boostIn.gain.value = boost; boostIn.connect(lim).connect(c.destination);
+    }
+    c.createMediaElementSource(a).connect(boostIn); boosted.add(a);
+  } catch {}
+}
+function setBoost(v){
+  boost = v; try { localStorage.setItem("alh-boost", v); } catch {}
+  if (v > 1) { document.querySelectorAll(".audio audio").forEach(a => { if (!a.paused) boostRoute(a); }); if (!clipA.paused) boostRoute(clipA); }
+  if (boostIn) boostIn.gain.setTargetAtTime(v, boostIn.context.currentTime, 0.05);
+  boostSync(); toast(v === 1 ? "🔈 Normal volume" : `🔊 Voice notes boosted ${v}×`);
+}
+const boostLbl = v => v === 1 ? "Normal" : v + "×";
+function boostSync(){
+  const d = document.getElementById("drBoost"); if (d) d.textContent = `🔊 Boost ${boostLbl(boost)}`;
+  const f = document.getElementById("fsBoost");
+  if (f) f.innerHTML = `<small>🔊 Volume</small>` + BOOSTS.map(v => `<button type="button" data-bv="${v}" aria-pressed="${v === boost}">${boostLbl(v)}</button>`).join("");
+}
+document.addEventListener("play", e => { if (e.target.tagName === "AUDIO") { boostRoute(e.target); if (boosted.has(e.target)) audioCtx(); } }, true);
+// browsers only let audio start after a tap: wake the audio engine on the first tap, and again when the page comes back
+["pointerdown", "keydown"].forEach(t => document.addEventListener(t, () => { if (boost > 1 || boostIn) audioCtx(); }, {capture: true, passive: true}));
+document.addEventListener("visibilitychange", () => { if (!document.hidden && boostIn) audioCtx(); });
+document.addEventListener("click", e => {
+  const b = e.target.closest("[data-bv]"); if (b) { setBoost(+b.dataset.bv); return; }
+  if (e.target.closest("#drBoost")) setBoost(BOOSTS[(BOOSTS.indexOf(boost) + 1) % BOOSTS.length]);
+});
+
 /* short "ding" between voice notes (made in the browser, no file needed) */
 let chimeCtx = null;
 function chime(final){
@@ -1216,7 +1263,7 @@ function announce(text, done){
   try {
     if (!window.speechSynthesis) throw 0;
     speechSynthesis.cancel();
-    const u = new SpeechSynthesisUtterance(text); u.lang = "en-US"; u.rate = 0.95;
+    const u = new SpeechSynthesisUtterance(text); u.lang = "en-US"; u.rate = 0.95; u.volume = ANN_VOL;
     u.onend = fin; u.onerror = fin; speechSynthesis.speak(u);
     setTimeout(fin, 7000);
   } catch { setTimeout(fin, 1200); }
@@ -1613,6 +1660,7 @@ addEventListener("keydown", e => {
 
 /* ---------- teacher clips ---------- */
 const clipA = new Audio(); clipA.preload = "none"; let clipEnd = 0, clipBtn = null, clipRaf = 0;
+boostSync();
 function clipStop(){ clipA.pause(); cancelAnimationFrame(clipRaf); if (clipBtn) { clipBtn.classList.remove("on"); clipBtn.closest(".card")?.classList.remove("saying"); } clipBtn = null; }
 function clipWatch(){ if (clipA.currentTime >= clipEnd || clipA.ended) { clipStop(); return; } clipRaf = requestAnimationFrame(clipWatch); }
 function playClip(btn){
@@ -1621,6 +1669,7 @@ function playClip(btn){
   const src = "audio/" + btn.dataset.f, s = +btn.dataset.s; clipEnd = +btn.dataset.e; clipBtn = btn;
   btn.classList.add("on"); btn.closest(".card")?.classList.add("saying");
   const go = () => { clipA.currentTime = s; clipA.play().then(() => { clipRaf = requestAnimationFrame(clipWatch); }).catch(clipStop); };
+  boostRoute(clipA);
   if (!clipA.src.endsWith(src)) { clipA.src = src; clipA.addEventListener("loadedmetadata", go, {once: true}); clipA.load(); } else go();
 }
 document.addEventListener("click", e => { const b = e.target.closest(".say"); if (b) { e.stopPropagation(); playClip(b); } }, true);
