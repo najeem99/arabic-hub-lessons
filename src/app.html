@@ -193,6 +193,9 @@ body.quiz .meaning.show{filter:none}
 @keyframes slidein{from{opacity:0;transform:translateX(8px)}}
 .w-ar{font-family:var(--f-ar);font-size:21px;line-height:1.8;direction:rtl;text-align:right;order:2;font-weight:700}
 .w-en{order:1;min-width:0;font-size:14px}
+.words li.hasw{grid-template-columns:auto minmax(0,1fr) minmax(0,1fr)}
+.say.wsay{order:0;padding:3px;align-self:center}
+.w-hint{font-weight:600;color:var(--coral);font-size:12px}
 
 /* ---------- Voice note ---------- */
 .audio{background:linear-gradient(135deg,var(--sand-soft),var(--coral-soft));border:1px solid color-mix(in srgb,var(--sand) 40%,var(--line));
@@ -927,7 +930,7 @@ const card = i => i.audio ? audioCard(i.audio) : `
     <div class="acts">${i.clip ? `<button class="say${i.clip.a ? " approx" : ""}" type="button" data-f="${esc(i.clip.f)}" data-s="${i.clip.s}" data-e="${i.clip.e}" aria-label="Hear the teacher say this${i.clip.a ? " (approximate timing)" : ""}" title="${i.clip.a ? "Approximate: from where the teacher explains this phrase, may start a second early or late" : "The teacher saying this phrase"}"><span class="dot">${icon("play")}</span>Teacher says it${i.clip.a ? " ≈" : ""}</button>` : ""}${i.wa ? `<button class="wa-btn" type="button" aria-expanded="false" aria-label="Show the original WhatsApp text" title="Show how it was written in the WhatsApp message">${icon("chat")}<span>WhatsApp text</span></button>` : ""}</div>
     ${i.wa ? `<div class="wa-box" hidden><span class="wa-from">Original message · no harakat</span><div class="wa-ar" lang="ar" dir="rtl">${esc(i.wa.ar)}</div>${i.wa.lines.map(l => `<div class="wa-l">${esc(l)}</div>`).join("")}</div>` : ""}
     <div class="meaning"><span class="en">${esc(i.en)}</span>${i.tm ? `<span class="ta" lang="ta">${esc(i.tm)}</span>` : ""}</div>
-    <details class="words"><summary>Word by word</summary><ul>${i.w.map(([a,e],k) => `<li style="animation-delay:${k*40}ms"><span class="w-ar" lang="ar">${fmt(a)}</span><span class="w-en">${esc(e)}</span></li>`).join("")}</ul></details>
+    <details class="words"><summary>Word by word${i.clip?.w ? `<span class="w-hint"> · ▶ hear each word</span>` : ""}</summary><ul>${i.w.map(([a,e],k) => { const wc = i.clip?.w?.[k]; return `<li class="${wc ? "hasw" : ""}" style="animation-delay:${k*40}ms">${wc ? `<button class="say wsay" type="button" data-f="${esc(i.clip.f)}" data-s="${wc[0]}" data-e="${wc[1]}" aria-label="Hear the teacher say this word" title="The teacher saying this word"><span class="dot">${icon("play")}</span></button>` : ""}<span class="w-ar" lang="ar">${fmt(a)}</span><span class="w-en">${esc(e)}</span></li>`; }).join("")}</ul></details>
   </article>`;
 
 let cur = null, mode = "day";

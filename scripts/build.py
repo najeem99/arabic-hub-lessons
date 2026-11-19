@@ -58,6 +58,8 @@ def prepare(path):
                     it["clip"] = {"f": c["f"], "s": c["s"], "e": c["e"]}
                     if c.get("approx"):
                         it["clip"]["a"] = 1
+                    if c.get("w") and len(c["w"]) == len(it.get("w", [])):
+                        it["clip"]["w"] = c["w"]  # per-word clips, aligned with the word-by-word rows
         for s in secs:
             for it in s["items"]:
                 assert it.get("w"), f"Day {d['day']}: missing word-by-word for {it.get('ar')}"

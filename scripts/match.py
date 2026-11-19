@@ -1,8 +1,10 @@
 """Find where the teacher says each phrase inside his voice notes.
 
-Reads data/days/day*.json + data/transcripts/<note>.json (word timestamps), writes data/clips.json:
+Reads data/days/day*.json + data/transcripts/<note>.json (word timestamps), writes data/clips.json
+(hand-checked entries in data/clips_manual.json override the automatic ones):
     python3 scripts/match.py
- { "<day>": { "items": { "<sec>.<item>": {"f": note, "s": start, "e": end, "r": score} },
+ { "<day>": { "items": { "<block>.<sec>.<item>": {"f": note, "s": start, "e": end, "r": score,
+                                                   "w": [[start, end] or 0 per word-by-word row]} },
               "splits": { "<block>": [phrases covered by each note, in chat order] } } }
 """
 import glob, json, os, re, itertools
@@ -86,6 +88,35 @@ def candidates(vs, words, fi, toff):
     return keep
 
 
+def word_clips(it, words, s, e):
+    """per-word clips inside an exactly matched phrase: each word-by-word row, in order, found among the
+    transcript words between s and e. A row with no reliable match gets 0 (no button)."""
+    win = [w for w in words if w[0] >= s - 0.05 and w[1] <= e + 0.05]
+    out, pos = [], 0
+    for a_, e_ in it.get('w', []):
+        vs = variants(a_)
+        m = LESSON.search(e_)
+        if m and norm(m.group(1)):
+            vs.append(norm(m.group(1)))
+        vs += [ALIAS[v] for v in vs if v in ALIAS]
+        best = None
+        for v in vs:
+            k, vlen = len(v.split()), len(v.replace(' ', ''))
+            thr = 1.0 if vlen <= 2 else 0.85 if vlen <= 4 else 0.75
+            for L in {k, k + 1} if k > 1 else {1}:
+                for i in range(pos, len(win) - L + 1):
+                    r = ratio(v, ' '.join(w[2] for w in win[i:i + L]))
+                    if r >= thr and (best is None or r > best[0] + 0.05 or (abs(r - best[0]) <= 0.05 and i < best[1])):
+                        best = (r, i, L)
+        if best:
+            _, i, L = best
+            out.append([round(max(0, win[i][0] - 0.08), 2), round(win[i + L - 1][1] + 0.18, 2)])
+            pos = i + L
+        else:
+            out.append(0)
+    return out if any(out) else None
+
+
 def main():
     res = {}
     for p in sorted(glob.glob(os.path.join(ROOT, 'data', 'days', 'day*.json'))):
@@ -140,6 +171,9 @@ def main():
                     if pj == pi and f2 == f and s0 < s2 <= e0 + 4 and e2 - s0 <= 10:
                         e0 = max(e0, e2)
                 day["items"][f"{bi}.{si}.{ii}"] = {"f": f, "s": round(max(0, s0 - 0.15), 2), "e": round(e0 + 0.35, 2), "r": round(r, 2)}
+                wc = word_clips(phrases[pi][2], next(ws for f_, ws, _ in trs if f_ == f), s0, e0)
+                if wc:
+                    day["items"][f"{bi}.{si}.{ii}"]["w"] = wc
                 last_by_note[f] = max(last_by_note.get(f, -1), pi)
             # phrases are taught in order: an unmatched phrase lies between its found neighbours
             # (or between the note start/end and the nearest found one). Share that stretch of the
@@ -187,9 +221,15 @@ def main():
                 cuts[-1] = len(phrases)
                 day["splits"][str(bi)] = [cuts[0]] + [cuts[k] - cuts[k - 1] for k in range(1, len(cuts))]
             nap = sum(1 for k, v in day["items"].items() if k.startswith(f"{bi}.") and v.get("approx"))
-            print(f"Day {d['day']} block {bi}: {len(chosen)}/{len(phrases)} exact + {nap} approx, {len(allnotes)} notes",
+            nw = sum(1 for k, v in day["items"].items() if k.startswith(f"{bi}.") for x in v.get("w", []) if x)
+            print(f"Day {d['day']} block {bi}: {len(chosen)}/{len(phrases)} exact + {nap} approx, {nw} word clips, {len(allnotes)} notes",
                   day["splits"].get(str(bi), ""))
         res[str(d['day'])] = day
+    mp = os.path.join(ROOT, 'data', 'clips_manual.json')  # hand-checked clips win over the automatic ones
+    if os.path.exists(mp):
+        for dy, its in json.load(open(mp, encoding='utf-8')).items():
+            if dy in res:
+                res[dy]['items'].update(its)
     json.dump(res, open(os.path.join(ROOT, 'data', 'clips.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=0)
 
 

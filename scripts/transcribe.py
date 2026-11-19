@@ -2,6 +2,7 @@
 
     python3 scripts/transcribe.py            # all notes referenced in data/days/*.json
 Writes data/transcripts/<note>.json and skips notes already done. Runs ~real time on 2 CPU cores.
+If huggingface.co is blocked, point WHISPER_MODEL at a local CTranslate2 "small" model folder (see CLAUDE.md).
 """
 import glob, json, os, re, subprocess, sys, time
 import numpy as np
@@ -29,7 +30,7 @@ def jobs():
 
 def main():
     os.makedirs(OUT, exist_ok=True)
-    model = WhisperModel("small", device="cpu", compute_type="int8", cpu_threads=os.cpu_count() or 2)
+    model = WhisperModel(os.environ.get("WHISPER_MODEL", "small"), device="cpu", compute_type="int8", cpu_threads=os.cpu_count() or 2)
     for f, prompt in jobs().items():
         o = os.path.join(OUT, f + ".json")
         if os.path.exists(o):

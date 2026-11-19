@@ -7,7 +7,7 @@ Every lesson day becomes a tab with:
 - Arabic with full harakat, English + Tamil transliteration and meaning
 - an expandable **word-by-word** breakdown on every phrase
 - the teacher's **voice notes**, placed right after the phrases they explain
-- **"Teacher says it"** buttons that play just the moment where the teacher says that phrase
+- **"Teacher says it"** buttons that play just the moment where the teacher says that phrase, plus a small ▶ next to each word in "Word by word" that plays the teacher saying just that word
 - a **WhatsApp text** button showing the phrase exactly as the teacher typed it (no harakat, with his transliteration lines)
 - colour groups for interchangeable words (same colour = same meaning)
 - a **quiz** across one or more days, with score, streak and review of misses
@@ -16,7 +16,7 @@ Every lesson day becomes a tab with:
 - **Cheat sheets** (essentials: pronouns, possessive endings, and the tense charts from the live-class PPTs: past, present, future, past continuous, with their practice keys and a past · present · future table) and **On the go** (everyday phrases, numbers, days and time, directions, greetings, plurals): tables with Arabic + harakat, transliteration, English and Tamil, Gulf word first. Every sheet starts collapsed; tap to open, or Open all. Filter by topic, jump to the source PDF page, or hide the Arabic to test yourself. The side menu sections and the sheet lists fold too.
 - star ☆ "I know this", listened ✓ progress, light / dark theme, phone side menu
 
-Days 3–20 are included (Day 2 had no text; Day 11 was a revision class). Days 16–17 and 20 have voice notes but no "Teacher says it" clips yet.
+Days 3–22 are included (Day 2 had no text; Day 11 was a revision class; Day 21 has not been shared yet).
 
 The end of the side menu shows **Last updated · <date, time> (UAE time)**: the moment `scripts/build.py` ran, in Asia/Dubai time. If the live page shows the new stamp, the deploy went through.
 

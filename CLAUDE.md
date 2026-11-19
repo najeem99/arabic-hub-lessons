@@ -29,6 +29,7 @@ One page (`docs/index.html`) built from `src/app.html` + the JSON in `data/`. Ph
 | **Phrase cards** | Arabic with full harakat, English + Tamil transliteration, English + Tamil meaning, expandable **word-by-word**, colour groups for interchangeable words. | |
 | **Voice notes** | Teacher's notes placed **before** the phrases they explain ("Explains the N phrases below"). | Najeem plays audio first, then scrolls through the words. |
 | **Teacher says it** | Per-phrase button that plays just that moment of the voice note (from `data/clips.json`). Dashed "≈" = approximate clip. | |
+| **Word clips** | A ▶ beside each row of "Word by word" plays the teacher saying just that word (`"w"` list in a clip, one `[s, e]` or `0` per word row; only on exact phrase clips). Summary reads "Word by word · ▶ hear each word". | Najeem asked for audio cut for each word (2026-11-19). |
 | **WhatsApp text** | Shows the phrase exactly as the teacher typed it (no harakat) with his transliteration lines (`data/whatsapp.json`). | |
 | **Collapsible sections** | Each day's numbered sections fold; side-menu sections fold (`alh-drfold`). | Everything collapsible, collapsed by default where it's a list of sheets. |
 | **Audio only** | Toggle (like the theme toggle) hiding lesson text, keeping voice notes; plays notes back to back with a chime. | `alh-audio-only` |
@@ -98,7 +99,10 @@ Najeem uploads a **WhatsApp chat export `.zip`** (a `WhatsApp Chat with ….txt`
    python3 scripts/transcribe.py       # data/transcripts/<note>.json, ~real time on 2 cores; run in background
    python3 scripts/match.py            # updates data/clips.json and data splits
    ```
-   `match.py` fuzzy-matches each phrase (and its Gulf/lesson variants) against the transcript, keeps teaching order, and fills gaps with approximate clips. Whisper downloads its model from huggingface.co, which was blocked from the cloud container on 2026-11-05 (Days 16–17 have no clips) but worked for Days 18–19 on 2026-11-11. If it's blocked, skip clips and say so; no clip is better than a wrong one.
+   `match.py` fuzzy-matches each phrase (and its Gulf/lesson variants) against the transcript, keeps teaching order, and fills gaps with approximate clips. It also cuts **word clips**: each word-by-word row is found, in order, among the transcript words inside the phrase clip (`word_clips()`); rows with no reliable match get no button.
+   - **Hugging Face blocked?** (it often is from the cloud container). Get the same CTranslate2 Whisper *small* int8 model from npm, which is reachable: download the 4 tarballs `@skillninja/shortmovie-telop-model-p0`…`p3` (`curl` the `dist.tarball` URLs from registry.npmjs.org; don't `npm install`), untar into a scratch folder, `cat model.bin.part0..3 > small/model.bin`, copy the json files from p0, check `sha256sum` against `model.sha256`, then run `WHISPER_MODEL=/path/to/small python3 scripts/transcribe.py`. Worked 2026-11-19.
+   - Whisper sometimes hears the teacher's Arabic as English. For phrases `match.py` misses, re-transcribe just that stretch (ffmpeg `-ss/-to`, `initial_prompt` = the phrase, `vad_filter=False`), trust only words with normal durations (a "word" lasting several seconds is the prompt echoing back), check speech with `silencedetect`, and put the hand-checked clip in `data/clips_manual.json` (`{day: {"block.sec.item": {f,s,e,r,w}}}`); `match.py` copies it over its own result. If unsure, leave it out: no clip is better than a wrong one.
+   - Note: re-running `match.py` from scratch changes a few old clips on Days 4, 7, 10 (the committed clips.json was made by an earlier version). On 2026-11-19 those old entries were kept as they were; only `"w"` was added where the phrase clip was unchanged.
 5. **WhatsApp text**: `python3 scripts/whatsapp_source.py "path/to/WhatsApp Chat with ….txt"` → `data/whatsapp.json`. **Careful:** it rewrites the whole file and empties days that are not in this export, so back the file up first and merge in only the new day (`indent=0`). Days 15–19 carry their WhatsApp text inline as `"wa"` on each item.
 6. **Build, check, push**: `python3 scripts/build.py` (prints phrases / voice notes per day and warns on missing audio, materials or transliteration), commit `data/ docs/` (and README/CLAUDE.md if counts or features changed: README says "Days 3–N are included"), push to `main`, check the Pages run.
 7. **Reply** in 2–3 lines: days added, phrase and voice-note counts, how many phrases got a teacher clip, and anything skipped. Then offer to teach the new day (section 3).
@@ -119,8 +123,9 @@ Najeem uploads a **WhatsApp chat export `.zip`** (a `WhatsApp Chat with ….txt`
 CLAUDE.md                this file (keep it current)
 README.md                human-facing overview, build and add-a-day steps
 src/app.html             the whole app: CSS + JS; placeholders __DATA__, __MATERIALS__, __SHEETS__, __VIDEOS__, __BUILT__, __BUILT_ISO__
-data/days/dayNN.json     lesson content, one file per day (Days 3–20 now; no 11)
-data/clips.json          per-phrase teacher clips {day: {items: {"block.sec.item": {f,s,e,r,approx?}}, splits}} (match.py)
+data/days/dayNN.json     lesson content, one file per day (Days 3–22 now; no 11, no 21 yet)
+data/clips.json          per-phrase teacher clips {day: {items: {"block.sec.item": {f,s,e,r,approx?,w?}}, splits}} (match.py)
+data/clips_manual.json   hand-checked clips that override match.py
 data/transcripts/        whisper word timestamps per note (transcribe.py)
 data/whatsapp.json       original WhatsApp text per card (whatsapp_source.py)
 data/materials.json      course PDFs list
@@ -163,6 +168,7 @@ Only when Najeem asks. `python3 scripts/build.py` writes `dist/artifact.html`; p
 
 ## 9. History of Najeem's requests (newest first)
 
+- 2026-11-19: Day 22 (He was · هُوَّ كَانْ); audio clip for each word in "Word by word" (all days with transcripts); transcripts + clips for Days 16, 17, 20 using the Whisper model from npm.
 - 2026-11-19: in-app volume booster for the quiet WhatsApp notes (default 3×, with limiter); quieter spoken "Day N" announcements.
 - 2026-11-19: side menu lists the days first; Quiz, Materials and the sheets moved to the bottom.
 - 2026-11-15: Day 20 (Possibility · مُمْكِنْ; Hugging Face blocked again, so no clips); "Last updated" stamp (UAE time) at the end of the side menu.
