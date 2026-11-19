@@ -560,6 +560,7 @@ body.audio-only #day:not(.quizview) .pdf-link{display:none}
 .dr-h{all:unset;box-sizing:border-box;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:8px;width:100%;padding:2px 0}
 .dr-h .sh-chev{font-size:18px}
 .dr-sec.folded > :not(.dr-h){display:none}
+.dr-more{margin:14px 0 4px;padding-top:10px;border-top:1px solid var(--line);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
 .dr-built{margin:auto 0 0;padding-top:12px;border-top:1px solid var(--line);font-size:12px;color:var(--muted);text-align:center}
 .dr-built time{font-weight:700;color:var(--fg);font-variant-numeric:tabular-nums}
 .dr-frow{display:flex;align-items:stretch;gap:4px}
@@ -1637,13 +1638,14 @@ function renderDrawer(){
     : cur.sections.map((s, si) => `<button class="dr-link sec" type="button" data-drs="${si}" style="--dc:${dayColor(cur)}"><span class="n">${si+1}</span>
       <span class="t"><b>${esc(s.title.replace(/^\d+\.\s*/, ""))}</b><small>${s.items.filter(i => !i.audio).length} phrases · ${s.items.filter(i => i.audio).length} notes</small></span>${s.ar ? `<span class="ar" lang="ar">${fmt(s.ar).replace(/<[^>]+>/g, "").split(" ")[0]}</span>` : ""}</button>`).join("")
       + `<button class="dr-link sec" type="button" data-drq="day"><span class="n">🎯</span><span class="t"><b>Quiz this day</b><small>10 random questions</small></span></button>`;
-  $("#drDays").innerHTML = `<button class="dr-link" type="button" data-drq="1" aria-current="${quiz}" style="--dc:var(--coral)">${icon("target")}<span class="t"><b>Quiz</b><small>Pick one or more days</small></span></button>` +
+  $("#drDays").innerHTML = DAYS_NEWEST().map(d => `<button class="dr-link" type="button" data-drd="${d.day}" aria-current="${mode === "day" && cur.day === d.day}" style="--dc:${dayColor(d)}">${icon(d.icon)}
+      <span class="t"><b>Day ${d.day}</b><small>${esc(d.title)}</small></span><span class="pc">🎧${heardIn(d)}/${d.audios.length}</span></button>`).join("") +
+    `<p class="dr-more">Quiz · Materials · Sheets</p>` +
+    `<button class="dr-link" type="button" data-drq="1" aria-current="${quiz}" style="--dc:var(--coral)">${icon("target")}<span class="t"><b>Quiz</b><small>Pick one or more days</small></span></button>` +
     (MATS.length ? `<button class="dr-link" type="button" data-drm="1" aria-current="${mats}" style="--dc:var(--teal)">${icon("file")}<span class="t"><b>Materials</b><small>${MATS.length} PDFs · ${VIDS.length} videos</small></span></button>` : "") +
     SHEET_SETS.map(k => `<div class="dr-fold${drFold.has(k) ? " open" : ""}"><div class="dr-frow"><button class="dr-link" type="button" data-sheets="${k}" aria-current="${shs && shSet === k}" style="--dc:${SETS[k].color}">${icon(SETS[k].icon)}<span class="t"><b>${SETS[k].title}</b><small>${SETS[k].sub} · ${setSheets(k).length} sheets</small></span></button>
       <button class="dr-chev" type="button" data-drfold="${k}" aria-expanded="${drFold.has(k)}" aria-label="Show the ${SETS[k].title} list">›</button></div>
-      <div class="dr-flist" ${drFold.has(k) ? "" : "hidden"}>${setSheets(k).map(s => `<button class="dr-link sec" type="button" data-sheet="${esc(s.id)}" style="--dc:${shColor(s)}"><span class="t"><b>${esc(s.title)}</b><small>${esc(s.group)}</small></span></button>`).join("")}</div></div>`).join("") +
-    DAYS_NEWEST().map(d => `<button class="dr-link" type="button" data-drd="${d.day}" aria-current="${mode === "day" && cur.day === d.day}" style="--dc:${dayColor(d)}">${icon(d.icon)}
-      <span class="t"><b>Day ${d.day}</b><small>${esc(d.title)}</small></span><span class="pc">🎧${heardIn(d)}/${d.audios.length}</span></button>`).join("");
+      <div class="dr-flist" ${drFold.has(k) ? "" : "hidden"}>${setSheets(k).map(s => `<button class="dr-link sec" type="button" data-sheet="${esc(s.id)}" style="--dc:${shColor(s)}"><span class="t"><b>${esc(s.title)}</b><small>${esc(s.group)}</small></span></button>`).join("")}</div></div>`).join("");
   drawerSync();
 }
 function drawerSync(){

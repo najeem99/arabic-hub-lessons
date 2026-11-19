@@ -25,7 +25,7 @@ One page (`docs/index.html`) built from `src/app.html` + the JSON in `data/`. Ph
 
 | Area | What it does | Notes |
 |---|---|---|
-| **Day tabs / side menu** | One tab per lesson day, **newest day first** (tabs, menu, quiz picker, materials). Hash `#day-N`. | Najeem mostly studies the latest day. |
+| **Day tabs / side menu** | One tab per lesson day, **newest day first** (tabs, menu, quiz picker, materials). Hash `#day-N`. In the side menu's "Menu · all days" list the **days come first**; Quiz, Materials, Cheat sheets and On the go sit **below the days** under a "Quiz · Materials · Sheets" divider (2026-11-19). | Najeem mostly studies the latest day. |
 | **Phrase cards** | Arabic with full harakat, English + Tamil transliteration, English + Tamil meaning, expandable **word-by-word**, colour groups for interchangeable words. | |
 | **Voice notes** | Teacher's notes placed **before** the phrases they explain ("Explains the N phrases below"). | Najeem plays audio first, then scrolls through the words. |
 | **Teacher says it** | Per-phrase button that plays just that moment of the voice note (from `data/clips.json`). Dashed "≈" = approximate clip. | |
@@ -162,6 +162,7 @@ Only when Najeem asks. `python3 scripts/build.py` writes `dist/artifact.html`; p
 
 ## 9. History of Najeem's requests (newest first)
 
+- 2026-11-19: side menu lists the days first; Quiz, Materials and the sheets moved to the bottom.
 - 2026-11-15: Day 20 (Possibility · مُمْكِنْ; Hugging Face blocked again, so no clips); "Last updated" stamp (UAE time) at the end of the side menu.
 - 2026-11-11: this CLAUDE.md; keep it updated with every workflow/feature change.
 - 2026-11-11: Cheat sheets = essentials laid out like the PPT; new On the go menu; numbers moved there; everything collapsible, collapsed by default.
