@@ -41,7 +41,7 @@ One page (`docs/index.html`) built from `src/app.html` + the JSON in `data/`. Ph
 | **Scroll progress bar** | Thin bar under the sticky header, reaches the end at page bottom. | |
 | **Search** | Across all days in Arabic (harakat optional), sound, English or Tamil; results jump to the card. | |
 | **Quiz** | Across one or more days; score, streak, review of misses. Hash `#quiz`. | |
-| **Materials** | Course PDFs (in-page reader with prev/next, sortable by day: `alh-msort2`) + training videos on YouTube. Hash `#materials`. Days link to their "Lesson PDF" / "Training video". | Najeem wants them openable in any order. |
+| **Materials** | Course PDFs in **one list by the date shared** (newest first; toggle Newest/Oldest first: `alh-msort2`; each card shows "📅 date"; no separate "Course outline & reference" group, 2026-11-19), in-page reader with prev/next in the same order + training videos on YouTube. Hash `#materials`. Days link to their "Lesson PDF" / "Training video". | Najeem wants them openable in any order. |
 | **📋 Cheat sheets** (`#sheets`) | **Essentials only**: pronouns, possessive endings, and the tense charts from the live-class PPTs (past, present, future, past continuous, the practice answer keys, a past · present · future table), laid out **like the PPT slides** (verb شَرَبْ, order he/they/she · you · I/we). | Every sheet starts **collapsed**; Open all / Close all; filter by topic; 🙈 Hide Arabic to self-test; link to the source PDF page. |
 | **🚶 On the go** (`#onthego`) | Practical sheets: everyday phrases from the lessons (I'm at work, I'm coming now…), numbers, ordinals, days, time, directions, greetings, plurals. | Numbers belong here, **not** in Cheat sheets. |
 | **Last updated stamp** | Last line of the side menu: "Last updated · 15 Nov 2026, 11:07 PM (UAE time)". `build.py` fills `__BUILT__` / `__BUILT_ISO__` in `src/app.html` with the build time in Asia/Dubai. | Najeem uses it to see whether a deploy went live. Every rebuild changes it, so always rebuild right before committing. |
@@ -111,7 +111,7 @@ Najeem uploads a **WhatsApp chat export `.zip`** (a `WhatsApp Chat with ….txt`
 
 ## 5. Workflow: materials, videos, cheat sheets
 
-- **Course PDFs** come from Najeem's Notion page "Arabic Class" (Najeem Home / Arabic Class) or uploads in the project. Put the PDF in `docs/materials/<kebab-name>.pdf` plus a first-page cover `<same-name>.jpg`, and add an entry to `data/materials.json`: `{file, thumb, day (number or null), kind?, title, ar, ta, by, pages}`. Sorted by day in the UI.
+- **Course PDFs** come from Najeem's Notion page "Arabic Class" (Najeem Home / Arabic Class) or uploads in the project. Put the PDF in `docs/materials/<kebab-name>.pdf` plus a first-page cover `<same-name>.jpg`, and add an entry to `data/materials.json`: `{file, thumb, day (number or null), date: "YYYY-MM-DD", kind?, title, ar, ta, by, pages}`. **`date` = the day it was shared** and is the sort key: live-class PDFs use the class date; day PDFs use the date of that day's voice notes (`AUD-YYYYMMDD`, latest one); PDFs Najeem shared without a known date use the date they arrived.
 - **Training videos** (YouTube): `data/videos.json` entries `{id, day (or null), kind?, title, yt}`; `id` is the YouTube video id.
 - **Cheat sheets / On the go**: `data/cheatsheets.json`, a list of sheets `{id, set: "cheat"|"go", group, title, ar, ta, day?, src: {file, pages, p}?, note?, cols: [{k, label, type: "ar"|"txt"|"ta", t?: <translit key>, under?: <col it folds under on phones>}], rows: [{…}]}`. Gulf form first with the slide's formal word alongside (e.g. إِحْنَا with نَحْنُ). Cheat sheets = grammar essentials copied from the trainers' slides only; everyday/practical tables go in On the go. When a new grammar PPT/PDF arrives, add it to materials **and** a sheet here.
 
@@ -168,6 +168,7 @@ Only when Najeem asks. `python3 scripts/build.py` writes `dist/artifact.html`; p
 
 ## 9. History of Najeem's requests (newest first)
 
+- 2026-11-19: Materials: all PDFs listed by date (newest first), date shown on each; no "Course outline & reference" group.
 - 2026-11-19: Day 22 (He was · هُوَّ كَانْ); audio clip for each word in "Word by word" (all days with transcripts); transcripts + clips for Days 16, 17, 20 using the Whisper model from npm.
 - 2026-11-19: in-app volume booster for the quiet WhatsApp notes (default 3×, with limiter); quieter spoken "Day N" announcements.
 - 2026-11-19: side menu lists the days first; Quiz, Materials and the sheets moved to the bottom.

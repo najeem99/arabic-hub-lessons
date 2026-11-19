@@ -12,7 +12,7 @@ Every lesson day becomes a tab with:
 - colour groups for interchangeable words (same colour = same meaning)
 - a **quiz** across one or more days, with score, streak and review of misses
 - **search** across all days in Arabic (harakat optional), sound, English or Tamil — results show day and topic and jump to the card
-- a **Materials** view: the course PDFs (read in the page, sorted by day) and the training videos on YouTube, plus a "Lesson PDF" / "Training video" link on matching days
+- a **Materials** view: the course PDFs (read in the page, listed by the date they were shared, newest first) and the training videos on YouTube, plus a "Lesson PDF" / "Training video" link on matching days
 - **Cheat sheets** (essentials: pronouns, possessive endings, and the tense charts from the live-class PPTs: past, present, future, past continuous, with their practice keys and a past · present · future table) and **On the go** (everyday phrases, numbers, days and time, directions, greetings, plurals): tables with Arabic + harakat, transliteration, English and Tamil, Gulf word first. Every sheet starts collapsed; tap to open, or Open all. Filter by topic, jump to the source PDF page, or hide the Arabic to test yourself. The side menu sections and the sheet lists fold too.
 - star ☆ "I know this", listened ✓ progress, light / dark theme, phone side menu
 
