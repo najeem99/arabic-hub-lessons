@@ -975,6 +975,292 @@
   ]
  },
  {
+  "id": "cmd-prohib",
+  "set": "cheat",
+  "group": "Commands",
+  "title": "Commands & don'ts: man, woman, all",
+  "ar": "الْأَمْرْ وَالنَّهْيْ",
+  "ta": "கட்டளை · தடை",
+  "day": null,
+  "src": {
+   "file": "command-prohibition.pdf",
+   "pages": "pages 2–4",
+   "p": 2
+  },
+  "note": "To a man: the bare verb (اِطْبُخْ itbukh). To a woman add -ī (اِطْبُخِي itbukhī). To a group add -ū (اِطْبُخُوا itbukhū). Don't = لَا + the present verb: lā ti… (man), lā ti…īn (woman), lā ti…ūn (all). ق is said g (قُولْ gūl).",
+  "cols": [
+   {
+    "k": "en",
+    "label": "Verb",
+    "type": "txt"
+   },
+   {
+    "k": "p",
+    "label": "To",
+    "type": "ar",
+    "t": "pt"
+   },
+   {
+    "k": "c",
+    "label": "Do it!",
+    "type": "ar",
+    "t": "ct"
+   },
+   {
+    "k": "n",
+    "label": "Don't!",
+    "type": "ar",
+    "t": "nt"
+   }
+  ],
+  "rows": [
+   {
+    "en": "Cook",
+    "p": "إِنْتَ",
+    "pt": "Inta",
+    "c": "اِطْبُخْ",
+    "ct": "Itbukh",
+    "n": "لَا تِطْبُخْ",
+    "nt": "Lā titbukh",
+    "sep": 1
+   },
+   {
+    "en": "",
+    "p": "إِنْتِي",
+    "pt": "Inti",
+    "c": "اِطْبُخِي",
+    "ct": "Itbukhī",
+    "n": "لَا تِطْبُخِينْ",
+    "nt": "Lā titbukhīn"
+   },
+   {
+    "en": "",
+    "p": "إِنْتُو",
+    "pt": "Intu",
+    "c": "اِطْبُخُوا",
+    "ct": "Itbukhū",
+    "n": "لَا تِطْبُخُونْ",
+    "nt": "Lā titbukhūn"
+   },
+   {
+    "en": "Clean",
+    "p": "إِنْتَ",
+    "pt": "Inta",
+    "c": "نَظِّفْ",
+    "ct": "Naddif",
+    "n": "لَا تْنَظِّفْ",
+    "nt": "Lā tnaddif",
+    "sep": 1
+   },
+   {
+    "en": "",
+    "p": "إِنْتِي",
+    "pt": "Inti",
+    "c": "نَظِّفِي",
+    "ct": "Naddifī",
+    "n": "لَا تْنَظِّفِينْ",
+    "nt": "Lā tnaddifīn"
+   },
+   {
+    "en": "",
+    "p": "إِنْتُو",
+    "pt": "Intu",
+    "c": "نَظِّفُوا",
+    "ct": "Naddifū",
+    "n": "لَا تْنَظِّفُونْ",
+    "nt": "Lā tnaddifūn"
+   },
+   {
+    "en": "Try",
+    "p": "إِنْتَ",
+    "pt": "Inta",
+    "c": "حَاوِلْ",
+    "ct": "Hāwil",
+    "n": "لَا تْحَاوِلْ",
+    "nt": "Lā thāwil",
+    "sep": 1
+   },
+   {
+    "en": "",
+    "p": "إِنْتِي",
+    "pt": "Inti",
+    "c": "حَاوْلِي",
+    "ct": "Hāwlī",
+    "n": "لَا تْحَاوْلِينْ",
+    "nt": "Lā thāwlīn"
+   },
+   {
+    "en": "",
+    "p": "إِنْتُو",
+    "pt": "Intu",
+    "c": "حَاوْلُوا",
+    "ct": "Hāwlū",
+    "n": "لَا تْحَاوْلُونْ",
+    "nt": "Lā thāwlūn"
+   },
+   {
+    "en": "Tell / say",
+    "p": "إِنْتَ",
+    "pt": "Inta",
+    "c": "قُولْ",
+    "ct": "Gūl",
+    "n": "لَا تْقُولْ",
+    "nt": "Lā tgūl",
+    "sep": 1
+   },
+   {
+    "en": "",
+    "p": "إِنْتِي",
+    "pt": "Inti",
+    "c": "قُولِي",
+    "ct": "Gūlī",
+    "n": "لَا تْقُولِينْ",
+    "nt": "Lā tgūlīn"
+   },
+   {
+    "en": "",
+    "p": "إِنْتُو",
+    "pt": "Intu",
+    "c": "قُولُوا",
+    "ct": "Gūlū",
+    "n": "لَا تْقُولُونْ",
+    "nt": "Lā tgūlūn"
+   },
+   {
+    "en": "Eat",
+    "p": "إِنْتَ",
+    "pt": "Inta",
+    "c": "كُلْ",
+    "ct": "Kul",
+    "n": "لَا تَاكُلْ",
+    "nt": "Lā tākul",
+    "sep": 1
+   },
+   {
+    "en": "",
+    "p": "إِنْتِي",
+    "pt": "Inti",
+    "c": "كُلِي",
+    "ct": "Kulī",
+    "n": "لَا تَاكْلِينْ",
+    "nt": "Lā tāklīn"
+   },
+   {
+    "en": "",
+    "p": "إِنْتُو",
+    "pt": "Intu",
+    "c": "كُلُوا",
+    "ct": "Kulū",
+    "n": "لَا تَاكْلُونْ",
+    "nt": "Lā tāklūn"
+   }
+  ]
+ },
+ {
+  "id": "cmd-tenses",
+  "set": "cheat",
+  "group": "Commands",
+  "title": "Do, don't, present, future (to a man)",
+  "ar": "الْأَمْرْ وَالنَّهْيْ",
+  "ta": "கட்டளை · தடை · காலம்",
+  "day": null,
+  "src": {
+   "file": "command-prohibition.pdf",
+   "pages": "page 9",
+   "p": 9
+  },
+  "note": "All said to a man (إِنْتَ). Don't = lā + present. Future = bi + present.",
+  "cols": [
+   {
+    "k": "c",
+    "label": "Do it!",
+    "type": "ar",
+    "t": "ct"
+   },
+   {
+    "k": "en",
+    "label": "Meaning",
+    "type": "txt",
+    "under": "c"
+   },
+   {
+    "k": "n",
+    "label": "Don't!",
+    "type": "ar",
+    "t": "nt"
+   },
+   {
+    "k": "pr",
+    "label": "Present",
+    "type": "ar",
+    "t": "prt"
+   },
+   {
+    "k": "fu",
+    "label": "Future",
+    "type": "ar",
+    "t": "fut"
+   }
+  ],
+  "rows": [
+   {
+    "en": "Wait",
+    "c": "تِرَيَّا",
+    "ct": "Tirayya",
+    "n": "لَا تِتْرَيَّا",
+    "nt": "Lā titrayya",
+    "pr": "تِتْرَيَّا",
+    "prt": "Titrayya",
+    "fu": "بِتِتْرَيَّا",
+    "fut": "Bititrayya"
+   },
+   {
+    "en": "Be patient",
+    "c": "اِصْبِرْ",
+    "ct": "Isbir",
+    "n": "لَا تِصْبِرْ",
+    "nt": "Lā tisbir",
+    "pr": "تِصْبِرْ",
+    "prt": "Tisbir",
+    "fu": "بِتِصْبِرْ",
+    "fut": "Bitisbir"
+   },
+   {
+    "en": "Make it fast",
+    "c": "سَرِّعْ",
+    "ct": "Sarri'",
+    "n": "لَا تْسَرِّعْ",
+    "nt": "Lā tsarri'",
+    "pr": "تْسَرِّعْ",
+    "prt": "Tsarri'",
+    "fu": "بِتْسَرِّعْ",
+    "fut": "Bitsarri'"
+   },
+   {
+    "en": "Send",
+    "c": "اِرْسِلْ",
+    "ct": "Irsil",
+    "n": "لَا تُرْسِلْ",
+    "nt": "Lā tursil",
+    "pr": "تُرْسِلْ",
+    "prt": "Tursil",
+    "fu": "بِتُرْسِلْ",
+    "fut": "Bitursil"
+   },
+   {
+    "en": "Pay",
+    "c": "دْفَعْ",
+    "ct": "Dfa'",
+    "n": "لَا تِدْفَعْ",
+    "nt": "Lā tidfa'",
+    "pr": "تِدْفَعْ",
+    "prt": "Tidfa'",
+    "fu": "بِتِدْفَعْ",
+    "fut": "Bitidfa'"
+   }
+  ]
+ },
+ {
   "id": "phrases",
   "set": "go",
   "group": "Phrases",
@@ -2972,5 +3258,225 @@
    }
   ],
   "set": "go"
+ },
+ {
+  "id": "commands",
+  "set": "go",
+  "group": "Commands",
+  "title": "Everyday commands: home, car, work",
+  "ar": "أَوَامِرْ كِلّْ يُومْ",
+  "ta": "தினசரி கட்டளைகள்",
+  "day": null,
+  "src": {
+   "file": "command-prohibition.pdf",
+   "pages": "pages 5–6 and 8",
+   "p": 5
+  },
+  "note": "Said to a man. For a woman add ـِي (قُومِي), for a group ـُوا (قُومُوا).",
+  "cols": [
+   {
+    "k": "ar",
+    "label": "Arabic",
+    "type": "ar",
+    "t": "t"
+   },
+   {
+    "k": "en",
+    "label": "English",
+    "type": "txt"
+   }
+  ],
+  "rows": [
+   {
+    "ar": "قُومْ مِنَ النُّومْ",
+    "t": "Gūm min an-nūm",
+    "en": "Wake up (get up from sleep)"
+   },
+   {
+    "ar": "جَهِّزْ رُوحَكْ",
+    "t": "Jahhiz rūhak",
+    "en": "Get ready (rūhak = yourself)"
+   },
+   {
+    "ar": "كُلْ فُطُورْ",
+    "t": "Kul futūr",
+    "en": "Eat breakfast"
+   },
+   {
+    "ar": "لْبِسْ نِعَالَكْ",
+    "t": "Libis ni'ālak",
+    "en": "Wear your shoes / sandals"
+   },
+   {
+    "ar": "أَعْطِنِي مِفْتَاحْ السَّيَّارَة",
+    "t": "A'tini miftāh as-sayyāra",
+    "en": "Give me the car key"
+   },
+   {
+    "ar": "اِرْكَبْ السَّيَّارَة",
+    "t": "Irkab is-sayyāra",
+    "en": "Get in the car"
+   },
+   {
+    "ar": "خُذْ قَلَمْ",
+    "t": "Khudh galam",
+    "en": "Take a pen (ق = g)"
+   },
+   {
+    "ar": "اُكْتُبْ عَلَى الدَّفْتَرْ",
+    "t": "Uktub 'ala d-daftar",
+    "en": "Write in the notebook"
+   },
+   {
+    "ar": "خَلِّصْ شُغْلَكْ عَلَى الْوَقْتْ",
+    "t": "Khallis shughlak 'ala l-wagt",
+    "en": "Finish your work on time"
+   },
+   {
+    "ar": "أَعْطِنِي وَقْتْ زِيَادَة",
+    "t": "A'tini wagt ziyāda",
+    "en": "Give me more time"
+   },
+   {
+    "ar": "شُوفْ الزَّبُونْ",
+    "t": "Shūf az-zabūn",
+    "en": "See the customer"
+   },
+   {
+    "ar": "اِتَّصِلْ الزَّبُونْ",
+    "t": "Ittasil az-zabūn",
+    "en": "Call the customer"
+   },
+   {
+    "ar": "سَاعِدْ الْعَمِيلْ",
+    "t": "Sā'id al-'ameel",
+    "en": "Help the client"
+   },
+   {
+    "ar": "جِيبْ الْمَاءْ",
+    "t": "Jeeb il-mā",
+    "en": "Bring the water"
+   },
+   {
+    "ar": "اِفْتَحْ الْبَابْ",
+    "t": "Iftah il-bāb",
+    "en": "Open the door"
+   },
+   {
+    "ar": "اُسْكُتْ شْوَيّْ",
+    "t": "Uskut shwayy",
+    "en": "Be quiet for a bit"
+   },
+   {
+    "ar": "شِيلْ هَالشَّيّْ",
+    "t": "Sheel hash-shay",
+    "en": "Carry this thing"
+   },
+   {
+    "ar": "سَكِّرْ النُّورْ",
+    "t": "Sakkir an-nūr",
+    "en": "Turn off the light"
+   },
+   {
+    "ar": "تَعَالْ هْنِي",
+    "t": "Ta'āl hni",
+    "en": "Come here"
+   },
+   {
+    "ar": "حُطَّهْ عَلَى الطَّاوْلَة",
+    "t": "Huttah 'ala t-tāwla",
+    "en": "Put it on the table"
+   },
+   {
+    "ar": "رُوحْ هْنَاكْ",
+    "t": "Rūh hnāk",
+    "en": "Go there"
+   },
+   {
+    "ar": "اِمْسَحْ الْأَرْضْ",
+    "t": "Imsah il-ardh",
+    "en": "Mop / wipe the floor"
+   }
+  ]
+ },
+ {
+  "id": "donts",
+  "set": "go",
+  "group": "Commands",
+  "title": "Everyday don'ts",
+  "ar": "لَا …",
+  "ta": "செய்யாதே",
+  "day": null,
+  "src": {
+   "file": "command-prohibition.pdf",
+   "pages": "pages 6–7",
+   "p": 6
+  },
+  "note": "Don't = لَا + the present verb (said to a man).",
+  "cols": [
+   {
+    "k": "ar",
+    "label": "Arabic",
+    "type": "ar",
+    "t": "t"
+   },
+   {
+    "k": "en",
+    "label": "English",
+    "type": "txt"
+   }
+  ],
+  "rows": [
+   {
+    "ar": "لَا تْرُوحْ",
+    "t": "Lā trūh",
+    "en": "Don't go"
+   },
+   {
+    "ar": "لَا تِتْأَخَّرْ",
+    "t": "Lā tit'akhkhar",
+    "en": "Don't be late"
+   },
+   {
+    "ar": "لَا تَاكُلْ شِيبْسْ",
+    "t": "Lā tākul cheeps",
+    "en": "Don't eat chips"
+   },
+   {
+    "ar": "لَا تْكَلَّمْ وَايِدْ",
+    "t": "Lā tkallam wāyid",
+    "en": "Don't talk too much"
+   },
+   {
+    "ar": "لَا تِنْسَى مِفْتَاحْ السَّيَّارَة",
+    "t": "Lā tinsa miftāh as-sayyāra",
+    "en": "Don't forget the car key"
+   },
+   {
+    "ar": "لَا تِتْعَدَّى الْمَوْعِدْ",
+    "t": "Lā tit'adda l-maw'id",
+    "en": "Don't go past the deadline / appointment time"
+   },
+   {
+    "ar": "لَا تْسُوقْ بِسُرْعَة",
+    "t": "Lā tsūg bsur'a",
+    "en": "Don't drive fast (ق = g)"
+   },
+   {
+    "ar": "لَا تْشِلّْ نِعَالَكْ",
+    "t": "Lā tshill ni'ālak",
+    "en": "Don't take off your shoes"
+   },
+   {
+    "ar": "لَا تْرُوحْ بَعِيدْ",
+    "t": "Lā trūh ba'eed",
+    "en": "Don't go far"
+   },
+   {
+    "ar": "لَا تْضَيِّعْ الْهَدَفْ",
+    "t": "Lā tdhayyi' al-hadaf",
+    "en": "Don't miss the target"
+   }
+  ]
  }
 ]

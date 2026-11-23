@@ -54,6 +54,7 @@ One page (`docs/index.html`) built from `src/app.html` + the JSON in `data/`. Ph
 
 - **Gulf / UAE forms**, e.g. وِيَّاكْ wiyyāk (not مَعَكْ ma'ak), مُبْ mub, هْنِي hni, الْحِينْ al-heen, أَبَا abā / أَبْغَى, إِحْنَا ihna, إِنْتَ Inta, negate verbs with مَا (مَا أَحِبّْ, not لَا أَحِبّْ), يُومْ, -طَعَشْ numbers (إِحْدَعَشْ), ج pronounced y (يِيتْ) and ق as g where the Gulf does.
 - If the lesson used a formal word, show the **Gulf word first and keep the lesson word visible**: as a colour-group alternative `[r:Gulf|lesson]`, or in the word row note, e.g. `["هْنِي", "here (Gulf; lesson هِنَا)"]`. The Gulf cleanup of Days 3–14 (PR #2, 2026-11-02) is the reference; its change list is in the project files `gulf-fixes/proposed-gulf-changes.md`.
+- Commands use لَا, not مَا: لَا تْرُوحْ "don't go" (Gulf too). مَا negates statements (مَا أَحِبّْ).
 - Before rewriting existing Arabic words in bulk, **send Najeem the list of proposed changes and wait for confirmation** (that's how the Gulf cleanup was done).
 - **Every card**: full harakat on Arabic, `ten` (English-letter transliteration), `tta` (Tamil-script transliteration), `en`, `tm` (Tamil meaning), and a **required** `w` word-by-word list covering every word (small words too), with notes like "(Gulf)", "(to a woman)", "(ق = g)". `build.py` fails if `w` is missing.
 - Interchangeable words: `[r:A|B]` red, `[b:A|B]` blue, `[g:A|B]` green. Same colour = same meaning, in `ar`, `ten`, `tta` and `w`.
@@ -125,7 +126,7 @@ scripts/match.py            # updates data/clips.json and data splits
 CLAUDE.md                this file (keep it current)
 README.md                human-facing overview, build and add-a-day steps
 src/app.html             the whole app: CSS + JS; placeholders __DATA__, __MATERIALS__, __SHEETS__, __VIDEOS__, __BUILT__, __BUILT_ISO__
-data/days/dayNN.json     lesson content, one file per day (Days 3–22 now; no 11, no 21 yet)
+data/days/dayNN.json     lesson content, one file per day (Days 3–23 now; no 11, no 21 yet)
 data/clips.json          per-phrase teacher clips {day: {items: {"block.sec.item": {f,s,e,r,approx?,w?}}, splits}} (match.py)
 data/clips_manual.json   hand-checked clips that override match.py
 data/transcripts/        whisper word timestamps per note (transcribe.py)
@@ -171,6 +172,7 @@ Only when Najeem asks. `python3 scripts/build.py` writes `dist/artifact.html`; p
 
 ## 9. History of Najeem's requests (newest first)
 
+- 2026-11-23: Day 23 (I was · أَنَا كِنْتْ); live-class PDF "Command & Prohibition Sentences" (19 Nov) in Materials, with 2 Cheat sheets (group Commands: do/don't for man · woman · all; do/don't/present/future) and 2 On the go sheets (everyday commands, everyday don'ts). Prohibitions keep لَا (لَا تْرُوحْ), as the Gulf does; the مَا rule is for statements.
 - 2026-11-19: Materials: all PDFs listed by date (newest first), date shown on each; no "Course outline & reference" group.
 - 2026-11-19: favicon for the Chrome tab (ع on a dusk tile) + apple-touch-icon.
 - 2026-11-19: Day 22 (He was · هُوَّ كَانْ); audio clip for each word in "Word by word" (all days with transcripts); transcripts + clips for Days 16, 17, 20 using the Whisper model from npm.
