@@ -80,7 +80,7 @@ One page (`docs/index.html`) built from `src/app.html` + the JSON in `data/`. Ph
 
 Najeem uploads a **WhatsApp chat export `.zip`** (a `WhatsApp Chat with ….txt` plus the teacher's `AUD-YYYYMMDD-WA00NN.mp3` / `.opus` voice notes), or pastes the lesson text and attaches audio. Uploads in a Claude project land in `/mnt/project-files/uploads/hearth/<id>` with **no extension**; check with `file` and unzip into a fresh scratch folder (never into the repo; `raw/` and `*.zip` are git-ignored).
 
-1. **Find the lesson.** Lessons start with a `*Day N*` header (emoji digits like `Day1️⃣7️⃣` too) from Riyas ALH. Ignore class reminders, Meet links, stickers, other members' messages and their voice notes. Only add days not already in `data/days/` (unless asked to redo one). Day 2 had no text; Day 11 was a revision class (no file).
+1. **Find the lesson.** Lessons start with a `*Day N*` header (emoji digits like `Day1️⃣7️⃣` too) from Riyas ALH. Ignore class reminders, Meet links, stickers, other members' messages and their voice notes. Only add days not already in `data/days/` (unless asked to redo one). Since Nov 2026 the export is often from Najeem's own group "Arabic temp", where Najeem forwards the teacher's messages: there the lesson lines are under Najeem's name, so take the `Day N` message and what follows it (skip "You deleted this message" lines). Day 2 had no text; Day 11 was a revision class (no file).
 2. **Compress ("trim") the voice notes** to small mono MP3s:
    `scripts/compress_audio.sh path/to/AUD-*.mp3` → `docs/audio/<same name>.mp3` (mono, 22.05 kHz, 48 kbps). Keep the original WhatsApp file name; it's how notes are referenced everywhere.
 3. **Write `data/days/dayNN.json`** (copy a recent day such as `day19.json`):
@@ -126,7 +126,7 @@ scripts/match.py            # updates data/clips.json and data splits
 CLAUDE.md                this file (keep it current)
 README.md                human-facing overview, build and add-a-day steps
 src/app.html             the whole app: CSS + JS; placeholders __DATA__, __MATERIALS__, __SHEETS__, __VIDEOS__, __BUILT__, __BUILT_ISO__
-data/days/dayNN.json     lesson content, one file per day (Days 3–23 now; no 11, no 21 yet)
+data/days/dayNN.json     lesson content, one file per day (Days 3–24 now; no 11, no 21 yet)
 data/clips.json          per-phrase teacher clips {day: {items: {"block.sec.item": {f,s,e,r,approx?,w?}}, splits}} (match.py)
 data/clips_manual.json   hand-checked clips that override match.py
 data/transcripts/        whisper word timestamps per note (transcribe.py)
@@ -172,6 +172,7 @@ Only when Najeem asks. `python3 scripts/build.py` writes `dist/artifact.html`; p
 
 ## 9. History of Najeem's requests (newest first)
 
+- 2026-11-24: Day 24 (She was · هِيَّ كَانَتْ, 13 phrases, 2 notes, teacher clips + word clips); live-class PDF "Polite Requests in Spoken Arabic" (23 Nov) in Materials, with 1 Cheat sheet (Polite request words) and 2 On the go sheets (polite request examples; sorry · one minute · wait).
 - 2026-11-23: Day 23 (I was · أَنَا كِنْتْ); live-class PDF "Command & Prohibition Sentences" (19 Nov) in Materials, with 2 Cheat sheets (group Commands: do/don't for man · woman · all; do/don't/present/future) and 2 On the go sheets (everyday commands, everyday don'ts). Prohibitions keep لَا (لَا تْرُوحْ), as the Gulf does; the مَا rule is for statements.
 - 2026-11-19: Materials: all PDFs listed by date (newest first), date shown on each; no "Course outline & reference" group.
 - 2026-11-19: favicon for the Chrome tab (ع on a dusk tile) + apple-touch-icon.

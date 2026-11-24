@@ -1261,6 +1261,97 @@
   ]
  },
  {
+  "id": "polite-words",
+  "set": "cheat",
+  "group": "Polite requests",
+  "title": "Polite request words",
+  "ar": "مِنْ فَضْلَكْ · لَوْ سَمَحْتْ · مُمْكِنْ",
+  "ta": "மரியாதையான கோரிக்கைச் சொற்கள்",
+  "day": null,
+  "src": {
+   "file": "polite-requests.pdf",
+   "pages": "pages 3, 6, 9 and 13",
+   "p": 3
+  },
+  "note": "Start a request with one of these words. لَوْ سَمَحْتْ and مُمْكِنْ / عَادِي are the everyday Gulf ones; مِنْ فَضْلَكْ is more formal. To a woman: مِنْ فَضْلِچْ (min fadlich), لَوْ سَمَحْتِي (law samahti), تْفَضَّلِي (tfaddali).",
+  "cols": [
+   {
+    "k": "ar",
+    "label": "Word",
+    "type": "ar",
+    "t": "t"
+   },
+   {
+    "k": "en",
+    "label": "Meaning",
+    "type": "txt"
+   },
+   {
+    "k": "use",
+    "label": "When",
+    "type": "txt",
+    "under": "en"
+   },
+   {
+    "k": "ta",
+    "label": "Tamil",
+    "type": "ta",
+    "under": "en"
+   }
+  ],
+  "rows": [
+   {
+    "ar": "مِنْ فَضْلَكْ",
+    "t": "Min fadlak",
+    "en": "Please / Excuse me",
+    "use": "More formal and professional",
+    "ta": "தயவுசெய்து"
+   },
+   {
+    "ar": "فَضْلًا",
+    "t": "Fadlan",
+    "en": "Please",
+    "use": "Rare",
+    "ta": "தயவுசெய்து"
+   },
+   {
+    "ar": "لَوْ سَمَحْتْ",
+    "t": "Law samaht",
+    "en": "Excuse me / If you allow",
+    "use": "Everyday; fine in formal talk too",
+    "ta": "மன்னிக்கவும் / அனுமதித்தால்"
+   },
+   {
+    "ar": "اِسْمَحْنِي",
+    "t": "Ismahni",
+    "en": "Please (let me…)",
+    "use": "Asking permission to do something; very rare in speech",
+    "ta": "என்னை அனுமதியுங்கள்"
+   },
+   {
+    "ar": "مُمْكِنْ",
+    "t": "Mumkin",
+    "en": "Can / Could / May (sometimes Please)",
+    "use": "Polite questions: مُمْكِنْ أَدْخُلْ؟",
+    "ta": "முடியுமா"
+   },
+   {
+    "ar": "عَادِي",
+    "t": "'Ādi",
+    "en": "Is it OK…? (same as مُمْكِنْ)",
+    "use": "Polite questions: عَادِي أَجْلِسْ هْنِي؟",
+    "ta": "பரவாயில்லையா"
+   },
+   {
+    "ar": "تْفَضَّلْ",
+    "t": "Tfaddal (Faddal)",
+    "en": "Please (go ahead / come in / sit)",
+    "use": "The polite answer to مُمْكِنْ أَدْخُلْ؟ To a woman: تْفَضَّلِي",
+    "ta": "வாருங்கள் / தயவுசெய்து"
+   }
+  ]
+ },
+ {
   "id": "phrases",
   "set": "go",
   "group": "Phrases",
@@ -3476,6 +3567,225 @@
     "ar": "لَا تْضَيِّعْ الْهَدَفْ",
     "t": "Lā tdhayyi' al-hadaf",
     "en": "Don't miss the target"
+   }
+  ]
+ },
+ {
+  "id": "polite-examples",
+  "set": "go",
+  "group": "Polite requests",
+  "title": "Polite requests: examples",
+  "ar": "لَوْ سَمَحْتْ …",
+  "ta": "மரியாதையான கோரிக்கைகள்",
+  "day": null,
+  "src": {
+   "file": "polite-requests.pdf",
+   "pages": "pages 4–5, 7–8, 10–11",
+   "p": 4
+  },
+  "note": "Gulf form first; the slide's word is in brackets. مُمْكِنْ and عَادِي swap freely.",
+  "cols": [
+   {
+    "k": "ar",
+    "label": "Arabic",
+    "type": "ar",
+    "t": "t"
+   },
+   {
+    "k": "en",
+    "label": "English",
+    "type": "txt"
+   }
+  ],
+  "rows": [
+   {
+    "ar": "مِنْ فَضْلَكْ تَعَالْ هْنِي",
+    "t": "Min fadlak ta'āl hni",
+    "en": "Please come here"
+   },
+   {
+    "ar": "مِنْ فَضْلَكْ بِنْشُوفْ بُكْرَة؟",
+    "t": "Min fadlak b-nshoof bukra?",
+    "en": "Excuse me, shall we meet tomorrow?"
+   },
+   {
+    "ar": "مِنْ فَضْلَكْ عِنْدَكْ سَيَّارَة؟",
+    "t": "Min fadlak 'indak sayyāra?",
+    "en": "Excuse me, do you have a car?"
+   },
+   {
+    "ar": "فَضْلًا عَطْنِي الْفَاتُورَة",
+    "t": "Fadlan 'atni al-fātoora",
+    "en": "Please give me the bill"
+   },
+   {
+    "ar": "مِنْ فَضْلَكْ خُذْ الْإِيصَالْ",
+    "t": "Min fadlak khudh al-eesāl",
+    "en": "Please take the receipt"
+   },
+   {
+    "ar": "مِنْ فَضْلَكْ عَطْنِي رَقْمِچْ",
+    "t": "Min fadlak 'atni ragmich",
+    "en": "Please give me your number (رَقْمِچْ = your number, to a woman; ق = g)"
+   },
+   {
+    "ar": "مِنْ فَضْلَكْ بِنْرُوحْ بَاچِرْ؟",
+    "t": "Min fadlak b-nrooh bāchir?",
+    "en": "Excuse me, shall we go tomorrow? (بَاچِرْ = tomorrow, Gulf; like بُكْرَة)"
+   },
+   {
+    "ar": "فَضْلًا إِيشْ تَبْغَى؟",
+    "t": "Fadlan aish tabgha?",
+    "en": "Please, what do you want?"
+   },
+   {
+    "ar": "لَوْ سَمَحْتْ قُولْ لِي وِشْ الْمُشْكِلَة؟",
+    "t": "Law samaht gool li wish al-mushkila?",
+    "en": "Excuse me, tell me what the problem is"
+   },
+   {
+    "ar": "اِسْمَحْنِي بَجِي وِيَّاكْ",
+    "t": "Ismahni baji wiyyāk",
+    "en": "Please, I'll come with you (slide: مَعَاكْ ma'āk)"
+   },
+   {
+    "ar": "لَوْ سَمَحْتْ مُمْكِنْ سُؤَالْ؟",
+    "t": "Law samaht mumkin su'āl?",
+    "en": "Excuse me, could I ask a question?"
+   },
+   {
+    "ar": "لَوْ سَمَحْتْ بَسْتَخْدِمْ اللَّابْتُوبْ حَقَّكْ؟",
+    "t": "Law samaht b-astakhdim al-lābtob haggak?",
+    "en": "Excuse me, shall I use your laptop?"
+   },
+   {
+    "ar": "لَوْ سَمَحْتْ قُولْ لِي وِينْ الْمَسْجِدْ؟",
+    "t": "Law samaht gool li wain al-masjid?",
+    "en": "Excuse me, tell me where the mosque is"
+   },
+   {
+    "ar": "اِسْمَحْنِي بَرُوحْ إِلَى الْإِجَازَة",
+    "t": "Ismahni b-arooh ila al-ijāza",
+    "en": "Please, I'll go on leave (let me go on vacation)"
+   },
+   {
+    "ar": "لَوْ سَمَحْتْ عَطْنِي الْمِنْيُو",
+    "t": "Law samaht 'atni al-menu",
+    "en": "Excuse me, give me the menu"
+   },
+   {
+    "ar": "لَوْ سَمَحْتْ بَزُورْ مَكْتَبَكْ",
+    "t": "Law samaht b-azoor maktabak",
+    "en": "Excuse me, I'd like to visit your office"
+   },
+   {
+    "ar": "مُمْكِنْ تْسَكِّرْ الْبَابْ؟",
+    "t": "Mumkin ('Ādi) tsakkir al-bāb?",
+    "en": "Could you shut the door?"
+   },
+   {
+    "ar": "مُمْكِنْ تِتْكَلَّمْ عَرَبِي؟",
+    "t": "Mumkin ('Ādi) titkallam 'arabi?",
+    "en": "Can you speak Arabic?"
+   },
+   {
+    "ar": "مُمْكِنْ اِسْمَكْ؟",
+    "t": "Mumkin ('Ādi) ismak?",
+    "en": "Your name, please?"
+   },
+   {
+    "ar": "مُمْكِنْ أَدْخُلْ؟",
+    "t": "Mumkin ('Ādi) adkhul?",
+    "en": "May I come in? (answer: تْفَضَّلْ tfaddal)"
+   },
+   {
+    "ar": "عَادِي أَجْلِسْ هْنِي؟",
+    "t": "'Ādi ajlis hni?",
+    "en": "Is it OK if I sit here? (slide: هِنَا hina)"
+   },
+   {
+    "ar": "مُمْكِنْ تِقِينِي مِنَ الْمَطَارْ؟",
+    "t": "Mumkin tiqeeni min al-matār?",
+    "en": "Could you … me from the airport? (slide word تِقِينِي, no English given; ask the trainer)"
+   },
+   {
+    "ar": "مُمْكِنْ أَكَلِّمْ وِيَّا مُدِيرْ؟",
+    "t": "Mumkin akallim wiyya mudeer?",
+    "en": "Could I speak with a manager?"
+   },
+   {
+    "ar": "عَادِي عَطْنِي سَيَّارْتَكْ؟",
+    "t": "'Ādi 'atni sayyārtak?",
+    "en": "Could you give me your car?"
+   }
+  ]
+ },
+ {
+  "id": "polite-vocab",
+  "set": "go",
+  "group": "Polite requests",
+  "title": "Sorry, one minute, wait…",
+  "ar": "مَعْلِيشْ · لَحْظَة · اِسْتَنَّى",
+  "ta": "மன்னிக்கவும் · ஒரு நிமிடம் · காத்திரு",
+  "day": null,
+  "src": {
+   "file": "polite-requests.pdf",
+   "pages": "pages 12–13",
+   "p": 12
+  },
+  "cols": [
+   {
+    "k": "ar",
+    "label": "Arabic",
+    "type": "ar",
+    "t": "t"
+   },
+   {
+    "k": "en",
+    "label": "English",
+    "type": "txt"
+   }
+  ],
+  "rows": [
+   {
+    "ar": "الْمَعْذِرَة",
+    "t": "Al-ma'dhira",
+    "en": "Sorry / Excuse me (more formal)"
+   },
+   {
+    "ar": "مَعْلِيشْ",
+    "t": "Ma'leesh",
+    "en": "Sorry / never mind (informal)"
+   },
+   {
+    "ar": "أَنَا آسِفْ",
+    "t": "Ana āsif",
+    "en": "I'm sorry (a woman: أَنَا آسْفَة āsfa)"
+   },
+   {
+    "ar": "دَقِيقَة",
+    "t": "Dageega",
+    "en": "One minute… (ق = g)"
+   },
+   {
+    "ar": "لَحْظَة",
+    "t": "Lahdha",
+    "en": "One second…"
+   },
+   {
+    "ar": "اِسْتَنَّى / اِنْتَظِرْ / اِتْرَيَّا",
+    "t": "Istanna / Intadhir / Itrayya",
+    "en": "Wait (اِتْرَيَّا is very Gulf)"
+   },
+   {
+    "ar": "اِصْبِرْ شُوَيّْ",
+    "t": "Isbir shwayy",
+    "en": "Have some patience (wait a bit)"
+   },
+   {
+    "ar": "تْفَضَّلْ / تْفَضَّلِي",
+    "t": "Tfaddal / Tfaddali",
+    "en": "Please (come in / sit / go ahead), to a man / a woman"
    }
   ]
  }

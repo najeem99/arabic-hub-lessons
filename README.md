@@ -16,7 +16,7 @@ Every lesson day becomes a tab with:
 - **Cheat sheets** (essentials: pronouns, possessive endings, and the tense charts from the live-class PPTs: past, present, future, past continuous, with their practice keys and a past · present · future table) and **On the go** (everyday phrases, numbers, days and time, directions, greetings, plurals): tables with Arabic + harakat, transliteration, English and Tamil, Gulf word first. Every sheet starts collapsed; tap to open, or Open all. Filter by topic, jump to the source PDF page, or hide the Arabic to test yourself. The side menu sections and the sheet lists fold too.
 - star ☆ "I know this", listened ✓ progress, light / dark theme, phone side menu
 
-Days 3–23 are included (Day 2 had no text; Day 11 was a revision class; Day 21 has not been shared yet).
+Days 3–24 are included (Day 2 had no text; Day 11 was a revision class; Day 21 has not been shared yet).
 
 The end of the side menu shows **Last updated · <date, time> (UAE time)**: the moment `scripts/build.py` ran, in Asia/Dubai time. If the live page shows the new stamp, the deploy went through.
 
