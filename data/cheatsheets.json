@@ -1352,6 +1352,108 @@
   ]
  },
  {
+  "id": "qwords",
+  "set": "cheat",
+  "group": "Questions",
+  "title": "Question words: what, why, who…",
+  "ar": "شُو · لَيْشْ · مِنُو · وَيْنْ",
+  "ta": "கேள்விச் சொற்கள்",
+  "day": null,
+  "src": {
+   "file": "question-words.pdf",
+   "pages": "pages 2–12",
+   "p": 2
+  },
+  "note": "Gulf / UAE word first; the other words on the slide are the same question in other Gulf countries. Start the sentence with the question word: شُو تْسَوِّي؟ What are you doing?",
+  "cols": [
+   {
+    "k": "ar",
+    "label": "Word",
+    "type": "ar",
+    "t": "t"
+   },
+   {
+    "k": "en",
+    "label": "Meaning",
+    "type": "txt"
+   },
+   {
+    "k": "ta",
+    "label": "Tamil",
+    "type": "ta",
+    "under": "en"
+   }
+  ],
+  "rows": [
+   {
+    "ar": "شُو",
+    "t": "Shu",
+    "en": "What (UAE)",
+    "ta": "என்ன"
+   },
+   {
+    "ar": "إِيشْ · وِشْ · شْنُو",
+    "t": "Aish · Wish · Shnu",
+    "en": "What (other Gulf: Saudi, Kuwait)",
+    "ta": "என்ன"
+   },
+   {
+    "ar": "لَيْشْ",
+    "t": "Laish",
+    "en": "Why / what for",
+    "ta": "ஏன்"
+   },
+   {
+    "ar": "مِنُو · مِينْ · مَنْ",
+    "t": "Minu · Meen · Man",
+    "en": "Who",
+    "ta": "யார்"
+   },
+   {
+    "ar": "لِمِينْ · حَقّْ مِينْ · مِينْ",
+    "t": "Limeen · Hagg meen · Meen",
+    "en": "Whose (ق = g in حَقّْ)",
+    "ta": "யாருடைய"
+   },
+   {
+    "ar": "مَتَى",
+    "t": "Mata",
+    "en": "When",
+    "ta": "எப்போது"
+   },
+   {
+    "ar": "هَلْ",
+    "t": "Hal",
+    "en": "Is / are…? (a yes/no question)",
+    "ta": "…ஆ?"
+   },
+   {
+    "ar": "كَمْ · بِكَمْ",
+    "t": "Kam · Bikam",
+    "en": "How much / how many · for how much",
+    "ta": "எவ்வளவு / எத்தனை"
+   },
+   {
+    "ar": "وَيْنْ",
+    "t": "Wain",
+    "en": "Where",
+    "ta": "எங்கே"
+   },
+   {
+    "ar": "كَيْفْ",
+    "t": "Kaif",
+    "en": "How",
+    "ta": "எப்படி"
+   },
+   {
+    "ar": "أَيْ",
+    "t": "Ay",
+    "en": "Which",
+    "ta": "எந்த"
+   }
+  ]
+ },
+ {
   "id": "phrases",
   "set": "go",
   "group": "Phrases",
@@ -3786,6 +3888,306 @@
     "ar": "تْفَضَّلْ / تْفَضَّلِي",
     "t": "Tfaddal / Tfaddali",
     "en": "Please (come in / sit / go ahead), to a man / a woman"
+   }
+  ]
+ },
+ {
+  "id": "q-ex1",
+  "set": "go",
+  "group": "Questions",
+  "title": "Questions: what, why, who, whose",
+  "ar": "شُو · لَيْشْ · مِنُو · لِمِينْ",
+  "ta": "கேள்விகள்: என்ன, ஏன், யார், யாருடைய",
+  "day": null,
+  "src": {
+   "file": "question-words.pdf",
+   "pages": "pages 3 and 5",
+   "p": 3
+  },
+  "note": "Gulf form first; the slide's word is in brackets. To a woman: إِنْتِي (inti), and -ak becomes -ich (زَوْجِچْ).",
+  "cols": [
+   {
+    "k": "ar",
+    "label": "Arabic",
+    "type": "ar",
+    "t": "t"
+   },
+   {
+    "k": "en",
+    "label": "English",
+    "type": "txt"
+   }
+  ],
+  "rows": [
+   {
+    "ar": "شُو هَاذَا؟",
+    "t": "Shu hādha?",
+    "en": "What is this? (also إِيشْ / وِشْ / شْنُو هَاذَا)"
+   },
+   {
+    "ar": "شُو تْسَوِّي؟",
+    "t": "Shu tsawwi?",
+    "en": "What are you doing?"
+   },
+   {
+    "ar": "شُو تِشْتَغِلْ؟",
+    "t": "Shu tishtaghil?",
+    "en": "What work do you do?"
+   },
+   {
+    "ar": "شُو تَبَا؟",
+    "t": "Shu tabā?",
+    "en": "What do you want? (Saudi: وِشْ تَبْغَى wish tabgha)"
+   },
+   {
+    "ar": "لَيْشْ إِنْتَ زَعْلَانْ؟",
+    "t": "Laish inta za'lān?",
+    "en": "Why are you upset?"
+   },
+   {
+    "ar": "لَيْشْ إِنْتَ غَضْبَانْ؟",
+    "t": "Laish inta ghadhbān?",
+    "en": "Why are you angry?"
+   },
+   {
+    "ar": "لَيْشْ إِنْتَ تْأَخَّرْتْ؟",
+    "t": "Laish inta t'akhkhart?",
+    "en": "Why are you late?"
+   },
+   {
+    "ar": "مِنُو إِنْتَ؟ · مِنُو هُوَّ؟",
+    "t": "Minu inta? · Minu huwwa?",
+    "en": "Who are you? · Who is he? (slide مَنْ man)"
+   },
+   {
+    "ar": "مِنُو الْمُدِيرْ؟",
+    "t": "Minu al-mudeer?",
+    "en": "Who is the manager? (slide مَنْ مُدِيرْ)"
+   },
+   {
+    "ar": "مِينْ هْنَاكْ؟ · مِينْ هْنِي؟",
+    "t": "Meen hnāk? · Meen hni?",
+    "en": "Who is there? · Who is here? (slide هِنَا)"
+   },
+   {
+    "ar": "مِينْ كَفِيلَكْ؟",
+    "t": "Meen kafeelak?",
+    "en": "Who is your sponsor?"
+   },
+   {
+    "ar": "مِنُو زَوْجِچْ؟",
+    "t": "Minu zawjich?",
+    "en": "Who is your husband? (to a woman; slide زَوْجِكْ)"
+   },
+   {
+    "ar": "مِنُو زَوْجْتَكْ؟",
+    "t": "Minu zawjtak?",
+    "en": "Who is your wife?"
+   },
+   {
+    "ar": "مِنُو الطَّبِيبْ؟ · مِنُو الدِّكْتُورْ؟",
+    "t": "Minu at-tabeeb? · Minu ad-diktoor?",
+    "en": "Who is the doctor?"
+   },
+   {
+    "ar": "لِمِينْ السَّيَّارَة هَاذِي؟",
+    "t": "Limeen as-sayyāra hādhi?",
+    "en": "Whose car is this?"
+   },
+   {
+    "ar": "حَقّْ مِينْ الْمِلَفّْ هَاذَا؟",
+    "t": "Hagg meen al-milaff hādha?",
+    "en": "Whose file is this? (ق = g)"
+   },
+   {
+    "ar": "مِينْ الْمَكْتَبْ هَاذَا؟",
+    "t": "Meen al-maktab hādha?",
+    "en": "Whose office is this?"
+   }
+  ]
+ },
+ {
+  "id": "q-ex2",
+  "set": "go",
+  "group": "Questions",
+  "title": "Questions: when, is…?, how much, where, how, which",
+  "ar": "مَتَى · هَلْ · كَمْ · وَيْنْ · كَيْفْ · أَيْ",
+  "ta": "கேள்விகள்: எப்போது, …ஆ?, எவ்வளவு, எங்கே, எப்படி, எந்த",
+  "day": null,
+  "src": {
+   "file": "question-words.pdf",
+   "pages": "pages 6–11",
+   "p": 6
+  },
+  "note": "Gulf form first; ق is said g (أَقْدَرْ agdar). هَلْ can be dropped in speech: إِنْتَ مَشْغُولْ؟ with a question voice.",
+  "cols": [
+   {
+    "k": "ar",
+    "label": "Arabic",
+    "type": "ar",
+    "t": "t"
+   },
+   {
+    "k": "en",
+    "label": "English",
+    "type": "txt"
+   }
+  ],
+  "rows": [
+   {
+    "ar": "مَتَى الْاِجْتِمَاعْ؟",
+    "t": "Mata al-ijtimā'?",
+    "en": "When is the meeting?"
+   },
+   {
+    "ar": "مَتَى زَفَافَكْ؟",
+    "t": "Mata zafāfak?",
+    "en": "When is your wedding?"
+   },
+   {
+    "ar": "مَتَى إِنْتَ فَاضِي؟",
+    "t": "Mata inta fādhi?",
+    "en": "When are you free?"
+   },
+   {
+    "ar": "مَتَى أَقْدَرْ أَشُوفَكْ؟",
+    "t": "Mata agdar ashoofak?",
+    "en": "When can I see you?"
+   },
+   {
+    "ar": "مَتَى بِيكُونْ الْمَوْعِدْ؟",
+    "t": "Mata bi-ykoon al-maw'id?",
+    "en": "When will the appointment be?"
+   },
+   {
+    "ar": "هَلْ إِنْتَ مِتْزَوِّجْ؟",
+    "t": "Hal inta mitzawwij?",
+    "en": "Are you married?"
+   },
+   {
+    "ar": "هَلْ إِنْتَ عَازِبْ؟",
+    "t": "Hal inta 'āzib?",
+    "en": "Are you single?"
+   },
+   {
+    "ar": "هَلْ إِنْتَ مَشْغُولْ؟",
+    "t": "Hal inta mashghool?",
+    "en": "Are you busy?"
+   },
+   {
+    "ar": "هَلْ إِنْتَ مِنَ الْهِنْدْ؟",
+    "t": "Hal inta min al-Hind?",
+    "en": "Are you from India?"
+   },
+   {
+    "ar": "هَلْ إِنْتَ هِنْدِي؟",
+    "t": "Hal inta Hindi?",
+    "en": "Are you Indian?"
+   },
+   {
+    "ar": "هَلْ هُوَّ صَدِيقَكْ؟",
+    "t": "Hal huwwa sadeegak?",
+    "en": "Is he your friend? (ق = g)"
+   },
+   {
+    "ar": "هَلْ هِيَّ صَدِيقْتَكْ؟",
+    "t": "Hal hiya sadeegtak?",
+    "en": "Is she your friend?"
+   },
+   {
+    "ar": "كَمْ السَّاعَة؟ · السَّاعَة كَمْ؟",
+    "t": "Kam as-sā'a? · As-sā'a kam?",
+    "en": "What's the time?"
+   },
+   {
+    "ar": "كَمْ سِعْرْ هَاذَا؟ · كَمْ هَاذَا؟ · بِكَمْ هَاذَا؟ · كَمْ حَقُّه؟",
+    "t": "Kam si'r hādha? · Kam hādha? · Bikam hādha? · Kam haggu?",
+    "en": "How much is this?"
+   },
+   {
+    "ar": "كَمْ كِيلُو مِتِرْ؟",
+    "t": "Kam kīlo mitir?",
+    "en": "How many kilometres?"
+   },
+   {
+    "ar": "كَمْ كِيلُو؟",
+    "t": "Kam kīlo?",
+    "en": "How many kilos?"
+   },
+   {
+    "ar": "كَمْ عُمْرَكْ؟",
+    "t": "Kam 'umrak?",
+    "en": "How old are you?"
+   },
+   {
+    "ar": "وَيْنْ إِنْتَ يَا مُحَمَّدْ؟",
+    "t": "Wain inta ya Muhammad?",
+    "en": "Where are you, Muhammad?"
+   },
+   {
+    "ar": "وَيْنْ الْمِفْتَاحْ؟",
+    "t": "Wain al-miftāh?",
+    "en": "Where is the key?"
+   },
+   {
+    "ar": "وَيْنْ الْمَوْقِعْ مِنْ هْنِي؟",
+    "t": "Wain al-mawgi' min hni?",
+    "en": "Where is the location from here? (slide هِنَا)"
+   },
+   {
+    "ar": "وَيْنْ الشِّقَّة؟",
+    "t": "Wain ash-shigga?",
+    "en": "Where is the apartment? (ق = g)"
+   },
+   {
+    "ar": "وَيْنْ شُغْلَكْ؟ · وَيْنْ دَوَامَكْ؟ · وَيْنْ عَمَلَكْ؟",
+    "t": "Wain shughlak? · Wain dawāmak? · Wain 'amalak?",
+    "en": "Where is your job?"
+   },
+   {
+    "ar": "كَيْفْ صِحَّتَكْ؟",
+    "t": "Kaif sihhatak?",
+    "en": "How is your health?"
+   },
+   {
+    "ar": "كَيْفْ مُمْكِنْ؟",
+    "t": "Kaif mumkin?",
+    "en": "How is that possible?"
+   },
+   {
+    "ar": "كَيْفْ أَقْدَرْ أَقُولْ لَكْ؟",
+    "t": "Kaif agdar agool lak?",
+    "en": "How can I tell you that?"
+   },
+   {
+    "ar": "كَيْفْ الْفِلِمْ؟",
+    "t": "Kaif al-filim?",
+    "en": "How is the film?"
+   },
+   {
+    "ar": "كَيْفْ كَانَتْ الْإِجَازَة؟",
+    "t": "Kaif kānat al-ijāza?",
+    "en": "How was the holiday?"
+   },
+   {
+    "ar": "أَيْ وَاحِدْ تْحِبّْ؟",
+    "t": "Ay wāhid thibb?",
+    "en": "Which one do you like?"
+   },
+   {
+    "ar": "أَيْ سَيَّارَة عِنْدَكْ؟",
+    "t": "Ay sayyāra 'indak?",
+    "en": "Which car do you have?"
+   },
+   {
+    "ar": "أَيْ يُومْ إِنْتَ فَاضِي؟",
+    "t": "Ay yoom inta fādhi?",
+    "en": "Which day are you free?"
+   },
+   {
+    "ar": "أَيْ مَطْعَمْ بِنْرُوحْ لَه؟",
+    "t": "Ay mat'am b-nrooh lah?",
+    "en": "Which restaurant shall we go to?"
    }
   ]
  }

@@ -1,0 +1,607 @@
+{
+ "day": 25,
+ "icon": "clock",
+ "title": "They were · We were",
+ "arTitle": "هُمْ كَانُوا · إِحْنَا كِنَّا",
+ "ta": "அவர்கள் இருந்தார்கள் · நாங்கள் இருந்தோம்",
+ "keys": [
+  "هُمْ كَانُوا مَشْغُولِينْ",
+  "هُمْ كَانُوا وِيَّانَا فِي الْمَكْتَبْ",
+  "إِحْنَا كِنَّا نَعِيشْ فِي قَطَرْ",
+  "إِحْنَا كِنَّا نَلْعَبْ كُرَةْ الْقَدَمْ"
+ ],
+ "activity": {
+  "items": [
+   {
+    "ta": "நாங்கள் சென்ற மாதம் அபுதாபியில் இருந்தோம்.",
+    "en": "We were in Abu Dhabi last month."
+   },
+   {
+    "ta": "அவர்கள் தங்கள் குடும்பத்துடன் துபாயில் இருந்தார்கள்.",
+    "en": "They were in Dubai with their family."
+   },
+   {
+    "ta": "நாங்கள் அலுவலகத்தில் இருந்தோம்.",
+    "en": "We were in the office."
+   },
+   {
+    "ta": "நாங்கள் காவலர்களாக இருந்தோம்.",
+    "en": "We were policemen."
+   },
+   {
+    "ta": "அவர்கள் பாகிஸ்தானியர்களாக இருந்தார்கள்.",
+    "en": "They were Pakistanis."
+   }
+  ],
+  "hint": "إِحْنَا كِنَّا فِي أَبُوظَبِي + قَبْلْ شَهَرْ (a month ago, Day 24); هُمْ كَانُوا فِي دُبَيّْ وِيَّا الْعَائِلَة (Day 23); إِحْنَا كِنَّا فِي الْمَكْتَبْ; شُرْطِي (policeman, Day 22; the group form wasn't taught yet); بَاكِسْتَانِي (Day 12) + ـيِّينْ for a group, like سَعُودِيِّينْ."
+ },
+ "blocks": [
+  {
+   "audio": [
+    "AUD-20261125-WA0029.mp3"
+   ],
+   "sections": [
+    {
+     "title": "1. They were",
+     "ar": "هُمْ كَانُوا",
+     "ta": "அவர்கள் இருந்தார்கள்",
+     "note": "كَانُوا (kānu) = they were (Day 22 هُوَّ كَانْ he was, Day 23 أَنَا كِنْتْ I was, Day 24 هِيَّ كَانَتْ she was). For a group the describing word takes ـِينْ (-een): مَشْغُولْ → مَشْغُولِينْ, سَعُودِي → سَعُودِيِّينْ.",
+     "items": [
+      {
+       "ar": "هُمْ كَانُوا مَشْغُولِينْ",
+       "ten": "Hum kānu mashghooleen",
+       "tta": "ஹும் கானூ மஷ்கூலீன்",
+       "en": "They were busy",
+       "tm": "அவர்கள் பிசியாக இருந்தார்கள்",
+       "w": [
+        [
+         "هُمْ",
+         "they"
+        ],
+        [
+         "كَانُوا",
+         "they were (كَانْ + ـوا for they)"
+        ],
+        [
+         "مَشْغُولِينْ",
+         "busy (for a group; one man: مَشْغُولْ, Day 23)"
+        ]
+       ],
+       "wa": {
+        "ar": "هم كانوا مشغولين",
+        "lines": [
+         "(Hum Kanu mashgholeen)",
+         "(ஹும் கானூ மஷ்கூலீன்)",
+         "They were busy",
+         "அவர்கள் பிசியாக இருந்தார்கள்."
+        ]
+       },
+       "key": true
+      },
+      {
+       "ar": "هُمْ كَانُوا فِي الْمَسْجِدْ",
+       "ten": "Hum kānu fil masjid",
+       "tta": "ஹும் கானூ ஃபில் மஸ்ஜித்",
+       "en": "They were in the mosque",
+       "tm": "அவர்கள் பள்ளிவாசலில் இருந்தார்கள்",
+       "w": [
+        [
+         "هُمْ",
+         "they"
+        ],
+        [
+         "كَانُوا",
+         "they were (كَانْ + ـوا for they)"
+        ],
+        [
+         "فِي",
+         "in / at"
+        ],
+        [
+         "الْمَسْجِدْ",
+         "the mosque (فِي الْـ is said fil)"
+        ]
+       ],
+       "wa": {
+        "ar": "هم كانو في المسجد",
+        "lines": [
+         "(Hum Kanu fil masjid)",
+         "(ஹும் கானூ ஃபில் மஸ்ஜித்)",
+         "They were in the mosque",
+         "அவர்கள் பள்ளிவாசலில் இருந்தார்கள்."
+        ]
+       },
+       "key": true
+      },
+      {
+       "ar": "هُمْ كَانُوا فُقَرَاءْ",
+       "ten": "Hum kānu fugarā",
+       "tta": "ஹும் கானூ ஃபுகரா",
+       "en": "They were poor",
+       "tm": "அவர்கள் ஏழைகளாக இருந்தார்கள்",
+       "w": [
+        [
+         "هُمْ",
+         "they"
+        ],
+        [
+         "كَانُوا",
+         "they were (كَانْ + ـوا for they)"
+        ],
+        [
+         "فُقَرَاءْ",
+         "poor (for a group; ق = g: fugarā)"
+        ]
+       ],
+       "wa": {
+        "ar": "هم كانو فقراء",
+        "lines": [
+         "(Hum Kanu fugara)",
+         "(ஹும் கானூ ஃபுகரா)",
+         "They were poor",
+         "அவர்கள் ஏழைகளாக இருந்தார்கள்."
+        ]
+       }
+      },
+      {
+       "ar": "هُمْ كَانُوا سَعُودِيِّينْ",
+       "ten": "Hum kānu Sa'oodiyyeen",
+       "tta": "ஹும் கானூ ச'வூதியீன்",
+       "en": "They were Saudis",
+       "tm": "அவர்கள் ச'வூதியர்களாக இருந்தார்கள்",
+       "w": [
+        [
+         "هُمْ",
+         "they"
+        ],
+        [
+         "كَانُوا",
+         "they were (كَانْ + ـوا for they)"
+        ],
+        [
+         "سَعُودِيِّينْ",
+         "Saudis (for a group; one: سَعُودِي)"
+        ]
+       ],
+       "wa": {
+        "ar": "هم كانو سعوديين",
+        "lines": [
+         "(Hum Kanu Saudiyyeen)",
+         "(ஹும் கானூ ச'வூதியீன்)",
+         "They were Saudi`s",
+         "அவர்கள் ச'வூதியர்களாக இருந்தார்கள்."
+        ]
+       }
+      },
+      {
+       "ar": "هُمْ كَانُوا فِي رَاسْ الْخَيْمَة",
+       "ten": "Hum kānu fi Rās al-Khaima",
+       "tta": "ஹும் கானூ ஃபீ ராஸ் அல்-ஹைமா",
+       "en": "They were in Ras al-Khaimah",
+       "tm": "அவர்கள் ராஸ் அல் ஹைமாவில் இருந்தார்கள்",
+       "w": [
+        [
+         "هُمْ",
+         "they"
+        ],
+        [
+         "كَانُوا",
+         "they were (كَانْ + ـوا for they)"
+        ],
+        [
+         "فِي",
+         "in / at"
+        ],
+        [
+         "رَاسْ الْخَيْمَة",
+         "Ras al-Khaimah (one of the emirates; خ = kh)"
+        ]
+       ],
+       "wa": {
+        "ar": "هم كانوا في  راس الخيمة",
+        "lines": [
+         "(Hum Kanu fi rasal khaima)",
+         "(ஹும் கானூ ஃபீ ராஸ் அல்-ஹைமா)",
+         "They were in Ras al-Khaimah",
+         "அவர்கள் ராஸ் அல் ஹைமாவில் இருந்தார்கள்."
+        ]
+       }
+      },
+      {
+       "ar": "هُمْ كَانُوا فِي السِّيَاحَة",
+       "ten": "Hum kānu fis-siyāha",
+       "tta": "ஹும் கானூ ஃபிஸ் ஸியாஹா",
+       "en": "They were in tourism",
+       "tm": "அவர்கள் சுற்றுலாவில் இருந்தார்கள்",
+       "w": [
+        [
+         "هُمْ",
+         "they"
+        ],
+        [
+         "كَانُوا",
+         "they were (كَانْ + ـوا for they)"
+        ],
+        [
+         "فِي",
+         "in / at"
+        ],
+        [
+         "السِّيَاحَة",
+         "tourism / a sightseeing trip (فِي السِّـ is said fis-s)"
+        ]
+       ],
+       "wa": {
+        "ar": "هم كانوا في السياحة",
+        "lines": [
+         "(Hum Kanu fissiyaha)",
+         "(ஹும் கானூ ஃபிஸ் ஸியாஹா)",
+         "They were in tourism",
+         "அவர்கள் சுற்றுலாவில் இருந்தார்கள்."
+        ]
+       }
+      },
+      {
+       "ar": "هُمْ كَانُوا [r:وِيَّانَا|مَعَنَا] فِي الْمَكْتَبْ",
+       "ten": "Hum kānu [r:wiyyāna|ma'na] fil maktab",
+       "tta": "ஹும் கானூ [r:விய்யானா|மஅனா] ஃபில் மக்தப்",
+       "en": "They were with us in the office",
+       "tm": "அவர்கள் அலுவலகத்தில் எங்களோடு இருந்தார்கள்",
+       "w": [
+        [
+         "هُمْ",
+         "they"
+        ],
+        [
+         "كَانُوا",
+         "they were (كَانْ + ـوا for they)"
+        ],
+        [
+         "[r:وِيَّانَا]",
+         "with us (Gulf: وِيَّا + ـنَا)"
+        ],
+        [
+         "[r:مَعَنَا]",
+         "with us (lesson word)"
+        ],
+        [
+         "فِي",
+         "in / at"
+        ],
+        [
+         "الْمَكْتَبْ",
+         "the office"
+        ]
+       ],
+       "wa": {
+        "ar": "هم كانوا معنا في المكتب",
+        "lines": [
+         "(Hum Kanu ma'na fil maktab)",
+         "(ஹும் கானூ மஅனா ஃபில் மக்தப்)",
+         "They were with us in the office",
+         "அவர்கள் அலுவலகத்தில் எங்களோடு இருத்தார்கள்."
+        ]
+       },
+       "key": true
+      },
+      {
+       "ar": "هُمْ كَانُوا أَبْرِيَاءْ",
+       "ten": "Hum kānu abriyā",
+       "tta": "ஹும் கானூ அப்ரியா",
+       "en": "They were innocent",
+       "tm": "அவர்கள் அப்பாவிகளாக இருந்தார்கள்",
+       "w": [
+        [
+         "هُمْ",
+         "they"
+        ],
+        [
+         "كَانُوا",
+         "they were (كَانْ + ـوا for they)"
+        ],
+        [
+         "أَبْرِيَاءْ",
+         "innocent (for a group)"
+        ]
+       ],
+       "wa": {
+        "ar": "هم كانو أبرياء",
+        "lines": [
+         "(Hum Kanu abriya)",
+         "(ஹும் கானூ அப்ரியா)",
+         "They were innocent",
+         "அவர்கள் அப்பாவிகளாக இருந்தார்கள்."
+        ]
+       }
+      },
+      {
+       "ar": "هُمْ كَانُوا فِي فِلَسْطِينْ مِنْ زَمَانْ",
+       "ten": "Hum kānu fi Filasteen min zamān",
+       "tta": "ஹும் கானூ ஃபீ ஃபலஸ்தீன் மின் ஜமான்",
+       "en": "They have been in Palestine for a long time",
+       "tm": "அவர்கள் வெகுகாலமாக ஃபலஸ்தீனில் இருந்தார்கள்",
+       "w": [
+        [
+         "هُمْ",
+         "they"
+        ],
+        [
+         "كَانُوا",
+         "they were (كَانْ + ـوا for they)"
+        ],
+        [
+         "فِي",
+         "in / at"
+        ],
+        [
+         "فِلَسْطِينْ",
+         "Palestine"
+        ],
+        [
+         "مِنْ",
+         "from / since"
+        ],
+        [
+         "زَمَانْ",
+         "a long time (مِنْ زَمَانْ = for a long time)"
+        ]
+       ],
+       "wa": {
+        "ar": "هم كانو في فلسطين من زمان",
+        "lines": [
+         "(Hum Kanu fi felasteen min zaman)",
+         "(ஹும் கானூ ஃபீ ஃபலஸ்தீன் மின் ஜமான்)",
+         "They have been in Palestine for a long time",
+         "அவர்கள் வெகுகாலமாக ஃபலஸ்தீனில் இருந்தார்கள்."
+        ]
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "audio": [
+    "AUD-20261125-WA0028.mp3"
+   ],
+   "sections": [
+    {
+     "title": "2. We were",
+     "ar": "إِحْنَا كِنَّا",
+     "ta": "நாங்கள் இருந்தோம்",
+     "note": "Gulf إِحْنَا ihna = we (lesson نَحْنُ nahnu), كِنَّا kinna = we were (lesson كُنَّا kunna). كِنَّا + a 'we' verb starting with نـ (نَعِيشْ, نَلْعَبْ) = we were …ing.",
+     "items": [
+      {
+       "ar": "[r:إِحْنَا|نَحْنُ] كِنَّا نَعِيشْ فِي قَطَرْ",
+       "ten": "[r:Ihna|Nahnu] kinna na'eesh fi Gatar",
+       "tta": "[r:இஹ்னா|நஹ்னு] கின்னா நஈஷ் ஃபீ கதர்",
+       "en": "We were living in Qatar",
+       "tm": "நாங்கள் கதாரில் வசித்துக் கொண்டிருந்தோம்",
+       "w": [
+        [
+         "[r:إِحْنَا]",
+         "we (Gulf)"
+        ],
+        [
+         "[r:نَحْنُ]",
+         "we (lesson word)"
+        ],
+        [
+         "كِنَّا",
+         "we were (Gulf kinna; lesson كُنَّا kunna)"
+        ],
+        [
+         "نَعِيشْ",
+         "we live (كِنَّا + verb = we were …ing)"
+        ],
+        [
+         "فِي",
+         "in / at"
+        ],
+        [
+         "قَطَرْ",
+         "Qatar (ق = g: Gatar)"
+        ]
+       ],
+       "wa": {
+        "ar": "نحن كنا نعيش في قطر",
+        "lines": [
+         "(Nahn kunna na'eesh fi qatar)",
+         "(நஹ்ன் குன்னா ந'ஈஷு ஃபீ கதர்)",
+         "We were living  in Qatar.",
+         "நாங்கள் கதாரில் வசித்துக் கொண்டிருந்தோம்."
+        ]
+       },
+       "key": true
+      },
+      {
+       "ar": "[r:إِحْنَا|نَحْنُ] كِنَّا [b:نِشْتَغِلْ|نَعْمَلْ] فِي وَظِيفَة حُكُومِيَّة فِي الْمَمْلَكَة",
+       "ten": "[r:Ihna|Nahnu] kinna [b:nishtaghil|na'mal] fi wadheefa hukoomiyya fil mamlaka",
+       "tta": "[r:இஹ்னா|நஹ்னு] கின்னா [b:நிஷ்தகில்|நஃமல்] ஃபீ வழீஃபா ஹுகூமிய்யா ஃபில் மம்லகா",
+       "en": "We were working in a government job in the KSA",
+       "tm": "நாங்கள் ச'வூதி அரேபியாவில் அரசு பணியில் வேலை செய்து கொண்டிருந்தோம்",
+       "w": [
+        [
+         "[r:إِحْنَا]",
+         "we (Gulf)"
+        ],
+        [
+         "[r:نَحْنُ]",
+         "we (lesson word)"
+        ],
+        [
+         "كِنَّا",
+         "we were (Gulf kinna; lesson كُنَّا kunna)"
+        ],
+        [
+         "[b:نِشْتَغِلْ]",
+         "we work (Gulf)"
+        ],
+        [
+         "[b:نَعْمَلْ]",
+         "we work (lesson word)"
+        ],
+        [
+         "فِي",
+         "in / at"
+        ],
+        [
+         "وَظِيفَة",
+         "a job / post (ظ = dh)"
+        ],
+        [
+         "حُكُومِيَّة",
+         "government (describing the job)"
+        ],
+        [
+         "فِي",
+         "in"
+        ],
+        [
+         "الْمَمْلَكَة",
+         "the Kingdom = Saudi Arabia (KSA)"
+        ]
+       ],
+       "wa": {
+        "ar": "نحن كنا نعمل في وظيفة حكومية في المملكة",
+        "lines": [
+         "(Nahn kunna na'mal fi wazhifa hukoomiyyah fil mamlakah)",
+         "(நஹ்ன் குன்னா நஃமல் ஃபீ வழீஃபா ஹுகூமிய்யா ஃபில் மம்லகா)",
+         "We were working in a government job in the KSA.",
+         "நாங்கள் ச'வூதி அரேபியாவில் அரசு பணியில் வேலை செய்து கொண்டிருந்தோம்."
+        ]
+       }
+      },
+      {
+       "ar": "[r:إِحْنَا|نَحْنُ] كِنَّا نَلْعَبْ كُرَةْ الْقَدَمْ",
+       "ten": "[r:Ihna|Nahnu] kinna nal'ab kural gadam",
+       "tta": "[r:இஹ்னா|நஹ்னு] கின்னா நல்'அப் குரல் கதம்",
+       "en": "We were playing football",
+       "tm": "நாங்கள் கால்பந்து விளையாடிக் கொண்டிருந்தோம்",
+       "w": [
+        [
+         "[r:إِحْنَا]",
+         "we (Gulf)"
+        ],
+        [
+         "[r:نَحْنُ]",
+         "we (lesson word)"
+        ],
+        [
+         "كِنَّا",
+         "we were (Gulf kinna; lesson كُنَّا kunna)"
+        ],
+        [
+         "نَلْعَبْ",
+         "we play"
+        ],
+        [
+         "كُرَةْ",
+         "ball"
+        ],
+        [
+         "الْقَدَمْ",
+         "the foot (ق = g; كُرَةْ الْقَدَمْ = football, said kural gadam)"
+        ]
+       ],
+       "wa": {
+        "ar": "نحن كنا نلعب كرة القدم",
+        "lines": [
+         "(Nahn kunna nal'ab kural gadam)",
+         "( நஹ்ன் குன்னா நல்'அப் குரல் கதம்)",
+         "We were playing football .",
+         "நாங்கள் கால்பந்து விளையாடிக் கொண்டிருந்தோம்."
+        ]
+       },
+       "key": true
+      },
+      {
+       "ar": "[r:إِحْنَا|نَحْنُ] كِنَّا نُمَارِسْ الرِّيَاضَة",
+       "ten": "[r:Ihna|Nahnu] kinna numāris ar-riyādha",
+       "tta": "[r:இஹ்னா|நஹ்னு] கின்னா நுமாரிஸ் அர் ரியாழா",
+       "en": "We were doing sports / exercise",
+       "tm": "நாங்கள் உடற்பயிற்சி செய்துகொண்டிருந்தோம்",
+       "w": [
+        [
+         "[r:إِحْنَا]",
+         "we (Gulf)"
+        ],
+        [
+         "[r:نَحْنُ]",
+         "we (lesson word)"
+        ],
+        [
+         "كِنَّا",
+         "we were (Gulf kinna; lesson كُنَّا kunna)"
+        ],
+        [
+         "نُمَارِسْ",
+         "we practise / do (a sport)"
+        ],
+        [
+         "الرِّيَاضَة",
+         "sport / exercise (ض = dh)"
+        ]
+       ],
+       "wa": {
+        "ar": "نحن كنا نمارس الرياضة",
+        "lines": [
+         "(Nahn kunna numaris arriyadha)",
+         "(நஹ்ன் குன்னா நுமாரிஸ் அர் ரியாழா)",
+         "We were doing sports/exercise.",
+         "நாங்கள் உடற்பயிற்சி செய்துகொண்டிருந்தோம்."
+        ]
+       }
+      },
+      {
+       "ar": "[r:إِحْنَا|نَحْنُ] كِنَّا نُدَرِّبْ فِي مَعْهَدْ Arabic Language Hub",
+       "ten": "[r:Ihna|Nahnu] kinna nudarrib fi ma'had Arabic Language Hub",
+       "tta": "[r:இஹ்னா|நஹ்னு] கின்னா நுதர்ரிப் ஃபீ மஃஹத் Arabic Language Hub",
+       "en": "We were training at the Arabic Language Hub",
+       "tm": "நாங்கள் Arabic Language Hub இல் பயிற்சி செய்து கொண்டிருந்தோம்",
+       "w": [
+        [
+         "[r:إِحْنَا]",
+         "we (Gulf)"
+        ],
+        [
+         "[r:نَحْنُ]",
+         "we (lesson word)"
+        ],
+        [
+         "كِنَّا",
+         "we were (Gulf kinna; lesson كُنَّا kunna)"
+        ],
+        [
+         "نُدَرِّبْ",
+         "we train"
+        ],
+        [
+         "فِي",
+         "in / at"
+        ],
+        [
+         "مَعْهَدْ",
+         "an institute"
+        ],
+        [
+         "Arabic Language Hub",
+         "the course's name"
+        ]
+       ],
+       "wa": {
+        "ar": "نحن كنا ندرب في معهد Arabic Language Hub",
+        "lines": [
+         "(Nahn kunna nudarrib fi ma'had arabic language hub)",
+         "(நஹ்ன் குன்னா நுதர்ரிப் ஃபீ மஃஹத் Arabic Language Hub )",
+         "We were training at the Arabic Language Hub.",
+         "நாங்கள் Arabic Language Hub இல் பயிற்சி செய்து கொண்டிருந்தோம்."
+        ]
+       }
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

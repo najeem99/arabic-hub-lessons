@@ -128,7 +128,7 @@ scripts/match.py            # updates data/clips.json and data splits
 CLAUDE.md                this file (keep it current)
 README.md                human-facing overview, build and add-a-day steps
 src/app.html             the whole app: CSS + JS; placeholders __DATA__, __MATERIALS__, __SHEETS__, __VIDEOS__, __BUILT__, __BUILT_ISO__
-data/days/dayNN.json     lesson content, one file per day (Days 3–24 now; no 11, no 21 yet)
+data/days/dayNN.json     lesson content, one file per day (Days 3–25 now; no 11, no 21 yet)
 data/clips.json          per-phrase teacher clips {day: {items: {"block.sec.item": {f,s,e,r,approx?,w?}}, splits}} (match.py)
 data/clips_manual.json   hand-checked clips that override match.py
 data/transcripts/        whisper word timestamps per note (transcribe.py)
@@ -179,6 +179,7 @@ Only when Najeem asks. `python3 scripts/build.py` writes `dist/artifact.html`; p
 
 ## 9. History of Najeem's requests (newest first)
 
+- 2026-11-25: Day 25 (They were · هُمْ كَانُوا / We were · إِحْنَا كِنَّا, 14 phrases, 2 notes, 13 teacher clips + word clips; 5 hand-checked in clips_manual.json); live-class PDF "Question Words in Spoken Arabic" (25 Nov) in Materials, with 1 Cheat sheet (Question words) and 2 On the go sheets (question examples).
 - 2026-11-25: scene pictures for every dialogue phrase (characters acting it out, made with Gemini; tap to hear the teacher; 🖼️ on/off chip). Site wiring + prompts done; pictures still to generate (Gemini needs Najeem's Google sign-in; Claude in Chrome was not connected).
 - 2026-11-24: Day 24 (She was · هِيَّ كَانَتْ, 13 phrases, 2 notes, teacher clips + word clips); live-class PDF "Polite Requests in Spoken Arabic" (23 Nov) in Materials, with 1 Cheat sheet (Polite request words) and 2 On the go sheets (polite request examples; sorry · one minute · wait).
 - 2026-11-23: Day 23 (I was · أَنَا كِنْتْ); live-class PDF "Command & Prohibition Sentences" (19 Nov) in Materials, with 2 Cheat sheets (group Commands: do/don't for man · woman · all; do/don't/present/future) and 2 On the go sheets (everyday commands, everyday don'ts). Prohibitions keep لَا (لَا تْرُوحْ), as the Gulf does; the مَا rule is for statements.
