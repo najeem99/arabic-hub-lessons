@@ -30,6 +30,7 @@ One page (`docs/index.html`) built from `src/app.html` + the JSON in `data/`. Ph
 | **Voice notes** | Teacher's notes placed **before** the phrases they explain ("Explains the N phrases below"). | Najeem plays audio first, then scrolls through the words. |
 | **Teacher says it** | Per-phrase button that plays just that moment of the voice note (from `data/clips.json`). Dashed "≈" = approximate clip. | |
 | **Word clips** | A ▶ beside each row of "Word by word" plays the teacher saying just that word (`"w"` list in a clip, one `[s, e]` or `0` per word row; only on exact phrase clips). Summary reads "Word by word · ▶ hear each word". | Najeem asked for audio cut for each word (2026-11-19). |
+| **Scene pictures** | A cartoon picture above a phrase card showing the recurring characters (Saeed, Mariam, Ravi) acting the line out, empty speech bubble, no text. Tap it to hear the teacher say the phrase. Side-menu chip "🖼️ Pictures on/off" (`alh-pics`). Only dialogue phrases (not single-word `grid` sections). | Najeem asked for them (2026-11-25), made with **Google Gemini**. See section 5 "Scene pictures". |
 | **WhatsApp text** | Shows the phrase exactly as the teacher typed it (no harakat) with his transliteration lines (`data/whatsapp.json`). | |
 | **Collapsible sections** | Each day's numbered sections fold; side-menu sections fold (`alh-drfold`). | Everything collapsible, collapsed by default where it's a list of sheets. |
 | **Audio only** | Toggle (like the theme toggle) hiding lesson text, keeping voice notes; plays notes back to back with a chime. | `alh-audio-only` |
@@ -116,6 +117,7 @@ scripts/match.py            # updates data/clips.json and data splits
 
 - **Course PDFs** come from Najeem's Notion page "Arabic Class" (Najeem Home / Arabic Class) or uploads in the project. Put the PDF in `docs/materials/<kebab-name>.pdf` plus a first-page cover `<same-name>.jpg`, and add an entry to `data/materials.json`: `{file, thumb, day (number or null), date: "YYYY-MM-DD", kind?, title, ar, ta, by, pages}`. **`date` = the day it was shared** and is the sort key: live-class PDFs use the class date; day PDFs use the date of that day's voice notes (`AUD-YYYYMMDD`, latest one); PDFs Najeem shared without a known date use the date they arrived.
 - **Training videos** (YouTube): `data/videos.json` entries `{id, day (or null), kind?, title, yt}`; `id` is the YouTube video id.
+- **Scene pictures** (Gemini): `python3 scripts/pic_prompts.py` writes `data/pic_prompts.json`: one prompt per dialogue phrase (newest day first, `done` = picture exists) with the same STYLE + CAST + "no text" rule in every prompt, plus 2x2 `sheets` prompts (4 phrases per image) to stretch Gemini's daily image limit. Generate each image at gemini.google.com **signed in to Najeem's Google account** (Najeem asked for their own Chrome via Claude in Chrome; signed-out Gemini refuses images, and Claude must not sign in for them), download it, then `python3 scripts/add_pics.py IMG KEY [IMG KEY…]` or `add_pics.py --grid SHEET K1 K2 K3 K4` → 480×480 WebP (~30 KB) in `docs/pics/dNN-b-s-i.webp` + `data/pics.json` (`{day: {"b.s.i": file}}`). Re-run `pic_prompts.py`, then build. Look at each picture before adding it: skip any with text/letters in it or the wrong meaning. When a new day is added, its phrases show up in `pic_prompts.json` as not done.
 - **Cheat sheets / On the go**: `data/cheatsheets.json`, a list of sheets `{id, set: "cheat"|"go", group, title, ar, ta, day?, src: {file, pages, p}?, note?, cols: [{k, label, type: "ar"|"txt"|"ta", t?: <translit key>, under?: <col it folds under on phones>}], rows: [{…}]}`. Gulf form first with the slide's formal word alongside (e.g. إِحْنَا with نَحْنُ). Cheat sheets = grammar essentials copied from the trainers' slides only; everyday/practical tables go in On the go. When a new grammar PPT/PDF arrives, add it to materials **and** a sheet here.
 
 ---
@@ -130,6 +132,9 @@ data/days/dayNN.json     lesson content, one file per day (Days 3–24 now; no 1
 data/clips.json          per-phrase teacher clips {day: {items: {"block.sec.item": {f,s,e,r,approx?,w?}}, splits}} (match.py)
 data/clips_manual.json   hand-checked clips that override match.py
 data/transcripts/        whisper word timestamps per note (transcribe.py)
+data/pics.json           scene pictures per phrase {day: {"b.s.i": "dNN-b-s-i.webp"}} (add_pics.py)
+data/pic_prompts.json    Gemini prompts per dialogue phrase + 2x2 sheets (pic_prompts.py)
+docs/pics/               scene pictures, 480 px WebP
 data/whatsapp.json       original WhatsApp text per card (whatsapp_source.py)
 data/materials.json      course PDFs list
 data/videos.json         training videos list
@@ -144,6 +149,8 @@ scripts/build.py         stitches everything into docs/index.html + dist/artifac
 scripts/compress_audio.sh  WhatsApp notes -> mono 48 kbps MP3s in docs/audio/
 scripts/transcribe.py    faster-whisper transcription with word timestamps
 scripts/match.py         finds each phrase inside the notes -> data/clips.json
+scripts/pic_prompts.py   writes the Gemini prompts -> data/pic_prompts.json
+scripts/add_pics.py      Gemini image(s) -> docs/pics/*.webp + data/pics.json
 scripts/whatsapp_source.py  links cards to the WhatsApp export -> data/whatsapp.json
 ```
 
@@ -172,6 +179,7 @@ Only when Najeem asks. `python3 scripts/build.py` writes `dist/artifact.html`; p
 
 ## 9. History of Najeem's requests (newest first)
 
+- 2026-11-25: scene pictures for every dialogue phrase (characters acting it out, made with Gemini; tap to hear the teacher; 🖼️ on/off chip). Site wiring + prompts done; pictures still to generate (Gemini needs Najeem's Google sign-in; Claude in Chrome was not connected).
 - 2026-11-24: Day 24 (She was · هِيَّ كَانَتْ, 13 phrases, 2 notes, teacher clips + word clips); live-class PDF "Polite Requests in Spoken Arabic" (23 Nov) in Materials, with 1 Cheat sheet (Polite request words) and 2 On the go sheets (polite request examples; sorry · one minute · wait).
 - 2026-11-23: Day 23 (I was · أَنَا كِنْتْ); live-class PDF "Command & Prohibition Sentences" (19 Nov) in Materials, with 2 Cheat sheets (group Commands: do/don't for man · woman · all; do/don't/present/future) and 2 On the go sheets (everyday commands, everyday don'ts). Prohibitions keep لَا (لَا تْرُوحْ), as the Gulf does; the مَا rule is for statements.
 - 2026-11-19: Materials: all PDFs listed by date (newest first), date shown on each; no "Course outline & reference" group.

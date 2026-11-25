@@ -32,6 +32,8 @@ def dur(f):
 
 WA = json.load(open(os.path.join(DATA, "whatsapp.json"), encoding="utf-8")) if os.path.exists(os.path.join(DATA, "whatsapp.json")) else {}
 CLIPS = json.load(open(os.path.join(DATA, "clips.json"), encoding="utf-8")) if os.path.exists(os.path.join(DATA, "clips.json")) else {}
+# Scene pictures (characters acting out a phrase): {day: {"block.sec.item": "dNN-b-s-i.webp"}}, files in docs/pics/
+PICS = json.load(open(os.path.join(DATA, "pics.json"), encoding="utf-8")) if os.path.exists(os.path.join(DATA, "pics.json")) else {}
 
 
 def prepare(path):
@@ -44,6 +46,7 @@ def prepare(path):
         return page, used
     C = CLIPS.get(str(d["day"]), {"items": {}, "splits": {}})
     W = WA.get(str(d["day"]), {})
+    P = PICS.get(str(d["day"]), {})
     total_audio = sum(len(b.get("intro", [])) + len(b.get("audio", [])) for b in d["blocks"])
     n, sections, used = 0, [], []
     for bi, b in enumerate(d["blocks"]):
@@ -53,6 +56,9 @@ def prepare(path):
                 wa = W.get(f"{bi}.{si}.{ii}")
                 if wa:  # the teacher's original WhatsApp text, as typed
                     it["wa"] = wa
+                pic = P.get(f"{bi}.{si}.{ii}")
+                if pic and os.path.exists(os.path.join(ROOT, "docs", "pics", pic)):
+                    it["pic"] = pic  # scene picture: characters acting the phrase out
                 c = C["items"].get(f"{bi}.{si}.{ii}")
                 if c:
                     it["clip"] = {"f": c["f"], "s": c["s"], "e": c["e"]}

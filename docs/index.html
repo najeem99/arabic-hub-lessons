@@ -426,6 +426,13 @@ body.mini-on{padding-bottom:calc(84px + env(safe-area-inset-bottom,0px))}
 .say.on .dot{animation:pulse 1.2s ease-out infinite}
 .say.approx{background:transparent;border-style:dashed}
 .say.approx .dot{background:color-mix(in srgb,var(--coral) 75%,var(--surface))}
+/* Scene picture: the lesson characters acting the phrase out; tap it to hear the teacher */
+.scene{margin:6px 0 4px;border-radius:14px;overflow:hidden;background:var(--surface-2);border:1.5px solid var(--line);position:relative;aspect-ratio:1/1;max-width:340px;cursor:default}
+.scene img{display:block;width:100%;height:100%;object-fit:cover}
+.scene.can{cursor:pointer}
+.scene.can::after{content:"▶ Teacher says it";position:absolute;left:8px;bottom:8px;font:700 11px var(--f-ui);background:rgba(0,0,0,.55);color:#fff;border-radius:999px;padding:3px 9px}
+.card.saying .scene{border-color:var(--coral)}
+body.no-pics .scene{display:none}
 .card.saying{border-color:var(--coral);box-shadow:0 0 0 3px color-mix(in srgb,var(--coral) 25%,transparent),var(--shadow)}
 
 /* ---------- Mobile: compact bar + side drawer ---------- */
@@ -786,11 +793,12 @@ table.sheet .usub{display:none}
     <button class="chip" id="drOpen" type="button" aria-pressed="false">📖 Word-by-word</button>
     <button class="chip" id="drTheme" type="button">🌙 Dark mode</button>
     <button class="chip" id="drAudio" type="button" aria-pressed="false">🎧 Audio only</button>
+    <button class="chip" id="drPics" type="button" aria-pressed="true" aria-label="Show or hide the scene pictures">🖼️ Pictures on</button>
     <button class="chip" id="drBoost" type="button" aria-label="Volume boost for voice notes, tap to change">🔊 Boost 3×</button>
   </div>
   <div class="dr-sec"><button class="dr-h" type="button" data-drsec="this" aria-expanded="true"><h4 id="drSecTitle">This day</h4><span class="sh-chev" aria-hidden="true">›</span></button><div id="drSections"></div></div>
   <div class="dr-sec"><button class="dr-h" type="button" data-drsec="all" aria-expanded="true"><h4>Menu · all days</h4><span class="sh-chev" aria-hidden="true">›</span></button><div id="drDays"></div></div>
-  <p class="dr-built" id="drBuilt">Last updated · <time datetime="2026-11-24T08:36+04:00">24 Nov 2026, 8:36 AM</time> (UAE time)</p>
+  <p class="dr-built" id="drBuilt">Last updated · <time datetime="2026-11-25T21:46+04:00">25 Nov 2026, 9:46 PM</time> (UAE time)</p>
 </aside>
 
 <main class="gut"><div class="inner" id="day"></div></main>
@@ -940,6 +948,7 @@ const card = i => i.audio ? audioCard(i.audio) : `
   <article class="card${i.key ? " key" : ""}${known[i.id] ? " known" : ""}" data-id="${i.id}">
     <div class="top">${i.tag ? `<span class="tag">${esc(i.tag)}</span>` : ""}
       <button class="star-btn" type="button" aria-pressed="${!!known[i.id]}" aria-label="I know this phrase">${icon("star")}</button></div>
+    ${i.pic ? `<figure class="scene${i.clip ? " can" : ""}"><img src="pics/${esc(i.pic)}" alt="${esc(i.en)}" loading="lazy" decoding="async" width="480" height="480"></figure>` : ""}
     <div class="ar-line" lang="ar">${fmt(i.ar)}</div>
     <div class="sound"><span class="en">${fmt(i.ten)}</span>${i.tta ? `<span class="ta" lang="ta">${fmt(i.tta)}</span>` : ""}</div>
     <div class="acts">${i.clip ? `<button class="say${i.clip.a ? " approx" : ""}" type="button" data-f="${esc(i.clip.f)}" data-s="${i.clip.s}" data-e="${i.clip.e}" aria-label="Hear the teacher say this${i.clip.a ? " (approximate timing)" : ""}" title="${i.clip.a ? "Approximate: from where the teacher explains this phrase, may start a second early or late" : "The teacher saying this phrase"}"><span class="dot">${icon("play")}</span>Teacher says it${i.clip.a ? " ≈" : ""}</button>` : ""}${i.wa ? `<button class="wa-btn" type="button" aria-expanded="false" aria-label="Show the original WhatsApp text" title="Show how it was written in the WhatsApp message">${icon("chat")}<span>WhatsApp text</span></button>` : ""}</div>
@@ -1687,6 +1696,17 @@ function playClip(btn){
 }
 document.addEventListener("click", e => { const b = e.target.closest(".say"); if (b) { e.stopPropagation(); playClip(b); } }, true);
 document.addEventListener("play", e => { if (e.target !== clipA) clipStop(); }, true);
+/* tapping a scene picture plays that phrase's teacher clip */
+document.addEventListener("click", e => { const f = e.target.closest(".scene.can"); if (f) { const b = f.closest(".card")?.querySelector(".acts .say"); if (b) playClip(b); } });
+
+/* ---------- scene pictures on/off, remembered per viewer ---------- */
+function setPics(on, save = true){
+  document.body.classList.toggle("no-pics", !on);
+  const c = document.getElementById("drPics"); if (c) { c.setAttribute("aria-pressed", on); c.textContent = on ? "🖼️ Pictures on" : "🖼️ Pictures off"; }
+  if (save) { try { localStorage.setItem("alh-pics", on ? "1" : "0"); } catch {} }
+}
+try { if (localStorage.getItem("alh-pics") === "0") setPics(false, false); } catch {}
+document.getElementById("drPics")?.addEventListener("click", () => setPics(document.body.classList.contains("no-pics")));
 
 /* ---------- mobile drawer ---------- */
 const drawer = $("#drawer"), scrim = $("#scrim");
